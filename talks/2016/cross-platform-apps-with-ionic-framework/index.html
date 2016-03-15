@@ -1,0 +1,945 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Cross platform apps with Ionic Framework | Julien Renaux, AngularJS Mexico, January 16th 2016</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Julien Renaux">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../../../css/reveal.css">
+		<link rel="stylesheet" href="../../../css/overwrite.css">
+		<link rel="stylesheet" href="../../../css/gridism.css">
+		<link rel="stylesheet" href="../../../css/font-awesome.min.css">
+		<link rel="stylesheet" href="../../../css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../../../lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement('link');
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match(/print-pdf/gi) ? '../../../css/print/pdf.css' : '../../../css/print/paper.css';
+			document.getElementsByTagName('head')[0].appendChild(link);
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+			.reveal pre {
+				width: 100% !important;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<a href="../../.." class="back-button">Back</a>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-markdown>
+					<script type="text/template">
+						# Cross platform apps with Ionic Framework
+
+						<ul style="list-style-type: none; margin-left: 0">
+							<li>
+								<i class="fa fa-external-link"></i> <a href="http://julienrenaux.fr">julienrenaux.fr</a>
+							</li>
+							<li>
+								<i class="fa fa-twitter"></i> <a href="http://twitter.com/julienrenaux">julienrenaux</a></small>
+							</li>
+							<li>
+								<i class="fa fa-github"></i> <a href="https://github.com/shprink">shprink</a></small>
+							</li>
+						</ul>
+						<p>
+							<small>Slides: http://shprink.github.io/slides-cross-platform-apps-with-ionic-framework</small>
+							<br/>
+							<small>Code: https://github.com/shprink/ionic-cross-platform-boilerplate</small>
+						</p>
+						<aside class="notes">
+							[intro] I created this talk because very few people realize that we can build much more than iOS and Android apps with Ionic Framework. <br/>
+							I have been focussing on finding the right way to build Cross platform applications for the past two years.<br/>
+							Let me tell you that if you do not use the right tools, it can be realy complexe<br/>
+							We will explore all of this today.<br/>
+							2. Open source.<br/>
+							3. Questions at the end
+					    </aside>
+					</script>
+				</section>
+				<section >
+					<section data-markdown>
+						<script type="text/template">
+							## About me
+
+							<ul style="text-align: center; list-style-type: none; margin-left: 0">
+								<li class="fragment"><a href="http://www.toptal.com/resume/julien-renaux#select-just-supreme-hackers" target="_blank"><img class="plain" style="background: transparent;" width="300" data-src="./img/toptal.png" alt="Toptal"></a></li>
+								<li class="fragment"><img class="plain" style="background: transparent;" width="120" data-src="./img/angular.png" alt="angular"></li>
+								<li class="fragment"><img class="plain" style="background: transparent;" width="200" data-src="./img/ionic.png" alt="ionic"></li>
+							</ul>
+							<aside class="notes">
+								My name is Julien, I am from France, I am a Software Engineer freelancer @toptal<br/>
+								I have 5 years experience<br/>
+								Always worked with AngularJS<br/>
+								I was an early adopter of Ionic<br/>
+								creator of two famous open source projects built with Ionic<br/>
+								- WordPress Hybrid Client<br/>
+								- Ionic Native Transitions<br/>
+						    </aside>
+						</script>
+					</section>
+						<section data-markdown>
+							<script type="text/template">
+								## Creator trendingdevs.com
+
+								<img class="plain" style="background: transparent;" data-src="./img/trendingdevs_world.png" alt="trendingdevs">
+
+								<http://app.trendingdevs.com/>
+
+								<aside class="notes">
+									I am the creator of Trendingdevs which is a platform to find the best developers in the world, per country and city.<br/>
+									It is built with Angular Material Design, I invite you to check it out.
+							    </aside>
+							</script>
+						</section>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## Table of content
+
+						<ol style="text-align: left;">
+							<li class="fragment">What's the best tech stack?</li>
+							<li class="fragment">Cross platform plugins</li>
+							<li class="fragment">Platform specific plugins</li>
+							<li class="fragment">What can we expect from Ionic2?</li>
+							<li class="fragment">Conclusion</li>
+							<li class="fragment">Questions</li>
+						</ol>
+
+						<aside class="notes">
+							[transition] Alright, now that you know a little more about myself let's see the details of our presentation.<br/>
+							1. first we'll see What's the best technologies to build cross platform apps?<br/>
+							2. then we will learn about Cross platform plugins?<br/>
+							3. then about Platform specific plugins?<br/>
+							3. To finish we will talk about what Ionic2 can bring on table<br/>
+						</aside>
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## What's a Cross platform app?
+
+						<div class="fragment">
+						<blockquote >
+							One source code to rule several platforms
+						</blockquote>
+						<img data-src="./img/cross-platform.png" height="500" alt="Cross platform" class="plain" style="background: transparent;">
+						</div>
+						<aside class="notes">
+							[transition] Is anyone able to answer this question?<br/>
+							It means:<br/>
+							* No need to learn different languages<br/>
+							* No need to create different projects/repositories<br/>
+							* Can be a one man job<br/>
+							* Free up a lot of time doing the job only once!
+						</aside>
+					</script>
+				</section>
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							## 1. What's the best tech stack?
+							##### <small>Android, iOS, Web and Desktop (Windows, OSX, Linux)</small>
+
+							<ul style="text-align: left;">
+								<li class="fragment">React Native</li>
+								<li class="fragment">Native Script</li>
+								<li class="fragment">Ionic Framework / Cordova / Electron</li>
+							</ul>
+							<aside class="notes">
+								[transition] Now that we know about cross platform apps the next question is: what are the best technologies to build an app for the following platforms?<br/>
+								1. Can we do that with React Native?<br/>
+								2. Can we do that with Native Script?<br/>
+								3. or can we do that with Ionic Framework / Cordova / Electron?<br/>
+							</aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## React Native
+
+							<p>
+								<span class="fragment">Supported platforms:</span>
+								<span class="fragment">Android</span>
+								<span class="fragment">& iOS</span>
+							</p>
+							<p>
+								<span class="fragment">Same code base?</span>
+								<span class="fragment">Yes and No</span>
+							</p>
+							<span class="fragment">
+
+								// iOS
+								<TabBarIOS>
+									<TabBarIOS.Item title="React Native" selected={true}>
+										<NavigatorIOS initialRoute={{ title: 'React Native' }} />
+									</TabBarIOS.Item>
+								</TabBarIOS>
+
+								// Android
+								<DrawerLayoutAndroid renderNavigationView={()=>
+									<Text>React Native</Text>}>
+									<ProgressBarAndroid />
+								</DrawerLayoutAndroid>
+
+							</span>
+							<aside class="notes">
+								[transition] React and React Native are rising in the Software industry nowadays, but is it a good candidate for an cross platform app?<br/>
+								1. Supports only Android and iOS<br/>
+								2. Does it use the same code base? Yes and No<br/>
+								3. While the component logic can be shared between platforms, the UI MUST be different!
+							</aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Native Script
+							<p>
+								<span class="fragment">Supported platforms:</span>
+								<span class="fragment">Android</span>
+								<span class="fragment">& iOS</span>
+							</p>
+							<p>
+								<span class="fragment">Same code base?</span>
+								<span class="fragment">Yes</span>
+							</p>
+							<span class="fragment">
+
+								<Page loaded="pageLoaded">
+									<StackLayout orientation="vertical">
+										<Progress value="{{ someProperty }}" />
+										<Slider value="{{ someProperty }}" />
+									</StackLayout>
+								</Page>
+
+							</span>
+							<img class="fragment" data-src="./img/native_script_slider.png" alt="Down arrow">
+							<aside class="notes">
+								[transition] Another great technology to create apps is Native Script<br/>
+								* Supports Angular<br/>
+								1. Supports only Android and iOS<br/>
+								2. Does it use the same code base? Yes<br/>
+								3. The following UI will compile into platform specific native UI
+							</aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Ionic Framework / Cordova / Electron
+							<p>
+								<span class="fragment">Supported platforms:</span>
+								<span class="fragment">Android</span>
+								<span class="fragment">, iOS</span>
+								<span class="fragment">, Windows Phone</span>
+								<span class="fragment">, Desktop (Windows, OSX, Linux)</span>
+								<span class="fragment">, Browser and more ...</span>
+							</p>
+							<p>
+								<span class="fragment">Same code base?</span>
+								<span class="fragment">Yes</span>
+							</p>
+							<aside class="notes">
+								[transition] What about Ionic, Cordova and Electron<br/>
+								1. Supports many platforms<br/>
+								2. Same code base<br/>
+								3. the tech stack I recommend using, and we are going to focus on this today.
+							</aside>
+						</script>
+					</section>
+					<section data-markdown>
+
+		  				<script type="text/template">
+							<div style="
+	          background: url(img/ionic-logo.png) no-repeat center center;
+	          background-size: 390px 390px;
+	          position: absolute;
+	          width: 100%;
+	          height: 100%;
+	          opacity: 0.1; z-index: -1;"></div>
+							## Ionic Framework
+
+							* SDK (UI components, CLI and services) for Developing Hybrid Apps
+							* AngularJS powered
+							* 34th most popular OSS project (20,000+ stars on GitHub)
+							* ONE MILLION apps built Ionic so far
+							* Over 2 years old (still have support & v2 is coming)
+
+							<http://ionicframework.com/>
+
+							<aside class="notes">
+								[transition] What is Ionic Framework?<br/>
+								* SDK to create Hybrid Apps.<br/>
+								An Hybrid app is an app built with Web technologies (JS, HTML and CSS) instead platform specific languages such as Java or ObjectiveC<br/>
+								* Powered by Angular.<br/>
+								* Very successful
+							</aside>
+						</script>
+					</section>
+					<section data-markdown>
+
+		  				<script type="text/template">
+							## Ionic UI
+
+							<img data-src="./img/ionic_ui.png" height="600" alt="Ionic UI">
+
+							<aside class="notes">
+								* replicates iOS and Android UI with web technologies<br/>
+								* You have access to Menu, Action sheet, Tabs, Modal etc.<br/>
+							</aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							<div style="
+	          background: url(img/cordova.png) no-repeat center center;
+	          background-size: 320px 360px;
+	          position: absolute;
+	          width: 100%;
+	          height: 100%;
+	          opacity: 0.1; z-index: -1;"></div>
+
+							## Cordova (PhoneGap)
+
+							<p class="fragment">Platforms
+								<pre class="fragment"><code class="hljs">cordova platform add ios|android|browser|etc. </code></pre>
+							</p>
+							<p class="fragment">Plugins
+								<pre class="fragment"><code class="hljs">cordova plugin add camera|network|device|etc. </code></pre>
+							</p>
+
+							<aside class="notes">
+								[transition] What is Cordova?<br/>
+								1. Cordova is a technology that allow us to manipulate the Hardware of devices<br/>
+								2. Cordova supports a lot of platforms, such as ios, android, browser etc.<br/>
+								3. We can manipulate a specific hardware of a device using plugins.<br/>
+							</aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## ngCordova
+
+							<http://ngcordova.com/>
+
+
+							Cordova's api:
+
+							    window.cordova.plugins.notification.local.schedule(options, callback)
+								window.cordova.plugins.notification.local.on('trigger', () => {
+									// ...
+								});
+
+							AngularJS services and events:
+
+							    module.controller('MyCtrl', ($rootScope, $cordovaLocalNotification) => {
+									$cordovaLocalNotification.schedule(options).then(function (result) {
+									    // ...
+									});
+									$rootScope.$on('$cordovaLocalNotification:schedule', () => {
+									    // ...
+									});
+								});
+
+							<aside class="notes">
+								[transition] When using Cordova in an Angular app it is good to have ngCordova installed.<br/>
+								1. ngCordova is an Angular library that wraps the Cordova plugin API.<br/>
+								2. Instead of using cordova's api (on top)<br/>
+								3. We can do exactly the same with Angular services and events<br/>
+								4. With NgCordova, Cordova's plugin API is unified. For instance methods always return promises and events are broadcasted accross the app.<br/>
+							</aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Electron
+
+							<p class="fragment">Build cross platform desktop apps with web technologies</p>
+
+							<div class="fragment">
+								<h3>You already using Electron without knowing it!</h3>
+								<img data-src="./img/electron_users.png"  alt="electron_users">
+							</div>
+
+							<aside class="notes">
+								1. Electron is an open source project create by Github<br/>
+								2. The purpose of this tool is to build Desktop applications based on Web technologies.<br/>
+								2. If you can run on a browser you can run on Desktop with Electron.<br/>
+								3. I am sure you have already used Slack or Atom (IDE)
+							</aside>
+						</script>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							## 2. Cross platform plugins
+
+							<div style="text-align: left;">
+								<ul style="text-align: left;">
+									<li class="fragment">Network</li>
+									<li class="fragment">Camera</li>
+									<li class="fragment">Badge</li>
+									<li class="fragment">Device</li>
+									<li class="fragment">Facebook Connect</li>
+								</ul>
+								<p class="fragment">Complete list: https://cordova.apache.org/plugins/?platforms=cordova-browser%2Ccordova-ios%2Ccordova-android</p>
+							</div>
+
+							<aside class="notes">
+								[transition] Now that we know all the technologies we need to use, let's talk about Cross platform plugins<br/>
+								1. Plugins that will work on ALL our platforms with the same API.<br/>
+								2. Here a list of Cordova plugins that can work on all our platforms today<br/>
+							</aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Network
+
+							<pre><code>cordova plugin add cordova-plugin-network-information</code></pre>
+
+								// listen for Online event
+								$rootScope.$on('$cordovaNetwork:online',
+									angular.bind(this, (event, networkState) => {
+								    	this.network = networkState;
+								    	this.isOnline = true;
+									})
+								);
+
+								// listen for Offline event
+								$rootScope.$on('$cordovaNetwork:offline',
+									angular.bind(this, (event, networkState) => {
+								    	this.network = networkState;
+								    	this.isOnline = false;
+									})
+								);
+
+							<aside class="notes">
+								[transition] let's focus on the network plugin<br/>
+								1. Can be install like this.<br/>
+								2. With ngCordova we can have network information just with this simple piece of code.
+							</aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## DEMO
+
+							<aside class="notes">
+								[transition] let's see the result shall we!
+							</aside>
+						</script>
+					</section>
+				</section>
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+							## 3. Platform specific plugins
+
+							<div class="grid">
+								<div class="unit one-third fragment">
+									<img data-src="./img/loading_ios.png" alt="Loading iOS">
+									<h4>iOS</h4>
+								</div>
+								<div class="unit one-third fragment">
+									<img data-src="./img/loading_android.png" alt="Loading Android">
+									<h4>Android</h4>
+								</div>
+								<div class="unit one-third fragment">
+									<img data-src="./img/loading_ionic.png" alt="Loading Ionic">
+									<h4>Web, Desktop (Ionic)</h4>
+								</div>
+							</div>
+
+							<h3 class="fragment" >Some more</h3>
+
+							<p>
+								<span class="fragment">Action Sheet</span>
+								<span class="fragment">, Alert</span>
+								<span class="fragment">, Confirm</span>
+								<span class="fragment">, Image picker</span>
+								<span class="fragment">, Push notification etc...</span>
+							</p>
+
+							<aside class="notes">
+								[transition] We just saw how easy the code could be when using cross Platform plugins. But now what IF the plugin API is different per platform?<br/>
+								1. A comprehensive example is the loading UI<br/>
+								2. In few minutes we will see how to create an Angular service that unifies these APIs but for now we need to learn about the tools that can facilitate that work.
+						    </aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Recommended tools
+
+							<div style="text-align: left;">
+								<ul style="text-align: left;">
+									<li class="fragment">ES6 Classes / TypeScript Interfaces</li>
+									<li class="fragment">CommonJS / ES6 modules</li>
+									<li class="fragment">Webpack</li>
+								</ul>
+							</div>
+
+							<aside class="notes">
+								[transition] Tools are essential if you want to be productive and write reusable code<br/>
+						        1. There are of course a lot of ways to handle Platform specific plugins<br/>
+								2. But here are my Recommended tools<br/>
+						    </aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## ES6 Classes / Interfaces
+							#### Facilitate inheritance
+
+							<pre class="fragment"><code class="hljs">
+								interface ClockInterface {
+								    currentTime: Date;
+								}
+
+							</code></pre>
+							<pre class="fragment"><code class="hljs">
+								class Clock implements ClockInterface  {
+								    currentTime: Date;
+								    // ALL THE COMMON LOGIC
+								}
+
+							</code></pre>
+							<pre class="fragment"><code class="hljs">
+								class ClockAndroid extends Clock implements ClockInterface  {
+								    currentTime: Date;
+								    // PLATFORM ANDROID SPECIFIC CODE
+								}
+
+							</code></pre>
+
+							<aside class="notes">
+								[transition] If you have some experience with Java, PHP, C# you already know what's interface.<br/>
+								1. Interfaces are a TypeScript feature, it forces a Class to respect a certain implementation.<br/>
+								1. Here we force any Classes that implements the ClockInterface to have a property named currentTime which has a Date type.<br/>
+								2. We can then create a Clock Class that could contain all the cross platform code<br/>
+								3. And we can create an Android specific Class.<br/>
+								4. As you can see Classes are the perfect tool to extend/overwrite a common behavior into a specific one.
+						    </aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## CommonJS / ES6 modules
+							#### Modular code
+
+							<div class="grid">
+								<div class="unit half">
+									<h4>CommonJS</h4>
+									<pre><code class="hljs">
+							# import
+							var module = require('./path')
+
+							# export
+							module.exports = function(){}
+									</code></pre>
+								</div>
+								<div class="unit half"  style="position:relative;">
+									<h4>ES6 Module</h4>
+									<pre><code class="hljs">
+							# import
+							import module from './path';
+
+							# export
+							export default function(){}
+									</code></pre>
+
+								</div>
+							</div>
+
+							<aside class="notes">
+								[transition] CommonJS was created to handle modules outside the browser<br/>
+								What's a module? Isolated piece of code that solves scope leaking and namespacing problem. Import or Export MUST be explicite.<br/>
+								With modules we can easily CREATE / IMPORT and EXPORT reusable pieces of code<br/>
+						    </aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Webpack
+
+							<p class="fragment">Preprocess any type of file and generate static assets</p>
+							<div class="grid">
+								<div class="unit two-thirds fragment">
+									<img data-src="./img/dependency_tree.jpg" height="380" alt="dependency_tree">
+								</div>
+								<div class="unit one-third fragment"  style="position:relative;">
+									<i class="fa fa-chevron-right" style="position: absolute; left: -40px; top:200px;"></i>
+									<img data-src="./img/webpack_static_assets.jpg" alt="Loading Ionic">
+									<h3>Static assets</h3>
+								</div>
+							</div>
+							<p>
+								<small>Recommended reading: http://julienrenaux.fr/2015/03/30/introduction-to-webpack-with-practical-examples</small>
+							</p>
+							<aside class="notes">
+								[transition] the latest tool to talk about is webpack<br/>
+								1. Webpack is a module bundler that can generate static assets from any type of file.<br/>
+								2. Here we have a dependency tree. The tree root here is called an entry point. This intry point will require other dependencies that will require other dependencies and so on.<br/>
+								3. At the end you end up with a large dependency tree that compile into static assets.
+						    </aside>
+						</script>
+                	</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Webpack conditional imports
+
+							<div class="grid">
+								<div class="unit half fragment">
+									<pre style="margin:0; box-shadow: none; position:relative;">
+										<code class="hljs">
+								new webpack.DefinePlugin({
+								    IS_IOS: false,
+								    IS_ANDROID: false,
+								    IS_BROWSER: true,
+								    IS_DESKTOP: false
+								})
+										</code>
+										<span style="position:absolute; right:0; top:0;">Webpack Config</span>
+									</pre>
+									<pre style="margin:0; box-shadow: none; position:relative; margin-top: -30px;">
+										<code class="hljs">
+								if (IS_IOS)
+								    require("./ios.ts");
+								if (IS_ANDROID)
+								    require("./android.ts");
+								if (IS_BROWSER)
+								    require("./browser.ts");
+								if (IS_DESKTOP)
+								    require("./desktop.ts");
+										</code>
+										<span style="position:absolute; right:0; top:0;">Any js file</span>
+									</pre>
+								</div>
+								<div class="unit half fragment">
+									<img data-src="./img/dependency_tree_browser.jpg" height="400" alt="dependency_tree">
+								</div>
+
+							</div>
+
+							<aside class="notes">
+								1. With webpack we can create conditional imports upon the platform that we want to build on.<br/>
+								2. Using Webpack's DefinePlugin you can inject any variable into your JS files.<br/>
+								3. Upon those variables we can import the right content for the right platform.<br/>
+								4. Setting IS_BROWSER to true will remove an entire branch of the dependency tree and build Browser only code.
+						    </aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Better tools: Summary
+
+							<div style="text-align: left;">
+								<ul style="text-align: left;">
+									<li class="fragment">ES6 Classes / TypeScript Interfaces: <br/>
+										<ol style="text-align: left; font-size: 30px;">
+											<li>Facilitate inheritance</li>
+											<li>Extend common behavior</li>
+											<li>Forces API implementation</li>
+										</ol>
+									</li>
+									<li class="fragment">CommonJS / ES6 modules: <br/>
+										<ol style="text-align: left; font-size: 30px;">
+											<li>Modular code</li>
+											<li>avoid scope leaking</li>
+											<li>Facilitate namespacing</li>
+											</ol>
+										</li>
+									<li class="fragment">Webpack: <br/>
+										<ol style="text-align: left; font-size: 30px;">
+											<li>Generate static assets</li>
+											<li>Conditional imports: Generate 100% platform specific bundle</li>
+											</ol>
+										</li>
+									</li>
+								</ul>
+							</div>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Create a cross platform Loading service
+
+							#### One API to control all platforms
+
+								$crossPlatformLoading.show('CrossPlatform Loading');
+
+								$crossPlatformLoading.hide();
+
+
+							<div class="grid">
+								<div class="unit one-third">
+									<img data-src="./img/loading_ios.png" alt="Loading iOS">
+									<h4>iOS</h4>
+								</div>
+								<div class="unit one-third">
+									<img data-src="./img/loading_android.png" alt="Loading Android">
+									<h4>Android</h4>
+								</div>
+								<div class="unit one-third">
+									<img data-src="./img/loading_ionic.png" alt="Loading Ionic">
+									<h4>Ionic</h4>
+								</div>
+							</div>
+
+							<aside class="notes">
+						        [transition] With all the tools that we have just learnt, let's try to create a cross platform Loading service.<br/>
+								The goal is to have one API to control all platforms<br/>
+								Whether you are on iOS or Desktop we want that calling show pops up the loading UI.
+						    </aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## module entry point
+
+								let crossPlatformLoading;
+								if (IS_IOS)
+								    crossPlatformLoading = require("./service.cordova.ts");
+								if (IS_ANDROID)
+								    crossPlatformLoading = require("./service.cordova.ts");
+								if (IS_BROWSER)
+								    crossPlatformLoading = require("./service.ionic.ts");
+								if (IS_DESKTOP)
+								    crossPlatformLoading = require("./service.ionic.ts");
+
+								let mod = angular.module('crossPlatform.loading', [
+								    'ionic'
+								]);
+								mod.service('$crossPlatformLoading', crossPlatformLoading);
+								export default mod;
+
+							<aside class="notes">
+						        * conditional imports<br/>
+						        * Angular Module creation<br/>
+						        * Service declaration<br/>
+						        Depending on the platform we want to build, we will have a different crossPlatformLoading service.<br/>
+						    </aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Interface
+
+								export interface ICrossPlatformLoading {
+								    show(message: string);
+								    hide();
+								}
+
+							<aside class="notes">
+						        To force our API and to make sure different developers can work in parallel on different platforms we create this interface.<br/>
+						    </aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Web Desktop service
+
+								import {ICrossPlatformLoading} from './interface';
+
+								module.exports = class implements ICrossPlatformLoading{
+								    constructor(private $ionicLoading: ionic.loading.IonicLoadingService){
+								        'ngInject';
+								    }
+								    show(message: string){
+								        this.$ionicLoading.show({
+								            template: message
+								        });
+								    }
+								    hide(){
+								        this.$ionicLoading.hide();
+								    }
+								}
+
+							<aside class="notes">
+						        * Implements our interface <br/>
+						        * Inject $ionicLoading service <br/>
+						        * Implement show and hide method and use $ionicLoading inside <br/>
+						    </aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## iOS, Android service
+
+								import {ICrossPlatformLoading} from './interface';
+
+								module.exports = class implements ICrossPlatformLoading{
+								    constructor(private $cordovaSpinnerDialog: ionic.loading.IonicLoadingService){
+								        'ngInject';
+								    }
+								    show(message: string){
+								        this.$cordovaSpinnerDialog.show(null, message, true);
+								    }
+								    hide(){
+								        this.$cordovaSpinnerDialog.hide();
+								    }
+								}
+
+							<aside class="notes">
+						        * Implements our interface <br/>
+						        * Inject $cordovaSpinnerDialog service <br/>
+						        * Implement show and hide method and use $cordovaSpinnerDialog inside <br/>
+						    </aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## Demo
+
+								$crossPlatformLoading.show('CrossPlatform Loading');
+								setTimeout(() => $crossPlatformLoading.hide(), 5000);
+
+							<aside class="notes">
+								[transition] Let see the result of calling our cross platform service now<br/>
+							</aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## After Build
+
+								var crossPlatformLoading;
+								if (false) // IS_IOS
+								    crossPlatformLoading = require("./service.cordova.ts");
+								if (false) // IS_ANDROID
+								    crossPlatformLoading = require("./service.cordova.ts");
+								if (true) // IS_BROWSER
+								    crossPlatformLoading = __webpack_require__(18);
+								if (false) // IS_DESKTOP
+								    crossPlatformLoading = require("./service.ionic.ts");
+
+							<aside class="notes">
+						        You might wonder what happen after the build<br/>
+								As you can see only the browser version is required. It means that the other files are not in the final bundle.<br/>
+								That's good but we still have in the Browser version, references to other platforms, which is not perfect.
+						    </aside>
+						</script>
+					</section>
+					<section data-markdown>
+						<script type="text/template">
+							## After minification
+
+								var crossPlatformLoading;
+								if (true)
+								    crossPlatformLoading = __webpack_require__(18);
+
+							<aside class="notes">
+						        * dead code is removed by uglifyJS<br/>
+								* final bundle only contains the code for the platform you have chosen to build!<br/>
+						    </aside>
+						</script>
+					</section>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## 4. What can we expect from Ionic2?
+
+						<h3 class="fragment"> Universal (isomorphic) rendering</h3>
+
+						<div style="text-align: left;">
+							<ul style="text-align: left;">
+								<li class="fragment">Performance</li>
+								<li class="fragment">SEO</li>
+							</ul>
+						</div>
+
+						<aside class="notes">
+							[transition] This talk is almost finished but before we conclude I would like to talk about Ionic2<br/>
+							1. We can expect the same as today + the Universal rendering.<br/>
+							2. What is Universal rendering?<br/>
+							2. It is an app that can be rendered on the browser OR server side.<br/>
+							2. That is not possible today with angular1 because it is browser dependent.<br/>
+							2. The advantages are:<br/>
+							* Performance (first page loading really fast)<br/>
+							* SEO (Page rendered for Search engine robots)
+						</aside>
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## 5. Conclusion
+
+						<div style="text-align: left;">
+							<ul style="text-align: left;">
+								<li class="fragment">Ionic Framework / Cordova / Electron: <br/><small>Perfect tech stack for cross platform apps</small></li>
+								<li class="fragment">ngCordova: <br/><small>Better plugin interaction</small></li>
+								<li class="fragment">ES6 Classes, Modules / TypeScript and Webpack <br/><small>Perfect tools for cross platform apps</small></li>
+								<li class="fragment">Universal rendering <br/><small>Better Performance and SEO</small></li>
+							</ul>
+						</div>
+
+						<aside class="notes">
+							1. Today's presentation was intense! We learnt a lot of things.<br/>
+							2. We learnt that in order to create Cross platform apps, Ionic, Cordova and Electron was a good choice.<br/>
+							3. We learnt that Cross platform plugins exist and that using ngCordova's API is more elegant.<br/>
+							4. We discovered great tools to decouple distinct pieces of functionality into modules.<br/>
+							5. To finish we learnt that Ionic2 will make Universal rendering possible
+						</aside>
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						## 6. Questions?
+
+						<ul style="list-style-type: none; margin-left: 0">
+							<li>
+								<i class="fa fa-external-link"></i> <a href="http://julienrenaux.fr">julienrenaux.fr</a>
+							</li>
+							<li>
+								<i class="fa fa-twitter"></i> <a href="http://twitter.com/julienrenaux">julienrenaux</a></small>
+							</li>
+							<li>
+								<i class="fa fa-github"></i> <a href="https://github.com/shprink">shprink</a></small>
+							</li>
+						</ul>
+						<p>
+							<small>Slides: http://shprink.github.io/slides-cross-platform-apps-with-ionic-framework</small>
+							<br/>
+							<small>Code: https://github.com/shprink/ionic-cross-platform-boilerplate</small>
+						</p>
+
+						<aside class="notes">
+							1. I hope I gave you enough information for you to start your own project, today's code is open source and available on Github.<br/>
+							2. Do you have any questions?
+						</aside>
+					</script>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="../../../lib/js/head.min.js"></script>
+		<script src="../../../js/reveal.js"></script>
+		<script src="../../../js/init.js"></script>
+	</body>
+
+</html>
