@@ -1,0 +1,24 @@
+<script src="../../../../js/angular.1.5.min.js"></script>
+
+<div ng-app="demo">
+    <blink interval="500"><b><i>Hello World</i></b></blink>
+</div>
+
+<script>
+    angular.module('demo', []).directive('blink', function() {
+        return {
+            restrict: 'E',
+            transclude: true,
+            template: '<p ng-show="visible" ng-transclude></p>',
+            scope: {
+                interval: '='
+            },
+            controller: function($scope, $interval) {
+                $scope.visible = true;
+                var timer = $interval(function() {
+                    $scope.visible = !$scope.visible;
+                }, $scope.interval);
+            }
+        }
+    });
+</script>

@@ -1,0 +1,20 @@
+<script src="../../../../js/angular.1.5.min.js"></script>
+
+<div ng-app="demo">
+    <blink-hello-world></blink-hello-world>
+</div>
+
+<script>
+    angular.module('demo', []).directive('blinkHelloWorld', function() {
+        return {
+            restrict: 'E',
+            template: '<p ng-show="visible">Hello World</p>',
+            controller: function($scope, $interval) {
+                $scope.visible = true;
+                var timer = $interval(function() {
+                    $scope.visible = !$scope.visible;
+                }, 500);
+            }
+        }
+    });
+</script>

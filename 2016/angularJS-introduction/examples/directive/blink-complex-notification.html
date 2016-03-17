@@ -1,0 +1,40 @@
+<script src="../../../../js/angular.1.5.min.js"></script>
+
+<div ng-app="demo"
+    ng-controller="demoCtrl">
+    <p>Changed {{changeCounter}} times</p>
+    <blink interval="500"
+        on-change="onBlinkChange($counter)"><b><i>Hello World</i></b></blink>
+</div>
+
+<script>
+    angular.module('demo', [])
+        .controller('demoCtrl', function($scope) {
+            $scope.changeCounter = 0;
+            $scope.onBlinkChange = function(counter) {
+                $scope.changeCounter = counter;
+            }
+        })
+        .directive('blink', function() {
+            return {
+                restrict: 'E',
+                transclude: true,
+                template: '<p ng-show="visible" ng-transclude></p>',
+                scope: {
+                    interval: '=',
+                    onChange: '&'
+                },
+                controller: function($scope, $interval) {
+                    $scope.visible = true;
+                    var counter = 0;
+                    var timer = $interval(function() {
+                        $scope.visible = !$scope.visible;
+                        counter++;
+                        $scope.onChange({
+                            $counter: counter
+                        });
+                    }, $scope.interval);
+                }
+            }
+        });
+</script>

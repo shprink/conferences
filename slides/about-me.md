@@ -3,10 +3,10 @@
 
     <ul style="text-align: center; list-style-type: none; margin-left: 0">
         <li class="fragment">
-            <a href="http://www.toptal.com/resume/julien-renaux#select-just-supreme-hackers" target="_blank"><img class="plain" style="background: transparent;" width="300" data-src="../../../img/toptal-logo.png" alt="Toptal"></a>
+            <a href="http://www.toptal.com/resume/julien-renaux#select-just-supreme-hackers" target="_blank"><img class="plain" style="background: transparent;" width="300" data-src="../../img/toptal-logo.png" alt="Toptal"></a>
         </li>
-        <li class="fragment"><img class="plain" style="background: transparent;" width="120" data-src="../../../img/angular-logo.png" alt="angular"></li>
-        <li class="fragment"><img class="plain" style="background: transparent;" width="200" data-src="../../../img/ionic-logo.png" alt="ionic"></li>
+        <li class="fragment"><img class="plain" style="background: transparent;" width="120" data-src="../../img/angular-logo.png" alt="angular"></li>
+        <li class="fragment"><img class="plain" style="background: transparent;" width="200" data-src="../../img/ionic-logo.png" alt="ionic"></li>
     </ul>
     <aside class="notes">
         My name is Julien, I am from France, I am a Software Engineer freelancer @toptal<br/>

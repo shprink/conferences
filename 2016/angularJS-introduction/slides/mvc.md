@@ -77,56 +77,68 @@
     <ul>
         <li>Represents the Model</li>
         <li>Anything attached to the $scope object is then accessible in the HTML
-            <pre><code class="html">
+            <pre><code class="js">
+angular.module('MyModuleName').controller('MyController', function($scope, dependency) {
     $scope.heading = 'Hello World!';
+});
             </code></pre>
 
             <pre><code class="html">
-    &lt;body ng-app=&quot;MyModuleName&quot; ng-app=&quot;MyController&quot;&gt;
+&lt;div ng-controller=&quot;MyController&quot;&gt;
     &lt;h1&gt;{{heading}}&lt;/h1&gt; &lt;!-- &lt;h1&gt;Hello World!&lt;/h1&gt; --&gt;
-    &lt;/body&gt;
+&lt;/div&gt;
             </code></pre>
         </li>
-        <li>$scope is only used in our Controllers and Directives, where we bind data to a view</li>
         <li>The $rootScope object is the parent of all $scopes</li>
+        <li>Prototypical inherited</li>
     </ul>
 
     <aside class="notes">
         <ul>
             <li>$scope is the link between your presentation layer (View) and the data/business logic (Model)</li>
             <li>It enables the two-way data binding</li>
-            <li>The DOM outside of the scope of the Controller (or Directive) is not accessible via the $scope</li>
-            <li>Properties on $rootScope will be accessible via other $scopes through the prototype chain of inheritance (NOTE: be careful about what you inherit. It's easy to shadow parent properties with child properties that are no longer linked).</li>
+            <li>
+                In the template, the ng-controller directive tells Angular where to bind an instance of a Controller and make the Controller's data and methods available in that DOM scope.
+            </li>
+        </ul>
+    </aside>
+</section>
+
+
+<section>
+    <h2>Watchers</h2>
+
+    <ul>
+        <li>Automatically added when using <code class="snippet">{{}}</code> in a template</li>
+        <li>Manually listen to changes
+<pre><code class="js">
+$scope.$watch('foo', function(new, old){
+
+});
+</code></pre>
+        </li>
+    </ul>
+    <aside class="notes">
+        <ul>
+            <li>Watchers check for changes at every $digest cycle (see after that slide)</li>
+            <li>Stack of things to check</li>
         </ul>
     </aside>
 </section>
 
 <section>
-    <h2>Controllers</h2>
+    <h2>Change detection</h2>
 
     <ul>
-        <li>Controllers are responsible for setting up the link between your View and Model (i.e., $scope)</li>
+        <li>$digest cycle</li>
+        <li>Update every scopes: $scope.apply() (calls $rootScope.$digest())</li>
+        <li>Update current scope and childrens: $scope.digest()</li>
     </ul>
-        <pre><code>
-angular.module('MyModuleName').controller('MyController', function($scope, dependency) {
-    $scope.heading = 'Hello World!';
-});
-        </code></pre>
-
-        <pre><code>
-// Syntax for minification/uglification
-angular.module('MyModuleName').controller('MyController', ['$scope', 'dependency', function($scope, dependency) {
-    $scope.heading = 'Hello World!';
-});
-        </code></pre>
-
     <aside class="notes">
         <ul>
-            <li>
-                In the template, the ng-controller directive tells Angular where to bind an instance of a Controller and make the Controller's data and methods available in that DOM scope.
-            </li>
-            <li>Controller function accepts the Controller's name as a String, and a Function that represents the Controller's body</li>
-            <li>To ensure the DI works correctly in minified code, an alternate syntax of passing an Array is used, where the inital values of the Array are the String representation of the Controller's dependencies, and the last argument is the Controller's body (i.e., the Function callback).</li>
+            <li>What is this famous $digest cycle?</li>
+            <li>It is a process that checks every watchers for changes</li>
+            <li>$digest cycle doesn’t run just once. At the end of the current loop, it starts all over again to check if any of the models have changed. </li>
         </ul>
     </aside>
 </section>

@@ -19,11 +19,16 @@ app.controller('FavoritesController', function($injector) {
 });
             </code></pre>
         </li>
-        <li>To handle minification/uglification, Angular provides an alernate syntax
+        <li>Minification/uglification
             <pre><code class="javascript" ng-non-bindable data-trim>
 app.controller('FavoritesController', ['$log', function($log) {
     $log.debug('hello world to console');
 }]);
+            </code></pre>
+            <pre><code class="javascript" ng-non-bindable data-trim>
+var FavoritesController = function($log) { $log.debug('hello world to console');}
+FavoritesController.$inject = ['$log'];
+app.controller('FavoritesController', FavoritesController);
             </code></pre>
         </li>
     </ul>
