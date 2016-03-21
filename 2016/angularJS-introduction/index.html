@@ -68,9 +68,9 @@
 							1. Modules
 							1. MVC - Scope
 							1. Dependency Injection
-							1. Template syntax
-							1. Providers (Services and Factories)
+							1. Template Syntax
 							1. Directives (core / custom)
+							1. Providers (Services and Factories)
 							1. Filters (core / custom)
 							1. Async operations ($http and $q)
 							1. Routing
@@ -86,8 +86,8 @@
 		        <section data-markdown="slides/mvc.md"></section>
 		        <section data-markdown="slides/di.md"></section>
 		        <section data-markdown="slides/template-syntax.md"></section>
-		        <section data-markdown="slides/providers.md"></section>
 		        <section data-markdown="slides/directives.md"></section>
+		        <section data-markdown="slides/providers.md"></section>
 		        <section data-markdown="slides/filters.md"></section>
 		        <section data-markdown="slides/async.md"></section>
 		        <section data-markdown="slides/routing.md"></section>
@@ -100,24 +100,6 @@
         </section>
 
         <section>
-          <section>
-            <h2>Scopes</h2>
-            <ul>
-              <li>Central structure of your app</li>
-              <li>Hold functions and data</li>
-              <li>Directives <i>can</i> introduce new Scopes</li>
-              <li>Prototypical inherited</li>
-            </ul>
-          </section>
-          <section>
-            <h2>Inheritance</h2>
-            <ul>
-              <li>Child scope properties overshadow parent scope properties</li>
-              <li>Isolated scopes don't</li>
-              <li>Following DOM-structure</li>
-            </ul>
-          </section>
-        </section>
 
         <section>
           <section>
@@ -128,12 +110,6 @@
                 Dynamic behavior always result of watchers firing
                 <pre><code>
 $scope.$watch('foo', function(value, old, scope){
-  //...
-});
-
-$scope.$watch(function(scope){
-  return scope.foo;
-}, function(value, old, scope){
   //...
 });
                 </code></pre>

@@ -25,7 +25,6 @@
     <ul>
         <li>Synchronizes the View with the Model and vice-versa</li>
         <li>The underlying model is a plain JavaScript Object</li>
-        <li>The models are easily parsed to and from JSON, making server-side communication simple</li>
         <li>Binding occurs in the templates via <code class="snippet">{{}}</code> or <code class="snippet">ng-bind</code></li>
         <li>Models can also be two way data-bound via the <code class="snippet">ng-model</code> directive</li>
     </ul>

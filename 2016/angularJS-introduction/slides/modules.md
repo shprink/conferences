@@ -6,9 +6,9 @@
     <h2>Modules</h2>
     <ul>
         <li>Applications are built from Modules</li>
-        <li>Modules are the containers for a component of an application</li>
-        <li>Modules can depend on other modules</li>
-        <li>Modules make our code reusable, limit scope, and enable testability</li>
+        <li>Can depend on other modules</li>
+        <li>Declares controllers, directives, services etc.</li>
+        <li>Modules make our code reusable (import/export)</li>
     </ul>
 </section>
 
@@ -52,7 +52,7 @@ angular.bootstrap(document, ['MyModuleName']);
 
     <aside class="notes">
         <ul>
-            <li>The ng-app directive takes the Module name as an argument and loads that Module, giving the Module access to and control over the DOM element it was placed on and all of its children. </li>
+            <li>An app needs at least one module</li>
         </ul>
     </aside>
 </section>
