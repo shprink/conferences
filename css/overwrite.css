@@ -57,9 +57,15 @@ input {
 .reveal blockquote {
     width: 90%;
 }
-.green{
+.green {
     color: #7DFB7D;
 }
-.red{
+.red {
     color: red;
+}
+code.snippet {
+    background-color: gray;
+    font-size: smaller;
+    padding: 5px 10px;
+    border-radius: 15px;
 }

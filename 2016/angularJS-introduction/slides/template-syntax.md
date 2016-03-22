@@ -32,20 +32,3 @@
     </li>
   </ul>
 </section>
-
-<section>
-    <h2>Example</h2>
-    <pre><code>
-$scope.heading = 'Hello World!';
-$scope.updateHeading = function(newHeading) {
-    $scope.heading = newHeading;
-}
-    </code></pre>
-
-    <pre><code>
-&lt;h1&gt;{{heading}}&lt;/h1&gt; &lt;!-- &lt;h1&gt;Hello World!&lt;/h1&gt;--&gt;
-&lt;button ng-click="updateHeading('Foobar')"&gt;Update&lt;/button&gt; &lt;!-- Click --&gt;
-    </code></pre>
-
-    <iframe style="background-color:white;" src="examples/template-syntax/index.html"></iframe>
-</section>

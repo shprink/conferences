@@ -1,14 +1,14 @@
 <section>
-    <h1>Providers</h1>
+    <h1>Service Factory and Provider</h1>
 </section>
 
 <section>
     <h2>Services and Factories</h2>
     <ul>
-        <li>Containers for our application's Model, where the data and business logic should live</li>
+        <li>Organize and share code across your app</li>
         <li>Services are invoked with <code class="snippet">new</code>, thus all data/logic should be bound to <code class="snippet">this</code></li>
         <li>Factories are <em>not</em> invoked with <code class="snippet">new</code> and can return anything (e.g., Functions, Objects, Arrays, simple values)</li>
-        <li>Everything returned from either a Service or Factory is a <em>singleton</em></li>
+        <li>Service or Factory are <em>singleton</em></li>
     </ul>
 
     <aside class="notes">
@@ -19,27 +19,25 @@
 </section>
 
 <section>
-    <h2>Service Syntax</h2>
+    <h2>Service</h2>
+
+    <ul>
+        <li>Services are invoked with <code class="snippet">new</code>, thus all data/logic should be bound to <code class="snippet">this</code></li>
+    </ul>
 
     <pre><code>
-angular.module('MyModule')
-.service('MyService', [myService]);
-
-function myService() {
-this.bar = 'bar';
-this.doSomething = function doSomething() {
-return 'foo' + this.bar;
-}
-}
+angular.module('MyModule').service('MyService', function() {
+    var bar = 'bar';
+    this.doSomething = function() {
+        return 'foo' + bar;
+    }
+});
     </code></pre>
 
-                            <pre><code>
-angular.module('MyModule')
-.controller('MyController', ['$scope', 'MyService', myController]);
-
-function myController($scope, myService) {
-$scope.heading = myService.doSomething();
-}
+    <pre><code>
+angular.module('MyModule').controller('MyController', function ($scope, myService) {
+    $scope.heading = myService.doSomething();
+});
     </code></pre>
 
     <pre><code>
@@ -54,47 +52,36 @@ $scope.heading = myService.doSomething();
 </section>
 
 <section>
-    <h2>Factories</h2>
+    <h2>Factory</h2>
+
     <ul>
         <li>Can return anything, but typically an <code class="snippet">Object Literal</code> or <code class="snippet">Function</code></li>
     </ul>
 
+
+    <pre><code>
+angular.module('MyModule').factory('MyService', function () {
+    var bar = 'bar';
+
+    return {
+        doSomething: function() {
+            return 'foo' + bar;
+        }
+    }
+});
+    </code></pre>
+
+    <pre><code>
+angular.module('MyModule').controller('MyController', function ($scope, myService) {
+    $scope.heading = myService.doSomething();
+});
+    </code></pre>
+
     <aside class="notes">
         <ul>
             <li>Take advantage of closures and can create privately scope variables</li>
-            <li>When naming Factories, recommend still use the word 'service' unless they are truly a Factory for creating other objects</li>
         </ul>
     </aside>
-</section>
-
-<section>
-    <h2>Factory Syntax</h2>
-
-    <pre><code>
-angular.module('MyModule')
-.factory('MyService', [myService]);
-
-function myService() {
-var bar = 'bar';
-
-return {
-doSomething: doSomething
-}
-
-function doSomething() {
-return 'foo' + bar;
-}
-}
-    </code></pre>
-
-                            <pre><code>
-angular.module('MyModule')
-.controller('MyController', ['$scope', 'MyService', myController]);
-
-function myController($scope, myService) {
-$scope.heading = myService.doSomething();
-}
-    </code></pre>
 </section>
 
 <section>
@@ -114,34 +101,36 @@ $scope.heading = myService.doSomething();
     <h2>Provider Syntax</h2>
 
     <pre><code>
-angular.module('MyModule')
-.provider('MyService', function() {
-var bar = 'bar';
-
-return {
-setBar: function(newBar) { bar = newBar; },
-$get: function() {
-return {
-doSomething: function() { return 'foo' + bar; }
-};
-}
-};
+angular.module('MyModule').provider('MyService', function() {
+    var bar = 'bar';
+    return {
+        setBar: function(newBar) { bar = newBar; },
+        $get: function() {
+            return {
+                doSomething: function() { return 'foo' + bar; }
+            };
+        }
+    };
 });
     </code></pre>
 
-                            <pre><code>
-angular.module('MyModule')
-.config(function(MyServiceProvider) {
-MyServiceProvider.setBar('baz');
-})
-.controller('MyController', function($scope, MyService) {
-$scope.heading = MyService.doSomething();
+    <pre><code>
+angular.module('MyModule').config(function(MyServiceProvider) {
+    MyServiceProvider.setBar('foo');
+}).controller('MyController', function($scope, MyService) {
+    $scope.heading = MyService.doSomething();
 });
+    </code></pre>
+
+
+    <pre><code>
+&lt;h1&gt;{{heading}}&lt;/h1&gt; &lt;!-- &lt;h1&gt;foofoo&lt;/h1&gt;--&gt;
     </code></pre>
 
     <aside class="notes">
         <ul>
-            <li>Service objects are just constructors that only get invoked once</li>
+            <li>.config is called when the app starts</li>
+            <li>.config is a way to customize services before runtime</li>
         </ul>
     </aside>
 </section>
