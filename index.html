@@ -26,6 +26,8 @@
 		<!-- Custom Fonts -->
 		<link rel="stylesheet"
 						href="css/font-awesome.min.css">
+		<link rel="stylesheet"
+						href="lib/css/magnific-popup.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
 						rel="stylesheet"
 						type="text/css">
@@ -72,7 +74,8 @@
 							<a href="http://julienrenaux.fr/">Blog</a>
 						</li>
 						<li class="page-scroll">
-							<a target="_blank" href="http://www.toptal.com/resume/julien-renaux#select-just-supreme-hackers">Hire me!</a>
+							<a target="_blank"
+											href="http://www.toptal.com/resume/julien-renaux#select-just-supreme-hackers">Hire me!</a>
 						</li>
 						<li>
 							<a target="_blank"
@@ -130,6 +133,7 @@
 									<th>Location</th>
 									<th>Event</th>
 									<th>Tags</th>
+									<th>Photos</th>
 								</tr>
 							</thead>
 							<tbody id="tableBody">
@@ -141,6 +145,7 @@
 		</section>
 		<!-- jQuery -->
 		<script src="lib/js/jquery.js"></script>
+		<script src="lib/js/jquery.magnific-popup.min.js"></script>
 		<script src="lib/js/moment.js"></script>
 		<script src="lib/js/bootstrap.min.js"></script>
 
@@ -166,11 +171,36 @@
 					eventName: 'GDG Angular México',
 					eventLink: 'http://www.meetup.com/angularmexico/events/227866069/',
 					link: './2016/cross-platform-apps-with-ionic-framework',
-					tags: ['angularjs', 'ionic', 'crossPlatform', 'javascript', 'es2015', 'webpack', 'typescript']
+					tags: ['angularjs', 'ionic', 'crossPlatform', 'javascript', 'es2015', 'webpack', 'typescript'],
+					photos: [{
+						src: 'photos/2016-01-16/angularmexico-01.jpg'
+					}, {
+						src: 'photos/2016-01-16/angularmexico-02.jpg'
+					}, {
+						src: 'photos/2016-01-16/angularmexico-03.jpg'
+					}, {
+						src: 'photos/2016-01-16/angularmexico-04.jpg'
+					}]
 				}, {
 					name: 'AngularJS introduction',
 					location: 'Barcelona, Spain',
 					date: '2016-04-06 10:00:00',
+					eventName: '',
+					eventLink: null,
+					link: './2016/angularJS-introduction',
+					tags: ['angularjs', 'javascript']
+				}, {
+					name: 'AngularJS architectures',
+					location: 'Barcelona, Spain',
+					date: '2016-04-06 11:00:00',
+					eventName: '',
+					eventLink: null,
+					link: './2016/angularJS-introduction',
+					tags: ['angularjs', 'javascript']
+				}, {
+					name: 'AngularJS Performance',
+					location: 'Barcelona, Spain',
+					date: '2016-04-06 12:00:00',
 					eventName: '',
 					eventLink: null,
 					link: './2016/angularJS-introduction',
@@ -181,6 +211,14 @@
 					date: '2016-04-06 19:00:00',
 					eventName: 'AngularBeers',
 					eventLink: 'http://www.meetup.com/AngularJS-Beers/events/229395591/',
+					link: './2016/angular2-router-vs-ui-router',
+					tags: ['angularjs', 'architecture', 'crossPlatform', 'performance', 'javascript', 'es2015', 'webpack', 'typescript']
+				}, {
+					name: 'Angular2 Router vs UiRouter',
+					location: 'Toulouse, France',
+					date: '2016-05-02 19:00:00',
+					eventName: 'AngularJS Toulouse',
+					eventLink: 'http://www.meetup.com/Toulouse-AngularJS-Meetup/events/229691258/',
 					link: './2016/angular2-router-vs-ui-router',
 					tags: ['angularjs', 'architecture', 'crossPlatform', 'performance', 'javascript', 'es2015', 'webpack', 'typescript']
 				}];
@@ -200,17 +238,33 @@
 						'<td><a href="' + talk.link + '">' + talk.name + '</a></td>',
 						'<td>' + talk.location + '</td>'
 					];
+
 					if (!talk.eventLink) {
 						row.push('<td>' + talk.eventName + '</td>');
 					} else {
 						row.push('<td><a href="' + talk.eventLink + '" target="_blank">' + talk.eventName + '</a></td>');
 					}
 					row.push('<td>' + talkTags.join(', ') + '</td>');
-					row.push('</tr>');
-					$('#tableBody').append(row.join(''))
-				});
 
-				//
+					if (talk.photos) {
+						row.push('<td class="text-center"><button class="btn btn-xs btn-primary img-slideshow"><i class="fa fa-photo"></i></button></td>');
+					} else {
+						row.push('<td></td>');
+					}
+
+					row.push('</tr>');
+					var $row = $(row.join(''));
+
+					$row.find('button.img-slideshow').magnificPopup({
+						items: talk.photos,
+						gallery: {
+							enabled: true
+						},
+						type: 'image'
+					});
+
+					$('#tableBody').append($row);
+				});
 			}(jQuery));
 		</script>
 
