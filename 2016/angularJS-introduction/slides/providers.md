@@ -1,28 +1,12 @@
 <section>
-    <h1>Service Factory and Provider</h1>
-</section>
-
-<section>
-    <h2>Services and Factories</h2>
-    <ul>
-        <li>Organize and share code across your app</li>
-        <li>Services are invoked with <code class="snippet">new</code>, thus all data/logic should be bound to <code class="snippet">this</code></li>
-        <li>Factories are <em>not</em> invoked with <code class="snippet">new</code> and can return anything (e.g., Functions, Objects, Arrays, simple values)</li>
-        <li>Service or Factory are <em>singleton</em></li>
-    </ul>
-
-    <aside class="notes">
-        <ul>
-            <li>The fact that they are singletons is very important and powerful. This means that regardless of where a Service or Factory object is used, it's always the same object. This enables us to share data across Controllers and maintain state with our application.</li>
-        </ul>
-    </aside>
+    <h1>Service vs Factory vs Provider</h1>
 </section>
 
 <section>
     <h2>Service</h2>
 
     <ul>
-        <li>Services are invoked with <code class="snippet">new</code>, thus all data/logic should be bound to <code class="snippet">this</code></li>
+        <li>Services are invoked with <code class="snippet">new</code> (<code class="snippet">Object.create</code>), thus all data/logic should be bound to <code class="snippet">this</code></li>
     </ul>
 
     <pre><code>
@@ -46,7 +30,9 @@ angular.module('MyModule').controller('MyController', function ($scope, myServic
 
     <aside class="notes">
         <ul>
-            <li>Service objects are just constructors that only get invoked once</li>
+            <li>.service() is a method on our module that takes a name and a function</li>
+            <li>We can inject it into controllers, directives and filters</li>
+            <li>A service is a constructor method. it is instanciated using New or Object.create()</li>
         </ul>
     </aside>
 </section>
@@ -79,9 +65,36 @@ angular.module('MyModule').controller('MyController', function ($scope, myServic
 
     <aside class="notes">
         <ul>
-            <li>Take advantage of closures and can create privately scope variables</li>
+            <li>.factory() is a method on our module and it also takes a name and a function</li>
+            <li>just a function that gets called, which is why we have to return an object explicitly</li>
         </ul>
     </aside>
+</section>
+
+<section>
+    <h2>Service or Factory?</h2>
+    <ul>
+        <li>Both <code class="snippet">Singleton</code></li>
+        <li>Same purpose, same capabilities</li>
+        <li>Services easy to use with ES6 classes</li>
+    </ul>
+
+    <pre><code>
+class MyService {
+  sayHello() {
+    console.log('hello');
+  }
+}
+app.service('MyService', MyService);
+    </code></pre>
+
+<aside class="notes">
+    <ul>
+        <li>Regardless of where a Service or Factory is used, it's always the same reference. This enables us to share data across the application.</li>
+        <li>Purpose: Organize and share code across your app</li>
+    </ul>
+</aside>
+
 </section>
 
 <section>

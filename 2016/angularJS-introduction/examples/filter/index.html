@@ -1,0 +1,19 @@
+<script src="../../../../js/angular.1.5.min.js"></script>
+
+<div ng-app="test"
+    ng-controller="MyController">
+    <h1>{{heading}}</h1>
+    <h1>{{heading | capitalize}}</h1>
+</div>
+
+<script>
+    angular.module('test', [])
+        .filter('capitalize', function() {
+    return function capitalizer(text) {
+        return text.charAt(0).toUpperCase() + text.slice(1);
+    };
+})
+.controller('MyController', function($scope) {
+    $scope.heading = 'foobar';
+});
+</script>

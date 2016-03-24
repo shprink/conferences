@@ -5,7 +5,7 @@
 <section>
     <h2>Filters</h2>
     <ul>
-        <li>Provide a means of processing data and returning a transformed version of it (e.g., filtered list, specific date format)</li>
+        <li>Provide a means of processing data and returning a transformed version of it</li>
         <li>Filters can be used in templates via the <code class="snippet">|</code> character</li>
         <pre><code>
 {{ object_expression | filterName : expression : comparator}}
@@ -14,7 +14,7 @@
         <pre><code>
 $filter('filterName')(object, expression, comparator)
         </code></pre>
-        <li>Filters do not alter the underlying data</li>
+        <li>Filters do not mutate objects</li>
     </ul>
 
     <aside class="notes">
@@ -36,7 +36,6 @@ $filter('filterName')(object, expression, comparator)
         <li><code class="snippet">date</code> converts a date to a specified format and timezone</li>
         <li><code class="snippet">limitTo</code> limits the elements returned in the collection to the specified number</li>
         <li><code class="snippet">orderBy</code> orders the elements returned in the collection based on the predicate</li>
-        <li><code class="snippet">linky</code> finds links in a snippet of text and converts them to actual Anchor links</li>
     </ul>
 
     <aside class="notes">
@@ -50,8 +49,8 @@ $filter('filterName')(object, expression, comparator)
     <h2>Custom Filters - Usage</h2>
 
     <ul>
-        <li>Use the <code class="snippet">filter</code> function and return a function used to filter the object</li>
-        <li>Angular will pass the value or collection to be run through the filter function</li>
+        <li>A <code class="snippet">filter</code> returns a function used to filter</li>
+        <li>First argument is the value to run through the filter function</li>
                                     <pre><code>
 angular.module('MyModule').filter('capitalize', function() {
 	return function capitalizer(text) {
@@ -62,10 +61,13 @@ angular.module('MyModule').filter('capitalize', function() {
 	$scope.heading = 'foobar';
 });
         </code></pre>
-        <pre><code>
+    <pre><code>
+&lt;h1&gt;{{heading}}&lt;/h1&gt; &lt;!-- &lt;h1&gt;foobar&lt;/h1&gt;--&gt;
 &lt;h1&gt;{{heading | capitalize}}&lt;/h1&gt; &lt;!-- &lt;h1&gt;Foobar&lt;/h1&gt;--&gt;
     </code></pre>
     </ul>
+    
+    <iframe style="background-color:white;" src="examples/filter/index.html"></iframe>
 
 
     <aside class="notes">
