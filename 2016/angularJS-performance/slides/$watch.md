@@ -110,3 +110,21 @@ $scope.$watchCollection('watchExpression', function(newVal, oldVal){
     </code></pre>
     
 </section>
+<section>
+    <h2>Do not forget to unwatch</h2>
+    
+    <ul>
+        <li><code class="snippet">$scope</code> destroy will automatically unwatch</li>
+        <li>You can unwatch manually </li>
+    </ul>
+    
+    <pre class="fragment"><code data-trim class="js">
+var unWatch = $scope.$watch('watchExpression', function(newVal, oldVal){
+    if(newVal){
+        // watchExpression has changed.
+        unWatch();
+    }
+});
+    </code></pre>
+    
+</section>
