@@ -26,6 +26,9 @@
         <a href="http://app.trendingdevs.com/" target="_blank">app.trendingdevs.com</a> - 47k+ Github users ranked
     </li>
     <li class="fragment">
+        <a href="http://www.meetup.com/Toulouse-AngularJS-Meetup/" target="_blank">AngularJS Toulouse meetups</a>
+    </li>
+    <li class="fragment">
         <a href="https://github.com/shprink/wordpress-hybrid-client" target="_blank">wordpress-hybrid-client</a> - 400+ stars - 100+ users on Gitter
     </li>
     <li class="fragment">
