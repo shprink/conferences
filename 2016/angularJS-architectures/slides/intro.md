@@ -4,9 +4,10 @@
 
 <section>
     <ul>
-        <li>Several archictures possible</li>
+        <li>Endless possible archictures</li>
         <li>Some are scalable</li>
         <li>Some makes you more productive</li>
         <li>Some allows you to work in a team</li>
+        <li>Some allow you to create cross platform apps</li>
     </ul>    
 </section>

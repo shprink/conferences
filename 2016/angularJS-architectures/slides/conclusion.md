@@ -7,9 +7,10 @@
     <h2>Conclusion</h2>
     
     <ul>
-        <li>Important to learn about the <code class="snippet">$digest loop</code></li>
-        <li>Check <code class="snippet">$$watchers</code> count as often as you can</li>
-        <li>Do not forget to turn development tools off (Logs and debug)</li>
+        <li>Use Folders-by-Feature structure</li>
+        <li>Use ES2015 Classes to facilitate inheritance</li>
+        <li>Use ES2015 Modules to create reusable piece of code</li>
+        <li>Use a module bundler</li>
     </ul>
     
 </section>

@@ -26,10 +26,10 @@
         <a href="http://app.trendingdevs.com/" target="_blank">app.trendingdevs.com</a> - 47k+ Github users ranked
     </li>
     <li class="fragment">
-        <a href="https://github.com/shprink/wordpress-hybrid-client" target="_blank">wordpress-hybrid-client</a> - 380+ stars - 100+ users on Gitter
+        <a href="https://github.com/shprink/wordpress-hybrid-client" target="_blank">wordpress-hybrid-client</a> - 400+ stars - 100+ users on Gitter
     </li>
     <li class="fragment">
-        <a href="https://github.com/shprink/ionic-native-transitions" target="_blank">ionic-native-transitions</a> - 310+ stars
+        <a href="https://github.com/shprink/ionic-native-transitions" target="_blank">ionic-native-transitions</a> - 325+ stars
     </li>
     </ul>
     <aside class="notes">
