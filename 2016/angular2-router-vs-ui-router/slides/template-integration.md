@@ -23,9 +23,7 @@
 // Angular2 Router
 import {RouterOutlet} from 'angular2/router';
 @Component({
-    selector: "app"
-})
-@View({
+    selector: "app",
     directives: [RouterOutlet]
     template: '<router-outlet></router-outlet>'
 })
@@ -40,6 +38,15 @@ import {RouterOutlet} from 'angular2/router';
 </section>
 
 <section>
+    <img src="../../img/meme/go-deeper.jpg" style="width: 18em;"/>
+     <aside class="notes">
+        <ul>
+            <li>We can now go deeper and nest our views</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
     <h2>Nested views</h2>
     <div class="grid">
         <div class="unit half fragment">
@@ -49,23 +56,25 @@ import {RouterOutlet} from 'angular2/router';
 </code></pre>
 
 <pre><code class="js" data-trim>
-$stateProvider.state('app', {
+$stateProvider.state('products', {
     abstract: true,
-    template: \`
-        <ui-view name="header"></ui-view>
-        <ui-view name="content"></ui-view>
-    \`
+    template: '&lt;ui-view name="products"/&gt;'
 })
-.state('app.profile', {
-    url: '/profile',
+.state('products.list', {
+    url: '/products',
     views: {
-        'header': {
-            templateUrl: "./profileHeader.html",
-            controller: "ProfileHeaderCtlr"
-        },
-        'content': {
-            templateUrl: "./profile.html",
-            controller: "ProfileCtlr"
+        'products': {
+            templateUrl: "./ProductList.html",
+            controller: "ProductListCtlr"
+        }
+    }
+});
+.state('products.item', {
+    url: '/products/:id',
+    views: {
+        'products': {
+            templateUrl: "./Product.html",
+             controller: "ProductCtlr"
         }
     }
 });
@@ -74,16 +83,19 @@ $stateProvider.state('app', {
         <div class="unit half fragment" >
 <pre><code class="typescript" data-trim>
 // Angular2 Router
-@Component({selector: "app"})
-@View({template: '&lt;router-outlet/&gt;'})
+@Component({
+    selector: "app"
+    template: '&lt;router-outlet/&gt;'
+})
 @RouteConfig([
-    new Route({ path: '/...', name: 'Products',
+    new Route({ path: 'products/...',
+        name: 'Products',
         component: Products})
 ])
 class App {}
-
-@Component({})
-@View({template: 'products: &lt;router-outlet/&gt;'})
+@Component({
+    template: 'products: &lt;router-outlet/&gt;'
+})
 @RouteConfig([{
         path: '/', name: 'all',
         component: ProductList
