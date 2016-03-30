@@ -11,8 +11,11 @@
         <li>Do we have access to similar directives (ui-view & ui-sref)</li>
     </ul>
     
-    <ul>
-        <li>HTML5 mode => No hash # navigation and requires server side rewrites</li>
-        <li>State => Association of a URL, a name, a template and a controller</li>
-    </ul>
+    <aside class="notes">
+        <ul>
+            <li>HTML5 mode => No hash # navigation and requires server side rewrites</li>
+            <li>State => Association of a URL, a name, a template and a controller</li>
+        </ul>
+    </aside>
+    
 </section>
