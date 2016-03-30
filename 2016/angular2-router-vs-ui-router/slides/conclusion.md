@@ -16,7 +16,7 @@
                 <li><code class="snippet">$stateParams.id</code> and <code class="snippet">RouteParams.get('id')</code></li>
             </ul>
         </li>
-        <li>Similar directives and purpose:
+        <li>Similar directives:
             <ul>
                 <li><code class="snippet">ui-view</code> and <code class="snippet">router-outlet</code></li>
                 <li><code class="snippet">ui-sref</code> and <code class="snippet">routerLink</code></li>

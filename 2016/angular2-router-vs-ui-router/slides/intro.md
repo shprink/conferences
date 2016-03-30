@@ -4,10 +4,15 @@
 
 <section>
     <ul>
-        <li>Endless possible archictures</li>
-        <li>Some are scalable</li>
-        <li>Some makes you more productive</li>
-        <li>Some allows you to work in a team</li>
-        <li>Some allow you to create cross platform apps</li>
-    </ul>    
+        <li>What are the differences?</li>
+        <li>Can we still use HTML5 mode?</li>
+        <li>Is the concept of <code class="snippet">state</code> kept?</li>
+        <li>Do we have access to similar services ($state & $stateParams)</li>
+        <li>Do we have access to similar directives (ui-view & ui-sref)</li>
+    </ul>
+    
+    <ul>
+        <li>HTML5 mode => No hash # navigation and requires server side rewrites</li>
+        <li>State => Association of a URL, a name, a template and a controller</li>
+    </ul>
 </section>
