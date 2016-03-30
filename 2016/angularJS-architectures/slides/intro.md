@@ -4,7 +4,7 @@
 
 <section>
     <ul>
-        <li>Endless possible archictures</li>
+        <li>Endless possible architectures</li>
         <li>Some are scalable</li>
         <li>Some makes you more productive</li>
         <li>Some allows you to work in a team</li>

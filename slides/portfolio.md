@@ -60,8 +60,8 @@
     <ul>
         <li>D3.js data visualization</li>
         <li>One code base, two UI libs: Angular Bootstrap & Ionic</li>
+        <li>Extensive usage of Interfaces and Inheritance</li>
         <li>Cross platform: Web and iOS</li>
         <li>Tools: Angular Bootstrap, Ionic, ES2015, Webpack</li>
     </ul>
-    <p>Starter kit: https://github.com/shprink/angular1.4-ES6-material-webpack-boilerplate</p>
 </section>
