@@ -51,12 +51,10 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Angular2 Router vs UiRouter</h1>
+					<h1>Angular2 Router vs Angular1 UI-Router</h1>
 					<section data-markdown="../../slides/footer.md"></section>
-					<aside class="notes">
-
-					</aside>
 				</section>
+		        <section data-markdown="slides/celebration.md"></section>
 		        <section data-markdown="../../slides/about-me.md"></section>
 				<section>
 					<section>
@@ -64,24 +62,33 @@
 					</section>
 					<section data-markdown>
 						<script type="text/template">
-                            1. Introduction
-                            1. UI Router
+                            1. Angular1 UI Router
                             1. Angular2 Router
                             1. Location strategies
                             1. Define Routes
-                            1. Template integration
+                            1. View placeholder
                             1. Navigation
                             1. Passing data
                             1. Conclusion
+                            
+                            <aside class="notes">
+                                Today we are going to talk about the differences between Angular1 UI Router and Angular2 Router
+                                .. and we are going to answer to some questions you might have:
+                                <ul>
+                                    <li>Can we still use HTML5 mode?</li>
+                                    <li>Is the concept of <code class="snippet">state</code> kept?</li>
+                                    <li>Do we have access to similar services ($state & $stateParams)</li>
+                                    <li>Do we have access to similar directives (ui-view & ui-sref)</li>
+                                </ul>
+                            </aside>
 						</script>
 					</section>
 				</section>
-		        <section data-markdown="slides/intro.md"></section>
 		        <section data-markdown="slides/ui-router.md"></section>
 		        <section data-markdown="slides/angular2-router.md"></section>
 		        <section data-markdown="slides/location-strategies.md"></section>
 		        <section data-markdown="slides/routes.md"></section>
-		        <section data-markdown="slides/template-integration.md"></section>
+		        <section data-markdown="slides/views.md"></section>
 		        <section data-markdown="slides/navigation.md"></section>
 		        <section data-markdown="slides/data.md"></section>
 		        <section data-markdown="slides/conclusion.md"></section>
@@ -91,76 +98,6 @@
                         <hr/>
 					<section data-markdown="../../slides/footer.md"></section>
 				</section>
-        <section>
-        </section>
-
-        <section>
-
-        <section>
-          <section>
-            <h2>Watchers and Binding</h2>
-            <p>Scopes responsible for binding and <br> communication between components</p>
-            <ul>
-              <li>
-                Dynamic behavior always result of watchers firing
-                <pre><code>
-$scope.$watch('foo', function(value, old, scope){
-  //...
-});
-                </code></pre>
-                <pre><code ng-non-bindable>
-&lt;span&gt;{{foo}}&lt;/span&gt;
-                </code></pre>
-              </li>
-            </ul>
-          </section>
-
-          <section>
-            <h2>Watchers and Binding</h2>
-            <p>Not event based</p>
-            <ul>
-              <li>Dirty Tracking</li>
-              <ul>
-                <li>Evaluate Watchers, execute handlers, until watchers don't change anymore</li>
-                <li>Until next $digest cycle (triggered by external event)</li>
-              </ul>
-            </ul>
-          </section>
-
-          <section>
-            <h2>Watchers and Binding</h2>
-            <img src="img/concepts-runtime.png" alt="Digest Cycle" />
-          </section>
-
-          <section>
-            <h2>Watchers and Binding</h2>
-            <p>Triggering $digest cycle from external events</p>
-            <pre><code>
-$.getJSON(url).success(function (data) {
-  $scope.$apply(function (scope) {
-    scope.result = data;
-  };
-})
-            </code></pre>
-            <p>Not necessary for angular-triggered events</p>
-          </section>
-        </section>
-
-        <section>
-          <h2>Events</h2>
-            <pre><code>
-// Sending upwards
-$scope.$emit('eventName', payload);
-
-// Sending downwards
-$scope.$broadcast('eventName', payload);
-
-// Receiving
-$scope.$on('eventName', function handler(event, payload){
-  // ...
-})
-            </code></pre>
-        </section>
 			</div>
 
 		</div>

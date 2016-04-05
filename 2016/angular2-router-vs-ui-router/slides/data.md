@@ -1,11 +1,16 @@
 <section>
     <h1>Data</h1>
+    <aside class="notes">
+       How to transfer data from one state to another?
+    </aside>
 </section>
 
 <section>
     <h2>URL data</h2>
     <ul>
-        <li>How to get the <code class="snippet">id</code> from <code class="snippet">/products/:id</code>?</li>
+        <li>How to get the <code class="snippet">id</code> from <code class="snippet">#/products/:id</code>?</li>
+        <li><code class="snippet">$stateParams</code> service for UI-Router</li>
+        <li><code class="snippet">RouteParams</code> service for Angular2 Router</li>
     </ul>
     <div class="grid">
         <div class="unit half fragment">
@@ -32,13 +37,17 @@ class {
     </div>
      <aside class="notes">
         <ul>
-            <li></li>
         </ul>
     </aside>
 </section>
 
 <section>
     <h2>Static data</h2>
+    <ul>
+        <li>How to display a different theme per page?</li>
+        <li><code class="snippet">$state.current.data</code> for UI-Router</li>
+        <li><code class="snippet">RouteData</code> service for Angular2 Router</li>
+    </ul>
     <div class="grid">
         <div class="unit half fragment">
 <pre><code class="js" data-trim>
@@ -108,7 +117,7 @@ app.config(function($locationProvider){
 </code></pre>
 <pre><code class="html" data-trim>
 <div ng-repeat="user in users">
-    <a ui-sref="home({user: user})">
+    <a ui-sref="user({user: user})">
         Go to {{user.name}}
     </a>
 </div>
@@ -128,7 +137,8 @@ app.controller(function($state){
     </div>
      <aside class="notes">
         <ul>
-            <li>Using "params" with UI-router you could pass an entire object to another state</li>
+            <li>Using "params" with UI-router you could pass an entire object to another state. For instance here we are trying to pass the user object to the user page so you will not have to fetch it server side.</li>
+            <li>What about on Angular2? Well it does not exist!</li>
         </ul>
     </aside>
 </section>

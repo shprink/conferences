@@ -69,7 +69,7 @@ class {
     </div>
      <aside class="notes">
         <ul>
-            <li></li>
+            <li>$state.go and Router.navigate are equivalent, they allow you to navigate from one page to another</li>
         </ul>
     </aside>
 </section>

@@ -20,6 +20,7 @@ $scope.$watch('watchExpression', function(newVal, oldVal){
     </code></pre>
     
 </section>
+
 <section>
     <h2>There are 4 types of $watch</h2>
     

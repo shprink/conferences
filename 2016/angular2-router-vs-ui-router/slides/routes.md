@@ -5,23 +5,41 @@
 
 <section>
     <h2>Routes</h2>
-    <ul>
-        <li>Known as <code class="snippet">State</code> with UI-Router</li>
-        <li>Known as <code class="snippet">Route</code> with Angular2 Router</li>
-        <li>A route is a <code class="snippet">name</code>, a <code class="snippet">url</code> and a <code class="snippet">component</code></li>
-    </ul>
+    
+        <div class="grid">
+            <div class="unit half fragment">
+                <ul>
+                    <li>A <code class="snippet">State</code> in UI-Router</li>
+                    <li>A <code class="snippet">State</code> is the association of a <code class="snippet">name</code>, a <code class="snippet">url</code>, a <code class="snippet">template</code> and a <code class="snippet">controller</code></li>
+                </ul>
+            </div>
+            <div class="unit half fragment" >
+                <ul>
+                    <li>A <code class="snippet">Route</code> in Angular2 Router</li>
+                    <li>A <code class="snippet">Route</code> is the association of a <code class="snippet">name</code>, a <code class="snippet">path</code> and a <code class="snippet">component</code></li>
+                </ul>
+
+            </div>
+        </div>
+     <aside class="notes">
+        <ul>
+            <li>A route is known as a <code class="snippet">State</code> in UI-Router</li>
+        </ul>
+        <ul>
+            <li>Known as a <code class="snippet">Route</code> in Angular2 Router</li>
+        </ul>
+    </aside>
 </section>
 
 <section>
-    <h2>Declare a Route</h2>
+    <h2>Declaring a Route</h2>
     
     <div class="grid">
         <div class="unit half fragment">
 <pre><code class="js" data-trim>
 // AngularJS 1.x with UI-Router
-app.config(function($locationProvider){
-    $stateProvider
-    .state('home', {
+app.config(function($stateProvider){
+    $stateProvider.state('home', {
         url: '/',
         templateUrl: 'home.html',
         controller: 'HomeCtrl'
@@ -38,9 +56,7 @@ import {
 } from 'angular2/router';
 import {MyComponentHome} from './myComponents';
 
-@Component({
-    selector: "app"
-})
+@Component({})
 @RouteConfig([
     new Route({ 
         path: '/', 
@@ -54,7 +70,8 @@ export class App {...}
     </div>
      <aside class="notes">
         <ul>
-            <li></li>
+            <li>We can create a state with $stateProvider in a config phase</li>
+            <li>We can register Routes on components using RouteConfig annotation</li>
         </ul>
     </aside>
 </section>

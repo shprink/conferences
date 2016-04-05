@@ -1,0 +1,14 @@
+<script src="../../../../js/angular.1.5.min.js"></script>
+
+<div ng-app="demo" ng-controller="testCtrl">
+    <input type="text" ng-model="user.firstname">
+    <p>Welcome, {{user.firstname}}</p>
+</div>
+
+<script>
+    angular.module('demo', []).controller('testCtrl', function($scope) {
+        $scope.user = {
+            firstname: 'Julien'
+        }
+    });
+</script>

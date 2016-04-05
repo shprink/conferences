@@ -12,19 +12,24 @@
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
 }
+
 .back-button:before {
     content: "\f053";
     margin-right: 5px;
 }
+
 .reveal .slides section .fragment.strikeout {
     opacity: 1;
 }
+
 .reveal .slides section .fragment.strikeout.visible {
     text-decoration: line-through;
 }
+
 .reveal button {
     font-size: 100%;
 }
+
 .reveal .arrow {
     position: absolute;
     text-align: left;
@@ -33,25 +38,32 @@
     color: #FF5E99;
     font-weight: bold;
 }
+
 .references, .references li {
     font-size: 0.70em;
 }
+
 .reveal .progress span {
     background-color: #9E3B3B;
 }
+
 .reveal pre code {
     font-family: Consolas, Inconsolata, monospace;
 }
+
 input {
     font-size: inherit;
     padding: 0.2em;
 }
+
 .reveal h2 {
     margin-bottom: 1em;
 }
+
 .reveal li {
     line-height: 1.5em;
 }
+
 .reveal .live-demo {
     background-color: #EAEFF2;
     width: 90%;
@@ -59,22 +71,33 @@ input {
     padding: 0.4em;
     box-sizing: border-box;
 }
+
 .reveal .live-demo p {
     margin-top: 0.2em;
     margin-bottom: 0;
 }
+
 .reveal blockquote {
     width: 90%;
 }
+
 .green {
     color: #7DFB7D;
 }
+
 .red {
     color: red;
 }
+
 code.snippet {
     background-color: gray;
     font-size: smaller;
     padding: 5px 10px;
     border-radius: 15px;
+}
+
+.flex-center-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
