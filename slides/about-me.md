@@ -40,7 +40,7 @@
     </ul>
     <aside class="notes">
          <ul>
-            <li>This is my blog, I talk a lot about the Web, Angular and Ionic</li>
+            <li>This is my blog, I talk a lot about the Web, Angular and Ionic apps and large scale architecture</li>
             <li>Creator or trandingdevs.com that ranks developers from around the world</li>
             <li>Creator of AngularJS Meetups in my hometown</li>
             <li>Creator of several open source projects such as:

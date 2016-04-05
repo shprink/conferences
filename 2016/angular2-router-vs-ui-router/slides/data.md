@@ -100,8 +100,8 @@ class {
 <section>
     <h2>Dynamic data</h2>
     <div class="grid">
-        <div class="unit half fragment">
-<pre><code class="js" data-trim>
+        <div class="unit half ">
+<pre class="fragment"><code class="js" data-trim>
 // AngularJS 1.x with UI-Router
 app.config(function($locationProvider){
     $stateProvider
@@ -115,6 +115,7 @@ app.config(function($locationProvider){
     })
 });
 </code></pre>
+<div class="fragment">
 <pre><code class="html" data-trim>
 <div ng-repeat="user in users">
     <a ui-sref="user({user: user})">
@@ -122,14 +123,13 @@ app.config(function($locationProvider){
     </a>
 </div>
 </code></pre>
+or
 <pre><code class="js" data-trim>
 app.controller(function($state){
-    // Got the user var from async operation
-    $state.go('user', {
-        user: user
-    })
+    $state.go('user', {user: user});
 });
 </code></pre>
+</div>
         </div>
         <div class="unit half fragment" >
             <img src="../../img/meme/does-not-exist.jpg"/>
@@ -137,7 +137,9 @@ app.controller(function($state){
     </div>
      <aside class="notes">
         <ul>
-            <li>Using "params" with UI-router you could pass an entire object to another state. For instance here we are trying to pass the user object to the user page so you will not have to fetch it server side.</li>
+            <li>Using "params" property in a state definition we could pass an entire object to another state. For instance here we are in a user list page.</li>
+            <li>We want when we click on a specific user to pass the user object to the user page</li>
+            <li>Why? So we do not have to fetch it server side.</li>
             <li>What about on Angular2? Well it does not exist!</li>
         </ul>
     </aside>

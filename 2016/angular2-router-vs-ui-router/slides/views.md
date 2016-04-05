@@ -35,7 +35,12 @@ import {RouterOutlet} from 'angular2/router';
     </div>
      <aside class="notes">
         <ul>
-            <li>A UI-VIEW or a routerOutlet is a placeholder that Angular dynamically fills based on the application's route.</li>
+            <li>A view placeholder is a placeholder that Angular dynamically fills based on the application's route.</li>
+            <li>It can be nested</li>
+        </ul>
+        <ul>
+            <li>Use ui-view directive for the ui-router</li>
+            <li>and RouterOutlet for Angular2</li>
         </ul>
     </aside>
 </section>
@@ -44,7 +49,20 @@ import {RouterOutlet} from 'angular2/router';
     <img src="../../img/meme/go-deeper.jpg" style="width: 18em;"/>
      <aside class="notes">
         <ul>
-            <li>We can now go deeper and nest our views</li>
+            <li>Let's see how to go deeper with nested views</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2>Nested views</h2>
+    <img src="./img/nested-views.jpg" />
+     <aside class="notes">
+        <ul>
+            <li>How to create that?</li>
+            <li>index.html contains either the root ui-view or the App routerOutlet</li>
+            <li>When we are browsing the Product page we want only a part of the ui updated, not the menu</li>
+            <li>To do this we must create a named ui-view or routerOutlet in the Products component</li>
         </ul>
     </aside>
 </section>
@@ -54,14 +72,15 @@ import {RouterOutlet} from 'angular2/router';
     <div class="grid">
         <div class="unit half fragment">
 <pre><code class="html" data-trim>
-<!-- AngularJS 1.x with UI-Router -->
+<!-- AngularJS 1.x UI-Router - index.html -->
 <ui-view></ui-view>
 </code></pre>
 
 <pre><code class="js" data-trim>
 $stateProvider.state('products', {
     abstract: true,
-    template: '&lt;ui-view name="products"/&gt;'
+    template: '<Menu></Menu>
+               &lt;ui-view name="products"/&gt;'
 })
 .state('products.list', {
     url: '/products',
@@ -83,8 +102,8 @@ $stateProvider.state('products', {
 });
 </code></pre>
         </div>
-        <div class="unit half fragment" >
-<pre><code class="typescript" data-trim>
+        <div class="unit half " >
+<pre class="fragment"><code class="typescript" data-trim>
 @Component({
     selector: "app"
     template: '&lt;router-outlet/&gt;'
@@ -95,9 +114,10 @@ $stateProvider.state('products', {
         component: Products})
 ])
 class App {}
-
+</code></pre>
+<pre class="fragment"><code class="typescript" data-trim>
 @Component({
-    template: 'products: &lt;router-outlet/&gt;'
+    template: '<Menu></Menu>&lt;router-outlet/&gt;'
 })
 @RouteConfig([{
         path: '/', name: 'all',
@@ -112,25 +132,18 @@ class Products {}
     </div>
      <aside class="notes">
         <ul>
-            <li>We define an abstract products state that does not have a url. It has a named ui-view directive</li>
+            <li>We define an abstract products state that does not have a url. It has a named ui-view directive and a menu directive</li>
             <li>the two other states follow the {parent}.{name} pattern, they are called nested views</li>
-            <li>These states inject their content in the ui-view name "products" (see the views property) and not on the root one</li>
+            <li>These states inject their content in the ui-view name "products" (because within the views property)</li>
         </ul>
-    </aside>
-     <aside class="notes">
+        For Angular2
         <ul>
             <li>The App component has a routerOutlet and has one Route registered</li>
-            <li>Only one RouterOutlet per component</li>
-            <li>/... means that the App component delegates the routing to the Products component</li>
-            <li>the Products component defines it own Routes and uses RouterOutlet</li>
+            <li>We can have only one RouterOutlet per component</li>
+            <li>products/... means that the App component delegates the routing to the Products component</li>
+            <li>[NEXT]</li>
+            <li>the Products component uses its own RouterOutlet</li>
+            <li>the Products component also defines it own Routes</li>
         </ul>
-    </aside>
-</section>
-
-<section>
-    <h2>Nested views</h2>
-    <img src="./img/nested-views.jpg" />
-    <aside class="notes">
-        
     </aside>
 </section>
