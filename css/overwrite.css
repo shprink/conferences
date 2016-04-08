@@ -1,10 +1,10 @@
 .back-button {
-    color: white;
+    color: #42affa;
     text-decoration: none;
     padding: 15px;
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 30px;
+    left: 10px;
     z-index: 1;
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;

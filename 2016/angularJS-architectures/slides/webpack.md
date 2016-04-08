@@ -66,16 +66,10 @@ if (IS_DESKTOP)
 
         </div>
 
-        <aside class="notes">
+    <aside class="notes">
         1. With webpack we can create conditional imports upon the platform that we want to build on.<br/>
         2. Using Webpack's DefinePlugin you can inject any variable into your JS files.<br/>
         3. Upon those variables we can import the right content for the right platform.<br/>
         4. Setting IS_BROWSER to true will remove an entire branch of the dependency tree and build Browser only code.
-        </aside>
-     <aside class="notes">
-        <ul>
-            <li>Here we have a dependency tree. The tree root here is called an entry point. This intry point will require other dependencies that will require other dependencies and so on.</li>
-            <li>At the end you end up with a large dependency tree that compile into static assets</li>
-        </ul>
     </aside>
 </section>

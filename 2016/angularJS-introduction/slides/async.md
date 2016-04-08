@@ -8,21 +8,10 @@
 
     <ul>
         <li><code class="snippet">$q</code> is a simplified Promise library implementation that supports <code class="snippet">then</code>, <code class="snippet">catch</code>, <code class="snippet">finally</code>, and <code class="snippet">all</code> methods</li>
-        <li>Exposes both the ES6 style promise or via the deferred API</li>
+        <li>Supports ES6 syntax</li>
     </ul>
     
-
-    <pre><code>
-function asyncGreet(name) {
-    var deferred = $q.defer();
-    setTimeout(function() {
-        if (okToGreet(name)) { deferred.resolve('Hello, ' + name + '!'); }
-        else { deferred.reject('Greeting ' + name + ' is not allowed.'); }
-    }, 1000);
-    return deferred.promise;
-}
-    </code></pre>
-    <pre><code>
+    <pre><code data-trim>
 function asyncGreet(name) {
     return $q(function(resolve, reject) {
         setTimeout(function() {
@@ -31,12 +20,17 @@ function asyncGreet(name) {
         }, 1000);
     });
 }
-        </code></pre>
+    </code></pre>
+    
+    <pre><code>
+asyncGreet('Julien')
+    .then(runResolveCallback, runRejectCallback)
+    .catch(runRejectCallback)
+    .finally(runAfterCallback)
+    </code></pre>
     <aside class="notes">
         <ul>
-            <li>Note the Success and Error functions returned from an $http request are convenience wrappers for Then and Catch promise functions. Success and Error functions are automatically passed in the data, status, headers and config params, where .Then/.Catch are only passed the raw response containing the aforementioned properties.</li>
-            <li>$http responses are wrapped in and $apply call, so if we update $scope bindings based on a response, they will be automatically updated in the View</li>
-            <li>You can bind the $http Promise response to a $scope property and Angular will automatically resolve the Promise value when it is fulfilled</li>
+            <li>Promises helps write declarative programming (instead of imperative) which is more predictable</li>
         </ul>
     </aside>
 </section>
@@ -61,9 +55,7 @@ $http({
         </code></pre>
     <aside class="notes">
         <ul>
-            <li>Note the Success and Error functions returned from an $http request are convenience wrappers for Then and Catch promise functions. Success and Error functions are automatically passed in the data, status, headers and config params, where .Then/.Catch are only passed the raw response containing the aforementioned properties.</li>
-            <li>$http responses are wrapped in and $apply call, so if we update $scope bindings based on a response, they will be automatically updated in the View</li>
-            <li>You can bind the $http Promise response to a $scope property and Angular will automatically resolve the Promise value when it is fulfilled</li>
+            <li>$http responses are wrapped in and $scope.$apply call, so if we update $scope bindings based on a response, they will be automatically updated in the View</li>
         </ul>
     </aside>
 </section>

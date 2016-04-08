@@ -13,11 +13,20 @@
 <section>
     <h2>.component</h2>
     <ul>
-        <li><code class="snippet">.component</code> same purpose as <code class="snippet">.directive</code></li>
-        <li>simpler configuration than plain directives</li>
-        <li>promote sane defaults and best practices</li>
-        <li>writing component directives will make it easier to upgrade to Angular 2</li>
+        <li>Same purpose as <code class="snippet">.directive</code></li>
+        <li>Simpler configuration than plain directives</li>
+        <li>Promote sane defaults and best practices</li>
+        <li>Writing component directives will make it easier to upgrade to Angular 2</li>
     </ul>
+    
+    <aside class="notes">
+        <ul>
+            <li>Same purpose as .directive</li>
+            <li>Easier API than directives</li>      
+            <li>Enable best practices by default</li>
+            <li>Facilitates Angular2 migration</li>
+        </ul>
+    </aside>
 </section>
 
 

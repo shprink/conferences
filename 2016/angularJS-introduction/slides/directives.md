@@ -99,10 +99,9 @@
         return {
             restrict: 'E',
             template: '<p ng-show="visible">Hello World</p>',
-			link: function link(scope, elem, attrs) {}, // provides DOM access
             controller: function($scope, $interval) {
                 $scope.visible = true;
-                var timer = $interval(function() {
+                $interval(function() {
                     $scope.visible = !$scope.visible;
                 }, 500);
             }
@@ -116,6 +115,11 @@
 
     <iframe style="background-color:white;" src="examples/directive/blinkHelloWorld.html"></iframe>
 	<aside class="notes">
+        END:
+		<ul>
+			<li>As you can see the 500ms are hardcoded. What if we want it to be managable from the outside?</li>
+		</ul>
+        BONUS:
 		<ul>
 			<li>The link function is executed after the Directive is compiled and the template (if provided) is inserted into the DOM, allowing us to bind event listeners or perform DOM manipulation based on scope properties or other logic</li>
 		</ul>
@@ -137,7 +141,7 @@
 		    // object literal => isolate scope where custom properties can be injected
             controller: function($scope, $interval) {
                 $scope.visible = true;
-                var timer = $interval(function() {
+                $interval(function() {
                     $scope.visible = !$scope.visible;
                 }, $scope.interval);
             }
@@ -150,6 +154,15 @@
     </code></pre>
 
     <iframe style="background-color:white;" src="examples/directive/blinkHelloWorld-scope.html"></iframe>
+	<aside class="notes">
+		<ul>
+			<li>To do that we introduce a scope to the directive</li>
+		</ul>
+        END:
+		<ul>
+			<li>As you can see the text is hardcoded. What if we want it to inject a custom text form the outside?</li>
+		</ul>
+	</aside>
 </section>
 
 <section>
@@ -165,7 +178,7 @@
             },
             controller: function($scope, $interval) {
                 $scope.visible = true;
-                var timer = $interval(function() {
+                $interval(function() {
                     $scope.visible = !$scope.visible;
                 }, $scope.interval);
             }
@@ -178,6 +191,15 @@
     </code></pre>
 
     <iframe style="background-color:white;" src="examples/directive/blink.html"></iframe>
+	<aside class="notes">
+		<ul>
+			<li>Here we introduce a new scope property with the @ sign instead of the =. It means that changes will not be picked up. It is good to pass strings</li>
+		</ul>
+        END:
+		<ul>
+			<li>What if we want to inject more complexe data than text?</li>
+		</ul>
+	</aside>
 </section>
 
 <section>
@@ -193,7 +215,7 @@
             },
             controller: function($scope, $interval) {
                 $scope.visible = true;
-                var timer = $interval(function() {
+                $interval(function() {
                     $scope.visible = !$scope.visible;
                 }, $scope.interval);
             }
@@ -206,43 +228,58 @@
     </code></pre>
 
     <iframe style="background-color:white;" src="examples/directive/blink-complex.html"></iframe>
+	<aside class="notes">
+		<ul>
+			<li>Here we are introducing transclusion. With transclude: true and ng-transclude directive we can inject complexe data inside a directive</li>
+		</ul>
+        END:
+		<ul>
+			<li>What if now we want to notified that outside world for any changes?</li>
+		</ul>
+	</aside>
 </section>
 
 <section>
     <h3>Blink complex element every Xms and get notified on change</h3>
-    <pre style="font-size: 0.30em"><code class="javascript">
-    angular.module('demo', []).directive('blink', function() {
-            return {
-                restrict: 'E',
-                transclude: true,
-                template: '<p ng-show="visible" ng-transclude></p>',
-                scope: {
-                    interval: '=',
-                    onChange: '&'
-                },
-                controller: function($scope, $interval) {
-                    $scope.visible = true;
-                    var counter = 0;
-                    var timer = $interval(function() {
-                        $scope.visible = !$scope.visible;
-                        counter++;
-                        $scope.onChange({
-                            $counter: counter
-                        });
-                    }, $scope.interval);
-                }
-            }
-        }).controller('demoCtrl', function($scope) {
-            $scope.changeCounter = 0;
-            $scope.onBlinkChange = function(counter) {
-                $scope.changeCounter = counter;
-            }
-        })
+    <pre style="font-size: 0.30em"><code class="javascript" data-trim>
+{
+    restrict: 'E',
+    transclude: true,
+    template: '<p ng-show="visible" ng-transclude></p>',
+    scope: {
+        interval: '=',
+        onChange: '&'
+    },
+    controller: function($scope, $interval) {
+        $scope.visible = true;
+        var counter = 0;
+        $interval(function() {
+            $scope.visible = !$scope.visible;
+            counter++;
+            $scope.onChange({
+                $counter: counter
+            });
+        }, $scope.interval);
+    }
+}
     </code></pre>
-    <pre style="font-size: 0.30em"><code class="html">
-        <p>Changed {{changeCounter}} times</p>
-        <blink interval="500" on-change="onBlinkChange($counter)"><b><i>Hello World</i></b></blink>
+    <pre style="font-size: 0.30em"><code class="javascript" data-trim>
+.controller('demoCtrl', function($scope) {
+    $scope.changeCounter = 0;
+    $scope.onBlinkChange = function(counter) {
+        $scope.changeCounter = counter;
+    }
+})
+    </code></pre>
+    <pre style="font-size: 0.30em"><code class="html" data-trim>
+<p>Changed {{changeCounter}} times</p>
+<blink interval="500" on-change="onBlinkChange($counter)"><b><i>Hello World</i></b></blink>
     </code></pre>
 
     <iframe style="background-color:white;" src="examples/directive/blink-complex-notification.html"></iframe>
+	<aside class="notes">
+		<ul>
+			<li>To do that we introducing scope property with the & symbole. It means that the outside world can inject a function that will be played on demand.</li>
+		</ul>
+	</aside>
 </section>

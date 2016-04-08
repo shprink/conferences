@@ -34,7 +34,7 @@ export class Menu {}
     </div>
      <aside class="notes">
         <ul>
-            <li></li>
+            <li>ui-sref and routerLink are similar, they allow you to navigate from one page to another</li>
         </ul>
     </aside>
 </section>
@@ -69,7 +69,7 @@ class {
     </div>
      <aside class="notes">
         <ul>
-            <li>$state.go and Router.navigate are equivalent, they allow you to navigate from one page to another</li>
+            <li>$state.go and Router.navigate are also similar</li>
         </ul>
     </aside>
 </section>

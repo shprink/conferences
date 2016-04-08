@@ -30,6 +30,11 @@ class Square extends Form{
 let square = new Square();
 console.log(square.getType()); // square
     </code></pre>
+    <aside class="notes">
+        <ul>
+            <li>Using this architecture we can imagine building cross platform apps using an abstract layer to hold the common behavior</li>
+        </ul>
+    </aside>
 </section>
 
 <section data-markdown>

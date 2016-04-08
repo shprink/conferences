@@ -5,25 +5,24 @@
 <section>
     <h2>Filters</h2>
     <ul>
-        <li>Provide a means of processing data and returning a transformed version of it</li>
+        <li>Provide a way to process data and return a transformed version of it</li>
         <li>Filters can be used in templates via the <code class="snippet">|</code> character</li>
-        <pre><code>
-{{ object_expression | filterName : expression : comparator}}
+        <pre><code data-trim>
+{{ object_expression | filterName : expression }}
+{{ 'hello' | translate }} // Hola
         </code></pre>
         <li>Filters can be used in JavaScript via the <code class="snippet">$filter</code> service</li>
-        <pre><code>
-$filter('filterName')(object, expression, comparator)
+        <pre><code data-trim>
+$filter('filterName')(object, expression)
+$filter('translate')('hello') // Hola
         </code></pre>
         <li>Filters do not mutate objects</li>
     </ul>
 
     <aside class="notes">
         <ul>
-            <li>single value or collection based</li>
-            <li>object/object_expression is the JavaScript Object to be passed through the filter function</li>
-            <li>filterName is the filter to be used (e.g., 'filter', 'date', 'uppercase')</li>
-            <li>expression is the predicate to be used for selecting certain elements from a collection (String, Object, or Function callback...via a function callback, custom filters can be created outside of the .filter function on modules)</li>
-            <li>comparator is means of telling Angular whether the actual and expected items are considered 'equal'</li>
+            <li>filterName is the filter to be used (e.g., 'filter', 'date', 'uppercase' or 'translate')</li>
+            <li>can be used with single value or a collection expression</li>
         </ul>
     </aside>
 </section>
@@ -37,12 +36,6 @@ $filter('filterName')(object, expression, comparator)
         <li><code class="snippet">limitTo</code> limits the elements returned in the collection to the specified number</li>
         <li><code class="snippet">orderBy</code> orders the elements returned in the collection based on the predicate</li>
     </ul>
-
-    <aside class="notes">
-        <ul>
-            <li>orderBy defaults to descending order, but can be reversed with a third boolean parameter</li>
-        </ul>
-    </aside>
 </section>
 
 <section>
@@ -53,7 +46,7 @@ $filter('filterName')(object, expression, comparator)
         <li>First argument is the value to run through the filter function</li>
                                     <pre><code>
 angular.module('MyModule').filter('capitalize', function() {
-	return function capitalizer(text) {
+	return function(text) {
 		return text.charAt(0).toUpperCase() + text.slice(1);
 	};
 })
@@ -73,9 +66,6 @@ angular.module('MyModule').filter('capitalize', function() {
     <aside class="notes">
         <ul>
             <li>Custom Filters benefit from two-way data binding and are executed on each $digest cycle automatically</li>
-            <li>Custom filters for collections are generally the same and single value filters: the collection will be passed to your function and you must return the subset of objects that meet your filtering conditions</li>
-            <li>Additional arguments can be passed into your filter function by colon (:) delimiting the arguments in the expression (e.g., capitlize:onlyStringsStartingWithA => | capitalize:'a'</li>
-            <li>Note that because the generalized 'filter' filter can take a function callback as a predicate, custom filters can be created without using the customer .filter module function</li>
         </ul>
     </aside>
 </section>

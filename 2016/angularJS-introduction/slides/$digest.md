@@ -7,10 +7,11 @@
     <h2>What is it?</h2>
     
      <ul>
-        <li>Process that checks every <code class="snippet">$scope</code> <code class="snippet">$$watchers</code> list when angular or yourself call <code class="snippet">$scope.$apply()</code></li>
+        <li>Process that checks every <code class="snippet">$scope.$$watchers</code> for changes when angular or yourself call <code class="snippet">$scope.$apply()</code></li>
     </ul>
     <pre><code data-trim class="html">
 $rootScope
+    $$watchers
     $scope
         $$watchers
     $scope
@@ -34,9 +35,11 @@ $rootScope
         <li>The dirty checking will catch the changes</li>
         <li>The DOM will update</li>
         <li>call <code class="snippet">$digest</code> cycle once again</li>
+        <li><code class="snippet">$digest</code> cycle stops when stable</li>
     </ul>
     <pre><code data-trim class="html">
 $rootScope
+    $$watchers // Changed? NO
     $scope
         $$watchers // Changed? NO
     $scope
@@ -47,26 +50,6 @@ $rootScope
     <aside class="notes">
         <ul>
             <li>$digest cycle doesn’t run just once. At the end of the current loop, it starts all over again to check if any of the models have changed.</li>
-        </ul>
-    </aside>
-    
-</section>
-<section>
-    <h2>How does it work?</h2>    
-     <ul>
-        <li><code class="snippet">$digest</code> cycle stops when stable</li>
-    </ul>
-    <pre><code data-trim class="html">
-$rootScope
-    $scope
-        $$watchers // Changed? NO
-    $scope
-        $$watchers // Changed? NO
-        $scope
-            $$watchers // Changed? NO ($digest completed)
-    </code></pre>
-    <aside class="notes">
-        <ul>
             <li>It takes at least 2 digest cycle to know if we can stop checking (stable)</li>
         </ul>
     </aside>

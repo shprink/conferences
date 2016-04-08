@@ -94,21 +94,32 @@ myInput.addEventListener("keyup", function() {
 </section>
 
 <section>
-    <h2>Watchers</h2>
-
+    <h2>$scope.$watch</h2>
+    <img src="../../img/meme/$scope.$watch.jpg" />
     <ul>
-        <li>Listen to a scope property change</li>
+        <li>Listen to a scope property changes</li>
         <li>Triggers when a change has happened</li>
-        <li>Several way to attach a watcher: <code class="snippet">$scope.$watch</code>, <code class="snippet">{{}}</code>, <code class="snippet">ng-bind</code> or <code class="snippet">ng-model</code>
-            <pre><code data-trim class="js">
+    </ul>
+    <pre><code data-trim class="js">
 $scope.$watch('watchExpression', function(newVal, oldVal){
     if(newVal){
         // watchExpression has changed.
     }
 });
-            </code></pre>
-        </li>
-        <li>The <code class="snippet">$$watchers</code> list is checked for changes at every $digest cycle</li>
+    </code></pre>
+    
+    <aside class="notes">
+        <ul>
+            <li></li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h2>$$watchers list</h2>
+
+    <ul>
+        <li>Everytime we use <code class="snippet">$scope.$watch</code>, <code class="snippet">{{}}</code>, <code class="snippet">ng-bind</code> or <code class="snippet">ng-model</code> we create add a reference to <code class="snippet">$scope.$$watchers</code> list</li>
+        <li>The <code class="snippet">$scope.$$watchers</code> list is checked for changes at every $digest cycle</li>
     </ul>
     
     

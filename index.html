@@ -131,7 +131,7 @@
 									<th>Talk</th>
 									<th>Location</th>
 									<th>Event</th>
-									<th>Tags</th>
+									<!--<th>Tags</th>-->
 									<th>Photos</th>
 								</tr>
 							</thead>
@@ -187,21 +187,36 @@
 					date: '2016-04-06 10:00:00',
 					eventName: 'Workshop',
 					link: './2016/angularJS-introduction',
-					tags: ['angularjs', 'javascript']
+					tags: ['angularjs', 'javascript'],
+					photos: [{
+						src: 'photos/2016-04-06/cdmon-01.jpg'
+					}, {
+						src: 'photos/2016-04-06/cdmon-02.jpg'
+					}]
 				}, {
 					name: 'AngularJS architectures',
 					location: 'Barcelona, Spain',
 					date: '2016-04-06 11:00:00',
 					eventName: 'Workshop',
 					link: './2016/angularJS-architectures',
-					tags: ['angularjs',  'architecture', 'javascript', 'crossPlatform', 'es2015', 'webpack', 'typescript']
+					tags: ['angularjs',  'architecture', 'javascript', 'crossPlatform', 'es2015', 'webpack', 'typescript'],
+					photos: [{
+						src: 'photos/2016-04-06/cdmon-01.jpg'
+					}, {
+						src: 'photos/2016-04-06/cdmon-02.jpg'
+					}]
 				}, {
 					name: 'AngularJS Performance',
 					location: 'Barcelona, Spain',
 					date: '2016-04-06 12:00:00',
 					eventName: 'Workshop',
 					link: './2016/angularJS-performance',
-					tags: ['angularjs', 'javascript', 'performance']
+					tags: ['angularjs', 'javascript', 'performance'],
+					photos: [{
+						src: 'photos/2016-04-06/cdmon-01.jpg'
+					}, {
+						src: 'photos/2016-04-06/cdmon-02.jpg'
+					}]
 				}, {
 					name: 'Angular2 Router vs UiRouter',
 					location: 'Barcelona, Spain',
@@ -209,7 +224,18 @@
 					eventName: 'AngularBeers',
 					eventLink: 'http://www.meetup.com/AngularJS-Beers/events/229395591/',
 					link: './2016/angular2-router-vs-ui-router',
-					tags: ['angular2', 'typescript', 'router']
+					tags: ['angular2', 'typescript', 'router'],
+					photos: [{
+						src: 'photos/2016-04-06/angularbeers-01.jpg'
+					}, {
+						src: 'photos/2016-04-06/angularbeers-02.jpg'
+					}, {
+						src: 'photos/2016-04-06/angularbeers-03.jpg'
+					}, {
+						src: 'photos/2016-04-06/angularbeers-04.jpg'
+					}, {
+						src: 'photos/2016-04-06/angularbeers-05.jpg'
+					}]
 				}, {
 					name: 'Angular2 Router vs UiRouter',
 					location: 'Toulouse, France',
@@ -241,7 +267,7 @@
 					} else {
 						row.push('<td><a href="' + talk.eventLink + '" target="_blank">' + talk.eventName + '</a></td>');
 					}
-					row.push('<td>' + talkTags.join(', ') + '</td>');
+					// row.push('<td>' + talkTags.join(', ') + '</td>');
 
 					if (talk.photos) {
 						row.push('<td class="text-center"><button class="btn btn-xs btn-primary img-slideshow"><i class="fa fa-photo"></i></button></td>');

@@ -130,8 +130,19 @@ class Products {}
 </code></pre>
         </div>
     </div>
+    
      <aside class="notes">
+        This could be complicated to explain and not really interesting in that format but here is what you need to remember
         <ul>
+            <li>With ui router we can do that using named ui-view</li>
+            <li>This named ui-view can be reference by any nested state</li>
+        </ul>
+        <ul>
+            <li>products/... means that the App component delegates the routing to the Products component</li>
+            <li>The products component can defines its own Routes</li>
+            <li>We can have only one RouterOutlet per component</li>
+        </ul>
+        <!--<ul>
             <li>We define an abstract products state that does not have a url. It has a named ui-view directive and a menu directive</li>
             <li>the two other states follow the {parent}.{name} pattern, they are called nested views</li>
             <li>These states inject their content in the ui-view name "products" (because within the views property)</li>
@@ -144,6 +155,6 @@ class Products {}
             <li>[NEXT]</li>
             <li>the Products component uses its own RouterOutlet</li>
             <li>the Products component also defines it own Routes</li>
-        </ul>
+        </ul>-->
     </aside>
 </section>

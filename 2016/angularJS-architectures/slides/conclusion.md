@@ -9,6 +9,7 @@
     <ul>
         <li>Use Folders-by-Feature structure</li>
         <li>Use ES2015 Classes to facilitate inheritance</li>
+        <li>Use TypeScript to force Class implementation</li>
         <li>Use ES2015 Modules to create reusable piece of code</li>
         <li>Use a module bundler</li>
     </ul>
