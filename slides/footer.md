@@ -1,4 +1,4 @@
-<ul style="list-style-type: none; margin-left: 0; margin-top: 2em;">
+<ul style="list-style-type: none; margin-left: 0;">
     <li>
         <i class="fa fa-external-link"></i> <a href="http://julienrenaux.fr">julienrenaux.fr</a>
     </li>
