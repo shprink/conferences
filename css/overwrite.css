@@ -39,7 +39,8 @@
     font-weight: bold;
 }
 
-.references, .references li {
+.references,
+.references li {
     font-size: 0.70em;
 }
 
@@ -100,4 +101,59 @@ code.snippet {
     display: flex;
     align-items: center;
     justify-content: space-around;
+}
+
+.section-without-top {
+    top: initial !important;
+}
+
+.user-card {
+    min-width: 250px;
+    width: 250px;
+    border-radius: 0.2em !important;
+    background-color: #fff;
+    margin: 0.5em auto 15px auto !important;
+    padding: 0.8em 0.5em !important;
+    text-align: center;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    background-clip: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.user-img {
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    background-clip: 50%;
+    margin-bottom: 15px;
+}
+
+.user-name {
+    font-size: 1em !important;
+    text-transform: capitalize !important;
+    font-weight: 700 !important;
+    color: #333 !important;
+    margin-bottom: 10px !important;
+}
+
+.user-description {
+    font-size: 0.7em !important;
+    font-weight: 300;
+    color: #B3B3B3;
+    margin: 7px 0 15px !important;
+}
+
+.user-social {
+    font-size: 24px !important;
+    color: #333 !important;
+    list-style-type: none !important;
+    margin-left: 0 !important;
+}
+
+.img-plain {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
 }
