@@ -1,6 +1,10 @@
 <section>
-    <img src="../../img/angular-logo.png" width="30%" class="img-plain"/>
-    <h1>Redux + Angular2 = ng2-redux</h1>
+    <img src="./img/logo_redux.png" width="25%" class="img-plain"/>
+    <img src="../../img/angular-logo.png" width="20%" class="img-plain"/>
+    <h1>Redux + Angular2</h1>
+    <aside class="notes">
+      <b>Maintenant que nous connaissons Redux, voyons comment l'utiliser avec Angular2</b>
+    </aside>
 </section>
 
 <section>
@@ -8,13 +12,16 @@
     <h2>Angular 2 bindings for Redux</h2>
     <small>https://github.com/angular-redux/ng2-redux</small>
     <ul>
+        <li>Uses Redux!</li>
         <li>Can access the store as Observables</li>
         <li>Compatible with existing Redux middlewares</li>
         <li>Compatible with the existing Redux devtools</li>
     </ul>
     <aside class="notes">
-      <b>ng2-redux ce sont des bindings angular2 pour redux</b>
+      <b>Il y a plusieurs librairies Redux pour angular2</b>
+      <b>Celle que je recommande c'est ng-redux. Pourquoi?</b>
       <ul>
+        <li>Utilise Redux. Attention ca parait logique mais...</li>
         <li>Vous le savez Angular2 est optimise pour les Observables</li>
         <li>ng2-redux permet donc de recuperer des datas du store via des Observables</li>
         <li>ng2-redux permet d'utiliser les devtools et middleware Redux</li>
@@ -132,23 +139,23 @@ export default (
 </section>
 
 <section>
-    <h5>Basic counter app: Create the root Reducer</h5>
+    <h5>Create the root Reducer</h5>
 <pre style="font-size: 55%;"><code  class="js" data-trim>
 import { combineReducers } from 'redux';
  
-import CounterReducer from './counter';
-import { UserReducer, IUser } from './user';
-import isMenuOpenedReducer from './isMenuOpened';
+import counter from './counter';
+import { user, IUser } from './user';
+import isMenuOpened from './isMenuOpened';
  
 export interface IAppState {
   isMenuOpened: boolean;
   user: IUser;
   counter: number;
-} 
+}
 export const rootReducer = combineReducers({
-  isMenuOpened: isMenuOpenedReducer,
-  user: UserReducer,
-  counter: CounterReducer
+  isMenuOpened,
+  user,
+  counter
 });
 </code></pre>
   <aside class="notes">
@@ -163,7 +170,7 @@ export const rootReducer = combineReducers({
 </section>
 
 <section>
-    <h5>Basic counter app: Bootstrap the store</h5>
+    <h5>Bootstrap the store</h5>
 <pre style="font-size: 65%;"><code class="js" data-trim>
 import { Store, createStore } from 'redux';
 import { rootReducer, IAppState } from './reducers';
@@ -189,27 +196,16 @@ class App {
 </section>
 
 <section>
-    <h5>Basic counter app: Interacting with the store</h5>
-<pre style="font-size: 45%;"><code class="js" data-trim >
+    <h5>@select: get store data as an Observable</h5>
+<pre style="font-size: 80%;"><code class="js" data-trim>
 import { Component } from '@angular/core';
-import { NgRedux, select } from 'ng2-redux';
-import { incrementCounter } from '../actions';
+import { select } from 'ng2-redux';
  
 @Component({
-  template: \`
-    <div>
-        <p>{counter$ | async}</p>
-        <button (click)="incrementCounter">+1</button>
-        <button (click)="decrementCounter">-1</button>
-    </div>
-  \`
+  template: \`<p>{counter$ | async}</p>\`
 })
 export class Counter {
-  @select() counter$;
- 
-  constructor(private ngRedux: NgRedux< IAppState >) {} 
-  incrementCounter = () => this.ngRedux.dispatch(incrementCounter())
-  decrementCounter = () => this.ngRedux.dispatch(decrementCounter())
+  @select() counter$: Observable < number >;
 }
 </code></pre>
   <aside class="notes">
@@ -217,10 +213,44 @@ export class Counter {
       <li>Pour recuperer la donner compteur on utilise le select decorator.</li>
       <li>@select retourne un observable qui subscribe et unsubscribe tout seul</li>
       <li>Via le asynch pipe on aura le resultat affiche a chaque changement</li>
+    </ul>
+  </aside>
+</section>
+
+<section>
+    <h5>Dispaching actions</h5>
+<pre style="font-size: 60%;" class="stretch"><code class="js" data-trim>
+import { Component } from '@angular/core';
+import { NgRedux } from 'ng2-redux';
+
+import { IAppState } from '../reducers';
+import { 
+  incrementCounter, 
+  decrementCounter
+} from '../actions';
+ 
+@Component({
+  template: \`
+    <button (click)="incrementCounter">+1</button>
+    <button (click)="decrementCounter">-1</button>
+  \`
+})
+export class Counter {
+  constructor(private ngRedux: NgRedux< IAppState >) {} 
+  incrementCounter = () => this.ngRedux.dispatch(incrementCounter())
+  decrementCounter = () => this.ngRedux.dispatch(decrementCounter())
+}
+</code></pre>
+  <aside class="notes">
+    <ul>
       <li>Pour changer la valeur du store on va utiliser nos actions creators au click user</li>
       <li>Pour ce faire on utilise ngRedux dispatch method au click</li>
     </ul>
-    <b>Voila maintenant vous etes des pros de Redux sur angular2!</b>
+    <b>C'est tout pour moi, j'espere que ca vous a permis de mieux comprendre les applications possibles de Redux dans Angular2. Merci beaucoup de votre attention.</b>
   </aside>
+</section>
+
+<section data-background-image="../../img/meme/questions.gif">
+  <h1>Questions?</h1>
 </section>
 

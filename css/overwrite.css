@@ -1,6 +1,7 @@
 .back-button {
-    color: #42affa;
+    color: white;
     text-decoration: none;
+    font-weight: bold;
     padding: 15px;
     position: absolute;
     bottom: 30px;
@@ -156,4 +157,12 @@ code.snippet {
     background: transparent !important;
     border: 0 !important;
     box-shadow: none !important;
+}
+
+.reveal .twitter{
+    font-size: 17px;
+    float: right;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
 }

@@ -4,9 +4,10 @@
     <h2>Predictable state container for JavaScript apps</h2>
     
     <aside class="notes">
+        <b>Passons a l'introduction de Redux</b>
         <ul>
             <li>Redux c'est quoi?</li>
-            <li>Une librairie qui permet d'avoir un etat predictif pour ses apps</li>
+            <li>Une librairie qui permet d'avoir un etat predictif pour ses apps javaCrypt :troll:</li>
         </ul>
     </aside>
 </section>
@@ -15,8 +16,9 @@
     <h1>Redux !== React</h1>
     
     <aside class="notes">
+        <b>React et Redux n'ont rien a voir</b>
         <ul>
-            <li>React et Redux n'ont rien a voir (Redux permet de gerer le state de son app et React permet de creer des composants)</li>
+            <li>Redux permet de gerer le state de son app et React permet de creer des composants</li>
             <li>Redux est framework agnostic</li>
             <li>Peut etre utilise m'importe quel framework ou librairie</li>
         </ul>
@@ -28,29 +30,8 @@
     <h1 class="fragment">Flux</h1>
     
     <aside class="notes">
-        <ul>
-            <li>Redux est une evolution de Flux</li>
-        </ul>
-      <b>Qu'est ce que Flux?</b>
-    </aside>
-</section>
-
-<section>
-    <h2>Why Flux was created?</h2>
-    <div class="fragment">
-        <h2>Avoid MVC hell</h2>
-        <img src="./img/mvc_diagram.jpeg" width="80%" class="img-plain"/>
-    </div>
-    
-    <aside class="notes">
-        <ul>
-            <li>Pourquoi utiliser flux?</li>
-            <li>Eviter les problemes du MVC et du two way data binding</li>
-            <li>MVC? Le model update la vue et la vue update le model</li>
-            <li>C'est la magie Angular v1 </li>
-            <li>Probleme: ca ne scale pas vraiment</li>
-            <li>Tres dur de predire pourquoi l'etat de mon app a change</li>
-        </ul>
+        <b>Redux est une evolution de ... Flux</b>
+        <b>Mais alors qu'est ce que Flux?</b>
     </aside>
 </section>
 
@@ -82,10 +63,29 @@
 </section>
 
 <section>
+    <h2>Why Flux was created?</h2>
+    <div class="fragment">
+        <img src="./img/mvc_diagram.jpeg" width="80%" class="img-plain"/>
+    </div>
+    
+    <aside class="notes">
+        <ul>
+            <li>Pourquoi Flux a t'il ete cree?</li>
+            <li>Eviter les problemes du MVC</li>
+            <li>ou le model update la vue et la vue update le model</li>
+            <li>C'est la magie Angular v1 </li>
+            <li>Probleme: ca ne scale pas vraiment</li>
+            <li>Tres dur de predire pourquoi l'etat de mon app a change</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
     <h1>Redux</h1>
     <img src="./img/redux_diagram_2.png" width="100%" class="img-plain"/>
     Created by <a href="https://twitter.com/dan_abramov"/>@dan_abramov</a>
     <aside class="notes">
+        <b>Redux vous le voyez ressemble a Flux</b>
         <ul>
             <li>Librairie cree par Dan Abramov</li>
             <li>Aussi un flux unidirectionel des donnees</li>
@@ -142,10 +142,9 @@ export function decrementCounter(amount = 1) {
     <aside class="notes">
         <ul>
             <li>Fonction qui cree des actions</li>
-            <li>Prenons l'exemple d'un compteur</li>
-            <li>On peut l'incrementer ou le decrementer d'une valeur, ici 1 par default.</li>
             <li>Nos components vont pouvoir appeler ces actions creators pour modifier le compteur</li>
         </ul>
+        <b>Les action creator centralise la creation d'actions</b>
     </aside>
 </section>
 
@@ -185,6 +184,7 @@ export default function counter(state = INITIAL_STATE, action) {
     </aside>
 </section>
 
+<!--
 <section>
     <h2>Redux: Action creators and reducers are pure functions</h2>
 
@@ -202,3 +202,4 @@ export default function counter(state = INITIAL_STATE, action) {
         </ul>
     </aside>
 </section>
+-->

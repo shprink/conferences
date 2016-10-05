@@ -20,7 +20,7 @@
             <li>Une api du store tres basique</li>
             <li>La communaute fournis beaucoup de middlewares et dev tools</li>
         </ul>
-      <b>Maintenant quelques examples de devtools</b>
+      <b>Et justement voyons quelques examples de devtools</b>
     </aside>
 </section>
 
@@ -38,7 +38,7 @@
     </aside>
 </section>
 
-<section>
+<!--<section>
     <h2>Dev tools: State map</h2>
     <img src="./img/redux_state_map.gif" width="100%" class="img-plain"/>
     <aside class="notes">
@@ -47,7 +47,7 @@
         </ul>
         <b>Et pour finir le time machine</b>
     </aside>
-</section>
+</section>-->
 
 <section>
     <h2>Dev tools: Time machine</h2>

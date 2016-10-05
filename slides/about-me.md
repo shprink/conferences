@@ -4,13 +4,17 @@
     <ul style="text-align: center; list-style-type: none; margin-left: 0">
         <li class="flex-center-center">
             <img class="fragment plain" style="background: transparent;" width="300" data-src="../../img/ebay-logo.png" alt="ebay">
-            <a class="fragment" href="http://www.toptal.com/resume/julien-renaux#select-just-supreme-hackers" target="_blank"><img class="plain" style="background: transparent;" width="300" data-src="../../img/toptal-logo.png" alt="Toptal"></a>
+            <a class="fragment" href="http://www.toptal.com/resume/julien-renaux#select-just-supreme-hackers" target="_blank"><img class="plain" style="background: transparent;" width="350" data-src="../../img/toptal-logo.png" alt="Toptal"></a>
         </li>
-        <li class="flex-center-center">
-            <img class="fragment plain" style="background: transparent;" width="120" data-src="../../img/angular-logo.png" alt="angular">
-            <img class="fragment plain" style="background: transparent;" width="200" data-src="../../img/ionic-logo.png" alt="ionic">
-        </li>
+        
     </ul>
+    <div class="fragment">
+        <div class="flex-center-center" >
+            <img class="plain" style="background: transparent;" width="180" data-src="../../img/angular-logo.png" alt="angular">
+            <img class="plain" style="background: transparent;" width="300" data-src="../../img/ionic-logo.png" alt="ionic">
+            <img class="plain" style="background: transparent;" width="200" data-src="../../img/react-logo.png" alt="react">
+        </div>
+    </div>
     <aside class="notes">
         <p>My name is Julien, I am a Software Engineer from Toulouse, France</p>
          <ul>
