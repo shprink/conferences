@@ -14,8 +14,8 @@
     <br/>
     <ul>
         <li>Open source</li>
-        <li>Ionic v1</li>
-        <li>Dozens of features (Posts, Pages, Custom posts, Taxonomies etc.)</li>
+        <li>Ionic v1 / ES6 / Webpack</li>
+        <li>Dozens of features (Posts, Pages, Custom posts etc.)</li>
         <li>540+ stars on Github</li>
         <li>200+ users on Gitter</li>
         <li>12 Languages</li>
@@ -66,7 +66,7 @@
     <h3>Cordova</h3>
     <ul>
         <li>Push Notifications</li>
-        <li>Analytics</li>
+        <li>Google Analytics</li>
         <li>Social sharing</li>
         <li>Admob support</li>
         <li>App rate plugin</li>

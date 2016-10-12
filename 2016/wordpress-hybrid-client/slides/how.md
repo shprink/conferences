@@ -49,6 +49,13 @@ app.controller(($wpApiPosts) => {
 </section>
 
 <section>
+    <h3>Push Notifications <small>by Delite Studio</small></h3>
+    <h4>Self hosted and free push notifications</h4>
+    <img src="./img/push_notifications.png" width="60%" class="img-plain"/>
+    https://wordpress.org/plugins/push-notifications-for-wp/
+</section>
+
+<section>
     <h3>Installation</h3>
 <pre style="font-size: 65% !important"><code class="shell" data-trim>
 # Clone and use the latest version
