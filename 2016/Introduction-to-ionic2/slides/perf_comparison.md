@@ -25,7 +25,7 @@
             <tr>
                 <td>UI Consistency</td>
                 <td><i class="fa fa-check-square-o green" aria-hidden="true"></i></td>
-                <td><i class="fa fa-check-square-o orange" aria-hidden="true"></i></td>
+                <td><i class="fa fa-check-square-o green" aria-hidden="true"></i></td>
                 <td><i class="fa fa-check-square-o orange" aria-hidden="true"></i></td>
                 <td><i class="fa fa-check-square-o green" aria-hidden="true"></i></td>
             </tr>
