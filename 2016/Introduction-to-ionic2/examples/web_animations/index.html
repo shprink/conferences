@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)https://s.codepen.io/boomerang/7888d2eefd7122a7cc8441b33580ecad1480721185721/index.html -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./index_files/console_runner-5710c30fb566082d9fcb6e7d97ee7e3f2a326128c9f334a4231b6fd752b29965.js"></script><script src="./index_files/events_runner-d5e4bf42585b8da8c18f7d963dbfc17cd66a79aa586c9448c4de8d6952ee9d97.js"></script><script src="./index_files/css_live_reload_init-25d1423d5d6fb975e7d61832d2c061422a94963ca446583b965dfc5569147311.js"></script><meta name="robots" content="noindex"><link rel="shortcut icon" type="image/x-icon" href="https://production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico"><link rel="mask-icon" type="" href="https://production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111"><link rel="canonical" href="https://codepen.io/shprink/pen/NbyNvR">
+
+<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<style class="cp-pen-styles">body {
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.2rem;
+}
+
+.info {
+  position: relative;
+  top: 100px;
+  background: #DDD;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.box {
+  box-sizing: border-box;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  height: 4rem;
+  width: 4rem;
+  background: #0063fe;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.box p {
+  width: 5.1rem;
+}
+</style><style type="text/css">
+:root .ad
+{ display: none !important; }</style></head><body>
+<div class="info">
+  <h1>Web Animation API Demo</h1>
+  <input id="slider" type="range" min="0" max="5000">
+  <p id="output">Time: 1754 ms</p>
+</div>
+
+<div id="box1" class="box">
+  <p id="text1">Text inside</p>
+</div>
+<script src="./index_files/stopExecutionOnTimeout-58d22c749295bca52f487966e382a94a495ac103faca9206cbd160bdf8aedf2a.js"></script><script src="./index_files/jquery.min.js"></script><script src="./index_files/web-animations.min.js"></script>
+<script>var animationProperties = {
+    duration: 5000,
+    iterations: Infinity
+};
+var boxKeyframes = [
+    {
+        opacity: '0',
+        width: '4rem',
+        left: '0'
+    },
+    {
+        opacity: '1.0',
+        width: '12rem',
+        left: '50%'
+    }
+];
+var textKeyframes = [
+    {
+        offset: 0,
+        transform: 'rotate(0deg)'
+    },
+    {
+        offset: 0.7,
+        transform: 'rotate(0deg)'
+    },
+    {
+        offset: 1,
+        transform: 'rotate(-90deg)'
+    }
+];
+var boxAnimation = document.getElementById('box1').animate(boxKeyframes, animationProperties);
+var textAnimation = document.getElementById('text1').animate(textKeyframes, animationProperties);
+$('#slider').on('input', function (event, ui) {
+    var timeValue = $('#slider').val();
+    $('#output').html('Time: ' + timeValue + ' ms');
+    boxAnimation.currentTime = textAnimation.currentTime = timeValue;
+});
+//# sourceURL=pen.js
+</script>
+</body></html>

@@ -91,6 +91,10 @@ input {
     color: red;
 }
 
+.orange{
+    color: orange;
+}
+
 code.snippet {
     background-color: gray;
     font-size: smaller;

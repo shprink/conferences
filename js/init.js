@@ -7,6 +7,7 @@ Reveal.initialize({
     center: true,
 
     transition: 'slide', // none/fade/slide/convex/concave/zoom
+    backgroundTransition: 'zoom',
 
     // Optional reveal.js plugins
     dependencies: [{
