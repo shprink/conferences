@@ -33,7 +33,11 @@
 <section>
     <h3>Better DOM Performance</h3>
     <style>
-        .rowCount, .deviation{
+        .rowCount {
+            color: gray;
+            zoom: 50%;
+        }
+        .deviation{
             display: none;
         }
         .factor{
@@ -54,8 +58,7 @@
         <tbody>
             <tr>
                 <th class="benchname">
-                    create rows
-                    <div class="rowCount">Duration for creating 1000 rows after the page loaded.</div>
+                    Creating 1000 rows
                 </th>
                 <td style="background-color:rgb(255, 229, 131)"><span class="mean">264.96</span><span class="deviation">8.50</span><br><span class="factor">(2.10)</span></td>
                 <td style="background-color:rgb(182, 215, 128)"><span class="mean">193.32</span><span class="deviation">4.17</span><br><span class="factor">(1.53)</span></td>
@@ -65,8 +68,7 @@
             </tr>
             <tr>
                 <th class="benchname">
-                    replace all rows
-                    <div class="rowCount">Duration for updating all 1000 rows of the table (with 5 warmup iterations).</div>
+                    Updating 10k rows
                 </th>
                 <td style="background-color:rgb(249, 105, 108)"><span class="mean">251.32</span><span class="deviation">5.35</span><br><span class="factor">(4.70)</span></td>
                 <td style="background-color:rgb(250, 137, 114)"><span class="mean">187.68</span><span class="deviation">5.16</span><br><span class="factor">(3.51)</span></td>
@@ -76,8 +78,7 @@
             </tr>
             <tr style="display:none">
                 <th class="benchname">
-                    partial update
-                    <div class="rowCount">Time to update the text of every 10th row (with 5 warmup iterations).</div>
+                    Updating text of every 10th row</div>
                 </th>
                 <td style="background-color:rgb(99, 191, 124)"><span class="mean">11.23</span><span class="deviation">0.36</span><br><span class="factor">(1.00)</span></td>
                 <td style="background-color:rgb(99, 191, 124)"><span class="mean">9.34</span><span class="deviation">0.39</span><br><span class="factor">(1.00)</span></td>
@@ -87,8 +88,7 @@
             </tr>
             <tr style="display:none">
                 <th class="benchname">
-                    select row
-                    <div class="rowCount">Duration to highlight a row in response to a click on the row. (with 5 warmup iterations).</div>
+                    Click on a row
                 </th>
                 <td style="background-color:rgb(99, 191, 124)"><span class="mean">8.16</span><span class="deviation">2.90</span><br><span class="factor">(1.00)</span></td>
                 <td style="background-color:rgb(99, 191, 124)"><span class="mean">4.54</span><span class="deviation">2.67</span><br><span class="factor">(1.00)</span></td>
@@ -98,8 +98,7 @@
             </tr>
             <tr style="display:none">
                 <th class="benchname">
-                    swap rows
-                    <div class="rowCount">Time to swap 2 rows on a 1K table. (with 5 warmup iterations).</div>
+                    Swap 2 rows on a 1K table
                 </th>
                 <td style="background-color:rgb(99, 191, 124)"><span class="mean">12.80</span><span class="deviation">0.44</span><br><span class="factor">(1.00)</span></td>
                 <td style="background-color:rgb(99, 191, 124)"><span class="mean">12.03</span><span class="deviation">0.49</span><br><span class="factor">(1.00)</span></td>
@@ -109,8 +108,7 @@
             </tr>
             <tr>
                 <th class="benchname">
-                    remove row
-                    <div class="rowCount">Duration to remove a row. (with 5 warmup iterations).</div>
+                    Remove a row
                 </th>
                 <td style="background-color:rgb(176, 213, 128)"><span class="mean">54.13</span><span class="deviation">3.40</span><br><span class="factor">(1.49)</span></td>
                 <td style="background-color:rgb(147, 205, 126)"><span class="mean">47.41</span><span class="deviation">1.21</span><br><span class="factor">(1.31)</span></td>
@@ -120,8 +118,7 @@
             </tr>
             <tr>
                 <th class="benchname">
-                    create many rows
-                    <div class="rowCount">Duration to create 10,000 rows</div>
+                    Create 10k rows
                 </th>
                 <td style="background-color:rgb(231, 229, 131)"><span class="mean">2247.40</span><span class="deviation">20.05</span><br><span class="factor">(1.85)</span></td>
                 <td style="background-color:rgb(190, 217, 129)"><span class="mean">1928.51</span><span class="deviation">16.91</span><br><span class="factor">(1.58)</span></td>
@@ -131,8 +128,7 @@
             </tr>
             <tr>
                 <th class="benchname">
-                    append rows to large table
-                    <div class="rowCount">Duration for adding 1000 rows on a table of 10,000 rows.</div>
+                    Add 1k rows to 10k table
                 </th>
                 <td style="background-color:rgb(202, 221, 129)"><span class="mean">388.07</span><span class="deviation">4.59</span><br><span class="factor">(1.66)</span></td>
                 <td style="background-color:rgb(146, 205, 126)"><span class="mean">304.24</span><span class="deviation">8.19</span><br><span class="factor">(1.30)</span></td>
@@ -142,25 +138,13 @@
             </tr>
             <tr>
                 <th class="benchname">
-                    clear rows
-                    <div class="rowCount">Duration to clear the table filled with 10.000 rows.</div>
+                    Clearing a 10k rows table
                 </th>
                 <td style="background-color:rgb(251, 144, 115)"><span class="mean">650.28</span><span class="deviation">29.54</span><br><span class="factor">(3.40)</span></td>
                 <td style="background-color:rgb(226, 228, 131)"><span class="mean">346.79</span><span class="deviation">8.63</span><br><span class="factor">(1.81)</span></td>
                 <td style="background-color:rgb(205, 221, 129)"><span class="mean">320.76</span><span class="deviation">5.81</span><br><span class="factor">(1.68)</span></td>
                 <td style="background-color:rgb(255, 236, 132)"><span class="mean">383.62</span><span class="deviation">4.83</span><br><span class="factor">(2.01)</span></td>
                 <td style="background-color:rgb(106, 193, 124)"><span class="mean">199.67</span><span class="deviation">3.21</span><br><span class="factor">(1.04)</span></td>
-            </tr>
-            <tr>
-                <th class="benchname">
-                    clear rows a 2nd time
-                    <div class="rowCount">Time to clear the table filled with 10.000 rows. But warmed up with only one iteration.</div>
-                </th>
-                <td style="background-color:rgb(249, 105, 108)"><span class="mean">1388.19</span><span class="deviation">21.56</span><br><span class="factor">(7.27)</span></td>
-                <td style="background-color:rgb(198, 220, 129)"><span class="mean">312.46</span><span class="deviation">4.87</span><br><span class="factor">(1.64)</span></td>
-                <td style="background-color:rgb(197, 219, 129)"><span class="mean">311.20</span><span class="deviation">6.44</span><br><span class="factor">(1.63)</span></td>
-                <td style="background-color:rgb(254, 236, 132)"><span class="mean">380.15</span><span class="deviation">13.02</span><br><span class="factor">(1.99)</span></td>
-                <td style="background-color:rgb(99, 191, 124)"><span class="mean">190.86</span><span class="deviation">1.55</span><br><span class="factor">(1.00)</span></td>
             </tr>
         </tbody>
     </table>

@@ -8,7 +8,7 @@
     <ul>
         <li>ES6 brings many new features</li>
         <li>TypeScript superset (ES6 + types, interfaces etc.)</li>
-        <li>IDE better support</li>
+        <li>IDEs have better support</li>
     </ul>
     <p>... making development faster</p>
     
@@ -74,18 +74,18 @@
 <section>
     <h3>Webviews (Chromium & WKWebView) <br/>have evolved</h3>
     <ul>
-        <li>JIT Machine Code</li>
-        <li>Native Scrolling</li>
         <li>Faster Rendering</li>
         <li>Faster Compute</li>
+        <li>JIT Machine Code</li>
+        <li>Native Scrolling</li>
     </ul>
     
     <aside class="notes"></aside>
 </section>
 
 <section>
-    <h3>Progressive Web Apps is the new Hype!</h3>
-    <div class="grid" style="margin-top: 50px">
+    <h3>Progressive Web Apps are the new Hype!</h3>
+    <div class="grid">
         <div class="unit one-third">
             <video width="100%" controls>
                 <source src="./videos/pwa.mp4" type="video/mp4">
@@ -93,11 +93,16 @@
             </video>
         </div>
         <div class="unit two-thirds">
-            <ul>
+            <ul style="zoom: 80%">
                 <li>Installable without stores</li>
                 <li>Offline capability (service worker)</li>
+                <li>Universal (every device, browser)</li>
                 <li>App Shell</li>
-                <li>More...</li>
+                <li>Discoverable (manifest)</li>
+                <li>Always up to date (service worker)</li>
+                <li>Safe (https)</li>
+                <li>Re-engageable (via push notifications)</li>
+                <li>Linkable (easy sharing via links)</li>
             </ul>
         </div>
     </div>
