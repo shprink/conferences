@@ -30,7 +30,7 @@
                 <td><i class="fa fa-check-square-o green" aria-hidden="true"></i></td>
             </tr>
             <tr>
-                <td>Distribution</td>
+                <td>Cross platform</td>
                 <td>
                     <i class="fa fa-check-square-o green" aria-hidden="true"></i>
                     <i class="fa fa-apple" aria-hidden="true"></i>
@@ -49,9 +49,9 @@
                     <i class="fa fa-android" aria-hidden="true"></i>
                 </td>
                 <td>
-                    <i class="fa fa-check-square-o orange" aria-hidden="true"></i>
-                    <i class="fa fa-apple" aria-hidden="true"></i>
-                    <i class="fa fa-android" aria-hidden="true"></i>
+                    <i class="fa fa-square-o red" aria-hidden="true"></i>
+                    <i class="fa fa-apple" aria-hidden="true"></i> /
+                    <i class="fa fa-android" aria-hidden="true"></i> / 
                     <i class="fa fa-windows" aria-hidden="true"></i>
                 </td>
             </tr>
@@ -60,13 +60,6 @@
                 <td><i class="fa fa-check-square-o green" aria-hidden="true"></i></td>
                 <td><i class="fa fa-check-square-o green" aria-hidden="true"></i></td>
                 <td><i class="fa fa-check-square-o green" aria-hidden="true"></i></td>
-                <td><i class="fa fa-square-o red" aria-hidden="true"></i></td>
-            </tr>
-            <tr>
-                <td>Cross platform</td>
-                <td><i class="fa fa-check-square-o green" aria-hidden="true"></i></td>
-                <td><i class="fa fa-check-square-o orange" aria-hidden="true"></i> \*\*</td>
-                <td><i class="fa fa-check-square-o orange" aria-hidden="true"></i> \*\*</td>
                 <td><i class="fa fa-square-o red" aria-hidden="true"></i></td>
             </tr>
             <tr>
