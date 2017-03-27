@@ -170,3 +170,14 @@ code.snippet {
     text-decoration: none;
     margin-right: 20px;
 }
+
+.line{
+    display: block;
+}
+.line.focus{
+    background-color: #525252;
+}
+
+.no-margin{
+    margin: 0 !important;
+}

@@ -27,9 +27,9 @@ Reveal.initialize({
         }
     }, {
         src: '../../plugin/highlight/highlight.js',
-        async: true,
+        async: false,
         callback: function() {
-            hljs.initHighlightingOnLoad();
+            // hljs.initHighlightingOnLoad();
         }
     }, {
         src: '../../plugin/zoom-js/zoom.js',
@@ -37,5 +37,11 @@ Reveal.initialize({
     }, {
         src: '../../plugin/notes/notes.js',
         async: true
+    },{
+      src: '../../plugin/reveal-code-focus/reveal-code-focus.js',
+      async: true,
+      callback: function() {
+        RevealCodeFocus();
+      }
     }]
 });
