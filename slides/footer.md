@@ -7,5 +7,5 @@
     </li>
 </ul>
 <p>
-    <small>Slides: http://julienrenaux.fr/talks</small>
+    <small>Slides: https://julienrenaux.fr/talks</small>
 </p>
