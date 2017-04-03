@@ -23,10 +23,10 @@
     <aside class="notes">
         <b>Conventionnal data flow could look like this.</b>
         <ul>
-            <li>Components can communicate directly with each other using props or event emitters (In and Out). Works for components that have a direct relationship, such as parent and children.</li>
-            <li>When you do not have a direct relationship you can use a third party service, or use a pub sub pattern etc.</li>
+            <li>When your components have a direct relationship can communicate directly with each other using props to get data IN and event emitters to get data out.</li>
+            <li>When you do not have a direct relationship you can use a third party service, or something similar to the rootScope in Angular 1 or a Pub Sub pattern</li>
         </ul>
-        <b>As you can see there are many ways to achieve data communications between components and it is not normalized, meaning if you have several developers working on your application over time, you could end up using all the possibilities and make your app harder to understand and unpredictable.</b>
+        <b>There are many ways to achieve data communications between components and it is not normalized. If you have several developers working on your application over time, you could end up using many of the possibilities and make your app harder to understand and to predictable.</b>
     </aside>
 </section>
 
@@ -38,7 +38,7 @@
         <b>With Redux the store contains the entire state of your app. It is what we call "the Single Source of Truth!!!"</b>
         <ul>
             <li>When a component ask a state change to the store, the store apply this change and notify the components that subscribed to it</li>
-            <li>With the unidirectional data flow, all data in your application follows the same lifecycle pattern, which makes the logic of your application more predictable and easier to understand.</li>
+            <li>With the unidirectional data flow, all data in your application follow the same lifecycle pattern, which makes the logic of your application more predictable and easier to understand.</li>
         </ul>
     </aside>
 </section>
@@ -91,9 +91,11 @@ function sum(total, currentValue) {
 </code></pre>
     <aside class="notes">
         <b>A reducer or a reduction function is a function that takes an accumulator (here total), the current value and returns a new value</b>
-        <b>Reduce is only available on arrays in JavaScript</b>
-        <b>Here We have a 1,2,3 array that we reduce with the sum function (or a reducer) and give an initial value of 0</b>
-        <b>What is the return value here? 6</b>
+        <ul>
+            <li>Reduce is only available on arrays in JavaScript</li>
+            <li>Here We have a 1,2,3 array that we reduce with the sum function (or a reducer) and give an initial value of 0</li>
+            <li>What is the return value here? 6</li>
+        </ul>
     </aside>
 </section>
 
@@ -135,7 +137,7 @@ function counterReducer(state, action) {
             <li>The reducer will apply the state modification</li>
             <li>then the reducer will return a new state</li>
         </ul>
-        <b>By now I think it is pretty clear, let now recap all of this with a diagram</b>
+        <b>By now I think it is pretty clear, let's now recap all of this with a diagram</b>
     </aside>
 </section>
 
@@ -150,7 +152,7 @@ function counterReducer(state, action) {
             <li>The Store notify the components with this new state</li>
             <li>... and so on, and so forth</li>
         </ol>
-        <b>You guys are now Redux experts, let's learn about ngrx/store now!</b>
+        <b>You guys are now Redux experts, Now let's talk about ngrx/store shall we?!</b>
     </aside>
 </section>
 

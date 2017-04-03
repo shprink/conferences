@@ -4,7 +4,8 @@
     <h2>Reactive Redux for Angular</h2>
     
     <aside class="notes">
-        <b>Now let's talk about ngrx/store shall we?<br/> ngrx/store is a RxJS powered, state management for Angular applications</b>
+        <b>ngrx/store is a RxJS powered, state management for Angular applications</b><br/>
+        <b>It was created by Rob Wormald who is a core member of the Angular team.</b>
     </aside>
 </section>
 
@@ -95,7 +96,7 @@ OR
 yarn add @ngrx/core @ngrx/store
 </code></pre>
     <aside class="notes">
-        <b>This is how we install the ngrx/store packages with npm or yarn</b>
+        <b>This is how we install the ngrx/store packages with npm or yarn. There are two packages, Core and Store</b>
     </aside>
 </section>
 
@@ -131,10 +132,10 @@ export class AppModule {}
         <ol>
             <li>First We import StoreModule and the combineReducers method</li>
             <li>We then import our reducers and use the combineReducers method to group them together. This step is important because it defines the shape of your state object.</li>
-            <li>For AOT compilation to work we need an extra step, we export a function that returns the result of the rootReducer call. This function is called at every new action</li>
-            <li>To finish we can import this store into our app</li>
+            <li>For AOT compilation to work we need an extra step, we export a function that returns the result of the rootReducer call. This function is called at every new action triggered</li>
+            <li>To finish we can import this store into our app using StoreModule.provideStore</li>
         </ol>
-        <b>Next question is: How do we consume this store?</b>
+        <b>Now that our store is ready the Next question is: How do we ust it in our components?</b>
     </aside>
 </section>
 
@@ -160,11 +161,12 @@ export class SomeComponent {
     <aside class="notes">
         <b>Before we can use the store we must create its definition. To do this we need to use a TypeScript interface.</b>
         <ol>
-            <li>The currentUser is a User type</li>
+            <li>The currentUser has a User type</li>
             <li>Users are an array of User</li>
             <li>And language is a string</li>
         </ol>
-        <b>Once we have our appState interfact, we can inject the Store provider in our services or components using Angular's dependency injection.</b>
+        <b>Once we have the appState interface, we can inject the Store provider in our services or components using Angular's dependency injection.</b><br/>
+        <b>Now how to retrieve data from the store?</b>
     </aside>
 </section>
 
@@ -186,7 +188,7 @@ store.select(state => state.users)
     <aside class="notes">
         <b>We can use the store provider to retreive data from the store using the `select` method</b>
         <ol>
-            <li>This is how you select the entire state tree. `Select` returns an Obsersable that we can subscribe to.</li>
+            <li>This is how you select the entire state tree. the `Select` method returns an Observable that we can subscribe to.</li>
             <li>or you can get a slice of the state tree</li>
         </ol>
         <b>Now we know how to get the state from the store, but how do we dispatch actions?</b>
@@ -237,7 +239,7 @@ export class CounterComponent {
             <li>We then subscribe to it and bind the counter result to our Class property</li>
             <li>On important thing to notice is that we need to unsubscribe to our Subscription, otherwise the Observable will continue pushing new values</li>
         </ol>
-        <b>This is a bit tidious right?. Here we need to subscribe, keep a reference to the subscription and then unsubscribe... Is there a better way?</b>
+        <b>As you can see this is a bit tidious?. Here we need to subscribe, keep a reference to the subscription and then unsubscribe... Is there a better way?</b>
     </aside>
 </section>
 
@@ -258,12 +260,16 @@ export class AsyncCounterComponent {
 <div class="fragment current-only" data-code-focus="2"></div>
 <!--<img src="./img/ngrx_async.png" width="80%" class="img-plain"/>-->
     <aside class="notes">
-        <b>The async pipe is here to help. The async pipe subscribes AND unscubscribes automatically to Observables, letting you focus on what's really important to you: the Data to display. Angular does the rest.</b>
+        <b>Yes there is a better way. It is the async pipe.</b><br/>
+        <ol>
+            <li>The async pipe subscribes AND unscubscribes automatically to Observables, letting you focus on what's really important to you: the Data to display. Angular does the rest.</li>
+        </ol>
+        <b>This example is exactly the same as the previous example but we with less code</b>
     </aside>
 </section>
 
 <section>
-    <h3>Ngrx/store: all in one</h3>
+    <h3>Ngrx/store: all together</h3>
 <pre style="font-size: 55%" class="stretch"><code class="typescript" data-trim> 
 @Component({
   template: \`
@@ -291,7 +297,7 @@ export class UsersComponent {
 <div class="fragment current-only" data-code-focus="3,10,15"></div>
 <div class="fragment current-only" data-code-focus="5,18-20"></div>
     <aside class="notes">
-        <b>With this example I want to show you how easy the code can be when using ngrx/store</b>
+        <b>Now all together. With this example I want to show you how easy the code can be when using ngrx/store</b>
         <ol>
             <li>We have a template that display a list of users with a remove button</li>
             <li>The usersStream$ is an Observable that we get from the store and subscribe to using the async pipe</li>
@@ -332,6 +338,7 @@ export class UsersComponent {
             <li>Why? Because with an array we need to go through the entire list if we want to get a specific User.</li>
             <li>With Object literals, we simply get the right key.</li>
         </ol>
+        <b></b>
     </aside>
 </section>
 
@@ -363,10 +370,11 @@ export class UsersComponent {
         <b></b>
         <ol>
             <li>What's wrong now? => We have two references of the same user objects.</li>
-            <li>Why is this wrong? Well user objects that represent the same users can be out of think. For instance the same user can have a profile picture on a page and another on another page depending on when you got the data.</li>
-            <li>It is really important to keep a single source of truth!</li>
+            <li>Why is this wrong? Well user objects that represent the same users can be out of sync. For instance the same user can have a profile picture on a page and another on another page depending on when you got the data.</li>
+            <li>It is really important to keep a single source of truth! And it is easily doable using an array of ids in this case</li>
         </ol>
-        <b>This leads us to conclude on derived data</b>
+        <b>This leads us to conclude this talk on derived data</b><br/>
+        <b>A little hint: we need to use a special rxjs operator</b>
     </aside>
 </section>
 
@@ -418,6 +426,7 @@ this.stream$ = Observable.combineLatest(
         <b>We need to use the combineLatest operator.</b><br/>
         <ul>
             <li>We get notified everytime one of the source Observable emits a new item</li>
+            <li>Two observables are merge into one, the result is a combination of both values</li>
             <li>If we translate this into code we have the following</li>
             <li>The first two arguments are our state Observables, then the last argument is a function that receives the state values and returns whatever you want but here the list of trending user objects!</li>
         </ul>
