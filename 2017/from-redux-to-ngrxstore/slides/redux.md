@@ -4,13 +4,15 @@
     <h2>Predictable state container for JavaScript apps</h2>
     
     <aside class="notes">
+        <b>To understand what ngrx/store is we must first learn where it is coming from. It is mainly inspired by Redux.</b><br/>
+        <b>What is Redux then?</b><br/>
         <b>Redux is a library for unidirectional data flow (top to bottom), which makes the state of your app:</b>
         <ul>
             <li>Easier to understand for developers</li>
-            <li>Encourages data normalization: avoid copies</li>
+            <li>Encourages data normalization: avoid copies of the same data</li>
             <li>Predictable</li>
         </ul>
-        <b>What is the problem with conventionnal data flow?</b>
+        <b>Ok great but What is the problem with conventionnal data flows?</b>
     </aside>
 </section>
 
@@ -21,10 +23,10 @@
     <aside class="notes">
         <b>Conventionnal data flow could look like this.</b>
         <ul>
-            <li>components can communicate directly with each other: props, event emitters</li>
-            <li>components can communicate through third party services</li>
+            <li>Components can communicate directly with each other using props or event emitters (In and Out). Works for components that have a direct relationship, such as parent and children.</li>
+            <li>When you do not have a direct relationship you can use a third party service, or use a pub sub pattern etc.</li>
         </ul>
-        <b>Hard to reason about</b>
+        <b>As you can see there are many ways to achieve data communications between components and it is not normalized, meaning if you have several developers working on your application over time, you could end up using all the possibilities and make your app harder to understand and unpredictable.</b>
     </aside>
 </section>
 
@@ -33,10 +35,10 @@
     <img src="./img/with_redux.svg" width="65%" class="img-plain no-margin"/>
 
     <aside class="notes">
-        <b>With Redux the store contains the state of your app. It is the Single Source of Truth!!!</b>
+        <b>With Redux the store contains the entire state of your app. It is what we call "the Single Source of Truth!!!"</b>
         <ul>
-            <li>Here A state change is ordered by a component</li>
-            <li>The store provides the new state to other components using a unidirectional data flow</li>
+            <li>When a component ask a state change to the store, the store apply this change and notify the components that subscribed to it</li>
+            <li>With the unidirectional data flow, all data in your application follows the same lifecycle pattern, which makes the logic of your application more predictable and easier to understand.</li>
         </ul>
     </aside>
 </section>
@@ -46,12 +48,12 @@
     <img src="./img/redux_store.svg" width="65%" class="img-plain no-margin"/>
 
     <aside class="notes">
-        <b>Let's get into the store API details.</b>
-        <ul>
-            <li>When a component orders a change, we say that it DISPATCHES an action</li>
-            <li>Components that subscribed to store changes will get notified</li>
-        </ul>
-        <b>Now let's see what is an action and how does it update the store?</b>
+        <b>Let's explore the lifecycle pattern a bit deeper</b>
+        <ol>
+            <li>When a component needs to change the state of the app, it orders a change by DISPATCHING an ACTION, that's the only way to change the state.</li>
+            <li>The store then applies this change and to finish it notifies the components that subscribed to its changes</li>
+        </ol>
+        <b>Now let's see what is an action and how it can update the store</b>
     </aside>
 </section>
 
@@ -60,11 +62,22 @@
     <img src="./img/redux_action.svg" width="80%" class="img-plain no-margin"/>
 
     <aside class="notes">
-        <b>An action is a plain JavaScript Object that describes the changes to make to the store</b>
+        <b>this is an an action. An Action is a plain JavaScript Object that describes the changes to make to the store</b>
         <ul>
-            <li>The only constraint you have is to be able to identify the action, here with a type</li>
-            <li>The payload can be anything</li>
+            <li>The only constraint you have is to be able to identify the action, here we do this using the type key, which is a convention.</li>
+            <li>The payload on the other hand is completely up to you, it can be anything</li>
         </ul>
+        <b>the purpose of this action is pretty straight forward. We want to change the username of the current user.</b>
+    </aside>
+</section>
+
+<section>
+    <h3>Redux store</h3>
+    <img src="./img/redux_store.svg" width="65%" class="img-plain no-margin"/>
+
+    <aside class="notes">
+        <b>If we go back to the previous diagram, we can see that there is missing part here. From an action how do we change the state of the app?</b>
+        <b>That's where reducers enter into the equation</b>
     </aside>
 </section>
 
@@ -77,8 +90,9 @@ function sum(total, currentValue) {
 [1,2,3].reduce(sum, 0);
 </code></pre>
     <aside class="notes">
-        <b>Redux is called Redux because of reducers. A reducer or a reduction function is a function that takes an accumulator (here total) and the current value and returns a new value</b>
-        <b>We have a 1,2,3 array that we reduce with the sum function and give an initial value of 0</b>
+        <b>A reducer or a reduction function is a function that takes an accumulator (here total), the current value and returns a new value</b>
+        <b>Reduce is only available on arrays in JavaScript</b>
+        <b>Here We have a 1,2,3 array that we reduce with the sum function (or a reducer) and give an initial value of 0</b>
         <b>What is the return value here? 6</b>
     </aside>
 </section>
@@ -119,8 +133,9 @@ function counterReducer(state, action) {
         <ul>
             <li>The current state + an action will enter the reducer</li>
             <li>The reducer will apply the state modification</li>
-            <li>and to finish the reducer will return a new state</li>
+            <li>then the reducer will return a new state</li>
         </ul>
+        <b>By now I think it is pretty clear, let now recap all of this with a diagram</b>
     </aside>
 </section>
 
@@ -128,15 +143,14 @@ function counterReducer(state, action) {
     <h3>Unidirectional data flow with Redux</h3>
     <img src="./img/redux_diagram_2.png" width="100%" class="img-plain"/>
     <aside class="notes">
-        <b>Let's summarized the unidirectional data flow with this diagram</b>
-        <ul>
-            <li>First Components subscribe to the unique store</li>
-            <li>Components can dispatch actions</li>
-            <li>Actions do to the reducers</li>
-            <li>The reducers apply the changes and return a new state</li>
-            <li>The new state is giver to components</li>
-            <li>... and so on</li>
-        </ul>
+        <ol>
+            <li>First Components subscribe to the unique store (only one store in Redux)</li>
+            <li>then the components can dispatch actions</li>
+            <li>The reducers receive those actions, apply the changes, and return a new state</li>
+            <li>The Store notify the components with this new state</li>
+            <li>... and so on, and so forth</li>
+        </ol>
+        <b>You guys are now Redux experts, let's learn about ngrx/store now!</b>
     </aside>
 </section>
 

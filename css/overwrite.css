@@ -84,15 +84,15 @@ input {
 }
 
 .green {
-    color: #7DFB7D;
+    color: #7DFB7D !important;
 }
 
 .red {
-    color: red;
+    color: red !important;
 }
 
 .orange{
-    color: orange;
+    color: orange !important;
 }
 
 code.snippet {

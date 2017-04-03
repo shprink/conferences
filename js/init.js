@@ -5,6 +5,7 @@ Reveal.initialize({
     progress: true,
     history: true,
     center: true,
+    // showNotes: true,
 
     transition: 'slide', // none/fade/slide/convex/concave/zoom
     backgroundTransition: 'zoom',
