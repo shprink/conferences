@@ -10,6 +10,32 @@
 </section>
 
 <section>
+    <h3>ngrx/store</h3>
+    <ul>
+        <li>Open Source library</li>
+        <li class="fragment">Predictable state management inspired by Redux</li>
+        <li class="fragment">RxJS powered</li>
+        <li class="fragment">Unidirectional data flow (top to bottom)</li>
+        <li class="fragment">Only for Angular applications</li>
+        <li class="fragment">Created by Rob Wormald</li>
+        <li class="fragment">
+            2.5k <i class="fa fa-star"></i> on Github
+        </li>
+    </ul>
+    <aside class="notes">
+        <b>ngrx/store is an Open Source library to </b>
+        <ul>
+            <li>Predictable state management Inspired by Redux</li>
+            <li>It is powered by RxJS, everything is an Observable</li>
+            <li>also had a Unidirectional data flow</li>
+            <li>it is only for Angular applications</li>
+            <li>Created by Rob Wormald, who works at google in Angular core team</li>
+            <li>has two point five thousand stars on Github</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
     <h3>Unidirectional data flow with ngrx/store</h3>
     <img src="./img/ngrx_diagram.png" width="100%" class="img-plain"/>
     <aside class="notes">
@@ -86,7 +112,7 @@ stateObserver.subscribe(counter => console.log(counter))
 </section>
 -->
 <section>
-    <h3>Ngrx/store: Installation</h3>
+    <h3>Installation</h3>
 
 <pre style="font-size: 90%"><code class="js" data-trim>
 npm install @ngrx/core @ngrx/store --save
@@ -101,7 +127,7 @@ yarn add @ngrx/core @ngrx/store
 </section>
 
 <section>
-    <h3>Ngrx/store: Create store</h3>
+    <h3>Store: creation</h3>
 <pre style="font-size: 60%" class="stretch"><code class="js" data-trim>
 import { StoreModule, combineReducers } from '@ngrx/store';
 import { 
@@ -140,7 +166,7 @@ export class AppModule {}
 </section>
 
 <section>
-    <h3>Ngrx/store: use the store</h3>
+    <h3>Store: injection</h3>
 <pre style="font-size: 85%"><code class="js" data-trim>
 export interface IAppState {
     currentUser: User; // { id: 1, ..}
@@ -153,9 +179,10 @@ import { Store } from '@ngrx/store';
  
 @Component({ ... })
 export class SomeComponent {
-  constructor(
-      store: Store< IAppState >
-  ) { }
+  constructor(store: Store< IAppState >) {
+      // We can use the store
+      this.store...
+   }
 }
 </code></pre>
     <aside class="notes">
@@ -166,24 +193,26 @@ export class SomeComponent {
             <li>And language is a string</li>
         </ol>
         <b>Once we have the appState interface, we can inject the Store provider in our services or components using Angular's dependency injection.</b><br/>
-        <b>Now how to retrieve data from the store?</b>
+        <b>Now that we have access to the store on our components how do we manipulate the state?</b>
     </aside>
 </section>
 
 <section>
-    <h3>Ngrx/store: Select</h3>
+    <h3>Store: state select</h3>
 <div class="fragment">
 <h4>Entire state</h4>
 <pre style="font-size: 95%"><code class="js" data-trim>
-store.select(state => state)
+this.store.select(state => state)
 </code></pre>
 </div>
 
 <div class="fragment">
 <h4>Slice of the state</h4>
 <pre style="font-size: 95%" ><code class="js" data-trim>
-store.select(state => state.users)
+this.store.select(state => state.users)
+this.store.select('users')
 </code></pre>
+    <h4 class="fragment green">Returns an Observable</h4>
 </div>
     <aside class="notes">
         <b>We can use the store provider to retreive data from the store using the `select` method</b>
@@ -196,9 +225,12 @@ store.select(state => state.users)
 </section>
 
 <section>
-    <h3>Ngrx/store: Dispatch Actions</h3>
+    <h3>Store: Dispatch</h3>
 <pre style="font-size: 65%"><code class="js" data-trim>
-this.store.dispatch({ type: 'ACTION_TYPE' })
+this.store.dispatch({
+    type: 'ACTION_TYPE',
+    payload: {...}
+})
 </code></pre>
     <aside class="notes">
         <b>Well it is pretty straight forward, we use the `dispatch` method with an action as argument</b><br/>
@@ -207,7 +239,7 @@ this.store.dispatch({ type: 'ACTION_TYPE' })
 </section>
 
 <section>
-    <h4>Ngrx/store: Change detection</h4>
+    <h4>UI Change detection</h4>
 <pre style="font-size: 65%" class="stretch"><code class="js" data-trim>
 @Component({
   template: \`
@@ -231,6 +263,7 @@ export class CounterComponent {
 <div class="fragment current-only" data-code-focus="11"></div>
 <div class="fragment current-only" data-code-focus="12"></div>
 <div class="fragment current-only" data-code-focus="14-16"></div>
+    <h4 class="fragment red">Too much boilerplate</h4>
     <aside class="notes">
         <b>The change detection happens everytime a Component Class property changes.</b>
         <ol>
@@ -244,7 +277,7 @@ export class CounterComponent {
 </section>
 
 <section>
-    <h4>Ngrx/store: Change detection with Async pipe</h4>
+    <h4>UI Change detection with Async pipe</h4>
 <pre style="font-size: 65%"><code class="js" data-trim>
 @Component({
   template: \`Counter: {{ counter$ | async }}\`
@@ -257,19 +290,20 @@ export class AsyncCounterComponent {
   }
 }
 </code></pre>
-<div class="fragment current-only" data-code-focus="2"></div>
+    <div class="fragment current-only" data-code-focus="2"></div>
+    <h4 class="fragment green">Less code = Less bugs</h4>
 <!--<img src="./img/ngrx_async.png" width="80%" class="img-plain"/>-->
     <aside class="notes">
-        <b>Yes there is a better way. It is the async pipe.</b><br/>
+        <b>Yes there is a better way. It is the async pipe. This example is exactly the same as the previous example but we with less code</b><br/>
         <ol>
             <li>The async pipe subscribes AND unscubscribes automatically to Observables, letting you focus on what's really important to you: the Data to display. Angular does the rest.</li>
         </ol>
-        <b>This example is exactly the same as the previous example but we with less code</b>
+        <b></b>
     </aside>
 </section>
 
 <section>
-    <h3>Ngrx/store: all together</h3>
+    <h3>all together</h3>
 <pre style="font-size: 55%" class="stretch"><code class="typescript" data-trim> 
 @Component({
   template: \`
@@ -303,13 +337,13 @@ export class UsersComponent {
             <li>The usersStream$ is an Observable that we get from the store and subscribe to using the async pipe</li>
             <li>To finish we have the removeUser method that is called when the user clicks on the button and that dispaches the REMOVE_USER action.</li>
         </ol>
-        <b>To resume, when we click on the remove button, the reducer will apply the modification, the usersStream will receive a new value and the UI will rerender the list</b><br/>
+        <b>To resume, we display a list of users that we get from the usersStream. Then when we click on the remove button, the reducer will remove one user and return a new state, the usersStream will receive the new list and the UI will rerender</b><br/>
         <b>Now let's learn about the state best practices</b>
     </aside>
 </section>
 
 <section>
-    <h3>Ngrx/store: State best practices</h3>
+    <h3>State best practices</h3>
 <pre style="font-size: 75%"><code class="typescript" data-trim> 
 "users": [
     { id: 293580923, "username": "shprink", ...},
@@ -343,7 +377,7 @@ export class UsersComponent {
 </section>
 
 <section>
-    <h3>Ngrx/store: State best practices</h3>
+    <h3>State best practices</h3>
 <pre style="font-size: 65%"><code class="typescript" data-trim> 
 "users": {
     293580923: { id: 293580923, "username": "shprink", ...},
@@ -380,7 +414,7 @@ export class UsersComponent {
 
 
 <section>
-    <h3>Ngrx/store: Derived data</h3>
+    <h3>Derived data</h3>
 <pre style="font-size: 65%"><code class="typescript" data-trim> 
 {
   "users": {
@@ -430,6 +464,27 @@ this.stream$ = Observable.combineLatest(
             <li>If we translate this into code we have the following</li>
             <li>The first two arguments are our state Observables, then the last argument is a function that receives the state values and returns whatever you want but here the list of trending user objects!</li>
         </ul>
-        <b>You guys now know EVERYTHING there is to know about ngrx/store, now have fun with it, thank you!</b>
+        <b>let's conclude this talk</b>
+    </aside>
+</section>
+
+<section>
+    <h3>Conclusion</h3>
+    <h4>With ngrx/store you get:</h4>
+    <ul>
+        <li class="fragment">A reactive app</li>
+        <li class="fragment">A predictable state</li>
+        <li class="fragment">A normalized state structure</li>
+        <li class="fragment">A unidirectional data flow</li>
+    </ul>
+    <aside class="notes">
+        <b>Why use ngrx/store, why should you care? Those are the things you should remember:</b>
+        <ul>
+            <li>You app becomes fully reactive: With the onPush change detection strategy that you can enable on your components, your app becomes lightening fast, it will only rerender part of your UI when necessary</li>
+            <li>Your state is always predictable: From a list of actions you can retreive the final state easily. Which make it perfect for unit testing</li>
+            <li>Data normalization: If you try to follow the state best practices I shared with you and there are more, you endup having a state understandable by everyone.</li>
+            <li>unidirectional data flow: Top to bottom, it makes your app easier to reason about</li>
+        </ul>
+        <b>Now know EVERYTHING there is to know about ngrx/store, I hope you guys will use it in your next app, thank you!</b>
     </aside>
 </section>
