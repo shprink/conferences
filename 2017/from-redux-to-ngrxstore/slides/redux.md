@@ -6,11 +6,29 @@
     <aside class="notes">
         <b>To understand what ngrx/store is we must first learn where it is coming from. It is mainly inspired by Redux.</b><br/>
         <b>What is Redux then?</b><br/>
-        <b>Redux is a library for unidirectional data flow (top to bottom), which makes the state of your app:</b>
+    </aside>
+</section>
+
+<section>
+    <h3>Redux</h3>
+    <ul>
+        <li>Open Source library</li>
+        <li class="fragment">Predictable state management</li>
+        <li class="fragment">Unidirectional data flow (top to bottom)</li>
+        <li class="fragment">Framework agnostic</li>
+        <li class="fragment">Created by Dan Abramov & Andrew Clark</li>
+        <li class="fragment">
+            29k <i class="fa fa-star"></i> on Github
+        </li>
+    </ul>
+    <aside class="notes">
+        <b>Redux is an Open Source library to manage the state of your app, meaning all the data of your app.</b>
         <ul>
-            <li>Easier to understand for developers</li>
-            <li>Encourages data normalization: avoid copies of the same data</li>
-            <li>Predictable</li>
+            <li>The state is Predictable so it is easily testable</li>
+            <li>It has a Unidirectional data flow: Always top to bottom</li>
+            <li>It is Framework agnostic, it can be used with any framework or any library: Angular, React, whatever</li>
+            <li>Created by Dan Abramov & Andrew Clark</li>
+            <li>has tweenty nine thousand stars on Github</li>
         </ul>
         <b>Ok great but What is the problem with conventionnal data flows?</b>
     </aside>
@@ -18,7 +36,18 @@
 
 <section>
     <h3>Without Redux</h3>
-    <img src="./img/without_redux.svg" width="65%" class="img-plain no-margin"/>
+    <div class="grid vertical-center">
+        <div class="unit w-3-5 no-padding">
+            <img src="./img/without_redux.svg" class="img-plain no-margin"/>
+        </div>
+        <div class="unit w-2-5 no-padding">
+            <ul style="zoom: 80%">
+                <li class="fragment">Direct communication: props, eventEmitters</li>
+                <li class="fragment">Undirect communication: Service, EventBus, PubSub</li>
+            </ul>
+        </div>
+    </div>
+    <h4 class="fragment red">Too many options</h4>
 
     <aside class="notes">
         <b>Conventionnal data flow could look like this.</b>
@@ -32,26 +61,50 @@
 
 <section>
     <h3>With Redux</h3>
-    <img src="./img/with_redux.svg" width="65%" class="img-plain no-margin"/>
+    <div class="grid vertical-center">
+        <div class="unit w-3-5 no-padding">
+            <img src="./img/with_redux.svg" class="img-plain no-margin"/>
+        </div>
+        <div class="unit w-2-5 no-padding">
+            <ul style="zoom: 80%">
+                <li class="fragment">No component to component communication</li>
+                <li class="fragment">Same lifecycle pattern</li>
+            </ul>
+        </div>
+    </div>
+    <h4 class="fragment green">Easy to reason about</h4>
 
     <aside class="notes">
         <b>With Redux the store contains the entire state of your app. It is what we call "the Single Source of Truth!!!"</b>
         <ul>
             <li>When a component ask a state change to the store, the store apply this change and notify the components that subscribed to it</li>
-            <li>With the unidirectional data flow, all data in your application follow the same lifecycle pattern, which makes the logic of your application more predictable and easier to understand.</li>
+            <li>With the unidirectional data flow, all data in your application follow the same lifecycle pattern</li>
+            <li>It makes the logic of your application more predictable and easier to reason about.</li>
         </ul>
     </aside>
 </section>
 
 <section>
     <h3>Redux store</h3>
-    <img src="./img/redux_store.svg" width="65%" class="img-plain no-margin"/>
+    <div class="grid vertical-center">
+        <div class="unit w-3-5 no-padding">
+            <img src="./img/redux_store.svg" class="img-plain no-margin"/>
+        </div>
+        <div class="unit w-2-5 no-padding">
+            <ol style="zoom: 80%">
+                <li class="fragment">An action is dispatched</li>
+                <li class="fragment">The store applies the change</li>
+                <li class="fragment">Components get notify</li>
+            </ol>
+        </div>
+    </div>
 
     <aside class="notes">
         <b>Let's explore the lifecycle pattern a bit deeper</b>
         <ol>
             <li>When a component needs to change the state of the app, it orders a change by DISPATCHING an ACTION, that's the only way to change the state.</li>
-            <li>The store then applies this change and to finish it notifies the components that subscribed to its changes</li>
+            <li>The store then applies this change</li>
+            <li>to finish the store notifies the components that subscribed to its changes</li>
         </ol>
         <b>Now let's see what is an action and how it can update the store</b>
     </aside>
@@ -76,7 +129,7 @@
     <img src="./img/redux_store.svg" width="65%" class="img-plain no-margin"/>
 
     <aside class="notes">
-        <b>If we go back to the previous diagram, we can see that there is missing part here. From an action how do we change the state of the app?</b>
+        <b>If we go back to the previous diagram, we can see that there is missing part here around the store. From an action how do we change the state of the app?</b>
         <b>That's where reducers enter into the equation</b>
     </aside>
 </section>
@@ -89,6 +142,7 @@ function sum(total, currentValue) {
 }
 [1,2,3].reduce(sum, 0);
 </code></pre>
+    <h4 class="fragment green">Result: 6</h4>
     <aside class="notes">
         <b>A reducer or a reduction function is a function that takes an accumulator (here total), the current value and returns a new value</b>
         <ul>
@@ -112,12 +166,11 @@ function counterReducer(state, action) {
       return state;
 }
 
-[
-    { type: 'INCREMENT' },
-    { type: 'INCREMENT' },
-    { type: 'DECREMENT' }
+[   { type: 'INCREMENT' }, { type: 'INCREMENT' },
+    { type: 'DECREMENT' }, { type: 'INCREMENT' }
 ].reduce(counterReducer, 0)
 </code></pre>
+    <h4 class="fragment green">Result: 2</h4>
     <aside class="notes">
         <b>If we expend this reduce idea with an array of actions, we get the idea of what Redux does internaly.</b>
         <b>In this case we are going to increment or decrement a counter by passing actions to a reducer.</b>
