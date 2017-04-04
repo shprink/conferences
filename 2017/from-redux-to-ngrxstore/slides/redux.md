@@ -52,10 +52,10 @@
     <aside class="notes">
         <b>Conventionnal data flow could look like this.</b>
         <ul>
-            <li>When your components have a direct relationship can communicate directly with each other using props to get data IN and event emitters to get data out.</li>
+            <li>When your components have a direct relationship, they can communicate directly with each other using props to get data IN and event emitters to get data out.</li>
             <li>When you do not have a direct relationship you can use a third party service, or something similar to the rootScope in Angular 1 or a Pub Sub pattern</li>
         </ul>
-        <b>There are many ways to achieve data communications between components and it is not normalized. If you have several developers working on your application over time, you could end up using many of the possibilities and make your app harder to understand and to predictable.</b>
+        <b>There are too many ways to achieve data communications between components and it is not normalized. If you have several developers working on your application over time, you could end up using many of the possibilities and make your app harder to understand and to predictable.</b>
     </aside>
 </section>
 
@@ -66,19 +66,18 @@
             <img src="./img/with_redux.svg" class="img-plain no-margin"/>
         </div>
         <div class="unit w-2-5 no-padding">
-            <ul style="zoom: 80%">
-                <li class="fragment">No component to component communication</li>
-                <li class="fragment">Same lifecycle pattern</li>
+            <ul style="zoom: 80%" class="fragment">
+                <li >No component to component communication</li>
+                <li>Same lifecycle pattern</li>
             </ul>
         </div>
     </div>
     <h4 class="fragment green">Easy to reason about</h4>
 
     <aside class="notes">
-        <b>With Redux the store contains the entire state of your app. It is what we call "the Single Source of Truth!!!"</b>
+        <b>With Redux the store contains the entire state of your app. It is what we call "the Single Source of Truth!!!". When a component initiate a change (green arrow), the store apply this change and let the components know (blue arrows)</b>
         <ul>
-            <li>When a component ask a state change to the store, the store apply this change and notify the components that subscribed to it</li>
-            <li>With the unidirectional data flow, all data in your application follow the same lifecycle pattern</li>
+            <li>With the unidirectional data flow, all data in your application follow the same lifecycle pattern: there is no component to component communication</li>
             <li>It makes the logic of your application more predictable and easier to reason about.</li>
         </ul>
     </aside>
@@ -102,7 +101,7 @@
     <aside class="notes">
         <b>Let's explore the lifecycle pattern a bit deeper</b>
         <ol>
-            <li>When a component needs to change the state of the app, it orders a change by DISPATCHING an ACTION, that's the only way to change the state.</li>
+            <li>When a component needs to change the state of the app, it orders a change by DISPATCHING an ACTION, that's the only way to change the state in Redux.</li>
             <li>The store then applies this change</li>
             <li>to finish the store notifies the components that subscribed to its changes</li>
         </ol>
@@ -113,6 +112,7 @@
 <section>
     <h3>Redux: Action</h3>
     <img src="./img/redux_action.svg" width="80%" class="img-plain no-margin"/>
+    <h4 class="fragment green">Type key is the only constraint</h4>
 
     <aside class="notes">
         <b>this is an an action. An Action is a plain JavaScript Object that describes the changes to make to the store</b>
@@ -129,7 +129,7 @@
     <img src="./img/redux_store.svg" width="65%" class="img-plain no-margin"/>
 
     <aside class="notes">
-        <b>If we go back to the previous diagram, we can see that there is missing part here around the store. From an action how do we change the state of the app?</b>
+        <b>If we go back to the previous diagram, we can see that there is missing part here around the store.<br/> From this action how do we change the state of the app?</b>
         <b>That's where reducers enter into the equation</b>
     </aside>
 </section>
@@ -173,7 +173,7 @@ function counterReducer(state, action) {
     <h4 class="fragment green">Result: 2</h4>
     <aside class="notes">
         <b>If we expend this reduce idea with an array of actions, we get the idea of what Redux does internaly.</b>
-        <b>In this case we are going to increment or decrement a counter by passing actions to a reducer.</b>
+        <b>In this case we are going to increment or decrement a counter by passing actions to a reducer. <br/>What is the return value here? 2</b>
     </aside>
 </section>
 
@@ -199,10 +199,10 @@ function counterReducer(state, action) {
     <img src="./img/redux_diagram_2.png" width="100%" class="img-plain"/>
     <aside class="notes">
         <ol>
-            <li>First Components subscribe to the unique store (only one store in Redux)</li>
-            <li>then the components can dispatch actions</li>
-            <li>The reducers receive those actions, apply the changes, and return a new state</li>
-            <li>The Store notify the components with this new state</li>
+            <li>First our Components can subscribe to the store</li>
+            <li>then the Components can dispatch actions</li>
+            <li>The reducers will receive those actions, apply the changes, and return a new state</li>
+            <li>The Store then notify the components with this new state</li>
             <li>... and so on, and so forth</li>
         </ol>
         <b>You guys are now Redux experts, Now let's talk about ngrx/store shall we?!</b>

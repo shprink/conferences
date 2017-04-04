@@ -5,15 +5,14 @@
     
     <aside class="notes">
         <b>ngrx/store is a RxJS powered, state management for Angular applications</b><br/>
-        <b>It was created by Rob Wormald who is a core member of the Angular team.</b>
     </aside>
 </section>
 
 <section>
     <h3>ngrx/store</h3>
     <ul>
-        <li>Open Source library</li>
-        <li class="fragment">Predictable state management inspired by Redux</li>
+        <li>Open Source library inspired by Redux</li>
+        <li class="fragment">Predictable state management</li>
         <li class="fragment">RxJS powered</li>
         <li class="fragment">Unidirectional data flow (top to bottom)</li>
         <li class="fragment">Only for Angular applications</li>
@@ -23,12 +22,12 @@
         </li>
     </ul>
     <aside class="notes">
-        <b>ngrx/store is an Open Source library to </b>
+        <b>ngrx/store is an Open Source library inspired by Redux</b>
         <ul>
-            <li>Predictable state management Inspired by Redux</li>
+            <li>Same purpose as Redux, it is a Predictable state management library</li>
             <li>It is powered by RxJS, everything is an Observable</li>
             <li>also had a Unidirectional data flow</li>
-            <li>it is only for Angular applications</li>
+            <li>This time it is not framework agnostic but only for Angular applications</li>
             <li>Created by Rob Wormald, who works at google in Angular core team</li>
             <li>has two point five thousand stars on Github</li>
         </ul>
@@ -140,7 +139,7 @@ const rootReducer = combineReducers({
     language: languageReducer,
 })
 
-export function get(state: any, action: any) { // AOT
+export function reducer(state: any, action: any) { // AOT
   return rootReducer(state, action);
 }
  
@@ -193,7 +192,7 @@ export class SomeComponent {
             <li>And language is a string</li>
         </ol>
         <b>Once we have the appState interface, we can inject the Store provider in our services or components using Angular's dependency injection.</b><br/>
-        <b>Now that we have access to the store on our components how do we manipulate the state?</b>
+        <b>Now that we have access to the store, to its API on our components/services. <br/>how do we manipulate the state?</b>
     </aside>
 </section>
 
