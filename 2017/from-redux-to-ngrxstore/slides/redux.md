@@ -22,7 +22,7 @@
         </li>
     </ul>
     <aside class="notes">
-        <b>Redux is an Open Source library to manage the state of your app, meaning all the data of your app.</b>
+        <b>Redux is an Open Source library to manage the state of your app, meaning all the data within your app.</b>
         <ul>
             <li>The state is Predictable so it is easily testable</li>
             <li>It has a Unidirectional data flow: Always top to bottom</li>
@@ -56,7 +56,7 @@
             <li>When you do not have a direct relationship you can use a third party service, or something similar to the rootScope in Angular 1 or a Pub Sub pattern</li>
             <li>There are too many ways to achieve data communications between components and it is not normalized. </li>
         </ul>
-        <b>If you have several developers working on your application over time, you could end up using many of the possibilities and make your app harder to understand and to predictable.</b>
+        <b>If you have several developers working on your application over time, you could end up using many of the possibilities and make your app harder to understand and to predict.</b>
     </aside>
 </section>
 
@@ -118,7 +118,7 @@
     <aside class="notes">
         <b>this is an an action. An Action is a plain JavaScript Object that describes the changes to make to the store</b>
         <ul>
-            <li>The only constraint you have is to be able to identify the action, here we do this using the type key, which is a convention.</li>
+            <li>The only constraint you have is to be able to identify the action, here we do this using the type key, which is a convention. it has to be unique</li>
             <li>The payload on the other hand is completely up to you, it can be anything</li>
         </ul>
         <b>the purpose of this action is pretty straight forward. We want to change the username of the current user.</b>
@@ -199,10 +199,11 @@ function counterReducer(state, action) {
     <h3>Unidirectional data flow with Redux</h3>
     <img src="./img/redux_diagram_2.png" width="100%" class="img-plain"/>
     <aside class="notes">
+        <b>We can summurize the </b>
         <ol>
-            <li>First the Components subscribe to the store</li>
+            <li>First the Components subscribe to the store to get the state</li>
             <li>then the Components can dispatch actions</li>
-            <li>The reducers will receive those actions, apply the changes, and return a new state</li>
+            <li>The reducers will receive those actions, apply the changes, and return a new state to the store</li>
             <li>The Store then notify the components with this new state</li>
             <li>... and so on, and so forth</li>
         </ol>

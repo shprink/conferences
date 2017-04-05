@@ -22,7 +22,7 @@
         </li>
     </ul>
     <aside class="notes">
-        <b>ngrx/store is an Open Source library inspired by Redux</b>
+        <b>It is an Open Source library inspired by Redux</b>
         <ul>
             <li>Same purpose as Redux, it is a Predictable state management library</li>
             <li>It is powered by RxJS, everything is an Observable</li>
@@ -38,7 +38,7 @@
     <h3>Unidirectional data flow with ngrx/store</h3>
     <img src="./img/ngrx_diagram.png" width="100%" class="img-plain"/>
     <aside class="notes">
-        <b>As you can see the diagram we have with ngrx is almost the same as with Redux. </b>
+        <b>As you can see here Redux and ngrx diagrams are similar. </b>
         <ul>
             <li>The differences are that both actions and the store are streams/Observables.</li>
             <li>We keep all the Redux ideas: Actions, Reducers, Store</li>
@@ -185,7 +185,7 @@ export class SomeComponent {
 }
 </code></pre>
     <aside class="notes">
-        <b>Before we can use the store we must create its definition. To do this we need to use a TypeScript interface.</b>
+        <b>Before we can use the store we must create its definition. To do this we can use a TypeScript interface.</b>
         <ol>
             <li>The currentUser has a User type</li>
             <li>Users are an array of User</li>
@@ -272,9 +272,9 @@ export class CounterComponent {
 <div class="fragment current-only" data-code-focus="14-16"></div>
     <h4 class="fragment red">a bit tidious</h4>
     <aside class="notes">
-        <b>The change detection happens everytime a Component Class property changes.</b>
+        <b>The change detection happens everytime a Component Class property changes. Check out zone.js for more details</b>
         <ol>
-            <li>We want the class property updated in the template everytime it changes in the Class.</li>
+            <li>We want `counter` within the template to update everytime it changes in the Class.</li>
             <li>To do this we are going to create an Observable that increments a counter by 1 every 1 second.</li>
             <li>We then subscribe to it and bind the counter result to our Class property. The counter will increase on the screen</li>
             <li>One important thing to notice is that we need to unsubscribe once the component is destroy, otherwise the Observable will continue pushing new values</li>
@@ -304,7 +304,7 @@ export class AsyncCounterComponent {
         <b>Yes there is a better way. It is the async pipe. This example is exactly the same as the previous example but we with less code</b><br/>
         <ol>
             <li>The async pipe subscribes AND unscubscribes automatically to Observables, letting you focus on what's really important to you: the Data to display. Angular does the rest.</li>
-            <li>Less code = less bugs. In the previous example if you forgot to unsubscribe for instance you would have memory leaks</li>
+            <li>Less code is less bugs. In the previous example if you forgot to unsubscribe for instance you would have memory leaks</li>
         </ol>
         <b></b>
     </aside>
@@ -379,7 +379,7 @@ export class UsersComponent {
             <li>Why? Because with an array we need to go through the entire list if we want to get a specific User.</li>
             <li>With Object literals, we simply get the right key.</li>
         </ol>
-        <b>Object literals have better performance</b>
+        <b>Object literals are better for performance</b>
     </aside>
 </section>
 
@@ -410,7 +410,7 @@ export class UsersComponent {
     <aside class="notes">
         <b></b>
         <ol>
-            <li>What's wrong now? => We have two references of the same user objects.</li>
+            <li>What's wrong with this example? => We have two references of the same user objects.</li>
             <li>Why is this wrong? the references can be out of sync. For instance the same user can have a profile picture on a page and another on another page depending on when you got the data.</li>
             <li>It is really important to keep a single source of truth! And it is easily doable using an array of ids in this case</li>
         </ol>
@@ -458,15 +458,15 @@ export class UsersComponent {
     <img src="./img/rx_combinelatest_operator.png" class="img-plain"/>
 <pre style="font-size: 65%" class="fragment"><code class="typescript" data-trim> 
 this.stream$ = Observable.combineLatest(
-      store.select(state => state.users),
-      store.select(state => state.trendingUsers),
+      store.select('users'),
+      store.select('trendingUsers'),
       (users, trendingUsers)
         => trendingUsers.map(id => users[id]))
 </code></pre>
     <aside class="notes">
         <b>We need to use the combineLatest operator.</b><br/>
         <ul>
-            <li>We get notified everytime one of the source Observable emits a new item (arrows on top)</li>
+            <li>After we apply the combineLatest operator we get notified everytime one of the source Observable emits a new item (arrows on top)</li>
             <li>Two observables are merge into one, the result is a combination of both values</li>
             <li>[EXPLAIN IMAGE]</li>
             <li>If we translate this into code we have the following</li>
@@ -492,6 +492,6 @@ this.stream$ = Observable.combineLatest(
             <li>If you follow the state best practices I shared with you (and there are more), you endup having a state understandable by everyone.</li>
             <li>And with the unidirectional data flow (Top to bottom), it makes your app easier to reason about</li>
         </ul>
-        <b>Now you guys know EVERYTHING there is to know about ngrx/store, I hope you guys will use it in your next project, and that's all for me thank you!</b>
+        <b>Now you know EVERYTHING there is to know about ngrx/store, I hope you guys will use it in your next project. thank you very much!</b>
     </aside>
 </section>
