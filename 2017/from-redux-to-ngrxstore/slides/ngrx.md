@@ -26,7 +26,7 @@
         <ul>
             <li>Same purpose as Redux, it is a Predictable state management library</li>
             <li>It is powered by RxJS, everything is an Observable</li>
-            <li>also had a Unidirectional data flow</li>
+            <li>also has a Unidirectional data flow</li>
             <li>This time it is not framework agnostic but only for Angular applications</li>
             <li>Created by Rob Wormald, who works at google in Angular core team</li>
             <li>has two point five thousand stars on Github</li>
@@ -160,7 +160,7 @@ export class AppModule {}
             <li>For AOT compilation to work we need an extra step, we export a function that returns the result of the rootReducer call. This function is called at every new action triggered</li>
             <li>To finish we can import this store into our app using StoreModule.provideStore</li>
         </ol>
-        <b>Now that our store is ready the Next question is: How do we ust it in our components?</b>
+        <b>Now that our store is ready the Next question is: How do we use it in our components or services?</b>
     </aside>
 </section>
 
@@ -192,37 +192,45 @@ export class SomeComponent {
             <li>And language is a string</li>
         </ol>
         <b>Once we have the appState interface, we can inject the Store provider in our services or components using Angular's dependency injection.</b><br/>
-        <b>Now that we have access to the store, to its API on our components/services. <br/>how do we manipulate the state?</b>
+        <b>Now that we have access to the store, let's focus on its API</b>
     </aside>
 </section>
 
 <section>
-    <h3>Store: state select</h3>
-<div class="fragment">
-<h4>Entire state</h4>
+    <h3>Store: API</h3>
+<div >
+<h4>select the Entire state</h4>
 <pre style="font-size: 95%"><code class="js" data-trim>
 this.store.select(state => state)
 </code></pre>
 </div>
 
 <div class="fragment">
-<h4>Slice of the state</h4>
+<h4>select a Slice of the state</h4>
 <pre style="font-size: 95%" ><code class="js" data-trim>
 this.store.select(state => state.users)
 this.store.select('users')
 </code></pre>
-    <h4 class="fragment green">Returns an Observable</h4>
+</div>
+<div class="fragment">
+<h4>Dispatch actions</h4>
+<pre style="font-size: 85%"><code class="js" data-trim>
+this.store.dispatch({
+    type: 'ACTION_TYPE',
+    payload: {...}
+})
+</code></pre>
 </div>
     <aside class="notes">
-        <b>We can use the store provider to retreive data from the store using the `select` method</b>
         <ol>
-            <li>This is how you select the entire state tree. the `Select` method returns an Observable that we can subscribe to.</li>
+            <li>to retreive data from the store we use the `select` method. The `Select` method returns an Observable that we can subscribe to.</li>
             <li>or you can get a slice of the state tree</li>
+            <li>To modify the state we can use the `dispatch` method with an action as the argument</li>
         </ol>
-        <b>Now we know how to get the state from the store, but how do we dispatch actions?</b>
+        <b>Now we know how to manipulate the state of the app, but we do not know how the UI reacts to the changes?</b>
     </aside>
 </section>
-
+<!--
 <section>
     <h3>Store: Dispatch</h3>
 <pre style="font-size: 65%"><code class="js" data-trim>
@@ -236,7 +244,7 @@ this.store.dispatch({
         <b>Now we know how to modify the store through actions, how does the UI react to changes?</b>
     </aside>
 </section>
-
+-->
 <section>
     <h4>UI Change detection</h4>
 <pre style="font-size: 65%" class="stretch"><code class="js" data-trim>
@@ -262,16 +270,16 @@ export class CounterComponent {
 <div class="fragment current-only" data-code-focus="11"></div>
 <div class="fragment current-only" data-code-focus="12"></div>
 <div class="fragment current-only" data-code-focus="14-16"></div>
-    <h4 class="fragment red">Too much boilerplate</h4>
+    <h4 class="fragment red">a bit tidious</h4>
     <aside class="notes">
         <b>The change detection happens everytime a Component Class property changes.</b>
         <ol>
             <li>We want the class property updated in the template everytime it changes in the Class.</li>
             <li>To do this we are going to create an Observable that increments a counter by 1 every 1 second.</li>
-            <li>We then subscribe to it and bind the counter result to our Class property</li>
-            <li>On important thing to notice is that we need to unsubscribe to our Subscription, otherwise the Observable will continue pushing new values</li>
+            <li>We then subscribe to it and bind the counter result to our Class property. The counter will increase on the screen</li>
+            <li>One important thing to notice is that we need to unsubscribe once the component is destroy, otherwise the Observable will continue pushing new values</li>
         </ol>
-        <b>As you can see this is a bit tidious?. Here we need to subscribe, keep a reference to the subscription and then unsubscribe... Is there a better way?</b>
+        <b>As you can see this is a bit tidious?. We need to subscribe, we need to keep a reference to the subscription and then unsubscribe... Is there a better way?</b>
     </aside>
 </section>
 
@@ -296,6 +304,7 @@ export class AsyncCounterComponent {
         <b>Yes there is a better way. It is the async pipe. This example is exactly the same as the previous example but we with less code</b><br/>
         <ol>
             <li>The async pipe subscribes AND unscubscribes automatically to Observables, letting you focus on what's really important to you: the Data to display. Angular does the rest.</li>
+            <li>Less code = less bugs. In the previous example if you forgot to unsubscribe for instance you would have memory leaks</li>
         </ol>
         <b></b>
     </aside>
@@ -333,10 +342,9 @@ export class UsersComponent {
         <b>Now all together. With this example I want to show you how easy the code can be when using ngrx/store</b>
         <ol>
             <li>We have a template that display a list of users with a remove button</li>
-            <li>The usersStream$ is an Observable that we get from the store and subscribe to using the async pipe</li>
-            <li>To finish we have the removeUser method that is called when the user clicks on the button and that dispaches the REMOVE_USER action.</li>
+            <li>The usersStream$ is an Observable that we get from the store and subscribe to it using the async pipe</li>
+            <li>To finish we have the removeUser method that is called when the user clicks on the button and which dispaches the REMOVE_USER action.</li>
         </ol>
-        <b>To resume, we display a list of users that we get from the usersStream. Then when we click on the remove button, the reducer will remove one user and return a new state, the usersStream will receive the new list and the UI will rerender</b><br/>
         <b>Now let's learn about the state best practices</b>
     </aside>
 </section>
@@ -371,7 +379,7 @@ export class UsersComponent {
             <li>Why? Because with an array we need to go through the entire list if we want to get a specific User.</li>
             <li>With Object literals, we simply get the right key.</li>
         </ol>
-        <b></b>
+        <b>Object literals have better performance</b>
     </aside>
 </section>
 
@@ -403,11 +411,10 @@ export class UsersComponent {
         <b></b>
         <ol>
             <li>What's wrong now? => We have two references of the same user objects.</li>
-            <li>Why is this wrong? Well user objects that represent the same users can be out of sync. For instance the same user can have a profile picture on a page and another on another page depending on when you got the data.</li>
+            <li>Why is this wrong? the references can be out of sync. For instance the same user can have a profile picture on a page and another on another page depending on when you got the data.</li>
             <li>It is really important to keep a single source of truth! And it is easily doable using an array of ids in this case</li>
         </ol>
         <b>This leads us to conclude this talk on derived data</b><br/>
-        <b>A little hint: we need to use a special rxjs operator</b>
     </aside>
 </section>
 
@@ -442,6 +449,7 @@ export class UsersComponent {
             <li>To do this we need to merge the users objects and the trending users ids</li>
         </ol>
         <b>How do we do this? Anyone?</b>
+        <b>A little hint: we need to use a special rxjs operator</b>
     </aside>
 </section>
 
@@ -458,10 +466,11 @@ this.stream$ = Observable.combineLatest(
     <aside class="notes">
         <b>We need to use the combineLatest operator.</b><br/>
         <ul>
-            <li>We get notified everytime one of the source Observable emits a new item</li>
+            <li>We get notified everytime one of the source Observable emits a new item (arrows on top)</li>
             <li>Two observables are merge into one, the result is a combination of both values</li>
+            <li>[EXPLAIN IMAGE]</li>
             <li>If we translate this into code we have the following</li>
-            <li>The first two arguments are our state Observables, then the last argument is a function that receives the state values and returns whatever you want but here the list of trending user objects!</li>
+            <li>The first two arguments are our state Observables, then the last argument is a function that receives the state values and returns whatever you want but in this case the list of trending user objects!</li>
         </ul>
         <b>let's conclude this talk</b>
     </aside>
@@ -471,19 +480,18 @@ this.stream$ = Observable.combineLatest(
     <h3>Conclusion</h3>
     <h4>With ngrx/store you get:</h4>
     <ul>
-        <li class="fragment">A reactive app</li>
+        <li>A reactive app</li>
         <li class="fragment">A predictable state</li>
         <li class="fragment">A normalized state structure</li>
         <li class="fragment">A unidirectional data flow</li>
     </ul>
     <aside class="notes">
-        <b>Why use ngrx/store, why should you care? Those are the things you should remember:</b>
         <ul>
-            <li>You app becomes fully reactive: With the onPush change detection strategy that you can enable on your components, your app becomes lightening fast, it will only rerender part of your UI when necessary</li>
+            <li>With ngrx/strore You app becomes fully reactive, it will only rerender part of UI when necessary</li>
             <li>Your state is always predictable: From a list of actions you can retreive the final state easily. Which make it perfect for unit testing</li>
-            <li>Data normalization: If you try to follow the state best practices I shared with you and there are more, you endup having a state understandable by everyone.</li>
-            <li>unidirectional data flow: Top to bottom, it makes your app easier to reason about</li>
+            <li>If you follow the state best practices I shared with you (and there are more), you endup having a state understandable by everyone.</li>
+            <li>And with the unidirectional data flow (Top to bottom), it makes your app easier to reason about</li>
         </ul>
-        <b>Now know EVERYTHING there is to know about ngrx/store, I hope you guys will use it in your next app, thank you!</b>
+        <b>Now you guys know EVERYTHING there is to know about ngrx/store, I hope you guys will use it in your next project, and that's all for me thank you!</b>
     </aside>
 </section>

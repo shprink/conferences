@@ -54,8 +54,9 @@
         <ul>
             <li>When your components have a direct relationship, they can communicate directly with each other using props to get data IN and event emitters to get data out.</li>
             <li>When you do not have a direct relationship you can use a third party service, or something similar to the rootScope in Angular 1 or a Pub Sub pattern</li>
+            <li>There are too many ways to achieve data communications between components and it is not normalized. </li>
         </ul>
-        <b>There are too many ways to achieve data communications between components and it is not normalized. If you have several developers working on your application over time, you could end up using many of the possibilities and make your app harder to understand and to predictable.</b>
+        <b>If you have several developers working on your application over time, you could end up using many of the possibilities and make your app harder to understand and to predictable.</b>
     </aside>
 </section>
 
@@ -75,7 +76,7 @@
     <h4 class="fragment green">Easy to reason about</h4>
 
     <aside class="notes">
-        <b>With Redux the store contains the entire state of your app. It is what we call "the Single Source of Truth!!!". When a component initiate a change (green arrow), the store apply this change and let the components know (blue arrows)</b>
+        <b>With Redux the store contains the entire state of your app. It is what we call "the Single Source of Truth!!!". When a component initiate a change (green arrow), the store apply this change and let the components know about it (blue arrows)</b>
         <ul>
             <li>With the unidirectional data flow, all data in your application follow the same lifecycle pattern: there is no component to component communication</li>
             <li>It makes the logic of your application more predictable and easier to reason about.</li>
@@ -190,7 +191,7 @@ function counterReducer(state, action) {
             <li>The reducer will apply the state modification</li>
             <li>then the reducer will return a new state</li>
         </ul>
-        <b>By now I think it is pretty clear, let's now recap all of this with a diagram</b>
+        <b>Let's now recap all of what we learnt with a diagram</b>
     </aside>
 </section>
 
@@ -199,7 +200,7 @@ function counterReducer(state, action) {
     <img src="./img/redux_diagram_2.png" width="100%" class="img-plain"/>
     <aside class="notes">
         <ol>
-            <li>First our Components can subscribe to the store</li>
+            <li>First the Components subscribe to the store</li>
             <li>then the Components can dispatch actions</li>
             <li>The reducers will receive those actions, apply the changes, and return a new state</li>
             <li>The Store then notify the components with this new state</li>
