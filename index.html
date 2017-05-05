@@ -1,361 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
+<head>
 
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible"
-						content="IE=edge">
-		<meta name="viewport"
-						content="width=device-width, initial-scale=1">
-		<meta name="description"
-						content="">
-		<meta name="author"
-						content="">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-		<title>Julien Renaux Blog - Talks</title>
+	<title>Julien Renaux Blog - Talks</title>
 
-		<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-		<link href="css/bootstrap.min.css"
-						rel="stylesheet">
+	<!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
 
-		<!-- Custom CSS -->
-		<link href="css/freelancer.css"
-						rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/freelancer.css" rel="stylesheet">
 
-		<!-- Custom Fonts -->
-		<link rel="stylesheet"
-						href="css/font-awesome.min.css">
-		<link rel="stylesheet"
-						href="lib/css/magnific-popup.css">
-		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
-						rel="stylesheet"
-						type="text/css">
-		<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
-						rel="stylesheet"
-						type="text/css">
-		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
+	<!-- Custom Fonts -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="lib/css/magnific-popup.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<style>
+		.big {
+			font-size: 50px;
+		}
+	</style>
+</head>
 
-	</head>
-
-	<body id="page-top"
-					class="index">
-
-		<!-- Navigation -->
-		<!--<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header page-scroll">
-					<button type="button"
-									class="navbar-toggle collapsed"
-									data-toggle="collapse"
-									data-target="#bs-example-navbar-collapse-1"
-									aria-expanded="false">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand"
-									href="#page-top">Julien Renaux</a>
-				</div>
-
-				<div class="collapse navbar-collapse"
-								id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li class="hidden">
-							<a href="#page-top"></a>
-						</li>
-						<li class="page-scroll">
-							<a href="http://julienrenaux.fr/">Blog</a>
-						</li>
-						<li class="page-scroll">
-							<a target="_blank"
-											href="http://www.toptal.com/resume/julien-renaux#select-just-supreme-hackers">Hire me!</a>
-						</li>
-						<li>
-							<a target="_blank"
-											href="https://www.facebook.com/julienrenauxblog"><i class="fa fa-fw fa-facebook"></i></a>
-						</li>
-						<li>
-							<a target="_blank"
-											href="https://twitter.com/julienrenaux"><i class="fa fa-fw fa-twitter"></i></a>
-						</li>
-						<li>
-							<a target="_blank"
-											href="https://github.com/shprink"><i class="fa fa-fw fa-github"></i></a>
-						</li>
-					</ul>
+<body id="page-top" class="index">
+	<!-- Portfolio Grid Section -->
+	<section id="portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>Talks</h2>
+					<hr class="star-primary">
 				</div>
 			</div>
-		</nav>-->
-
-		<!-- Header -->
-		<!-- <header>
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12">
-						<img class="img-responsive"
-										src="img/profile.png"
-										alt="">
-						<div class="intro-text">
-							<span class="name">Start Bootstrap</span>
-							<hr class="star-light">
-							<span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
-						</div>
+			<div class="row">
+				<div class="col-sm-4 text-center">
+					<div class="panel panel-primary">
+						<div class="panel-heading">Talks</div>
+						<div class="panel-body big" id="talk-count"></div>
+					</div>
+				</div>
+				<div class="col-sm-4 text-center">
+					<div class="panel panel-primary">
+						<div class="panel-heading">Cities</div>
+						<div class="panel-body big" id="city-count"></div>
+					</div>
+				</div>
+				<div class="col-sm-4 text-center">
+					<div class="panel panel-primary">
+						<div class="panel-heading">Countries</div>
+						<div class="panel-body big" id="country-count"></div>
 					</div>
 				</div>
 			</div>
-		</header> -->
 
-		<!-- Portfolio Grid Section -->
-		<section id="portfolio">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-12 text-center">
-						<h2>Talks</h2>
-						<hr class="star-primary">
-					</div>
-				</div>
-				<div class="row">
-					<!--<p class="alert alert-info">Tip: to see the talks associated notes, type "s" when browsing one.</p>-->
-					<div class="col-sm-12 portfolio-item">
-						<table class="table table-striped">
-							<thead>
-								<tr>
-									<th>Date</th>
-									<th>Talk</th>
-									<th>Location</th>
-									<th>Event</th>
-									<!--<th>Tags</th>-->
-									<th>Photos</th>
-								</tr>
-							</thead>
-							<tbody id="tableBody">
-							</tbody>
-						</table>
-					</div>
+
+
+			<div class="row">
+				<!--<p class="alert alert-info">Tip: to see the talks associated notes, type "s" when browsing one.</p>-->
+				<div class="col-sm-12 portfolio-item">
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Date</th>
+								<th>Talk</th>
+								<th>Location</th>
+								<th>Event</th>
+								<!--<th>Tags</th>-->
+								<th>Photos</th>
+							</tr>
+						</thead>
+						<tbody id="tableBody">
+						</tbody>
+					</table>
 				</div>
 			</div>
-		</section>
-		<!-- jQuery -->
-		<script src="lib/js/jquery.js"></script>
-		<script src="lib/js/jquery.magnific-popup.min.js"></script>
-		<script src="lib/js/moment.js"></script>
-		<script src="lib/js/bootstrap.min.js"></script>
+		</div>
+	</section>
+	<!-- jQuery -->
+	<script src="lib/js/jquery.js"></script>
+	<script src="lib/js/jquery.magnific-popup.min.js"></script>
+	<script src="lib/js/moment.js"></script>
+	<script src="lib/js/bootstrap.min.js"></script>
 
-		<script>
-			(function($) {
-				var tags = {
-					'angularjs': 'AngularJS',
-					'ionic': 'Ionic',
-					'angular2': 'Angular2',
-					'ionic2': 'Ionic 2',
-					'crossPlatform': 'CrossPlatform',
-					'javascript': 'JavaScript',
-					'typescript': 'TypeScript',
-					'es2015': 'es2015',
-					'webpack': 'Webpack',
-					'redux': 'Redux',
-					'rxjs': 'rxjs',
-					'ngrxstore': 'Ngrx Store',
-					'reactiveProgramming': 'Reactive Programming',
-					'router': 'Router',
-					'architecture': 'Architecture',
-					'wordpress': 'Wordpress',
-					'performance': 'Performance',
-				};
-				var talks = [{
-					name: 'Cross platform apps with Ionic Framework',
-					location: 'Mexico city, Mexico',
-					date: '2016-01-16',
-					eventName: 'GDG Angular México',
-					eventLink: 'http://www.meetup.com/angularmexico/events/227866069/',
-					link: './2016/cross-platform-apps-with-ionic-framework',
-					tags: ['angularjs', 'ionic', 'crossPlatform', 'javascript', 'es2015', 'webpack', 'typescript'],
-					photos: [{
-						src: 'photos/2016-01-16/angularmexico-01.jpg'
-					}, {
-						src: 'photos/2016-01-16/angularmexico-02.jpg'
-					}, {
-						src: 'photos/2016-01-16/angularmexico-03.jpg'
-					}, {
-						src: 'photos/2016-01-16/angularmexico-04.jpg'
-					}]
+	<script>
+		(function ($) {
+			var tags = {
+				'angularjs': 'AngularJS',
+				'ionic': 'Ionic',
+				'angular2': 'Angular2',
+				'ionic2': 'Ionic 2',
+				'crossPlatform': 'CrossPlatform',
+				'javascript': 'JavaScript',
+				'typescript': 'TypeScript',
+				'es2015': 'es2015',
+				'webpack': 'Webpack',
+				'redux': 'Redux',
+				'rxjs': 'rxjs',
+				'ngrxstore': 'Ngrx Store',
+				'reactiveProgramming': 'Reactive Programming',
+				'router': 'Router',
+				'architecture': 'Architecture',
+				'wordpress': 'Wordpress',
+				'performance': 'Performance',
+			};
+			var talks = [{
+				name: 'Cross platform apps with Ionic Framework',
+				city: 'Mexico city',
+				country: 'Mexico',
+				date: '2016-01-16',
+				eventName: 'GDG Angular México',
+				eventLink: 'http://www.meetup.com/angularmexico/events/227866069/',
+				link: './2016/cross-platform-apps-with-ionic-framework',
+				tags: ['angularjs', 'ionic', 'crossPlatform', 'javascript', 'es2015', 'webpack', 'typescript'],
+				photos: [{
+					src: 'photos/2016-01-16/angularmexico-01.jpg'
 				}, {
-					name: 'AngularJS introduction',
-					location: 'Barcelona, Spain',
-					date: '2016-04-06 10:00:00',
-					eventName: 'Workshop',
-					link: './2016/angularJS-introduction',
-					tags: ['angularjs', 'javascript'],
-					photos: [{
-						src: 'photos/2016-04-06/cdmon-01.jpg'
-					}, {
-						src: 'photos/2016-04-06/cdmon-02.jpg'
-					}]
+					src: 'photos/2016-01-16/angularmexico-02.jpg'
 				}, {
-					name: 'AngularJS architectures',
-					location: 'Barcelona, Spain',
-					date: '2016-04-06 11:00:00',
-					eventName: 'Workshop',
-					link: './2016/angularJS-architectures',
-					tags: ['angularjs',  'architecture', 'javascript', 'crossPlatform', 'es2015', 'webpack', 'typescript'],
-					photos: [{
-						src: 'photos/2016-04-06/cdmon-01.jpg'
-					}, {
-						src: 'photos/2016-04-06/cdmon-02.jpg'
-					}]
+					src: 'photos/2016-01-16/angularmexico-03.jpg'
 				}, {
-					name: 'AngularJS Performance',
-					location: 'Barcelona, Spain',
-					date: '2016-04-06 12:00:00',
-					eventName: 'Workshop',
-					link: './2016/angularJS-performance',
-					tags: ['angularjs', 'javascript', 'performance'],
-					photos: [{
-						src: 'photos/2016-04-06/cdmon-01.jpg'
-					}, {
-						src: 'photos/2016-04-06/cdmon-02.jpg'
-					}]
+					src: 'photos/2016-01-16/angularmexico-04.jpg'
+				}]
+			}, {
+				name: 'AngularJS introduction',
+				city: 'Barcelona',
+				country: 'Spain',
+				date: '2016-04-06 10:00:00',
+				eventName: 'Workshop',
+				link: './2016/angularJS-introduction',
+				tags: ['angularjs', 'javascript'],
+				photos: [{
+					src: 'photos/2016-04-06/cdmon-01.jpg'
 				}, {
-					name: 'Angular2 Router vs UiRouter',
-					location: 'Barcelona, Spain',
-					date: '2016-04-06 19:00:00',
-					eventName: 'AngularBeers',
-					eventLink: 'http://www.meetup.com/AngularJS-Beers/events/229395591/',
-					link: './2016/angular2-router-vs-ui-router',
-					tags: ['angular2', 'typescript', 'router'],
-					photos: [{
-						src: 'photos/2016-04-06/angularbeers-01.jpg'
-					}, {
-						src: 'photos/2016-04-06/angularbeers-02.jpg'
-					}, {
-						src: 'photos/2016-04-06/angularbeers-03.jpg'
-					}, {
-						src: 'photos/2016-04-06/angularbeers-04.jpg'
-					}, {
-						src: 'photos/2016-04-06/angularbeers-05.jpg'
-					}]
+					src: 'photos/2016-04-06/cdmon-02.jpg'
+				}]
+			}, {
+				name: 'AngularJS architectures',
+				city: 'Barcelona',
+				country: 'Spain',
+				date: '2016-04-06 11:00:00',
+				eventName: 'Workshop',
+				link: './2016/angularJS-architectures',
+				tags: ['angularjs', 'architecture', 'javascript', 'crossPlatform', 'es2015', 'webpack', 'typescript'],
+				photos: [{
+					src: 'photos/2016-04-06/cdmon-01.jpg'
 				}, {
-					name: 'Redux & Angular2',
-					location: 'Toulouse, France',
-					date: '2016-10-05 19:00:00',
-					eventName: 'AngularJS Toulouse',
-					eventLink: 'http://www.meetup.com/angulartoulouse/events/233768766/',
-					link: './2016/redux-angular2',
-					tags: ['angular2', 'redux'],
-					photos: [{
-						src: 'photos/2016-10-05/angularToulouse_S02E01_01.jpg'
-					}, {
-						src: 'photos/2016-10-05/angularToulouse_S02E01_02.jpg'
-					}, {
-						src: 'photos/2016-10-05/angularToulouse_S02E01_03.jpg'
-					}, {
-						src: 'photos/2016-10-05/angularToulouse_S02E01_04.jpg'
-					}, {
-						src: 'photos/2016-10-05/angularToulouse_S02E01_05.jpg'
-					}, {
-						src: 'photos/2016-10-05/angularToulouse_S02E01_06.jpg'
-					}]
+					src: 'photos/2016-04-06/cdmon-02.jpg'
+				}]
+			}, {
+				name: 'AngularJS Performance',
+				city: 'Barcelona',
+				country: 'Spain',
+				date: '2016-04-06 12:00:00',
+				eventName: 'Workshop',
+				link: './2016/angularJS-performance',
+				tags: ['angularjs', 'javascript', 'performance'],
+				photos: [{
+					src: 'photos/2016-04-06/cdmon-01.jpg'
 				}, {
-					name: 'WordPress Hybrid Client',
-					location: 'Netherlands',
-					date: '2016-10-13 19:00:00',
-					eventName: 'Ionic Nederland 2016.3',
-					eventLink: 'https://www.meetup.com/Ionic-Nederland/events/233916437/',
-					link: './2016/wordpress-hybrid-client',
-					tags: ['ionic', 'wordpress']
+					src: 'photos/2016-04-06/cdmon-02.jpg'
+				}]
+			}, {
+				name: 'Angular2 Router vs UiRouter',
+				city: 'Barcelona',
+				country: 'Spain',
+				date: '2016-04-06 19:00:00',
+				eventName: 'AngularBeers',
+				eventLink: 'http://www.meetup.com/AngularJS-Beers/events/229395591/',
+				link: './2016/angular2-router-vs-ui-router',
+				tags: ['angular2', 'typescript', 'router'],
+				photos: [{
+					src: 'photos/2016-04-06/angularbeers-01.jpg'
 				}, {
-					name: 'Introduction to Ionic2',
-					location: 'Toulouse, France',
-					date: '2016-12-07 19:00:00',
-					eventName: 'AngularJS Toulouse',
-					eventLink: 'https://www.meetup.com/angulartoulouse/events/235461342/',
-					link: './2016/Introduction-to-ionic2',
-					tags: ['ionic', 'ionic2', 'angular2'],
-					photos: [{
-						src: 'photos/2016-12-07/angularToulouse_S02E03_01.jpg'
-					},{
-						src: 'photos/2016-12-07/angularToulouse_S02E03_02.jpg'
-					},{
-						src: 'photos/2016-12-07/angularToulouse_S02E03_03.jpg'
-					},{
-						src: 'photos/2016-12-07/angularToulouse_S02E03_04.jpg'
-					},{
-						src: 'photos/2016-12-07/angularToulouse_S02E03_05.jpg'
-					},{
-						src: 'photos/2016-12-07/angularToulouse_S02E03_06.jpg'
-					},{
-						src: 'photos/2016-12-07/angularToulouse_S02E03_07.jpg'
-					}]
+					src: 'photos/2016-04-06/angularbeers-02.jpg'
 				}, {
-					name: 'From Redux to Ngrx/store',
-					location: 'Barcelona, Spain',
-					date: '2017-04-05 19:00:00',
-					eventName: 'Angular Community Days',
-					eventLink: 'https://www.meetup.com/AngularJS-Beers/events/236694815/',
-					link: './2017/from-redux-to-ngrxstore',
-					tags: ['ngrxstore', 'angular', 'rxjs', 'redux']
+					src: 'photos/2016-04-06/angularbeers-03.jpg'
 				}, {
-					name: 'WordPress Hybrid Client',
-					location: 'Barcelona, Spain',
-					date: '2017-04-06 14:00:00',
-					eventName: 'Angular Community Days',
-					eventLink: 'https://www.meetup.com/AngularJS-Beers/events/236694815/',
-					link: './2017/wordpress-hybrid-client',
-					tags: ['ionic', 'wordpress']
-				}];
+					src: 'photos/2016-04-06/angularbeers-04.jpg'
+				}, {
+					src: 'photos/2016-04-06/angularbeers-05.jpg'
+				}]
+			}, {
+				name: 'Redux & Angular2',
+				city: 'Toulouse',
+				country: 'France',
+				date: '2016-10-05 19:00:00',
+				eventName: 'AngularJS Toulouse',
+				eventLink: 'http://www.meetup.com/angulartoulouse/events/233768766/',
+				link: './2016/redux-angular2',
+				tags: ['angular2', 'redux'],
+				photos: [{
+					src: 'photos/2016-10-05/angularToulouse_S02E01_01.jpg'
+				}, {
+					src: 'photos/2016-10-05/angularToulouse_S02E01_02.jpg'
+				}, {
+					src: 'photos/2016-10-05/angularToulouse_S02E01_03.jpg'
+				}, {
+					src: 'photos/2016-10-05/angularToulouse_S02E01_04.jpg'
+				}, {
+					src: 'photos/2016-10-05/angularToulouse_S02E01_05.jpg'
+				}, {
+					src: 'photos/2016-10-05/angularToulouse_S02E01_06.jpg'
+				}]
+			}, {
+				name: 'WordPress Hybrid Client',
+				city: 'Utrecht',
+				country: 'Netherlands',
+				date: '2016-10-13 19:00:00',
+				eventName: 'Ionic Nederland 2016.3',
+				eventLink: 'https://www.meetup.com/Ionic-Nederland/events/233916437/',
+				link: './2016/wordpress-hybrid-client',
+				tags: ['ionic', 'wordpress']
+			}, {
+				name: 'Introduction to Ionic2',
+				city: 'Toulouse',
+				country: 'France',
+				date: '2016-12-07 19:00:00',
+				eventName: 'AngularJS Toulouse',
+				eventLink: 'https://www.meetup.com/angulartoulouse/events/235461342/',
+				link: './2016/Introduction-to-ionic2',
+				tags: ['ionic', 'ionic2', 'angular2'],
+				photos: [{
+					src: 'photos/2016-12-07/angularToulouse_S02E03_01.jpg'
+				}, {
+					src: 'photos/2016-12-07/angularToulouse_S02E03_02.jpg'
+				}, {
+					src: 'photos/2016-12-07/angularToulouse_S02E03_03.jpg'
+				}, {
+					src: 'photos/2016-12-07/angularToulouse_S02E03_04.jpg'
+				}, {
+					src: 'photos/2016-12-07/angularToulouse_S02E03_05.jpg'
+				}, {
+					src: 'photos/2016-12-07/angularToulouse_S02E03_06.jpg'
+				}, {
+					src: 'photos/2016-12-07/angularToulouse_S02E03_07.jpg'
+				}]
+			}, {
+				name: 'From Redux to Ngrx/store',
+				city: 'Barcelona',
+				country: 'Spain',
+				date: '2017-04-05 19:00:00',
+				eventName: 'Angular Community Days',
+				eventLink: 'https://www.meetup.com/AngularJS-Beers/events/236694815/',
+				link: './2017/from-redux-to-ngrxstore',
+				tags: ['ngrxstore', 'rxjs', 'redux']
+			// }, {
+			// 	name: 'Introduction to Ionic v2+',
+			// 	city: 'Riga',
+			// 	country: 'Latvia',
+			// 	date: '2017-05-15 16:00:00',
+			// 	eventName: 'Riga Dev Days',
+			// 	eventLink: 'https://rigadevdays.lv',
+			// 	link: './2017/introduction-to-ionic2',
+			// 	tags: ['ionic', 'ionic2', 'angular2'],
+			}];
 
-				talks = talks.sort(function(a, b) {
-					return new Date(b.date) - new Date(a.date);
+			talks = talks.sort(function (a, b) {
+				return new Date(b.date) - new Date(a.date);
+			});
+
+			var countries = {}, cities = {};
+			$.each(talks, function (i, talk) {
+				var talkTags = [];
+				$.each(talk.tags, function (i, tag) {
+					talkTags.push('#' + tags[tag]);
+				});
+				console.log('cities', cities)
+				console.log('countries', countries)
+				cities[talk.city] = true;
+				countries[talk.country] = true;
+				var row = [
+					'<tr>',
+					'<td>' + moment(talk.date).format('LL') + '</td>',
+					'<td><a href="' + talk.link + '">' + talk.name + '</a></td>',
+					'<td>' + talk.city + ', ' + talk.country + '</td>'
+				];
+
+				row.push(!talk.eventLink
+					? '<td>' + talk.eventName + '</td>'
+					: '<td><a href="' + talk.eventLink + '" target="_blank">' + talk.eventName + '</a></td>');
+				// row.push('<td>' + talkTags.join(', ') + '</td>');
+
+				row.push(talk.photos
+					? '<td class="text-center"><button class="btn btn-xs btn-primary img-slideshow"><i class="fa fa-photo"></i></button></td>'
+					: '<td></td>');
+
+				row.push('</tr>');
+				var $row = $(row.join(''));
+
+				$row.find('button.img-slideshow').magnificPopup({
+					items: talk.photos,
+					gallery: {
+						enabled: true
+					},
+					type: 'image'
 				});
 
-				$.each(talks, function(i, talk) {
-					var talkTags = [];
-					$.each(talk.tags, function(i, tag) {
-						talkTags.push('#' + tags[tag]);
-					});
-					var row = [
-						'<tr>',
-						'<td>' + moment(talk.date).format('LL') + '</td>',
-						'<td><a href="' + talk.link + '">' + talk.name + '</a></td>',
-						'<td>' + talk.location + '</td>'
-					];
+				$('#tableBody').append($row);
+				$('#talk-count').text(talks.length);
+				$('#city-count').text(Object.keys(cities).length);
+				$('#country-count').text(Object.keys(countries).length);
+			});
+		}(jQuery));
+	</script>
 
-					if (!talk.eventLink) {
-						row.push('<td>' + talk.eventName + '</td>');
-					} else {
-						row.push('<td><a href="' + talk.eventLink + '" target="_blank">' + talk.eventName + '</a></td>');
-					}
-					// row.push('<td>' + talkTags.join(', ') + '</td>');
-
-					if (talk.photos) {
-						row.push('<td class="text-center"><button class="btn btn-xs btn-primary img-slideshow"><i class="fa fa-photo"></i></button></td>');
-					} else {
-						row.push('<td></td>');
-					}
-
-					row.push('</tr>');
-					var $row = $(row.join(''));
-
-					$row.find('button.img-slideshow').magnificPopup({
-						items: talk.photos,
-						gallery: {
-							enabled: true
-						},
-						type: 'image'
-					});
-
-					$('#tableBody').append($row);
-				});
-			}(jQuery));
-		</script>
-
-	</body>
+</body>
 
 </html>

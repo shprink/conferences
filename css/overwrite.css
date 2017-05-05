@@ -6,12 +6,17 @@
     position: absolute;
     bottom: 30px;
     left: 10px;
-    z-index: 1;
+    z-index: 1000;
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
+    opacity: 0.5;
+}
+
+.back-button:hover {
+    opacity: 1;
 }
 
 .back-button:before {
@@ -207,4 +212,19 @@ code.snippet {
     display: inline-block;
     padding-left: 5px;
     padding-right: 5px
+
+[h100]{
+    height: 100%;
+}
+
+[w100]{
+    width: 100%;
+}
+
+.video-opacity-50 video{
+    opacity: 0.5;
+}
+
+.video-opacity-30 video{
+    opacity: 0.3;
 }
