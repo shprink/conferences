@@ -143,6 +143,36 @@
     <aside class="notes"></aside>
 </section>
 
+<section data-background-video="./img/process.mp4" data-background-video-loop data-background-color="#fcf21d"  class="video-opacity-30">
+    <div class="fragment" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 5px; color: white;">
+        <h3 style="color:#fff;">Web Worker</h3>
+        <h4 style="color:#fff;">The missing background process for the Web</h4>
+        <ul>
+            <li class="fragment">Assets caching</li>
+            <li class="fragment">Network caching</li>
+            <li class="fragment">Push notifications</li>
+        </ul>
+    </div>
+    <aside class="notes">
+        A service worker is a JavaScript file that is run by your browser in the background, separate from your webpage and that handles events fired either by the webpage or the browser.
+    </aside>
+</section>
+
+<section data-background-video="./img/process.mp4" data-background-video-loop data-background-color="#fcf21d"  class="video-opacity-30">
+    <div class="fragment" style="background-color: rgba(0, 0, 0, 0.5); padding: 20px; border-radius: 5px; color: white;">
+        <h3 style="color:#fff;">Service Worker</h3>
+        <h4 style="color:#fff;">The missing background process for the Web</h4>
+        <ul>
+            <li class="fragment">Assets caching</li>
+            <li class="fragment">Network caching</li>
+            <li class="fragment">Push notifications</li>
+        </ul>
+    </div>
+    <aside class="notes">
+        A service worker is a JavaScript file that is run by your browser in the background, separate from your webpage and that handles events fired either by the webpage or the browser. And since it runs in the background it does not need the web page to be opened!
+    </aside>
+</section>
+
 <section>
     <h3 style="color:#fff; margin:0">Why bet on the Web?</h3>
     <ul>

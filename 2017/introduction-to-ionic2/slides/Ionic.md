@@ -140,12 +140,24 @@
 </section>
 
 <section>
-    <h3>Progressive Web App</h3>     
+    <h3>Stores are broken</h3>
+    <img src="./img/pwa-stores.png" swidth="100%" class="img-plain"/>
     <aside class="notes"></aside>
 </section>
-
+<!-- https://cdn.auth0.com/blog/offline-first/offline-first-diagram.png -->
 <section>
-    <h3>Service Worker</h3>     
+    <h3>Progressive Web App</h3>
+    <ul>
+        <li>Installable without stores</li>
+        <li>Discoverable (manifest)</li>
+        <li>Universal (every device, browser)</li>
+        <li>Offline capability (service worker)</li>
+        <li>Always up to date (service worker)</li>
+        <li>Safe (https)</li>
+        <li>Re-engageable (via push notifications)</li>
+        <li>Linkable (easy sharing via links)</li>
+        <li>App Shell</li>
+    </ul>
     <aside class="notes"></aside>
 </section>
 
