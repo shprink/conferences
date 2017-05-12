@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduction to Ionic | Julien Renaux, Riga Dev Days - Riga, Latvia, May 15th 2017</title>
+
+		<meta name="description" content="Introduction to Ionic slides">
+		<meta name="author" content="Julien Renaux">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="../../css/reveal.css">
+		<link rel="stylesheet" href="../../css/animate.css">
+		<link rel="stylesheet" href="../../css/overwrite.css">
+		<link rel="stylesheet" href="../../css/gridism.css">
+		<link rel="stylesheet" href="../../css/font-awesome.min.css">
+		<link rel="stylesheet" href="../../css/flex-grid.css">
+		<link rel="stylesheet" href="../../css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="../../lib/css/zenburn.css">
+		<style>
+			body {
+				background-color: #082349;
+			}
+			div.box.ionic {background-color: #347eff; color: white;}
+			div.box.angular {background-color: #d4052b; color: white;}
+			div.box.shell {background-color: #e96615; color: white;}
+			
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement('link');
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match(/print-pdf/gi) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
+			document.getElementsByTagName('head')[0].appendChild(link);
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<style>
+			.reveal pre {
+				width: 100% !important;
+			}
+			.date{
+				position: fixed;
+				top: 10px;
+				right: 10px;
+			}
+			.wrapper{
+				background-color: rgba(0, 0, 0, 0.4);
+				padding: 20px; 
+				border-radius: 5px;
+			}
+			.fragment.visible.current-only:not(.current-fragment){
+				display: none;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<a href="../.." class="back-button">Back to talks</a>
+		<div class="reveal">
+			<section class="twitter" data-markdown="../../slides/twitter.md"></section>
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+				</section>
+		        <section data-markdown="slides/intro.md"></section>
+		        <section data-markdown="../../slides/about-me.md"></section>
+		        <section data-markdown="slides/web_history.md"></section>
+		        <section data-markdown="slides/web_today.md"></section>
+		        <section data-markdown="slides/ionic.md"></section>
+				<section>
+                    <hr/>
+					<div>
+                        <section data-markdown="../../slides/footer.md" ></section>
+                    </div>
+				</section>
+			</div>
+
+		</div>
+
+		<script src="../../lib/js/jquery.1.10.2.js"></script>
+		<script src="../../lib/js/waypoints.min.js"></script>
+		<script src="../../lib/js/jquery.counterup.min.js"></script>
+		<script src="../../lib/js/head.min.js"></script>
+		<script src="../../js/reveal.js"></script>
+		<script src="../../js/init.js"></script>
+		<script>
+			Reveal.addEventListener('slidechanged', function( event ) {
+				// event.currentSlide, event.indexh, event.indexv
+				if (event.indexh === 5 && event.indexv === 2){
+					console.log('here', jQuery('.counter'))
+					setTimeout(function(){
+						jQuery('.counter.counter-app').counterUp({ time: 9000 });
+						jQuery('.counter.counter-stars').counterUp({ time: 6000 });
+						jQuery('.counter.counter-devs').counterUp({ time: 3000 });
+					}, 100)
+					
+				}
+			});
+		</script>
+	</body>
+
+</html>

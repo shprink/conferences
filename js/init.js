@@ -8,7 +8,7 @@ Reveal.initialize({
     // showNotes: true,
 
     transition: 'slide', // none/fade/slide/convex/concave/zoom
-    backgroundTransition: 'zoom',
+    backgroundTransition: 'fade',
 
     // Optional reveal.js plugins
     dependencies: [{

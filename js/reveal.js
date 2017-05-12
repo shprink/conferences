@@ -2876,7 +2876,8 @@
 		// Stop any currently playing video background
 		if( previousBackground ) {
 
-			var previousVideo = previousBackground.querySelector( 'video' );
+			var previousVideo = previousBackground.querySelector('video');
+			
 			if( previousVideo ) previousVideo.pause();
 
 		}
@@ -3049,6 +3050,7 @@
 					backgroundVideo = slide.getAttribute( 'data-background-video' ),
 					backgroundVideoLoop = slide.hasAttribute( 'data-background-video-loop' ),
 					backgroundVideoMuted = slide.hasAttribute( 'data-background-video-muted' ),
+					backgroundVideoPlaybackRate = slide.getAttribute( 'data-background-video-playbackRate' ),
 					backgroundIframe = slide.getAttribute( 'data-background-iframe' );
 
 				// Images
@@ -3058,6 +3060,10 @@
 				// Videos
 				else if ( backgroundVideo && !isSpeakerNotes() ) {
 					var video = document.createElement( 'video' );
+
+					if( backgroundVideoPlaybackRate ) {
+						video.playbackRate = backgroundVideoPlaybackRate;
+					}
 
 					if( backgroundVideoLoop ) {
 						video.setAttribute( 'loop', '' );
