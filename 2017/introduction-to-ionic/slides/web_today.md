@@ -134,12 +134,9 @@
         </table>
     </div>
     <aside class="notes">
-        Devices
-        <ul>
-            <li>the web</li>
-            <li>is everywhere</li>
-        </ul>
-        <b>This is something we all have noticed</b>
+        <b>The mobile devices have drastically evolved. Since the first iphone in 2007, the processors performance have increased with higher calculation power and multiple cores while the memory have increased by 32 times.</b>
+        <br/>
+        <b>We now have in our pockets more calculation power than the computer that landed mankind on the moon back in 69.</b>
     </aside>
 </section>
  <!-- 
