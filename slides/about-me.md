@@ -28,7 +28,7 @@
     <aside class="notes">
         <p>My name is Julien, I am a Software Engineer from Toulouse, France</p>
          <ul>
-            <li>Previously I worked for eBay and now I am a freelancer working closely with Toptal</li>
+            <li>Previously I worked for eBay and now I have my own company doing freelancing work with Toptal</li>
             <li>I am specialized in Single Page Applications using Angular, Ionic or React</li>
             <li>I am also a community leader, creator of AngularToulouse meetup and organizer of Google Developer Group in Toulouse, France</li>
         </ul>

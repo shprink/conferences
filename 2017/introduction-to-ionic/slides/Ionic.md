@@ -25,8 +25,9 @@
         </div>
     </div>
     <aside class="notes">
-        <b>Ionic first release was 4 years ago now. The first version was built on top of AngularJS (which is Angular v1). Now the current version of Ionic (which version 3) is based on the latest version of Angular v4 and written in TypeScript</b>
-        <b>Let's see how popular Ionic is</b>
+        <b>Ionic first release was 4 years ago now. The first version was built on top of AngularJS (which is Angular v1). Now the current version of Ionic (which version 3) is based on the latest version of Angular (v4) and written in TypeScript</b>
+        <br/>
+        <b>Let's see how popular Ionic is ...</b>
     </aside>
 </section>
 
@@ -48,9 +49,9 @@
     </div>     
     <aside class="notes">
         <ol>
-            <li>Ionic has a huge community, we are around 12 thousands developers on the Ionic Worldwide Slack. The bigger the community the easiest it is to find good resources, plugins, or find the answer to questions you might have.</li>
-            <li>Ionic is in the top 50 most popular open source project on Github with 29 thousands stars</li>
-            <li>and the estimated number of applications created with Ionic is four million!</li>
+            <li>Ionic has a huge community, we are around 12 thousands developers on the Ionic Worldwide Slack. As you know The biggest the community is, the easiest it is to find good resources, plugins, or find the answer to your questions.</li>
+            <li>Ionic is within the top 50 most popular open source project on Github with 29 thousands stars</li>
+            <li>and the official estimated number of applications created with Ionic is four million!</li>
         </ol>
         <b>As you can see, Ionic is extremely popular and it is not going anywhere!</b>
     </aside>
@@ -91,19 +92,19 @@
 </section>
 
 <section>
-    <h3>It is just the Web</h3>
+    <h3>No need to learn about...</h3>
     <img src="../../img/objective-c-logo.png" style="margin: 50px 0" width="25%" class="img-plain fragment"/>
     <img src="../../img/swift-logo.png" style="margin: 50px 0" width="25%" class="img-plain fragment"/>
     <img src="../../img/java-logo.png" style="margin: 50px 0" width="25%" class="img-plain fragment"/>
-    <h3 class="fragment green" style="margin: 20px 0;">Do not even bother!</h3>
+    <h3 class="fragment green" style="margin: 20px 0;">All you need is the Web</h3>
     <aside class="notes">
-        <b>Once again all you need are Web technologies</b>
+        <b>, there is no need to learn about</b>
         <ol>
-            <li>No need to learn about Objective-C</li>
+            <li>Objective-C</li>
             <li>about Swift for iOS</li>
             <li>or even Java for Android</li>
+            <li>Once again all you need are Web technologies</li>
         </ol>
-        <b>Do not even bother</b>
     </aside>
 </section>
 
@@ -176,7 +177,7 @@
     <aside class="notes">    
         <b>Ionic comes with dozens of components out of the box</b>
         <ol>
-            <li>We have for instance "buttons". On the left side we have buttons for Android and on the right side buttons for iOS. The exact same code here once built for a specific platform, embraces the device UI standards and this is something really powerfull!</li>
+            <li>We have for instance "buttons". On the left side we have buttons for Android and on the right side buttons for iOS. And this is the EXACT same code. As you can see the code once built embraces the device UI standards and this is something really powerfull!</li>
             <li>We have also cards</li>
             <li>Icons. As you can see even icons are different per platform</li>
             <li>Date pickers</li>
@@ -185,8 +186,9 @@
             <li>Loading</li>
             <li>And slides to create tutorials.</li>
         </ol>
-        <b>With Ionic you get the majority of the components needed to create a good user experience.</b>
-        <b>But is it easy to use those components for a developer?</b>
+        <b>With Ionic you get the majority of the components you might need to create a good user experience.</b>
+        <br/>
+        <b>Let's see how simple it is to use those components shall we?</b>
     </aside>
 </section>
 
@@ -242,20 +244,21 @@
     </div>
     <h4 class="fragment green" style="margin: 0;">Makes it easy to understand</h4>
     <aside class="notes">
-        <b>The answer to this is big YES, the semantic helps developers a lot to understand what they are dealing with. Let's see an example:</b>
+        <b>The Ionic component semantic helps developers when it comes to understand what they are dealing with. Let's see an example:</b>
         <ol>
-            <li>First we have the header component. This component includes a toolbar that itself includes a title. The result is what you see on the left side. Just be reading the code semantic, you can get an idea of what the result will be.</li>
+            <li>First we have the header component. This component includes a toolbar that itself includes a title. The result is what you see on the left side. There is no surprise, Just by reading the code semantic, you can get an idea of what the result will be.</li>
             <li>The content is the rest of the page</li>
             <li>that contains a card</li>
             <li>which has a title</li>
             <li>and contains a list of buttons</li>
+            <li>Ionic component semantic helps developers understand and build complexe UI</li>
         </ol>
-        <b>Ionic component semantic helps developers understand and build complexe UI</b>
+        <b></b>
     </aside>
 </section>
 
 <section>
-    <h3>Leverage features of every layer</h3>
+    <h3>Leverage APIs of several layers</h3>
      <div layout="row" layout-align="center center">
             <div layout="column" flex="33" layout-align="center center">
                  <img src="./img/hybrid.png" class="img-plain"/>
@@ -288,7 +291,7 @@
                 </div>
             </div>
         </div>
-    <h3 class="fragment green" style="margin: 20px 0;">Even natives ones</h3>
+    <!--<h3 class="fragment green" style="margin: 20px 0;">Even natives ones</h3>-->
     <aside class="notes">
         <b>With Ionic you can leverage the power of several layers of awesomeness</b>
         <ol>
@@ -324,11 +327,10 @@
     <aside class="notes">
         <b>We saw earlier what was a Progressive Web app and why it is the Next Generation of the Mobile Web.</b>
          <ol>
-            <li>With Ionic you get a preconfigured service worker out of the box. All the assets needed to run the app are precached, the rest is simply cached and can be accessed offline</li>
+            <li>With Ionic you get a preconfigured service worker out of the box. All the assets needed to run the app are precached by default, the rest is simply cached when used and can be accessed offline</li>
             <li>We also get a preconfigured manifest that contains information such as the app name, splashscreen background color, icons etc.</li>
             <li>What you need to remember is that an Ionic app is already a Progressive Web App</li>
         </ol>
-        <b>Every Ionic app that you create is a progressive web app out of the box</b>
     </aside>
 </section>
 
@@ -341,8 +343,7 @@ $ npm install -g ionic
          <li class="fragment">Create new Applications</li>
          <li class="fragment">Create new Pages, Components, Providers</li>
          <li class="fragment">Run a local dev server</li>
-         <li class="fragment">Run on emulators</li>
-         <li class="fragment">Run on devices</li>
+         <li class="fragment">Run on emulator or device</li>
          <li class="fragment">Build for every platform...</li>
     </ul>
     <h3 class="fragment green" style="margin: 20px 0;">All you need is Ionic CLI</h3>
@@ -354,8 +355,8 @@ $ npm install -g ionic
             <li>It can run a local server based on webpack</li>
             <li>It can run the app on emulator or on device</li>
             <li>and allow you to buid for every known platforms</li>
+            <li>As you can see all you need is the CLI</li>
         </ol>
-        <b>As you can see all you need is the CLI</b>
     </aside>
 </section>
 
@@ -376,7 +377,7 @@ $ npm install -g ionic
         <h1 style="color:#fff; margin:0">Ionic Creator</h1>
     </div>
     <aside class="notes">
-        <b></b>
+        <b>Ionic Creator is a service to prototype application with a drag and drop interface. You can drag and drop components, you can test your app live and when you are happy with you can export the code. This is super helpful for people that do not know how to code but want to focus on the user experience before developing anything.</b>
     </aside>
 </section>
 
@@ -385,7 +386,7 @@ $ npm install -g ionic
         <h1 style="color:#fff; margin:0">Ionic View</h1>
     </div>
     <aside class="notes">
-        <b></b>
+        <b>Ionic view now is an app you can install on iOS and Android and that let your users test new version before release. It replaces alpha and beta testing that is complicated on native apps. Once your app is ready to test you can just run `ionic upload` with Ionic CLI and the app will be instantly available to your test users</b>
     </aside>
 </section>
 
@@ -394,7 +395,7 @@ $ npm install -g ionic
         <h1 style="color:#fff; margin:0">Ionic Deploy</h1>
     </div>
     <aside class="notes">
-        <b></b>
+        <b>Ionic Deploy is a service that let you publish your app directly to your users without going through the app store. With native apps this process can take days.</b>
     </aside>
 </section>
 
@@ -403,7 +404,7 @@ $ npm install -g ionic
         <h1 style="color:#fff; margin:0">Ionic Package</h1>
     </div>
     <aside class="notes">
-        <b></b>
+        <b>Ionic Packages makes it easy to build a native binary of your app for iOS or Android directly in the cloud. It is Perfect for developers using Windows or Linux that want to build iOS apps. You do not need an Apple machine anymore.</b>
     </aside>
 </section>
 
@@ -414,23 +415,23 @@ $ npm install -g ionic
         <li class="fragment">A Progressive Web App</li>
         <li class="fragment">No build configuration: Ionic CLI</li>
         <li class="fragment">One single codebase for all platforms</li>
-        <li class="fragment">A large set of components built in</li>
+        <li class="fragment">A large set of components built in (more at market.ionic.io)</li>
         <li class="fragment">An easy and accessible semantic</li>
         <li class="fragment">Access to every APIs (Ionic, Angular, HTML5, Cordova)</li>
         <li class="fragment">Access to a great ecosystem of services</li>
-        <li class="fragment">Amazing and growing community</li>
+        <li class="fragment">An amazing and growing community</li>
     </ul>
     <aside class="notes">
         <b>Let's conclude this talk, here are the things you should take home with you:</b>
         <ol>
             <li>With Ionic you get a progressive Web app by default</li>
             <li>With the Ionic CLI there are no complexe Webpack or Gulp configuration, it is already done for you</li>
-            <li>Only one codebase is necessary to build on every platforms, and components uses the device specific UI standards so on every platforms users have the look and feel they are expecting</li>
+            <li>Only one codebase is necessary to build on every platforms. your Components use the device specific UI standards so on every platforms users have the look and feel they are expecting</li>
             <li>A large set of components are available out of the box and many more are available on market.ionic.io</li>
             <li>As a developer, the component semantic makes it really easy to pick up what you are dealing with</li>
-            <li>Your application code can leverage Ionic, Angular, HTML5 and Cordova apis directly.</li>
+            <li>Your application code can leverage Ionic, Angular, HTML5 and Cordova APIs directly.</li>
             <li>Ionic has great services around the SDK</li>
-            <li>To finish the community is what makes every open source project successful and in that area Ionic is super successful with thousands of developers like myself, advocating for Ionic around the world or creating plugins, themes etc.</li>
+            <li>To finish the community is what makes Ionic sooooo special in the industry. With thousands of developers like myself, advocating for Ionic around the world or creating plugins, components, themes etc. Ionic is super successful!</li>
         </ol>
         <b></b>
     </aside>

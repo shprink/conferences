@@ -1,5 +1,8 @@
 <section>
     <h1>The web nowadays is...</h1>
+    <aside class="notes">
+        Well the web nowadays is...
+    </aside>
 </section>
 
 <section data-background-video="./img/mobiles.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
@@ -9,7 +12,7 @@
         </div>
     </div>
     <aside class="notes">
-        We all have a smartphone in our pockets and the Web is just a click away anywhere, anytime!
+        in every pockets, even cheap smartphones can run a decent browser, the Web is just a click away anywhere, anytime to anyone!
     </aside>
 </section>
 
@@ -20,7 +23,7 @@
         </div>
     </div>
     <aside class="notes">
-        The web is at the office...
+        The web is at your office...
     </aside>
 </section>
 
@@ -31,7 +34,7 @@
         </div>
     </div>
     <aside class="notes">
-        Even at home
+        also at home via smart Tvs
     </aside>
 </section>
 
@@ -42,7 +45,7 @@
         </div>
     </div>
     <aside class="notes">
-        Within planes
+        or within planes when you travel
     </aside>
 </section>
 
@@ -53,7 +56,7 @@
         </div>
     </div>
     <aside class="notes">
-        In cars
+        and even in cars. Indeed Tesla for instance added a Web browser in their cars and this is a real trend.
     </aside>
 </section>
 
@@ -69,63 +72,62 @@
         </div>
     </div>
     <aside class="notes">
-        Let's stop listing all places where the Web is, this could go forever, let's just say that: 
-        <ul>
+        <b>Let's stop listing all places where the Web is because this could go forever. Let's just say that: </b>
+        <ol>
             <li>the web</li>
-            <li>is everywhere</li>
-        </ul>
-        And that's something we all have noticed.
-        <b></b>
+            <li>is everywhere: And that's something we all have noticed, and we do not even think about it that much, it is pretty natural for us. </li>
+        </ol>
+        <b>Ok so the Web is everywhere, what else evolved in 10 years?</b>
     </aside>
 </section>
 
 <section data-background-video="./img/iphone_evolution.mp4" data-background-video-loop data-background-color="#fff"  class="stretch video-opacity-30">
     <div layout="column" layout-align="center center" h100>
        <h3>Devices have evolved</h3>
-        <table>
-            <tr class="fragment">
+        <table class="fragment">
+            <tr >
                 <th>Year</th>
                 <th>Device</th>
                 <th>Processor</th>
                 <th>RAM</th>
             </tr>
-            <tr  class="fragment">
+            <tr >
                 <td>2007</td>
                 <td>iPhone</td>
                 <td>620 MHz</td>
                 <td>128 MB</td>
             </tr>
-            <tr  class="fragment">
+            <tr>
                 <td>2010</td>
                 <td>iPhone 4</td>
                 <td>1 GHz</td>
                 <td>512 MB</td>
             </tr>
-            <tr  class="fragment">
+            <tr >
                 <td>2012</td>
                 <td>iPhone 5</td>
                 <td>1.3 GHz dual-core</td>
                 <td>1 GB</td>
             </tr>
-            <tr  class="fragment">
+            <tr>
                 <td>2014</td>
                 <td>iPhone 6</td>
                 <td>1.4 GHz dual-core</td>
                 <td>1 GB</td>
             </tr>
-            <tr  class="fragment">
+            <tr >
                 <td>2015</td>
                 <td>Nexus 5x</td>
                 <td>1.8GHz hexa-core </td>
                 <td>2 GB</td>
             </tr>
-            <tr  class="fragment">
+            <tr>
                 <td>2016</td>
                 <td>iPhone 7</td>
                 <td>2.3 GHz quad-core</td>
                 <td>2 GB</td>
             </tr>
-            <tr  class="fragment">
+            <tr >
                 <td>2016</td>
                 <td>Google Pixel</td>
                 <td>2.15 + 1.6Ghz quad-core</td>
@@ -134,9 +136,13 @@
         </table>
     </div>
     <aside class="notes">
-        <b>The mobile devices have drastically evolved. Since the first iphone in 2007, the processors performance have increased with higher calculation power and multiple cores while the memory have increased by 32 times.</b>
-        <br/>
+        <b>Well mobile devices evolved. </b>
+        <ol>
+            <li>Since the first iphone in 2007, the processors performance have increased with higher calculation power and multiple cores and the memory have increased drastically as well.</li>
+        </ol>
         <b>We now have in our pockets more calculation power than the computer that landed mankind on the moon back in 69.</b>
+        <br/>
+        <b>How about the browsers?.</b>
     </aside>
 </section>
  <!-- 
@@ -166,14 +172,14 @@
             <li class="fragment">Support Progressive Web Apps</li>
         </ul>    
     <aside class="notes">
-        <b>We all have noticed the evolution of the browsers we use over the years</b>
+        <b>Well We all have noticed this, we have infinitely better Browsers now that back in the Internet explorer 6 time</b>
         <ul>
-            <li>The browsers are constantly improving HTML, CSS and JS performance via their web browser engines such as Blink (Chrome), Gecko(Firefox) and their JavaScript engines: v8, SpiderMonkey or Nitro.</li>
-            <li>All modern JavaScript engines compile JavaScript code directly into native machine code before executing it which makes the execution time up to 10 times faster. It is called the Just In Time Compilation</li>
+            <li>The browsers are constantly improving HTML and CSS performance via their web browser engines such as Blink, Gecko, Webkit and their JavaScript engines: v8, SpiderMonkey or Nitro.</li>
+            <li>Now All modern JavaScript engines compile JavaScript code directly into native machine code before executing it which makes the execution time up to 10 times faster. It is called the Just In Time Compilation</li>
             <li>Mobile browsers now support Native Scrolling, which allow your application to listen to asynchronous scrolling events correctly. And that's pretty new as well.</li>
-            <li>Progressive Web Apps are the next Generation of the Mobile Web</li>
+            <li>To finish browsers now support Progressive Web Apps which has been a buzz word for the past 2 years but is defenitely the next Generation of the Mobile Web</li>
         </ul>
-        <b>Let's watch a video about progressive web apps to have a better understanding about it.</b>
+        <b>To have a better understanding of what's a progressive Web App Let's watch a video!</b>
     </aside>
 </section>
 
@@ -186,16 +192,15 @@
             Your browser does not support the video tag.
         </video>
     <aside class="notes">
-        Ok let's recap what
+        Ok let's recap
     </aside>
 </section>
 
 <section>
     <h3>Progressive Web App</h3>
     <ul>
-        <li class="fragment">Safe (https)</li>
-        <li class="fragment">Installable without stores (add to Homescreen)</li>
-        <li class="fragment">Discoverable (manifest)</li>
+        <li>Installable without stores (add to Homescreen button)</li>
+        <li class="fragment">Native look and feel</li>
         <li class="fragment">Uses a Service worker
             <ul>
                 <li class="fragment">Offline capability</li>
@@ -203,19 +208,21 @@
                 <li class="fragment">Push Notifications</li>
             </ul>
         </li>
+        <li class="fragment">Discoverable (manifest)</li>
+        <li class="fragment">Safe (https)</li>
     </ul>
     <aside class="notes">
-        <b>We all have noticed the evolution of the browsers we use over the years</b>
+        <b>A progressive Web app is Installable without stores</b>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li>A service worker is a JavaScript file that is run by your browser in the background, separate from your webpage and that handles events fired either by the webpage or the browser. And since it runs in the background it does not need the web page to be opened!</li>
+            <li>It has a native look and feel</li>
+            <li>Uses a service worker and a service worker is just a JavaScript file that is run by your browser in the background. It is completely separated from your webpage and handles events fired either by the webpage itself or the browser. What's cool about that is that since it runs in the background it does not need the web page to be opened!</li>
             <li>We can therefore implement the Offline capability via Network and Assets caching</li>
             <li>We can also prefetch assets ahead of the user to be always up to date</li>
-            <li>To finish we can re engage users via Push notifications</li>
+            <li>We can re engage users via Push notifications</li>
+            <li>You app is directly searchable on Google</li>
+            <li>and to finish your app must run a secured connection</li>
         </ul>
-        <b>Let's recap</b>
+        <b></b>
     </aside>
 </section>
 
@@ -237,8 +244,8 @@
             <li>First of all The Web is a Standard runtime that is available everywhere</li>
             <li>The browsers and devices performance are upgrading all the time</li>
             <li>The Web requires skills that most of us already have</li>
-            <li>And now the Web has a killer feature, a way to run background processes with service workers!</li>
-            <li>To finish on this section I want to quote Adam Bradley, the Ionic Project Lead that said that it was an exciting time to be a Web Developer at NgEurope last year and I tend to agree with him</li>
+            <li>The Web has a killer feature, a way to run background processes with service workers!</li>
+            <li>To finish on this section I want to quote Adam Bradley, who is the Ionic Project Lead that said, and I quote "It is an exciting time to be a Web Developer!". He said that at NgEurope last year in Paris and I tend to agree with him</li>
         </ul>
         <b>I hope you guys are now convinced that the Web is something that we need to invest on. And if you are I want to present you one of the best tool there is to build Web applications today. Introducing.....</b>
     </aside>
