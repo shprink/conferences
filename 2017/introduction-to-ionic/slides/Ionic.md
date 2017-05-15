@@ -25,7 +25,7 @@
         </div>
     </div>
     <aside class="notes">
-        <b>Ionic first release was 4 years ago now. The first version was built on top of AngularJS (which is Angular v1). Now the current version of Ionic (which version 3) is based on the latest version of Angular (v4) and written in TypeScript</b>
+        <b>Ionic first release was 4 years ago now. The first version was built on top of AngularJS (known as Angular version 1). Now the current version of Ionic is based on the latest version of Angular 2+ and written in TypeScript</b>
         <br/>
         <b>Let's see how popular Ionic is ...</b>
     </aside>
@@ -98,7 +98,7 @@
     <img src="../../img/java-logo.png" style="margin: 50px 0" width="25%" class="img-plain fragment"/>
     <h3 class="fragment green" style="margin: 20px 0;">All you need is the Web</h3>
     <aside class="notes">
-        <b>, there is no need to learn about</b>
+        <b>One thing that I really want to emphasize on it that there is no need to learn about</b>
         <ol>
             <li>Objective-C</li>
             <li>about Swift for iOS</li>
@@ -298,7 +298,7 @@
             <li>Your JavaScript code is on top of everything</li>
             <li>Your code seats on top of Ionic so you can use any Ionic components or services</li>
             <li>Ionic being based on Angular you can also reach Angular features such as the HTTP module to make HTTP requests</li>
-            <li>Then you app runs on a Webview or Browser depending on the platform</li>
+            <li>Then your app runs on a Webview or Browser depending on the platform</li>
             <li>To interact with the device features such as the camera you can use either Cordova if you want to build an hybrid app for Android or iOS or HTML5 if you build for the Web.</li>
         </ol>
         <b>Your Ionic application has therefore access to every API you might want to use to build your application.</b>
@@ -377,7 +377,7 @@ $ npm install -g ionic
         <h1 style="color:#fff; margin:0">Ionic Creator</h1>
     </div>
     <aside class="notes">
-        <b>Ionic Creator is a service to prototype application with a drag and drop interface. You can drag and drop components, you can test your app live and when you are happy with you can export the code. This is super helpful for people that do not know how to code but want to focus on the user experience before developing anything.</b>
+        <b>Ionic Creator is a service to prototype application with a drag and drop interface. You can drag and drop components, you can test your app live and when you are happy with you can export the code. This is super helpful for people that do not know how to code but want to focus on the user experience before handing over to developers.</b>
     </aside>
 </section>
 
@@ -395,7 +395,7 @@ $ npm install -g ionic
         <h1 style="color:#fff; margin:0">Ionic Deploy</h1>
     </div>
     <aside class="notes">
-        <b>Ionic Deploy is a service that let you publish your app directly to your users without going through the app store. With native apps this process can take days.</b>
+        <b>Ionic Deploy is a service that let you publish your app directly to your users without going through the app store. When beta testers are ok with the build, with Ionic deploy we can instanly update the app on users devices. With native apps this process can take days.</b>
     </aside>
 </section>
 

@@ -56,7 +56,19 @@
         </div>
     </div>
     <aside class="notes">
-        and even in cars. Indeed Tesla for instance added a Web browser in their cars and this is a real trend.
+        in cars. Indeed Tesla for instance added a Web browser in their cars and this is a real trend.
+    </aside>
+</section>
+
+<section data-background-video="./img/in-the-air.mp4" data-background-video-loop data-background-color="#95b1ec" data-background-video-playbackRate="0.7" data-background-style="cover">
+    <div layout="column" layout-align="center center" h100>
+       <div style="background-color: rgba(0, 0, 0, 0.4); padding: 20px; border-radius: 5px;">
+            <h3 style="color:#fff; margin:0 0 10px 0">and even in the air!</h3>
+            <h5 style="color:#fff; margin:0">turn your mobile bluetooth ON to receive a link to the slides</h5>
+        </div>
+    </div>
+    <aside class="notes">
+        and even in the air!. This macbook act as a beacon to broadcast the link to the slides via what we call the Physical Web! And YES I do love kitties in case you are still wondering :)
     </aside>
 </section>
 
@@ -75,7 +87,7 @@
         <b>Let's stop listing all places where the Web is because this could go forever. Let's just say that: </b>
         <ol>
             <li>the web</li>
-            <li>is everywhere: And that's something we all have noticed, and we do not even think about it that much, it is pretty natural for us. </li>
+            <li>is everywhere: And that's something we all have noticed, and we do not even think about it that much, it is pretty natural for our generation. </li>
         </ol>
         <b>Ok so the Web is everywhere, what else evolved in 10 years?</b>
     </aside>
@@ -138,7 +150,7 @@
     <aside class="notes">
         <b>Well mobile devices evolved. </b>
         <ol>
-            <li>Since the first iphone in 2007, the processors performance have increased with higher calculation power and multiple cores and the memory have increased drastically as well.</li>
+            <li>Since the first iphone in 2007, the processors performance have increased with higher calculation power on multiple cores and the memory have increased drastically as well.</li>
         </ol>
         <b>We now have in our pockets more calculation power than the computer that landed mankind on the moon back in 69.</b>
         <br/>
@@ -175,8 +187,8 @@
         <b>Well We all have noticed this, we have infinitely better Browsers now that back in the Internet explorer 6 time</b>
         <ul>
             <li>The browsers are constantly improving HTML and CSS performance via their web browser engines such as Blink, Gecko, Webkit and their JavaScript engines: v8, SpiderMonkey or Nitro.</li>
-            <li>Now All modern JavaScript engines compile JavaScript code directly into native machine code before executing it which makes the execution time up to 10 times faster. It is called the Just In Time Compilation</li>
-            <li>Mobile browsers now support Native Scrolling, which allow your application to listen to asynchronous scrolling events correctly. And that's pretty new as well.</li>
+            <li>Now All modern JavaScript engines compile JavaScript code directly into native machine code. This happens before executing the JavaScript code and makes it up to 10 times faster. It is called the Just In Time Compilation</li>
+            <li>Mobile browsers now support Native Scrolling, which allow your application to listen to asynchronous scrolling events correctly. And that's pretty new as well and used for features such as infinite scroll.</li>
             <li>To finish browsers now support Progressive Web Apps which has been a buzz word for the past 2 years but is defenitely the next Generation of the Mobile Web</li>
         </ul>
         <b>To have a better understanding of what's a progressive Web App Let's watch a video!</b>
@@ -201,26 +213,26 @@
     <ul>
         <li>Installable without stores (add to Homescreen button)</li>
         <li class="fragment">Native look and feel</li>
-        <li class="fragment">Uses a Service worker
+        <li class="fragment">Discoverable (manifest)</li>
+        <li class="fragment">Safe (https)</li>
+        <li class="fragment">Uses a Service worker for:
             <ul>
                 <li class="fragment">Offline capability</li>
-                <li class="fragment">Always up to date</li>
+                <li class="fragment">Being Fast and up to date</li>
                 <li class="fragment">Push Notifications</li>
             </ul>
         </li>
-        <li class="fragment">Discoverable (manifest)</li>
-        <li class="fragment">Safe (https)</li>
     </ul>
     <aside class="notes">
-        <b>A progressive Web app is Installable without stores</b>
+        <b>A progressive Web app is Installable without stores via the "add to homescreen button"</b>
         <ul>
             <li>It has a native look and feel</li>
-            <li>Uses a service worker and a service worker is just a JavaScript file that is run by your browser in the background. It is completely separated from your webpage and handles events fired either by the webpage itself or the browser. What's cool about that is that since it runs in the background it does not need the web page to be opened!</li>
-            <li>We can therefore implement the Offline capability via Network and Assets caching</li>
-            <li>We can also prefetch assets ahead of the user to be always up to date</li>
-            <li>We can re engage users via Push notifications</li>
             <li>You app is directly searchable on Google</li>
-            <li>and to finish your app must run a secured connection</li>
+            <li>your app runs on a secured connection</li>
+            <li>Uses a service worker and a service worker is just a JavaScript file that is run by your browser in the background. <br/>It is completely separated from your webpage and handles events fired either by the webpage itself or the browser. What's cool about that is that since it runs in the background it does not need the web page to be opened to work!</li>
+            <li>We can therefore leverage the Offline capability via Network and Assets caching</li>
+            <li>We can also prefetch assets ahead of the user to be always fast and up to date</li>
+            <li>To finish We can re engage users via Push notifications</li>
         </ul>
         <b></b>
     </aside>
@@ -239,13 +251,13 @@
         <footer>— Adam Bradley - Ionic Project Lead</footer>
     </blockquote>
     <aside class="notes">
-        <b>Why bet on the Web in 2017? Well there are many reason.</b>
+        <b>So Why bet on the Web in 2017? Well as we discussed there are many reason.</b>
         <ul>
             <li>First of all The Web is a Standard runtime that is available everywhere</li>
             <li>The browsers and devices performance are upgrading all the time</li>
             <li>The Web requires skills that most of us already have</li>
-            <li>The Web has a killer feature, a way to run background processes with service workers!</li>
-            <li>To finish on this section I want to quote Adam Bradley, who is the Ionic Project Lead that said, and I quote "It is an exciting time to be a Web Developer!". He said that at NgEurope last year in Paris and I tend to agree with him</li>
+            <li>And The Web has now a killer feature, a way to run background processes with service workers!</li>
+            <li>To finish on this section I want to quote Adam Bradley, who is the Ionic Project Lead that said, and I quote "It is an exciting time to be a Web Developer!". He said that at NgEurope last year in Paris and I completely agree with him. If you are a Web developer today, sky is the limit</li>
         </ul>
         <b>I hope you guys are now convinced that the Web is something that we need to invest on. And if you are I want to present you one of the best tool there is to build Web applications today. Introducing.....</b>
     </aside>

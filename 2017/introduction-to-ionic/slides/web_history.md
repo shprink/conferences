@@ -147,7 +147,7 @@
     <aside class="notes">
         <b>At this point of history in 2007, ten years ago the Web on mobile became a reality, not that it did not exist before, but the iPhone made the Web more accessible and close to the desktop experience.</b>
         <br/>
-        <b>It is to me the starting point of the modern Web. Let's jump back to present time and see what changed shall we?</b>
+        <b>It is to me the starting point of the modern Web<br/>This was 10 years ago right?! Next question we might want to answer to is: Is the Web different today?</b>
     </aside>
 </section>
 
