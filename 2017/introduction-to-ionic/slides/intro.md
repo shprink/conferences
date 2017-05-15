@@ -19,6 +19,11 @@
     <aside class="notes">
         <b>Hello everyone, I am really happy here</b>
         <br/>
-        <b>My name is Julien, I am a Software Engineer from Toulouse, France and I am here to talk about the Web and Ionic.</b>
+        <b>My name is Julien, I am a Software Engineer from Toulouse, France and I am here to talk about the Web and Ionic.</b><br/>
+        <b>Before we start I want to ask you some questions to get to know you better</b>
+        <ul>
+            <li>Please raise your hand if you heard about Ionic before?</li>
+            <li>Now how many of you have actually used it?</li>
+        </ul>
     </aside>
 </section>
