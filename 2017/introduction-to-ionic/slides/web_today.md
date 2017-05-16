@@ -56,7 +56,7 @@
         </div>
     </div>
     <aside class="notes">
-        in cars. Indeed Tesla for instance added a Web browser in their cars and this is a real trend.
+        in cars. Indeed Tesla for instance added a Web browser in their cars and this is a real trend in the industry.
     </aside>
 </section>
 
@@ -68,7 +68,8 @@
         </div>
     </div>
     <aside class="notes">
-        and even in the air!. This macbook act as a beacon to broadcast the link to the slides via what we call the Physical Web! And YES I do love kitties in case you are still wondering :)
+        and even in the air!. This macbook act as a beacon to broadcast the link to the slides via what we call the Physical Web! <br/> 
+        <b>And YES I do love kitties in case you are still wondering :)</b>
     </aside>
 </section>
 
@@ -231,7 +232,7 @@
             <li>your app runs on a secured connection</li>
             <li>Uses a service worker and a service worker is just a JavaScript file that is run by your browser in the background. <br/>It is completely separated from your webpage and handles events fired either by the webpage itself or the browser. What's cool about that is that since it runs in the background it does not need the web page to be opened to work!</li>
             <li>We can therefore leverage the Offline capability via Network and Assets caching</li>
-            <li>We can also prefetch assets ahead of the user to be always fast and up to date</li>
+            <li>We can also prefetch assets ahead of the user to have a fast bootload and keep the app up to date</li>
             <li>To finish We can re engage users via Push notifications</li>
         </ul>
         <b></b>

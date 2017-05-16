@@ -17,7 +17,7 @@
     </div>
     <img src="./img/riga_sponsors.jpg" style="position: absolute; bottom:25px; left:0; right:0;" class="img-plain"/>
     <aside class="notes">
-        <b>Hello everyone, I am really happy here</b>
+        <b>Hello everyone, I am really happy to be here, thanks for coming!</b>
         <br/>
         <b>My name is Julien, I am a Software Engineer from Toulouse, France and I am here to talk about the Web and Ionic.</b><br/>
         <b>Before we start I want to ask you some questions to get to know you better</b>

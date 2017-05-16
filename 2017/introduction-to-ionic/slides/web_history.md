@@ -113,7 +113,7 @@
     <aside class="notes">
         <b>And from this moment on, things got out of hands</b>
         <br/>
-        <b>Ok imagine that at this point of time, developers had in their hands EVERYTHING needed to create amazing website, great user experience but instead they created this...</b>
+        <b>Imagine that at this point in time, developers had in their hands EVERYTHING needed to create amazing website, great user experience but instead they created this...</b>
     </div>
 </section>
 
@@ -128,10 +128,10 @@
     </div>
 
     <aside class="notes">
-        <b>They created websites with awful backgrounds, rainbow texts, with the the blink tag, great gifs and layouts made with tables. If you do this today, you would get fired for sure, so please don't! The funny thing is that this one is actually a bootstrap theme so you can use it if you want!</b>
+        <b>They created websites with awful backgrounds, rainbow texts, with the the blink tag, great gifs and layouts made with tables. If you do this today, you would get fired for sure, so please don't! The funny thing is that this one is actually a bootstrap theme that you can use right now if you are nostalgic of the 90's!</b>
         <ol>
-            <li>Or this website, ismycomputeron.com... [5 secs]</li>
-            <li>Really clever!</li>
+            <li>They also created this website, ismycomputeron.com... [5 secs]</li>
+            <li>Think about it!</li>
         </ol>
         <b>Ok so now without any transition, let's talk about mobiles...</b>
     </div>

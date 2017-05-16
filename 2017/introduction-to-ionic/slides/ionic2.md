@@ -177,7 +177,7 @@
     <aside class="notes">    
         <b>Ionic comes with dozens of components out of the box</b>
         <ol>
-            <li>We have for instance "buttons". On the left side we have buttons for Android and on the right side buttons for iOS. And this is the EXACT same code. As you can see the code once built embraces the device UI standards and this is something really powerfull!</li>
+            <li>We have for instance "buttons". On the left side we have Material Design buttons for Android and on the right side buttons for iOS. And this is the EXACT same code. As you can see the code once built embraces the device UI standards!</li>
             <li>We have also cards</li>
             <li>Icons. As you can see even icons are different per platform</li>
             <li>Date pickers</li>
@@ -251,7 +251,7 @@
             <li>that contains a card</li>
             <li>which has a title</li>
             <li>and contains a list of buttons</li>
-            <li>Ionic component semantic helps developers understand and build complexe UI</li>
+            <li>Ionic component semantic helps developers understand and build complexe UI easily</li>
         </ol>
         <b></b>
     </aside>
@@ -301,7 +301,7 @@
             <li>Then your app runs on a Webview or Browser depending on the platform</li>
             <li>To interact with the device features such as the camera you can use either Cordova if you want to build an hybrid app for Android or iOS or HTML5 if you build for the Web.</li>
         </ol>
-        <b>Your Ionic application has therefore access to every API you might want to use to build your application.</b>
+        <b>Your Ionic application has therefore access to every API needed to build a complete application.</b>
     </aside>
 </section>
 
