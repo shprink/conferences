@@ -32,6 +32,9 @@
 		.big {
 			font-size: 50px;
 		}
+		h3.header{
+			border-bottom: 1px solid #2c3e50;
+		}
 	</style>
 </head>
 
@@ -70,7 +73,7 @@
 
 			<div class="row">
 				<!--<p class="alert alert-info">Tip: to see the talks associated notes, type "s" when browsing one.</p>-->
-				<div class="col-sm-12 portfolio-item">
+				<div class="col-sm-12 portfolio-item" id="tableWrapper">
 					<table class="table table-striped">
 						<thead>
 							<tr>
@@ -82,8 +85,7 @@
 								<th>Photos</th>
 							</tr>
 						</thead>
-						<tbody id="tableBody">
-						</tbody>
+						<tbody></tbody>
 					</table>
 				</div>
 			</div>
@@ -288,54 +290,98 @@
 				}, {
 					src: 'photos/2017-05-15/riga_dev_days_02.jpg'
 				}]
+			}, {
+				name: 'Code once and deploy everywhere with Ionic',
+				city: 'Barcelona',
+				country: 'Spain',
+				date: '2017-09-08 19:00:00',
+				eventName: 'AngularBeers',
+				eventLink: 'https://www.meetup.com/AngularJS-Beers/events/242028598/',
+				link: './2017/code_once_deploy_everywhere_with_ionic',
+				tags: ['ionic', 'ionic2', 'angular2']
+			}, {
+				name: 'Code once and deploy everywhere with Ionic',
+				city: 'Oslo',
+				country: 'Norway',
+				date: '2017-10-05 16:00:00',
+				eventName: 'Mobile Era',
+				eventLink: 'https://mobileera.rocks/',
+				link: './2017/code_once_deploy_everywhere_with_ionic',
+				tags: ['ionic', 'ionic2', 'angular2']
 			}];
+			var isDev = location.hostname === '127.0.0.1';
 
-			talks = talks.sort(function (a, b) {
+			talks = talks.filter(function(talk) {
+				var talkDate = moment(talk.date);
+				var futureTalk = talkDate.diff(moment()) > 0;
+				return isDev || !futureTalk;
+			}).sort(function (a, b) {
 				return new Date(b.date) - new Date(a.date);
 			});
 
-			var countries = {}, cities = {};
+			var countries = {}, cities = {}, perYear = {};
+			var tableTemplate = $('#tableWrapper').clone();
+			$('#tableWrapper').empty();
+
 			$.each(talks, function (i, talk) {
-				var talkTags = [];
-				$.each(talk.tags, function (i, tag) {
-					talkTags.push('#' + tags[tag]);
-				});
-				console.log('cities', cities)
-				console.log('countries', countries)
+				var talkDate = moment(talk.date);
+				var year = talkDate.format('YYYY');
+
+				perYear[year]
+					? perYear[year].push(talk)
+					: perYear[year] = [talk];
+
 				cities[talk.city] = true;
 				countries[talk.country] = true;
-				var row = [
-					'<tr>',
-					'<td>' + moment(talk.date).format('LL') + '</td>',
-					'<td><a href="' + talk.link + '">' + talk.name + '</a></td>',
-					'<td>' + talk.city + ', ' + talk.country + '</td>'
-				];
-
-				row.push(!talk.eventLink
-					? '<td>' + talk.eventName + '</td>'
-					: '<td><a href="' + talk.eventLink + '" target="_blank">' + talk.eventName + '</a></td>');
-				// row.push('<td>' + talkTags.join(', ') + '</td>');
-
-				row.push(talk.photos
-					? '<td class="text-center"><button class="btn btn-xs btn-primary img-slideshow"><i class="fa fa-photo"></i></button></td>'
-					: '<td></td>');
-
-				row.push('</tr>');
-				var $row = $(row.join(''));
-
-				$row.find('button.img-slideshow').magnificPopup({
-					items: talk.photos,
-					gallery: {
-						enabled: true
-					},
-					type: 'image'
-				});
-
-				$('#tableBody').append($row);
-				$('#talk-count').text(talks.length);
-				$('#city-count').text(Object.keys(cities).length);
-				$('#country-count').text(Object.keys(countries).length);
 			});
+
+			Object.keys(perYear).sort(function(a, b) { return b - a }).map(function(year){
+				injectYearTable(year, perYear[year]);
+			});
+
+			function injectYearTable(year, talks) {
+				var newTemplate = tableTemplate.clone();
+				$.each(talks, function (i, talk) {
+					var talkTags = [];
+					$.each(talk.tags, function (i, tag) {
+						talkTags.push('#' + tags[tag]);
+					});
+					var row = [
+						'<tr>',
+						'<td>' + moment(talk.date).format('MMMM Do') + '</td>',
+						'<td><a href="' + talk.link + '">' + talk.name + '</a></td>',
+						'<td>' + talk.city + ', ' + talk.country + '</td>'
+					];
+
+					row.push(!talk.eventLink
+						? '<td>' + talk.eventName + '</td>'
+						: '<td><a href="' + talk.eventLink + '" target="_blank">' + talk.eventName + '</a></td>');
+					// row.push('<td>' + talkTags.join(', ') + '</td>');
+
+					row.push(talk.photos
+						? '<td class="text-center"><button class="btn btn-xs btn-primary img-slideshow"><i class="fa fa-photo"></i></button></td>'
+						: '<td></td>');
+
+					row.push('</tr>');
+					var $row = $(row.join(''));
+
+					$row.find('button.img-slideshow').magnificPopup({
+						items: talk.photos,
+						gallery: {
+							enabled: true
+						},
+						type: 'image'
+					});
+
+					newTemplate.find('tbody').append($row);
+				});
+				$('#tableWrapper').append($('<h3 class="header">' + year + '</h3>'));
+				$('#tableWrapper').append(newTemplate);
+			}
+
+			$('#talk-count').text(talks.length);
+			$('#city-count').text(Object.keys(cities).length);
+			$('#country-count').text(Object.keys(countries).length);
 		}(jQuery));
 	</script>
 
