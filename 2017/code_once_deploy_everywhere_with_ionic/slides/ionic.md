@@ -193,3 +193,25 @@
 
 <!-- ADVANTAGES -->
 
+<section>
+    <h3><span style="color: #5c8dfc">Progressive Web App</span> (PWA) <span style="color: #5c8dfc">ready</span></h3>
+    <ul>
+        <li class="fragment">Service worker preconfigured
+            <ul>
+                <li>Mandatory assets precaching</li>
+                <li>Other assets caching</li>
+                <li>Network caching</li>
+            </ul>
+        </li>
+        <li class="fragment">Manifest preconfigured</li>
+    </ul>
+    <aside class="notes">
+        <b>We saw earlier what was a Progressive Web app and why it is the Next Generation of the Mobile Web.</b>
+         <ol>
+            <li>With Ionic you get a preconfigured service worker out of the box. All the assets needed to run the app are precached by default, the rest is simply cached when used and can be accessed offline</li>
+            <li>We also get a preconfigured manifest that contains information such as the app name, splashscreen background color, icons etc.</li>
+            <li>What you need to remember is that an Ionic app is already a Progressive Web App</li>
+        </ol>
+        <b>An Ionic app is a PWA!</b>
+    </aside>
+</section>

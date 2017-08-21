@@ -319,7 +319,7 @@
 				return new Date(b.date) - new Date(a.date);
 			});
 
-			var countries = {}, cities = {}, perYear = {};
+			var countries = {}, cities = {}, uniqTalks = {}, perYear = {};
 			var tableTemplate = $('#tableWrapper').clone();
 			$('#tableWrapper').empty();
 
@@ -331,6 +331,7 @@
 					? perYear[year].push(talk)
 					: perYear[year] = [talk];
 
+				uniqTalks[talk.link] = true;
 				cities[talk.city] = true;
 				countries[talk.country] = true;
 			});
@@ -379,7 +380,7 @@
 				$('#tableWrapper').append(newTemplate);
 			}
 
-			$('#talk-count').text(talks.length);
+			$('#talk-count').text(Object.keys(uniqTalks).length);
 			$('#city-count').text(Object.keys(cities).length);
 			$('#country-count').text(Object.keys(countries).length);
 		}(jQuery));

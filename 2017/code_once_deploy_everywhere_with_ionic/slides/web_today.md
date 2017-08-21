@@ -98,15 +98,36 @@
 <!-- EVOLUTION  -->
 
 <section>
-    <h2>The <span style="color: #5c8dfc">Web</span> has <span style="color: #5c8dfc">evolved</span></h2>
+    <h2>The <span style="color: #5c8dfc">Web</span> is <span style="color: #5c8dfc">evolving</span></h2>
     <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section>
+    <h3><span style="color: #5c8dfc">HTML5</span> keeps <span style="color: #5c8dfc">improving</span></h3>
+    <ul >
+        <li class="fragment">`navigator.vibrate(200)`</li>
+        <li class="fragment">`navigator.getBattery()`</li>
+        <li class="fragment">`navigator.connection`</li>
+        <li class="fragment">`navigator.geolocation`</li>
+        <li class="fragment">... and much <a href="http://mobilehtml5.org/" target="_blank">more</a></li>
+    </ul>
+    <aside class="notes">
+        <b>HTML5 is constantly improving. Right now and mostly on Chrome, we can access the following APIS:</b>
+        <ul>
+            <li>Vibration API</li>
+            <li>Batterie status API</li>
+            <li>Network Information API</li>
+            <li>Geolocation API</li>
+        </ul>
         <b></b>
     </aside>
 </section>
 
 <section data-background-video="./img/iphone_evolution.mp4" data-background-video-loop data-background-color="#fff"  class="stretch video-opacity-30">
     <div layout="column" layout-align="center center" h100>
-       <h3>Devices have evolved</h3>
+       <h3>The <span style="color: #5c8dfc">hardware</span> constantly <span style="color: #5c8dfc">upgrade</span></h3>
         <table class="fragment">
             <tr >
                 <th>Year</th>
@@ -170,20 +191,17 @@
 </section>
 
 <section data-background-image="./img/browsers.png" data-autoplay data-background-video-loop data-background-color="#fff"  data-background-video-playbackRate="0.02" class="video-opacity-30">
-        <h3>Browsers/Webviews have evolved</h3>
+        <h3><span style="color: #5c8dfc">Browsers</span> are <span style="color: #5c8dfc">faster then ever</span> </h3>
         <ul>
-            <li class="fragment">Faster HTML/CSS/JS performance (Blink, Gecko, Webkit / v8, SpiderMonkey, Nitro etc.)</li>
+            <li class="fragment">Better layout performance (Blink, Gecko engines)</li>
+            <li class="fragment">Optimized JS performance (v8, SpiderMonkey, Nitro engines)</li>
             <li class="fragment">Faster JS execution time (JIT Machine Code)</li>
-            <li class="fragment">Async scrolling events (Native Scrolling)</li>
-            <li class="fragment">Support Progressive Web Apps</li>
         </ul>
     <aside class="notes">
         <b>Well We all have noticed this, we have infinitely better Browsers now that back in the Internet explorer 6 time</b>
         <ul>
             <li>The browsers are constantly improving HTML and CSS performance via their web browser engines such as Blink, Gecko, Webkit and their JavaScript engines: v8, SpiderMonkey or Nitro.</li>
             <li>Now All modern JavaScript engines compile JavaScript code directly into native machine code. This happens before executing the JavaScript code and makes it up to 10 times faster. It is called the Just In Time Compilation</li>
-            <li>Mobile browsers now support Native Scrolling, which allow your application to listen to asynchronous scrolling events correctly. And that's pretty new as well and used for features such as infinite scroll.</li>
-            <li>To finish browsers now support Progressive Web Apps which has been a buzz word for the past 2 years but is defenitely the next Generation of the Mobile Web</li>
         </ul>
         <b>To have a better understanding of what's a progressive Web App Let's watch a video!</b>
     </aside>
@@ -243,7 +261,7 @@
     <h3 style="color:#fff;">Why is the <span style="color: #5c8dfc">Web the best platform</span> to build <span style="color: #5c8dfc">cross platform apps</span>?</h3>
     <ul>
         <li class="fragment">Standard runtime <span style="color: #5c8dfc">available everywhere</span></li>
-        <li class="fragment"><span style="color: #5c8dfc">Performance</span> is increasing all the time</li>
+        <li class="fragment"><span style="color: #5c8dfc">Performance</span> is improving all the time</li>
         <li class="fragment"><span style="color: #5c8dfc">Background processes</span> are now a reality with SW</li>
         <li class="fragment">Leverage <span style="color: #5c8dfc">Multi threading</span> for heavy tasks via WW</li>
     </ul>
