@@ -141,6 +141,13 @@
 </section>
 
 <section>
+    <h2><span style="color: #5c8dfc">Ionic apps</span> are <span style="color: #5c8dfc">Native apps</span></h2>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section>
     <h3>Cordova <span style="color: #5c8dfc">Native app</span> shell</h3>
      <div layout="row" layout-align="center center">
             <div layout="column" flex="33" layout-align="center center">
@@ -189,21 +196,116 @@
     </aside>
 </section>
 
-
-
 <!-- ADVANTAGES -->
 
 <section>
-    <h3><span style="color: #5c8dfc">Progressive Web App</span> (PWA) <span style="color: #5c8dfc">ready</span></h3>
+    <h2><span style="color: #5c8dfc">many tools</span> out of the box</h2>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+
+<section class="stretch">
+    <h3>Dozens of <span style="color: #5c8dfc">components</span></h3>
+    <div  style="margin: 0 75px; position: relative;">
+        <div style="position: absolute; width:100%;" layout="row" layout-align="space-between center" class="fragment zoom-in">
+            <img src="./img/screenshots/button-android.png" style="margin:0" height="500" class="img-plain"/>
+            <img src="./img/screenshots/button-ios.png" style="margin:0" height="500" class="img-plain"/>
+        </div>
+        <div style="position: absolute; width:100%; padding: 15px" layout="row" layout-align="space-between center" class="fragment zoom-in">
+            <img src="./img/screenshots/card-android.png" style="margin:0" height="500" class="img-plain"/>
+            <img src="./img/screenshots/card-ios.png" style="margin:0" height="500" class="img-plain"/>
+        </div>
+        <div style="position: absolute; width:100%; padding: 30px" layout="row" layout-align="space-between center" class="fragment zoom-in">
+            <img src="./img/screenshots/icons-android.png" style="margin:0" height="500" class="img-plain"/>
+            <img src="./img/screenshots/icons-ios.png" style="margin:0" height="500" class="img-plain"/>
+        </div>
+        <div style="position: absolute; width:100%; padding: 45px" layout="row" layout-align="space-between center" class="fragment zoom-in">
+            <video autoplay loop height="500">
+                <source src="./img/screenshots/date-android.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <video autoplay loop height="500">
+                <source src="./img/screenshots/date-ios.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div style="position: absolute; width:100%; padding: 60px" layout="row" layout-align="space-between center" class="fragment zoom-in">
+            <video autoplay loop height="500">
+                <source src="./img/screenshots/segment-android.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <video autoplay loop height="500">
+                <source src="./img/screenshots/segment-ios.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div style="position: absolute; width:100%; padding: 75px" layout="row" layout-align="space-between center" class="fragment zoom-in">
+            <video autoplay loop height="500">
+                <source src="./img/screenshots/modal-android.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <video autoplay loop height="500">
+                <source src="./img/screenshots/modal-ios.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div style="position: absolute; width:100%; padding: 90px" layout="row" layout-align="space-between center" class="fragment zoom-in">
+            <video autoplay loop height="500">
+                <source src="./img/screenshots/loading-android.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <video autoplay loop height="500">
+                <source src="./img/screenshots/loading-ios.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div style="position: absolute; width:100%; padding: 105px" layout="row" layout-align="space-between center" class="fragment zoom-in">
+            <video autoplay loop height="500">
+                <source src="./img/screenshots/slides-android.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>  
+            <video autoplay loop height="500">
+                <source src="./img/screenshots/slides-ios.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    <aside class="notes">    
+        <b>Ionic comes with dozens of components out of the box</b>
+        <ol>
+            <li>We have for instance "buttons". On the left side we have Material Design buttons for Android and on the right side buttons for iOS. And this is the EXACT same code. As you can see the code once built embraces the device UI standards!</li>
+            <li>We have also cards</li>
+            <li>Icons. As you can see even icons are different per platform</li>
+            <li>Date pickers</li>
+            <li>Segments which is a popular UI for iOS</li>
+            <li>Modals</li>
+            <li>Loading</li>
+            <li>And slides to create tutorials.</li>
+        </ol>
+        <b>With Ionic you get the majority of the components you might need to create a good user experience.</b>
+        <br/>
+        <b>Let's see how simple it is to use those components shall we?</b>
+    </aside>
+</section>
+
+<section>
+    <h3><span style="color: #5c8dfc">PWA</span> (Progressive Web App) <span style="color: #5c8dfc">preconfigured</span></h3>
     <ul>
-        <li class="fragment">Service worker preconfigured
+        <li class="fragment">Service worker
             <ul>
                 <li>Mandatory assets precaching</li>
                 <li>Other assets caching</li>
                 <li>Network caching</li>
             </ul>
         </li>
-        <li class="fragment">Manifest preconfigured</li>
+        <li class="fragment">Manifest
+            <ul>
+                <li>Application name</li>
+                <li>Icons list</li>
+                <li>Fullscreen strategy</li>
+            </ul></li>
     </ul>
     <aside class="notes">
         <b>We saw earlier what was a Progressive Web app and why it is the Next Generation of the Mobile Web.</b>
@@ -213,5 +315,59 @@
             <li>What you need to remember is that an Ionic app is already a Progressive Web App</li>
         </ol>
         <b>An Ionic app is a PWA!</b>
+    </aside>
+</section>
+
+<section>
+    <h3><span style="color: #5c8dfc">Ionic CLI</span></h3>
+<pre style="font-size: 130%"><code class="shell" data-trim>
+$ npm install -g ionic
+</code></pre>
+    <ul>
+         <li class="fragment">Create new Applications</li>
+         <li class="fragment">Create new Pages, Components, Providers</li>
+         <li class="fragment">Run a local dev server</li>
+         <li class="fragment">Run on emulator or device</li>
+         <li class="fragment">Build for every platform...</li>
+    </ul>
+    <aside class="notes">
+        <b>To install Ionic on your machine we first need to install the Ionic CLI. It can be installed globally with npm.</b>
+         <ol>
+            <li>The CLI can help you Create new Application</li>
+            <li>new Pages, Components, Providers etc.</li>
+            <li>It can run a local server based on webpack</li>
+            <li>It can run the app on emulator or on device</li>
+            <li>and allow you to buid for every known platforms</li>
+            <li>As you can see all you need is the CLI</li>
+        </ol>
+        <b>All you need is Ionic CLI</b>
+    </aside>
+</section>
+
+<!-- CONCLUSION  -->
+
+<section>
+    <h3 style="color:#fff;">Why is <span style="color: #5c8dfc">Ionic</span> one of the best SDK to build <span style="color: #5c8dfc">cross platform apps</span>?</h3>
+    <ul>
+        <li class="fragment"><span style="color: #5c8dfc">Progressive Web App</span> by default</li>
+        <li class="fragment"><span style="color: #5c8dfc">No build configuration</span>: Ionic CLI</li>
+        <li class="fragment"><span style="color: #5c8dfc">One single codebase</span> for all platforms</li>
+        <li class="fragment">Large set of <span style="color: #5c8dfc">great components</span></li>
+        <li class="fragment">Access to <span style="color: #5c8dfc">native hardware</span></li>
+        <li class="fragment">Amazing and <span style="color: #5c8dfc">growing community</span></li>
+    </ul>
+    <aside class="notes">
+        <b>Let's conclude this talk, here are the things you should take home with you:</b>
+        <ol>
+            <li>With Ionic you get a progressive Web app by default</li>
+            <li>With the Ionic CLI there are no complexe Webpack or Gulp configuration, it is already done for you</li>
+            <li>Only one codebase is necessary to build on every platforms. your Components use the device specific UI standards so on every platforms users have the look and feel they are expecting</li>
+            <li>A large set of components are available out of the box and many more are available on market.ionic.io</li>
+            <li>As a developer, the component semantic makes it really easy to pick up what you are dealing with</li>
+            <li>Your application code can leverage Ionic, Angular, HTML5 and Cordova APIs directly.</li>
+            <li>Ionic has great services around the SDK</li>
+            <li>To finish the community is what makes Ionic sooooo special in the industry. With thousands of developers like myself, advocating for Ionic around the world or creating plugins, components, themes etc. Ionic is super successful!</li>
+        </ol>
+        <b></b>
     </aside>
 </section>

@@ -52,7 +52,7 @@
 <section data-background-video="./img/tv.mp4" data-background-video-loop data-background-color="#fff" data-background-style="cover">
     <div layout="column" layout-align="center center" h100>
        <div style="background-color: rgba(0, 0, 0, 0.4); padding: 20px; border-radius: 5px;">
-            <h3 style="color:#fff; margin:0">at home...</h3>
+            <h3 style="color:#fff; margin:0">in the living room...</h3>
         </div>
     </div>
     <aside class="notes">
@@ -127,7 +127,7 @@
 
 <section data-background-video="./img/iphone_evolution.mp4" data-background-video-loop data-background-color="#fff"  class="stretch video-opacity-30">
     <div layout="column" layout-align="center center" h100>
-       <h3>The <span style="color: #5c8dfc">hardware</span> constantly <span style="color: #5c8dfc">upgrade</span></h3>
+       <h3><span style="color: #5c8dfc">Devices</span> are more <span style="color: #5c8dfc">prowerful</span> than ever</h3>
         <table class="fragment">
             <tr >
                 <th>Year</th>
@@ -146,12 +146,6 @@
                 <td>iPhone 4</td>
                 <td>1 GHz</td>
                 <td>512 MB</td>
-            </tr>
-            <tr >
-                <td>2012</td>
-                <td>iPhone 5</td>
-                <td>1.3 GHz dual-core</td>
-                <td>1 GB</td>
             </tr>
             <tr>
                 <td>2014</td>
@@ -177,6 +171,12 @@
                 <td>2.15 + 1.6Ghz quad-core</td>
                 <td>4 GB</td>
             </tr>
+            <tr >
+                <td>2017</td>
+                <td>Galaxy Note 8</td>
+                <td>2.35 + 1.9Ghz octa-core</td>
+                <td>6 GB</td>
+            </tr>
         </table>
     </div>
     <aside class="notes">
@@ -190,12 +190,12 @@
     </aside>
 </section>
 
-<section data-background-image="./img/browsers.png" data-autoplay data-background-video-loop data-background-color="#fff"  data-background-video-playbackRate="0.02" class="video-opacity-30">
-        <h3><span style="color: #5c8dfc">Browsers</span> are <span style="color: #5c8dfc">faster then ever</span> </h3>
+<section>
+        <h3><span style="color: #5c8dfc">Browsers</span> are <span style="color: #5c8dfc">self upgrading</span> </h3>
         <ul>
-            <li class="fragment">Better layout performance (Blink, Gecko engines)</li>
-            <li class="fragment">Optimized JS performance (v8, SpiderMonkey, Nitro engines)</li>
-            <li class="fragment">Faster JS execution time (JIT Machine Code)</li>
+            <li class="fragment">Better <span style="color: #5c8dfc">Browser engine</span> (Blink, Gecko, Webkit)</li>
+            <li class="fragment">Better <span style="color: #5c8dfc">JS engine</span> (v8, SpiderMonkey, Nitro)</li>
+            <li class="fragment">Faster <span style="color: #5c8dfc">JS execution time</span> (JIT Machine Code)</li>
         </ul>
     <aside class="notes">
         <b>Well We all have noticed this, we have infinitely better Browsers now that back in the Internet explorer 6 time</b>
@@ -203,7 +203,7 @@
             <li>The browsers are constantly improving HTML and CSS performance via their web browser engines such as Blink, Gecko, Webkit and their JavaScript engines: v8, SpiderMonkey or Nitro.</li>
             <li>Now All modern JavaScript engines compile JavaScript code directly into native machine code. This happens before executing the JavaScript code and makes it up to 10 times faster. It is called the Just In Time Compilation</li>
         </ul>
-        <b>To have a better understanding of what's a progressive Web App Let's watch a video!</b>
+        <b></b>
     </aside>
 </section>
 
@@ -220,10 +220,11 @@
 <section>
     <h3><span style="color: #5c8dfc">offline</span> process with <span style="color: #5c8dfc">Service Workers</span></h3>
     <ul>
-        <li class="fragment">Runs even when the webpage is closed</li>
-        <li class="fragment">Can cache assets and HTTP requests</li>
-        <li class="fragment">Can update your app in the background</li>
-        <li class="fragment">Can manage Push Notifications</li>
+        <li class="fragment"><span style="color: #5c8dfc">Runs</span> even when the <span style="color: #5c8dfc">webpage is closed</span></li>
+        <li class="fragment">Can <span style="color: #5c8dfc">cache</span> assets and HTTP requests</li>
+        <li class="fragment">Can <span style="color: #5c8dfc">update</span> your app <span style="color: #5c8dfc">in the background</span></li>
+        <li class="fragment">Can manage <span style="color: #5c8dfc">Push Notifications</span></li>
+        <li class="fragment"><img src="../../img/new.gif" style="margin:0" class="img-plain"/><a href="https://webkit.org/status/#specification-service-workers" target="_blank" style="color: #5c8dfc"> Safari support</a> is under development</li>
     </ul>
     <aside class="notes">
         <ul>
@@ -239,10 +240,10 @@
 <section>
     <h3><span style="color: #5c8dfc">Multi threading</span> with <span style="color: #5c8dfc">Web workers</span></h3>
     <ul>
-        <li class="fragment">Main thread can delegate expensive operations</li>
-        <li class="fragment">Do not affect the performance of the page</li>
-        <li class="fragment">A worker has its own event loop and memory space</li>
-        <li class="fragment">Communicate via PostMessage API</li>
+        <li class="fragment">Main thread <span style="color: #5c8dfc">can delegate</span> expensive <span style="color: #5c8dfc">operations</span></li>
+        <li class="fragment"><span style="color: #5c8dfc">Do not affect the performance</span> of the page</li>
+        <li class="fragment">A worker has its <span style="color: #5c8dfc">own event loop</span> and <span style="color: #5c8dfc">memory space</span></li>
+        <li class="fragment">Communicate via <span style="color: #5c8dfc">PostMessage API</span></li>
     </ul>
     <aside class="notes">
         <ul>
