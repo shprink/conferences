@@ -87,6 +87,10 @@ input {
     width: 90%;
 }
 
+.reveal pre code{
+    max-height: initial !important;
+}
+
 .green {
     color: #7DFB7D !important;
 }

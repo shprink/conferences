@@ -241,16 +241,24 @@
     <h3><span style="color: #5c8dfc">Multi threading</span> with <span style="color: #5c8dfc">Web workers</span></h3>
     <ul>
         <li class="fragment">Main thread <span style="color: #5c8dfc">can delegate</span> expensive <span style="color: #5c8dfc">operations</span></li>
-        <li class="fragment"><span style="color: #5c8dfc">Do not affect the performance</span> of the page</li>
         <li class="fragment">A worker has its <span style="color: #5c8dfc">own event loop</span> and <span style="color: #5c8dfc">memory space</span></li>
-        <li class="fragment">Communicate via <span style="color: #5c8dfc">PostMessage API</span></li>
+        <li class="fragment">Available in <span style="color: #5c8dfc">all major Browsers</span>
+<pre style="font-size: 105%;"><code class="shell" data-trim>
+var myWorker = new Worker('worker.js')
+</code></pre>
+        </li>
+        <li class="fragment">Communicate via <span style="color: #5c8dfc">PostMessage API</span>
+<pre style="font-size: 105%;"><code class="shell" data-trim>
+myWorker.postMessage(DATA);
+</code></pre>
+<pre style="font-size: 105%; margin-top: -2%"><code class="shell" data-trim>
+myWorker.onmessage = e => e.data;
+</code></pre>
+        </li>
     </ul>
     <aside class="notes">
         <ul>
-            <li>A service worker is just a JavaScript file that is ran by your browser in the background. <br/>It is completely separated from your webpage and handles events fired either by the webpage itself or the browser.</li>
-            <li>We can therefore leverage the Offline capability via Network and Assets caching or precaching.</li>
-            <li>When a new version of your app is available, the service worker can update old assets in the background for next time you use it</li>
-            <li>A service worker can manage Push notifications to re engage users</li>
+            <li>Do not affect the performance</span> of the page</li>
         </ul>
         <b></b>
     </aside>
@@ -259,17 +267,14 @@
 <!-- CONCLUSION  -->
 
 <section>
-    <h3 style="color:#fff;">Why is the <span style="color: #5c8dfc">Web the best platform</span> to build <span style="color: #5c8dfc">cross platform apps</span>?</h3>
+    <h3 style="color:#fff;">Why is the <span style="color: #5c8dfc">Web</span> the <span style="color: #5c8dfc">best platform</span> to build <span style="color: #5c8dfc">cross platform apps</span>?</h3>
     <ul>
         <li class="fragment">Standard runtime <span style="color: #5c8dfc">available everywhere</span></li>
         <li class="fragment"><span style="color: #5c8dfc">Performance</span> is improving all the time</li>
-        <li class="fragment"><span style="color: #5c8dfc">Background processes</span> are now a reality with SW</li>
-        <li class="fragment">Leverage <span style="color: #5c8dfc">Multi threading</span> for heavy tasks via WW</li>
+        <li class="fragment">Capability to <span style="color: #5c8dfc">access hardware</span> (via HTML5)</li>
+        <li class="fragment">Easy <span style="color: #5c8dfc">Offline support</span> (via SW)</li>
+        <li class="fragment"><span style="color: #5c8dfc">Multi threading</span> can delegate heavy tasks (via WW)</li>
     </ul>
-    <blockquote class="fragment">
-        "It is an exciting time to be a Web Developer!"
-        <footer>— Adam Bradley - Ionic Project Lead</footer>
-    </blockquote>
     <aside class="notes">
         <b>So Why bet on the Web in 2017? Well as we discussed there are many reason.</b>
         <ul>
@@ -277,8 +282,8 @@
             <li>The browsers and devices performance are upgrading all the time</li>
             <li>The Web requires skills that most of us already have</li>
             <li>And The Web has now a killer feature, a way to run background processes with service workers!</li>
-            <li>To finish on this section I want to quote Adam Bradley, who is the Ionic Project Lead that said, and I quote "It is an exciting time to be a Web Developer!". He said that at NgEurope last year in Paris and I completely agree with him. If you are a Web developer today, sky is the limit</li>
+            <li></li>
         </ul>
-        <b>I hope you guys are now convinced that the Web is something that we need to invest on. And if you are I want to present you one of the best tool there is to build Web applications today. Introducing.....</b>
+        <b>It is an exciting time to be a Web Developer, the Web now provides the tools to create almost anything. What we are missing now is an Software Developer Kit to create applications and be productive. That is where Ionic comes into place!</b>
     </aside>
 </section>

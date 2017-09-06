@@ -95,14 +95,28 @@ $ ionic build --prod
 </section>
 
 <section>
-    <h3>Building for the <span style="color: #5c8dfc">Android</span></h3>
+    <h3>Building for <span style="color: #5c8dfc">Android</span></h3>
      <div layout="row" layout-align="center center" h100>
             <div flex="33" layout="column" layout-align="center center">
                 <img src="../../img/android-logo.png" width="55%" class="img-plain"/>
             </div>
             <div layout="column" flex layout-align="center center">
-<pre style="font-size: 130%"><code class="shell" data-trim>
-$ npm install -g ionic
+<p>Required: Android SDK, Gradle, Ant, Java JDK</p>
+<pre style="font-size: 80%" class="fragment"><code class="shell" data-trim>
+$ ionic cordova platform add android@latest
+</code></pre>
+<pre style="font-size: 50%; margin-top:  -2.5%" class="fragment"><code class="shell" data-trim>
+Installing "cordova-plugin-device" for android
+Installing "cordova-plugin-splashscreen" for android
+Installing "cordova-plugin-statusbar" for android
+Installing "cordova-plugin-whitelist" for android
+Installing "ionic-plugin-keyboard" for android
+</code></pre>
+<pre style="font-size: 80%" class="fragment"><code class="shell" data-trim>
+$ ionic cordova emulate android
+</code></pre>
+<pre style="font-size: 80%" class="fragment"><code class="shell" data-trim>
+$ ionic cordova emulate android
 </code></pre>
             </div>
         </div>
@@ -111,67 +125,43 @@ $ npm install -g ionic
     </aside>
 </section>
 
+<section>
+    <h3>Building for <span style="color: #5c8dfc">iOS</span></h3>
+     <div layout="row" layout-align="center center" h100>
+            <div flex="33" layout="column" layout-align="center center">
+                <img src="../../img/ios-logo.png" width="55%" class="img-plain"/>
+            </div>
+            <div layout="column" flex layout-align="center center">
+<pre style="font-size: 130%"><code class="shell" data-trim>
+$ ionic cordova platform add ios@latest
+</code></pre>
+<pre style="font-size: 50%; margin-top:  -2.5%" class="fragment"><code class="shell" data-trim>
+Installing "cordova-plugin-device" for ios
+Installing "cordova-plugin-splashscreen" for ios
+Installing "cordova-plugin-statusbar" for ios
+Installing "cordova-plugin-whitelist" for ios
+Installing "ionic-plugin-keyboard" for ios
+</code></pre>
+            </div>
+        </div>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
 
 <section>
-    <h3 style="margin-bottom: 10px;">Component semantic</h3>
-    <div layout="row" layout-align="center center">
-        <div layout="column" flex="33" layout-align="center center" style="position: relative">
-            <div class="fragment current-only hi" data-code-focus="1-5">
-                <div style="background-color:red; opacity: 0.5; width: 282px; height: 38px; position: absolute; left: 19px; top: 17px;"></div>
+    <h3>Building for <span style="color: #5c8dfc">Desktop</span></h3>
+     <div layout="row" layout-align="center center" h100>
+            <div flex="33" layout="column" layout-align="center center">
+                <img src="../../img/electron-logo.svg" width="55%" class="img-plain"/>
             </div>
-            <div class="fragment current-only" data-code-focus="7-24">
-                <div style="background-color:red; opacity: 0.5; width: 282px; height: 444px; position: absolute; left: 19px; top: 56px;"></div>
-            </div>
-            <div class="fragment current-only" data-code-focus="8-22">
-                <div style="background-color:red; opacity: 0.5; width: 268px; height: 291px; position: absolute; left: 26px; top: 63px;"></div>
-            </div>
-            <div class="fragment current-only" data-code-focus="9-11">
-                <div style="background-color:red; opacity: 0.5; width: 268px; height: 51px; position: absolute; left: 26px; top: 63px;"></div>
-            </div>
-            <div class="fragment current-only" data-code-focus="12-21">
-                <div style="background-color:red; opacity: 0.5; width: 268px; height: 246px; position: absolute; left: 26px; top: 109px;"></div>
-            </div>
-            <img src="./img/screenshots/semantic-ios.png" style="margin:0" height="500" class="img-plain"/>
-        </div>
-        <div layout="column" flex layout-align="center center" style="margin-left: 10px">
-<pre style="font-size: 45%; box-shadow: none" class="stretch" ><code class="html" style="background-color: #082349" data-trim>
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Card Lists</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-    <ion-card>
-        <ion-card-header>
-            Explore Nearby
-        </ion-card-header>
-        <ion-list>
-            <button ion-item>
-                <ion-icon name="cart"></ion-icon>
-                Shopping
-            </button>
-            <button ion-item>
-                <ion-icon name="medical"></ion-icon>
-                Hospital
-            </button>
-        </ion-list>
-    </ion-card>
-</ion-content>
- <!-- -->
+            <div layout="column" flex layout-align="center center">
+<pre style="font-size: 130%"><code class="shell" data-trim>
+$ npm install -g ionic
 </code></pre>
+            </div>
         </div>
-    </div>
     <aside class="notes">
-        <b>The Ionic component semantic helps developers when it comes to understand what they are dealing with. Let's see an example:</b>
-        <ol>
-            <li>First we have the header component. This component includes a toolbar that itself includes a title. The result is what you see on the left side. There is no surprise, Just by reading the code semantic, you can get an idea of what the result will be.</li>
-            <li>The content is the rest of the page</li>
-            <li>that contains a card</li>
-            <li>which has a title</li>
-            <li>and contains a list of buttons</li>
-            <li>Ionic component semantic helps developers understand and build complexe UI easily</li>
-        </ol>
         <b></b>
     </aside>
 </section>
