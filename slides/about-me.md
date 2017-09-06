@@ -20,7 +20,6 @@
     <div class="fragment">
         <div class="flex-center-center" >
             <div></div>
-            <img class="plain" style="background: transparent;" width="130" data-src="../../img/angulartoulouse-logo.png" alt="angulartoulouse">
             <img class="plain" style="background: transparent;" width="400" data-src="../../img/gdg-logo-white.png" alt="gdg">
             <div></div>
         </div>

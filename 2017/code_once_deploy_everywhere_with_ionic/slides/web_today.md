@@ -1,7 +1,7 @@
 <section>
     <h2>The <span style="color: #5c8dfc">Web</span> is the <span style="color: #5c8dfc">best</span> platform for <span style="color: #5c8dfc">cross platform</span> apps</h2>
     <aside class="notes">
-        <b></b>
+        <b>To me the Web is the best platform to build cross platform apps for many reasons...</b>
     </aside>
 </section>
 
@@ -18,12 +18,12 @@
         </div>
     </div>
     <aside class="notes">
-        <b>Let's stop listing all places where the Web is because this could go forever. Let's just say that: </b>
+        <b>The first reason is because the...</b>
         <ol>
             <li>the web</li>
             <li>is everywhere: And that's something we all have noticed, and we do not even think about it that much, it is pretty natural for our generation. </li>
         </ol>
-        <b>Ok so the Web is everywhere, what else evolved in 10 years?</b>
+        <b>The Web is...</b>
     </aside>
 </section>
 
@@ -34,7 +34,7 @@
         </div>
     </div>
     <aside class="notes">
-        in every pockets, even cheap smartphones can run a decent browser, the Web is just a click away anywhere, anytime to anyone!
+        is on the go, even cheap smartphones can run a decent browser, the Web is just a click away anywhere, anytime to anyone!
     </aside>
 </section>
 
@@ -56,7 +56,7 @@
         </div>
     </div>
     <aside class="notes">
-        also at home via smart Tvs
+        at on on your smart TV
     </aside>
 </section>
 
@@ -67,7 +67,7 @@
         </div>
     </div>
     <aside class="notes">
-        or within planes when you travel
+        some recent planes have an internet connection and a web browser available direclty on your seat screen.
     </aside>
 </section>
 
@@ -90,8 +90,7 @@
         </div>
     </div>
     <aside class="notes">
-        and even in the air!. This macbook act as a beacon to broadcast the link to the slides via what we call the Physical Web! <br/> 
-        <b>And YES I do love kitties in case you are still wondering :)</b>
+        and even in the air!. My act as a beacon to broadcast the link to the slides via the Physical Web!
     </aside>
 </section>
 
@@ -100,7 +99,7 @@
 <section>
     <h2>The <span style="color: #5c8dfc">Web</span> is <span style="color: #5c8dfc">evolving</span></h2>
     <aside class="notes">
-        <b></b>
+        <b>The web is evolving all the time</b>
     </aside>
 </section>
 
@@ -114,20 +113,20 @@
         <li class="fragment">... and much <a href="http://mobilehtml5.org/" target="_blank">more</a></li>
     </ul>
     <aside class="notes">
-        <b>HTML5 is constantly improving. Right now and mostly on Chrome, we can access the following APIS:</b>
+        <b>HTML5 is now capable of controlling your device hardware. Right now and mostly on Chrome, we can access the following APIS:</b>
         <ul>
             <li>Vibration API</li>
             <li>Batterie status API</li>
             <li>Network Information API</li>
             <li>Geolocation API</li>
+            <li>and much more</li>
         </ul>
-        <b></b>
     </aside>
 </section>
 
 <section data-background-video="./img/iphone_evolution.mp4" data-background-video-loop data-background-color="#fff"  class="stretch video-opacity-30">
     <div layout="column" layout-align="center center" h100>
-       <h3><span style="color: #5c8dfc">Devices</span> are more <span style="color: #5c8dfc">prowerful</span> than ever</h3>
+       <h3><span style="color: #5c8dfc">Devices</span> are more <span style="color: #5c8dfc">powerful</span> than ever</h3>
         <table class="fragment">
             <tr >
                 <th>Year</th>
@@ -180,28 +179,25 @@
         </table>
     </div>
     <aside class="notes">
-        <b>Well mobile devices evolved. </b>
+        <b>Devices in the meantime also evolved tremendously. </b>
         <ol>
-            <li>Since the first iphone in 2007, the processors performance have increased with higher calculation power on multiple cores and the memory have increased drastically as well.</li>
+            <li>in 10 years time and since the first iphone in 2007, processors and memory specs exploded.</li>
         </ol>
-        <b>We now have in our pockets more calculation power than the computer that landed mankind on the moon back in 69.</b>
-        <br/>
-        <b>How about the browsers?.</b>
+        <b>We now have in our pockets more power than needed to do almost anything</b>
     </aside>
 </section>
 
 <section>
         <h3><span style="color: #5c8dfc">Browsers</span> are <span style="color: #5c8dfc">self upgrading</span> </h3>
         <ul>
-            <li class="fragment">Better <span style="color: #5c8dfc">Browser engine</span> (Blink, Gecko, Webkit)</li>
-            <li class="fragment">Better <span style="color: #5c8dfc">JS engine</span> (v8, SpiderMonkey, Nitro)</li>
-            <li class="fragment">Faster <span style="color: #5c8dfc">JS execution time</span> (JIT Machine Code)</li>
+            <li class="fragment"><span style="color: #5c8dfc">Browser engine</span> (Blink, Gecko, Webkit)</li>
+            <li class="fragment"><span style="color: #5c8dfc">JS engine</span> (v8, SpiderMonkey, Nitro)</li>
         </ul>
     <aside class="notes">
-        <b>Well We all have noticed this, we have infinitely better Browsers now that back in the Internet explorer 6 time</b>
+        <b>Browser are now self upgrading. Internet explorer 6 time is far away!</b>
         <ul>
             <li>The browsers are constantly improving HTML and CSS performance via their web browser engines such as Blink, Gecko, Webkit and their JavaScript engines: v8, SpiderMonkey or Nitro.</li>
-            <li>Now All modern JavaScript engines compile JavaScript code directly into native machine code. This happens before executing the JavaScript code and makes it up to 10 times faster. It is called the Just In Time Compilation</li>
+            <li>The same exists with the JavaScript engines: v8, SpiderMonkey or Nitro. They all also implement a Just in Time compiler that makes JavaScript execution up to 10 time faster</li>
         </ul>
         <b></b>
     </aside>
@@ -213,7 +209,7 @@
 <section>
     <h2>The <span style="color: #5c8dfc">Web</span> has <span style="color: #5c8dfc">new capabilities</span></h2>
     <aside class="notes">
-        <b></b>
+        <b>The Web is just not evolving, it also has new capabilities, features that open new possibilities to Web developers</b>
     </aside>
 </section>
 
@@ -227,13 +223,15 @@
         <li class="fragment"><img src="../../img/new.gif" style="margin:0" class="img-plain"/><a href="https://webkit.org/status/#specification-service-workers" target="_blank" style="color: #5c8dfc"> Safari support</a> is under development</li>
     </ul>
     <aside class="notes">
+        <b>What is a Service Worker?</b>
         <ul>
             <li>A service worker is just a JavaScript file that is ran by your browser in the background. <br/>It is completely separated from your webpage and handles events fired either by the webpage itself or the browser.</li>
-            <li>We can therefore leverage the Offline capability via Network and Assets caching or precaching.</li>
-            <li>When a new version of your app is available, the service worker can update old assets in the background for next time you use it</li>
-            <li>A service worker can manage Push notifications to re engage users</li>
+            <li>We can therefore leverage the Offline capability via Network and Assets caching.</li>
+            <li>When a new version of your app is available, the service worker can update old assets in the background and notify your users that something is new.</li>
+            <li>A service worker can manage Web Push notifications to re engage users</li>
+            <li>Available on Chrome, Firefox, Opera and soon on Safari</li>
         </ul>
-        <b></b>
+        <b>Ok so background processes is a really cool feature but what do we miss the most to improve Web performance? We are missing multi threading!</b>
     </aside>
 </section>
 
@@ -257,8 +255,12 @@ myWorker.onmessage = e => e.data;
         </li>
     </ul>
     <aside class="notes">
+        <b>JavaScript execution is single threaded in a Browser. Web Workers are here to help you tackle this very problem.</b>
         <ul>
-            <li>Do not affect the performance</span> of the page</li>
+            <li>The main thread can now delegate expensive operations to web workers</li>
+            <li>A worker has its own event loop and memory space: The performance of your main thread is not affected by workers</li>
+            <li>It is already available everywhere</li>
+            <li>and you can communicate with it via the PostMessage API</li>
         </ul>
         <b></b>
     </aside>
