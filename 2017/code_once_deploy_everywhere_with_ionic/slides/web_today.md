@@ -1,5 +1,5 @@
 <section>
-    <h2>The <span style="color: #5c8dfc">Web</span> is the <span style="color: #5c8dfc">best</span> platform for <span style="color: #5c8dfc">cross platform</span> apps</h2>
+    <h2>The <span style="color: #5c8dfc">Web</span> is the <span style="color: #5c8dfc">best</span> platform to build <span style="color: #5c8dfc">cross platform</span> apps</h2>
     <aside class="notes">
         <b>To me the Web is the best platform to build cross platform apps for many reasons...</b>
     </aside>
@@ -121,6 +121,7 @@
             <li>Geolocation API</li>
             <li>and much more</li>
         </ul>
+        <b>Thew Web evolving and in the meantime...</b>
     </aside>
 </section>
 
@@ -179,15 +180,15 @@
         </table>
     </div>
     <aside class="notes">
-        <b>Devices in the meantime also evolved tremendously. </b>
+        <b>...Devices became more powerful than ever</b>
         <ol>
-            <li>in 10 years time and since the first iphone in 2007, processors and memory specs exploded.</li>
+            <li>in 10 years time and since the first iphone in 2007, processors and memory specs have exploded.</li>
         </ol>
         <b>We now have in our pockets more power than needed to do almost anything</b>
     </aside>
 </section>
 
-<section>
+<!-- <section>
         <h3><span style="color: #5c8dfc">Browsers</span> are <span style="color: #5c8dfc">self upgrading</span> </h3>
         <ul>
             <li class="fragment"><span style="color: #5c8dfc">Browser engine</span> (Blink, Gecko, Webkit)</li>
@@ -201,7 +202,7 @@
         </ul>
         <b></b>
     </aside>
-</section>
+</section> -->
 
 
 <!-- EVOLUTION  -->
@@ -209,12 +210,12 @@
 <section>
     <h2>The <span style="color: #5c8dfc">Web</span> has <span style="color: #5c8dfc">new capabilities</span></h2>
     <aside class="notes">
-        <b>The Web is just not evolving, it also has new capabilities, features that open new possibilities to Web developers</b>
+        <b>The Web is just not evolving, it also has new capabilities, features that open new possibilities to Web developers. For instance...</b>
     </aside>
 </section>
 
 <section>
-    <h3><span style="color: #5c8dfc">offline</span> process with <span style="color: #5c8dfc">Service Workers</span></h3>
+    <h3><span style="color: #5c8dfc">Background</span> processes with <span style="color: #5c8dfc">Service Workers</span></h3>
     <ul>
         <li class="fragment"><span style="color: #5c8dfc">Runs</span> even when the <span style="color: #5c8dfc">webpage is closed</span></li>
         <li class="fragment">Can <span style="color: #5c8dfc">cache</span> assets and HTTP requests</li>
@@ -223,10 +224,10 @@
         <li class="fragment"><img src="../../img/new.gif" style="margin:0" class="img-plain"/><a href="https://webkit.org/status/#specification-service-workers" target="_blank" style="color: #5c8dfc"> Safari support</a> is under development</li>
     </ul>
     <aside class="notes">
-        <b>What is a Service Worker?</b>
+        <b>...Background processes using Service Workers? A service worker is just a JavaScript file that is ran by your browser in the background. <br/>It is completely separated from your webpage and handles events fired either by the webpage itself or the browser</b>
         <ul>
-            <li>A service worker is just a JavaScript file that is ran by your browser in the background. <br/>It is completely separated from your webpage and handles events fired either by the webpage itself or the browser.</li>
-            <li>We can therefore leverage the Offline capability via Network and Assets caching.</li>
+            <li>It can run even when your webpage is closed</li>
+            <li>We can leverage the Offline capability via Network and Assets caching.</li>
             <li>When a new version of your app is available, the service worker can update old assets in the background and notify your users that something is new.</li>
             <li>A service worker can manage Web Push notifications to re engage users</li>
             <li>Available on Chrome, Firefox, Opera and soon on Safari</li>
@@ -269,22 +270,21 @@ myWorker.onmessage = e => e.data;
 <!-- CONCLUSION  -->
 
 <section>
-    <h3 style="color:#fff;">Why is the <span style="color: #5c8dfc">Web</span> the <span style="color: #5c8dfc">best platform</span> to build <span style="color: #5c8dfc">cross platform apps</span>?</h3>
+    <h3 style="color:#fff;">The <span style="color: #5c8dfc">Web</span> is <span style="color: #5c8dfc">best platform</span> to build <span style="color: #5c8dfc">cross platform apps</span></h3>
     <ul>
-        <li class="fragment">Standard runtime <span style="color: #5c8dfc">available everywhere</span></li>
-        <li class="fragment"><span style="color: #5c8dfc">Performance</span> is improving all the time</li>
-        <li class="fragment">Capability to <span style="color: #5c8dfc">access hardware</span> (via HTML5)</li>
-        <li class="fragment">Easy <span style="color: #5c8dfc">Offline support</span> (via SW)</li>
-        <li class="fragment"><span style="color: #5c8dfc">Multi threading</span> can delegate heavy tasks (via WW)</li>
+        <li class="fragment" data-fragment-index="1">Standard runtime <span style="color: #5c8dfc">available everywhere</span></li>
+        <li class="fragment" data-fragment-index="2"><span style="color: #5c8dfc">Performance</span> is improving all the time</li>
+        <li class="fragment" data-fragment-index="3">Native capability to <span style="color: #5c8dfc">access hardware</span> (via HTML5)</li>
+        <li class="fragment" data-fragment-index="4"><span style="color: #5c8dfc">Offline</span> support (via SW)</li>
+        <li class="fragment" data-fragment-index="4"><span style="color: #5c8dfc">Multi threading</span> support (via WW)</li>
     </ul>
     <aside class="notes">
-        <b>So Why bet on the Web in 2017? Well as we discussed there are many reason.</b>
+        <b>We saw previously that we better go multi platform to reach everybody and for me the Web is the best platform for that. Here is a recap of the reasons why:</b>
         <ul>
             <li>First of all The Web is a Standard runtime that is available everywhere</li>
             <li>The browsers and devices performance are upgrading all the time</li>
-            <li>The Web requires skills that most of us already have</li>
-            <li>And The Web has now a killer feature, a way to run background processes with service workers!</li>
-            <li></li>
+            <li>We can already communicate with the hardware via HTML5 API</li>
+            <li>And The Web has now killer features such as background processes and Multithreading support!</li>
         </ul>
         <b>It is an exciting time to be a Web Developer, the Web now provides the tools to create almost anything. What we are missing now is an Software Developer Kit to create applications and be productive. That is where Ionic comes into place!</b>
     </aside>

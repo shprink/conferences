@@ -14,24 +14,24 @@
         </div>
         <div layout="column" flex="66" layout-align="center center">
             <ul>
+                <li><span style="color: #5c8dfc">Open Source</span> project (MIT licensed)</li>
                 <li>100% <span style="color: #5c8dfc">Web technology </span> based</li>
-                <li><span style="color: #5c8dfc">Top 50</span> OSS project on GitHub</li>
-                <li><span style="color: #5c8dfc">MIT </span> licensed</li>
+                <li>Build apps for <span style="color: #5c8dfc">many platforms</span> (Android, iOS, Desktop, PWA, etc.)</li>
                 <li>2013: <span style="color: #5c8dfc">V1</span> release (AngularJS)</li>
                 <li>2017: <span style="color: #5c8dfc">V2/V3</span> release (Angular)</li>
-                <li>Soon: <span style="color: #5c8dfc">V4</span> release (Stencil)</li>
+                <li>Soon: <span style="color: #5c8dfc">V4</span> release (Angular/Stencil)</li>
             </ul>
         </div>
     </div>
     <aside class="notes">
-        <b>Ionic first release was 4 years ago now. The first version was built on top of AngularJS (known as Angular version 1). Now the current version of Ionic is based on the latest version of Angular 2+ and written in TypeScript</b>
+        <b>...</b>
         <br/>
-        <b>Let's see how popular Ionic is ...</b>
+        <b>Stencil is the latest project created by the Ionic team, and will eventually replace Angular in long term but for now all we know is that Ionic v4 will mix Angular and Stencil. Let's see what Stencil is...</b>
     </aside>
 </section>
 
 <section data-background-color="#000">
-    <h3>Stencil (Future of Ionic)</h3>
+    <h3>Stencil</h3>
     <div layout="row" layout-align="center center">
         <div layout="column" flex="33" layout-align="center center">
             <img src="../../img/stencil_logo.gif" style="margin: 0" width="100%" class="img-plain"/>
@@ -54,7 +54,7 @@
 <section data-background-color="#000" class="stretch">
     <h3>Stencil Component</h3>
 <pre style="font-size: 90%;" ><code class="html" data-trim>
-<my-hostname></my-hostname> 
+<my-hostname></my-hostname>
 // My hostname is: 127.0.0.1
 </code></pre>
 <pre style="font-size: 80%;" class="fragment"><code  class="typescript" data-trim>
@@ -195,7 +195,7 @@ export class Counter {
             <video autoplay loop height="500">
                 <source src="./img/screenshots/loading-android.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>  
+            </video>
             <video autoplay loop height="500">
                 <source src="./img/screenshots/loading-ios.mp4" type="video/mp4">
                 Your browser does not support the video tag.
@@ -205,33 +205,24 @@ export class Counter {
             <video autoplay loop height="500">
                 <source src="./img/screenshots/slides-android.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-            </video>  
+            </video>
             <video autoplay loop height="500">
                 <source src="./img/screenshots/slides-ios.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
     </div>
-    <aside class="notes">    
-        <b>Ionic comes with dozens of components out of the box</b>
+    <aside class="notes">
+        <b>Ionic comes with dozens of components out of the box and each component has the look and feel of its original platform</b>
         <ol>
-            <li>We have for instance "buttons". On the left side we have Material Design buttons for Android and on the right side buttons for iOS. And this is the EXACT same code. As you can see the code once built embraces the device UI standards!</li>
-            <li>We have also cards</li>
-            <li>Icons. As you can see even icons are different per platform</li>
-            <li>Date pickers</li>
-            <li>Segments which is a popular UI for iOS</li>
-            <li>Modals</li>
-            <li>Loading</li>
-            <li>And slides to create tutorials.</li>
+            <li>FOr instance buttons: On the left side we have material design button for Android and on the right iOS buttons</li>
         </ol>
         <b>With Ionic you get the majority of the components you might need to create a good user experience.</b>
-        <br/>
-        <b>Let's see how simple it is to use those components shall we?</b>
     </aside>
 </section>
 
 <!-- POPULAR -->
-
+<!-- 
 <section>
     <h2> <span style="color: #5c8dfc">Ionic</span> is very <span style="color: #5c8dfc">popular</span></h2>
     <aside class="notes">
@@ -266,19 +257,16 @@ export class Counter {
         </div>
     </div>
     <aside class="notes">
-        <ol>
-            <li>Ionic has a huge community, we are around 12 thousands developers on the Ionic Worldwide Slack. As you know The biggest the community is, the easiest it is to find good resources, plugins, or find the answer to your questions.</li>
-            <li>Ionic is within the top 50 most popular open source project on Github with 29 thousands stars</li>
-            <li>and the official estimated number of applications created with Ionic is four million!</li>
-        </ol>
-        <b>As you can see, Ionic is extremely popular and it is not going anywhere!</b>
+        <b>The success of an Open source project is often based on popularity. The more popular your project is the more resources, plugins and answers to questions you will get.</b>
+        <br/>
+        <b>Those mnumbers highlight the fact that Ionic is extremely popular and it is not going anywhere!</b>
     </aside>
-</section>
+</section> -->
 
 <!-- ONE LANGUAGE -->
 
 <section>
-    <h2>only <span style="color: #5c8dfc">one language</span> and <span style="color: #5c8dfc">one codebase</span> necessary</h2>
+    <h2>only <span style="color: #5c8dfc">one language</span> and <span style="color: #5c8dfc">one codebase</span> are necessary</h2>
     <aside class="notes">
         <b></b>
     </aside>
@@ -301,13 +289,6 @@ export class Counter {
         </div>
     </div>
     <aside class="notes">
-        <b>One thing that I really want to emphasize on it that there is no need to learn about</b>
-        <ol>
-            <li>Objective-C</li>
-            <li>about Swift for iOS</li>
-            <li>or even Java for Android</li>
-            <li>Once again all you need are Web technologies</li>
-        </ol>
     </aside>
 </section>
 
@@ -344,7 +325,7 @@ export class Counter {
 <section>
     <h2><span style="color: #5c8dfc">Ionic apps</span> are <span style="color: #5c8dfc">Native apps</span></h2>
     <aside class="notes">
-        <b></b>
+        <b>Ionic applications are native applications. They can be installed on Google Play, the App Store or any sotre your platform uses. How does this work? ...</b>
     </aside>
 </section>
 
@@ -356,7 +337,7 @@ export class Counter {
             </div>
             <div layout="column" flex layout-align="center center" style="margin-left: 10px">
                 <div class="box shell " data-fragment-index="1" w100 style="position: relative">
-                    <div class="box ionic fragment zoom-in"  data-fragment-index="6" w100 style="position: relative">
+                    <div class="box ionic fragment zoom-in"  data-fragment-index="5" w100 style="position: relative">
                         <img src="../../img/ionic-logo-square-white.png" style="margin: 0; height: 48px; position: absolute; left: 10px;"  class="img-plain"/>
                         Ionic Components
                     </div>
@@ -383,24 +364,21 @@ export class Counter {
         </div>
         https://cordova.apache.org
     <aside class="notes">
-        <b>Ionic applications are native applications. They can be installed via stores such as Google Play or the App Store.</b>
+        <b>... well Cordova is the magic behind the native capabilities. It is an open source project that provides a native shell for a lot of platforms</b>
         <ol>
-            <li>Cordova is the magic that make it happens. It is an open source project that provides a native shell for a lot of platforms</li>
             <li>This native shell has access to all the device hardware, exactly the same as any native app.</li>
-            <li>The native shell runs a Webview</li>
-            <li>You can control the hardware via HTLM5 for some features or via Cordova API</li>
-            <li>Your code seats on top of Ionic so you can use any Ionic components or services</li>
-            <li>Ionic being based on Angular you can also reach Angular features such as the HTTP module to make HTTP requests</li>
-            <li>To interact with the device features such as the camera you can use either Cordova if you want to build an hybrid app for Android or iOS or HTML5 if you build for the Web.</li>
+            <li>The native shell runs a Webview which is a simple browser</li>
+            <li>We can control the hardware via HTLM5 for some features or via Cordova API for missing features</li>
+            <li>On top of all of that stack you can build your application using Ionic Web Components and any framework you want or not framework at all.</li>
         </ol>
-        <b>Your Ionic application has therefore access to every API needed to build a complete application.</b>
+        <b>Your Ionic Components have therefore access to every API needed to build a complete application.</b>
     </aside>
 </section>
 
 <section>
     <h2><span style="color: #5c8dfc">Ionic apps</span> are also <span style="color: #5c8dfc">Progressive Web Apps</span> (PWA)</h2>
     <aside class="notes">
-        <b></b>
+        <b>We just saw that Ionic apps were Native apps that can be installed via stores but did you know that Ionic apps are also Progressive Web apps by default?</b>
     </aside>
 </section>
 
@@ -411,11 +389,11 @@ export class Counter {
     <ul>
         <li class="fragment">Preconfigured <span style="color: #5c8dfc">Service worker</span>
             <ul>
-                <li>Assets caching</li>
-                <li>Network caching</li>
+                <li><span style="color: #5c8dfc">Assets caching</span> (HTML, JS, CSS, Images, Fonts etc.)</li>
+                <li><span style="color: #5c8dfc">Network caching</span> (NetworkFirst Strategy)</li>
             </ul>
         </li>
-        <li class="fragment">Preconfigured <span style="color: #5c8dfc">Manifest</span>
+        <li class="fragment">Preconfigured <span style="color: #5c8dfc">Manifest.json</span>
             <ul>
                 <li>Application name</li>
                 <li>Icons list</li>
@@ -423,20 +401,18 @@ export class Counter {
             </ul></li>
     </ul>
     <aside class="notes">
-        <b>We saw earlier what was a Progressive Web app and why it is the Next Generation of the Mobile Web.</b>
-         <ol>
-            <li>With Ionic you get a preconfigured service worker out of the box. All the assets needed to run the app are precached by default, the rest is simply cached when used and can be accessed offline</li>
-            <li>We also get a preconfigured manifest that contains information such as the app name, splashscreen background color, icons etc.</li>
-            <li>What you need to remember is that an Ionic app is already a Progressive Web App</li>
+        <b></b>
+        <ol>
+            <li>Preconfigured Manifest.json</li>
+            <li>Manifest.json has all the informations that are required to qualify as a Progressive Web App: name, icons, background color etc.</li>
         </ol>
-        <b>An Ionic app is a PWA!</b>
     </aside>
 </section>
 
 <section>
     <h2>How do we <span style="color: #5c8dfc">start?</span></h2>
     <aside class="notes">
-        <b></b>
+        <b>How to start using Ionic?</b>
     </aside>
 </section>
 
@@ -469,28 +445,26 @@ $ npm install -g ionic
 <!-- CONCLUSION  -->
 
 <section>
-    <h3 style="color:#fff;">Why is <span style="color: #5c8dfc">Ionic</span> one of the best SDK to build <span style="color: #5c8dfc">cross platform apps</span>?</h3>
+    <h3 style="color:#fff;"><span style="color: #5c8dfc">Ionic</span> is one of the best SDK to build <span style="color: #5c8dfc">cross platform apps</span></h3>
     <ul>
-        <li class="fragment">100% <span style="color: #5c8dfc">Web technology </span> based</li>
-        <li class="fragment">Large <span style="color: #5c8dfc">set of components </span> out of the box</li>
-        <li class="fragment"><span style="color: #5c8dfc">One single codebase</span> for all platforms</li>
-        <li class="fragment"><span style="color: #5c8dfc">Native shell</span> on Mobile devices</li>
-        <li class="fragment">Access to <span style="color: #5c8dfc">native hardware</span></li>
-        <li class="fragment"><span style="color: #5c8dfc">Progressive Web App</span> by default</li>
-        <li class="fragment"><span style="color: #5c8dfc">No build configuration</span>: Ionic CLI</li>
-        <li class="fragment">Powered by a <span style="color: #5c8dfc">growing community</span></li>
+        <li class="fragment">Large <span style="color: #5c8dfc">set of components </span> to choose from</li>
+        <li class="fragment">Only <span style="color: #5c8dfc">one programming language</span> needed (JS)</li>
+        <li class="fragment">Only <span style="color: #5c8dfc">one codebase</span> for all platforms</li>
+        <li class="fragment">Ionic apps are <span style="color: #5c8dfc">Native Apps</span></li>
+        <li class="fragment">Ionic apps are <span style="color: #5c8dfc">Progressive Web Apps</span></li>
+        <li class="fragment">Access to <span style="color: #5c8dfc">any native Hardware</span> (via cordova plugins)</li>
+        <li class="fragment"><span style="color: #5c8dfc">No build configuration</span> (Ionic CLI)</li>
     </ul>
     <aside class="notes">
-        <b>Let's conclude this talk, here are the things you should take home with you:</b>
+        <b>We saw earlier that, nowadays, we have to go multi platform and to do so, the Web is the best platform. To code once and deploy everywhere using the Web, Ionic is clearly the best option.</b>
         <ol>
-            <li>With Ionic you get a progressive Web app by default</li>
-            <li>With the Ionic CLI there are no complexe Webpack or Gulp configuration, it is already done for you</li>
-            <li>Only one codebase is necessary to build on every platforms. your Components use the device specific UI standards so on every platforms users have the look and feel they are expecting</li>
-            <li>A large set of components are available out of the box and many more are available on market.ionic.io</li>
-            <li>As a developer, the component semantic makes it really easy to pick up what you are dealing with</li>
-            <li>Your application code can leverage Ionic, Angular, HTML5 and Cordova APIs directly.</li>
-            <li>Ionic has great services around the SDK</li>
-            <li>To finish the community is what makes Ionic sooooo special in the industry. With thousands of developers like myself, advocating for Ionic around the world or creating plugins, components, themes etc. Ionic is super successful!</li>
+            <li>A large set of components are available out of the box</li>
+            <li>only one programming language is needed and it is the most popular one: JavaScript</li>
+            <li>Only one codebase is necessary to build on every platforms with platform specific look and feel</li>
+            <li>Ionic Apps are Native Apps that can be installed on the stores</li>
+            <li>Ionic Apps are also Progressive Web Apps</li>
+            <li>We can access any native hardware via Cordova plugins or HTML5</li>
+            <li>To finish with Ionic CLI you do not have to worry about complex webpack configuration, it is already done for you</li>
         </ol>
         <b></b>
     </aside>

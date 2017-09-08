@@ -72,20 +72,15 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="stretch" h100>
-					<div layout="column" layout-align="center center" h100>
-						<h2 style="margin-bottom: 0px">Code Once Deploy Everywhere with</h2>
-						<img src="../../img/ionic-logo.png" style="margin: 0px" width="60%" class="img-plain"/>
-					</div>
-					<div style="position: absolute; bottom: 0; zoom: 0.7" w100>
-						<section data-markdown="../../slides/footer.md"></section>
-					</div>
-				</section>
-		        <section data-markdown="../../slides/about-me.md"></section>
+		        <!-- <section data-markdown="../../slides/about-me.md"></section> -->
+		        <section data-markdown="slides/intro.md"></section>
 		        <section data-markdown="slides/the_new_norm.md"></section>
 		        <section data-markdown="slides/web_today.md"></section>
 		        <section data-markdown="slides/ionic.md"></section>
-		        <section data-markdown="slides/use_case.md"></section>
+				<section data-markdown="slides/use_case.md"></section>
+				<section data-background-image="../../img/meme/questions.gif">
+					<h1>Thank you</h1>
+				</section>
 			</div>
 
 		</div>
@@ -100,11 +95,11 @@
 			Reveal.addEventListener('slidechanged', function( event ) {
 				// event.currentSlide, event.indexh, event.indexv
 				if (event.indexh === 4 && event.indexv === 8){
-					setTimeout(function(){jQuery('.counter.counter-app').counterUp({ time: 3000 })}, 13000);
-					setTimeout(function(){jQuery('.counter.counter-twitter').counterUp({ time: 3000 })}, 10000);
-					setTimeout(function(){jQuery('.counter.counter-stars').counterUp({ time: 3000 })}, 7000);
-					setTimeout(function(){jQuery('.counter.counter-stackoverflow').counterUp({ time: 3000 })}, 4000);
-					setTimeout(function(){jQuery('.counter.counter-devs').counterUp({ time: 3000 })}, 1000);
+					setTimeout(function(){jQuery('.counter.counter-app').counterUp({ time: 2500 })}, 8500);
+					setTimeout(function(){jQuery('.counter.counter-twitter').counterUp({ time: 2500 })}, 6500);
+					setTimeout(function(){jQuery('.counter.counter-stars').counterUp({ time: 2500 })}, 4500);
+					setTimeout(function(){jQuery('.counter.counter-stackoverflow').counterUp({ time: 2500 })}, 2500);
+					setTimeout(function(){jQuery('.counter.counter-devs').counterUp({ time: 2500 })}, 500);
 					;
 				}
 			});
