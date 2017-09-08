@@ -1,7 +1,7 @@
 <section>
     <h2><span style="color: #5c8dfc">Multi platform</span> is the <span style="color: #5c8dfc">new norm</span></h2>
     <aside class="notes">
-        <b>Why do we want to "Code once and deploy everywhere"? Well it is because Multi Platform has become the new norm. To highlight this I will tell you what a typical day of mine is!</b>
+        <b>Why do we have to "Code once and deploy everywhere"? Well it is because Multi Platform has become the new norm. To highlight this I will tell you what a typical day of mine is!</b>
         <ul>
             <li>Wake up a 8</li>
             <li>check my email/social networks on my cellphone</li>
@@ -9,7 +9,7 @@
             <li>For the lunch break I often watch my favorite series on a smartTV</li>
             <li>And in the evening I relax using a tablet</li>
         </ul>
-        <b>Throughout a typical day of mine, I use up to 4 devices that are connected to the internet. This is a day of mine but is it the same for everybody? Do we have numbers about that?</b>
+        <b>As you can see in a normal day I use up to 4 devices that are connected to the internet. We are actually all going multi platform and we have numbers to confirm it.</b>
     </aside>
 </section>
 
@@ -18,7 +18,7 @@
     <img src="./img/2017-Mobile-use-through-day.png" style="margin:0" width="100%" class="img-plain"/>
     <a href="http://www.smartinsights.com/mobile-marketing/mobile-marketing-analytics/mobile-marketing-statistics/" target="_blank">source: ComScore 2016 in UK, France, USA (17 countries)</a>
     <aside class="notes">
-        <b>We do have numbers. Studies reveal that we mostly use cellphones in the morning, then desktop and to finish we use tablets before going to bed.</b>
+        <b>Studies reveal that we mostly use cellphones in the morning, then desktop and to finish we use tablets before going to bed.</b>
         <br/>
         <b>This is definitely true for me, maybe it is for you too but is it true for all generations?</b>
     </aside>

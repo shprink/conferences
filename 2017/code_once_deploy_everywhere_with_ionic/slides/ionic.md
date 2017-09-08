@@ -47,7 +47,9 @@
         </div>
     </div>
     <aside class="notes">
-        <b></b>
+        <b>...</b>
+        <br/>
+        <b>Let's see what a stencil component looks like</b>
     </aside>
 </section>
 
@@ -76,6 +78,10 @@ export class Hostname {
     <div class="fragment current-only" data-code-block="2" data-code-focus="8-12"></div>
     <aside class="notes">
         <b></b>
+        <ol>
+            <li>We have the @Component Decorator that is similar to Angular decorator. We can specify the tag name and style details.</li>
+            <li>The render function is similar to React render function. It returns JSX</li>
+        </ol>
     </aside>
 </section>
 
@@ -107,7 +113,13 @@ export class MyNameIs {
     <div class="fragment current-only" data-code-block="2" data-code-focus="13-15"></div>
     <div class="fragment current-only" data-code-block="2" data-code-focus="8-11"></div>
     <aside class="notes">
+        <b>Props represent data that come from outside a component</b>
         <b></b>
+        <ol>
+            <li>@Prop decorator defines what external property we expect. Here "name" as a string.</li>
+            <li>In the render function we can access "name" using "this" DOT "name" AND Everytime "name" changes, the render function will be called</li>
+            <li>If we want to do advanced features we can also subscribe to the "name" changes with the @PropWillChange decorator</li>
+        </ol>
     </aside>
 </section>
 
@@ -141,7 +153,12 @@ export class Counter {
     <div class="fragment current-only" data-code-block="2" data-code-focus="13-17"></div>
     <div class="fragment current-only" data-code-block="2" data-code-focus="8-11"></div>
     <aside class="notes">
-        <b></b>
+        <b>State represents the internal data of a component</b>
+        <ol>
+            <li>@State decorator defines our internal state. Here "count" as a number with a default value of 1.</li>
+            <li>In the render function we can access "count" using "this" DOT "count" the same way we access Props</li>
+            <li>We have access to life cycle events such as "componentDidLoad" to start our counter. Every seconds this.count reference changes and the component rerenders</li>
+        </ol>
     </aside>
 </section>
 
@@ -375,17 +392,10 @@ export class Counter {
     </aside>
 </section>
 
-<section>
-    <h2><span style="color: #5c8dfc">Ionic apps</span> are also <span style="color: #5c8dfc">Progressive Web Apps</span> (PWA)</h2>
-    <aside class="notes">
-        <b>We just saw that Ionic apps were Native apps that can be installed via stores but did you know that Ionic apps are also Progressive Web apps by default?</b>
-    </aside>
-</section>
-
 <!-- ADVANTAGES -->
 
 <section>
-    <h3>A <span style="color: #5c8dfc">PWA</span> out of the box</h3>
+    <h3><span style="color: #5c8dfc">Ionic apps</span> are also <span style="color: #5c8dfc">Progressive Web Apps</span> (PWA)</h3>
     <ul>
         <li class="fragment">Preconfigured <span style="color: #5c8dfc">Service worker</span>
             <ul>
@@ -401,10 +411,10 @@ export class Counter {
             </ul></li>
     </ul>
     <aside class="notes">
-        <b></b>
+        <b>We just saw that Ionic apps were Native apps that can be installed via stores but did you know that Ionic apps are also Progressive Web apps by default?</b>
         <ol>
-            <li>Preconfigured Manifest.json</li>
-            <li>Manifest.json has all the informations that are required to qualify as a Progressive Web App: name, icons, background color etc.</li>
+            <li>Every Ionic app has a Preconfigured Service worker </li>
+            <li>And also a Preconfigured Manifest.json! This file has all the informations that are required to qualify as a Progressive Web App: name, icons, background color etc.</li>
         </ol>
     </aside>
 </section>
@@ -456,7 +466,7 @@ $ npm install -g ionic
         <li class="fragment"><span style="color: #5c8dfc">No build configuration</span> (Ionic CLI)</li>
     </ul>
     <aside class="notes">
-        <b>We saw earlier that, nowadays, we have to go multi platform and to do so, the Web is the best platform. To code once and deploy everywhere using the Web, Ionic is clearly the best option.</b>
+        <b>We saw earlier that, nowadays, we have to go multi platform and to do so, the Web is the best platform. To code once and deploy everywhere using the Web, Ionic is clearly a good option.</b>
         <ol>
             <li>A large set of components are available out of the box</li>
             <li>only one programming language is needed and it is the most popular one: JavaScript</li>
@@ -466,6 +476,6 @@ $ npm install -g ionic
             <li>We can access any native hardware via Cordova plugins or HTML5</li>
             <li>To finish with Ionic CLI you do not have to worry about complex webpack configuration, it is already done for you</li>
         </ol>
-        <b></b>
+        <b>You do not have to take my work for it. I am going to show you</b>
     </aside>
 </section>

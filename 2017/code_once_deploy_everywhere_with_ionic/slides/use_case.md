@@ -125,7 +125,7 @@ $ ionic cordova build android --prod
     </aside>
 </section>
 
-<section>
+<!-- <section>
     <h3>Building for <span style="color: #5c8dfc">Desktop</span></h3>
      <div layout="row" layout-align="center center" h100>
             <div flex="33" layout="column" layout-align="center center">
@@ -140,7 +140,7 @@ $ npm install -g ionic
     <aside class="notes">
         <b></b>
     </aside>
-</section>
+</section> -->
 
 <!-- <section>
     <h2><span style="color: #5c8dfc">Ionic Twitter</span> PWA an <span style="color: #5c8dfc">Open Source</span> version of <span style="color: #5c8dfc">m.twitter.com</span> PWA</h2>

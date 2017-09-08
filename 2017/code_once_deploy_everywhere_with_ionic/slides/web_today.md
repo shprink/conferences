@@ -34,7 +34,7 @@
         </div>
     </div>
     <aside class="notes">
-        is on the go, even cheap smartphones can run a decent browser, the Web is just a click away anywhere, anytime to anyone!
+        is on the go!
     </aside>
 </section>
 
@@ -56,7 +56,7 @@
         </div>
     </div>
     <aside class="notes">
-        at on on your smart TV
+        on your smart TV
     </aside>
 </section>
 
@@ -86,11 +86,11 @@
     <div layout="column" layout-align="center center" h100>
        <div style="background-color: rgba(0, 0, 0, 0.4); padding: 20px; border-radius: 5px;">
             <h3 style="color:#fff; margin:0 0 10px 0">and even in the air!</h3>
-            <h5 style="color:#fff; margin:0">turn your mobile bluetooth ON to receive a link to the slides</h5>
+            <h5 style="color:#fff; margin:0">turn ON your mobile <span style="color: #5c8dfc">bluetooth</span> and <span style="color: #5c8dfc">location</span> to receive a link to the slides</h5>
         </div>
     </div>
     <aside class="notes">
-        and even in the air!. My act as a beacon to broadcast the link to the slides via the Physical Web!
+        and even in the air!. My machine here acts as a beacon to broadcast the link to this slides via the Physical Web!
     </aside>
 </section>
 
@@ -113,7 +113,7 @@
         <li class="fragment">... and much <a href="http://mobilehtml5.org/" target="_blank">more</a></li>
     </ul>
     <aside class="notes">
-        <b>HTML5 is now capable of controlling your device hardware. Right now and mostly on Chrome, we can access the following APIS:</b>
+        <b>HTML5 is now capable of controlling your device hardware. We can for instance access the following APIS:</b>
         <ul>
             <li>Vibration API</li>
             <li>Batterie status API</li>
@@ -121,7 +121,7 @@
             <li>Geolocation API</li>
             <li>and much more</li>
         </ul>
-        <b>Thew Web evolving and in the meantime...</b>
+        <b>The Web evolving and in the meantime...</b>
     </aside>
 </section>
 
@@ -184,7 +184,7 @@
         <ol>
             <li>in 10 years time and since the first iphone in 2007, processors and memory specs have exploded.</li>
         </ol>
-        <b>We now have in our pockets more power than needed to do almost anything</b>
+        <b>We now have in our pockets more power than needed to run any Web app</b>
     </aside>
 </section>
 
@@ -227,8 +227,8 @@
         <b>...Background processes using Service Workers? A service worker is just a JavaScript file that is ran by your browser in the background. <br/>It is completely separated from your webpage and handles events fired either by the webpage itself or the browser</b>
         <ul>
             <li>It can run even when your webpage is closed</li>
-            <li>We can leverage the Offline capability via Network and Assets caching.</li>
-            <li>When a new version of your app is available, the service worker can update old assets in the background and notify your users that something is new.</li>
+            <li>it can leverage the Offline capability via Network and Assets caching.</li>
+            <li>it can update your app in the background by replacing assets</li>
             <li>A service worker can manage Web Push notifications to re engage users</li>
             <li>Available on Chrome, Firefox, Opera and soon on Safari</li>
         </ul>
@@ -286,6 +286,6 @@ myWorker.onmessage = e => e.data;
             <li>We can already communicate with the hardware via HTML5 API</li>
             <li>And The Web has now killer features such as background processes and Multithreading support!</li>
         </ul>
-        <b>It is an exciting time to be a Web Developer, the Web now provides the tools to create almost anything. What we are missing now is an Software Developer Kit to create applications and be productive. That is where Ionic comes into place!</b>
+        <b>Trust me on that, it is an exciting time to be a Web Developer! <br/> The Web now provides the tools to create almost anything. What we are missing now is a Software Developer Kit (SDK) to create applications and be productive. That is where Ionic comes into place!</b>
     </aside>
 </section>

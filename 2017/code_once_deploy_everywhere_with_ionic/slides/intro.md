@@ -29,8 +29,8 @@
          </div>
     </div>
     <aside class="notes">
-        <b>Hello my name is Julien, I am a freelancer on Toptal and I am here to talk to you about "Code once and deploy everywhere with Ionic".</b>
+        <b>Hello my name is Julien, I am a freelancer on Toptal and I am really excited to present you an overview of what you can do with Ionic.</b>
         <br/>
-        <b>Ok so why do we want to "Code once and deploy everywhere"? Well as entrepreuneurs, project managers or even developers WE want to create the best products in a minimum amount of time and with the less resources possible, that is what this talk is about.</b>
+        <b>What do we want as entrepreuneurs, project managers or even developers? WE want to create the best products in a minimum amount of time and money right?. I will show you that with the Web and Ionic you have the possibility to "Code only once and deploy everywhere".</b>
     </aside>
 </section>
