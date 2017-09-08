@@ -28,16 +28,11 @@
 <section>
     <h3>Creating a new <span style="color: #5c8dfc">app</span></h3>
 <pre style="font-size: 120%"><code class="shell" data-trim>
-$ ionic start myNewApp conference
+$ ionic start
 </code></pre>
 
-<p class="fragment">Possible templates: blank | tabs | sidemenu | <span style="color: #5c8dfc">conference</span>...
-
-<pre style="font-size: 130%" class="fragment"><code class="shell" data-trim>
-$ cd myNewApp
-</code></pre>
-
-<pre style="font-size: 130%;" class="fragment"><code class="shell" data-trim>
+    <h3>Running a  <span style="color: #5c8dfc">Dev server</span></h3>
+<pre style="font-size: 120%"><code class="shell" data-trim>
 $ ionic serve
 </code></pre>
     <aside class="notes">
@@ -52,7 +47,7 @@ $ ionic serve
                 <img src="../../img/chrome-logo-white.png" width="55%" class="img-plain"/>
             </div>
             <div layout="column" flex layout-align="center start">
-<pre class="fragment" style="font-size: 130%"><code class="shell" data-trim>
+<pre style="font-size: 130%"><code class="shell" data-trim>
 $ ionic build --prod
 </code></pre>
     <!-- <img class="fragment img-plain" style="margin-top:0" width="42%" src="./img/use_case/ionic_www.png"/> -->
@@ -102,20 +97,20 @@ $ ionic cordova build ios --prod
             </div>
             <div layout="column" flex layout-align="center start">
 <p>Required: Android SDK, Gradle, Ant, Java JDK</p>
-<pre style="font-size: 80%" class="fragment"><code class="shell" data-trim>
+<pre style="font-size: 80%" class=""><code class="shell" data-trim>
 $ ionic cordova platform add android@latest
 </code></pre>
-<pre style="font-size: 50%; margin-top:  -2.5%" class="fragment"><code class="shell" data-trim>
+<pre style="font-size: 50%; margin-top:  -2.5%" class=""><code class="shell" data-trim>
 Installing "cordova-plugin-device" for android
 Installing "cordova-plugin-splashscreen" for android
 Installing "cordova-plugin-statusbar" for android
 Installing "cordova-plugin-whitelist" for android
 Installing "ionic-plugin-keyboard" for android
 </code></pre>
-<pre style="font-size: 80%" class="fragment"><code class="shell" data-trim>
+<pre style="font-size: 80%" class=""><code class="shell" data-trim>
 $ ionic cordova run android
 </code></pre>
-<pre style="font-size: 80%" class="fragment"><code class="shell" data-trim>
+<pre style="font-size: 80%" class=""><code class="shell" data-trim>
 $ ionic cordova build android --prod
 </code></pre>
             </div>
@@ -148,7 +143,7 @@ $ npm install -g ionic
         <b></b>
     </aside>
 </section> -->
-
+<!-- 
 <section class="stretch">
      <div layout="row" layout-align="center center" h100>
             <div flex="33" layout="column" h100 w100 style="">
@@ -177,4 +172,4 @@ $ npm install -g ionic
     <aside class="notes">
         <b></b>
     </aside>
-</section>
+</section> -->

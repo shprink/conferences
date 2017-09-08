@@ -1,6 +1,6 @@
 <section class="stretch" h100>
     <div layout="column" layout-align="center center" h100>
-        <h2 style="margin-bottom: 0px">Code Once Deploy Everywhere with</h2>
+        <h2 style="margin-bottom: 0px">Code Once, Deploy Everywhere with</h2>
         <img src="../../img/ionic-logo.png" style="margin: 0px" width="60%" class="img-plain"/>
         <hr/>
         <div style="zoom: 0.7" w100>
