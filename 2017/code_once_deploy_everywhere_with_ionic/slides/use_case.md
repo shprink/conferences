@@ -1,7 +1,7 @@
-<section >
-    <img src="../../img/meme/live-demo.jpg" style="margin:0" width="85%" class="img-plain"/>
+<section>
+    <h2>Build <span style="color: #5c8dfc">Everywhere</span></h2>
     <aside class="notes">
-        <b>It is time for a quick live demo! I will show you the commands to build for several platforms in no time</b>
+        <b></b>
     </aside>
 </section>
 
@@ -25,14 +25,25 @@
     </aside>
 </section> -->
 
-<section>
-    <h3>Creating a new <span style="color: #5c8dfc">app</span></h3>
-<pre style="font-size: 120%"><code class="shell" data-trim>
+<section >
+    <h2>Create a new <span style="color: #5c8dfc">app</span></h2>
+<pre style="font-size: 140%"><code class="shell" data-trim>
 $ ionic start
 </code></pre>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
 
-    <h3>Running a  <span style="color: #5c8dfc">Dev server</span></h3>
-<pre style="font-size: 120%"><code class="shell" data-trim>
+<section data-background-video="./img/use_case/ionic_start.mp4" data-background-video-loop  data-background-color="#262528">
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section >
+    <h2>Run a <span style="color: #5c8dfc">Dev server</span></h2>
+<pre style="font-size: 140%"><code class="shell" data-trim>
 $ ionic serve
 </code></pre>
     <aside class="notes">
@@ -40,8 +51,30 @@ $ ionic serve
     </aside>
 </section>
 
+<section data-background-video="./img/use_case/ionic_serve.mp4" data-background-video-loop  data-background-color="#262528">
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section >
+    <h2>Advanced <span style="color: #5c8dfc">Dev server</span></h2>
+<pre style="font-size: 140%"><code class="shell" data-trim>
+$ ionic serve --lab
+</code></pre>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section data-background-video="./img/use_case/ionic_serve_lab.mp4" data-background-video-loop  data-background-color="#262528">
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
 <section>
-    <h3>Building for the <span style="color: #5c8dfc">Web</span></h3>
+    <h3>Build for the <span style="color: #5c8dfc">Web</span></h3>
      <div layout="row" layout-align="center center" h100>
             <div flex="33" layout="column" layout-align="center center">
                 <img src="../../img/chrome-logo-white.png" width="55%" class="img-plain"/>
@@ -50,7 +83,7 @@ $ ionic serve
 <pre style="font-size: 130%"><code class="shell" data-trim>
 $ ionic build --prod
 </code></pre>
-    <!-- <img class="fragment img-plain" style="margin-top:0" width="42%" src="./img/use_case/ionic_www.png"/> -->
+    <img class="fragment img-plain" style="margin-top:0" width="42%" src="./img/use_case/ionic_www.png"/>
             </div>
         </div>
     <aside class="notes">
@@ -59,13 +92,13 @@ $ ionic build --prod
 </section>
 
 <section>
-    <h3>Building for <span style="color: #5c8dfc">iOS</span></h3>
+    <h3>Build for <span style="color: #5c8dfc">iOS</span></h3>
      <div layout="row" layout-align="center center" h100>
             <div flex="33" layout="column" layout-align="center center">
                 <img src="../../img/ios-logo.png" width="55%" class="img-plain"/>
             </div>
             <div layout="column" flex layout-align="center start">
-<p>Required: OSX, Xcode</p>
+                <p>Required: OSX, Xcode</p>
 <pre style="font-size: 80%"><code class="shell" data-trim>
 $ ionic cordova platform add ios@latest
 </code></pre>
@@ -77,13 +110,16 @@ Installing "cordova-plugin-whitelist" for ios
 Installing "ionic-plugin-keyboard" for ios
 </code></pre>
 <pre style="font-size: 80%" class="fragment"><code class="shell" data-trim>
-$ ionic cordova run ios
-</code></pre>
-<pre style="font-size: 80%" class="fragment"><code class="shell" data-trim>
 $ ionic cordova build ios --prod
 </code></pre>
             </div>
         </div>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section data-background-video="./img/use_case/ionic_ios.mp4" data-background-video-loop  data-background-color="#262528">
     <aside class="notes">
         <b></b>
     </aside>
@@ -108,9 +144,6 @@ Installing "cordova-plugin-whitelist" for android
 Installing "ionic-plugin-keyboard" for android
 </code></pre>
 <pre style="font-size: 80%" class=""><code class="shell" data-trim>
-$ ionic cordova run android
-</code></pre>
-<pre style="font-size: 80%" class=""><code class="shell" data-trim>
 $ ionic cordova build android --prod
 </code></pre>
             </div>
@@ -120,22 +153,57 @@ $ ionic cordova build android --prod
     </aside>
 </section>
 
-<!-- <section>
-    <h3>Building for <span style="color: #5c8dfc">Desktop</span></h3>
+<section data-background-video="./img/use_case/ionic_android.mp4" data-background-video-loop  data-background-color="#222222">
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section>
+    <h3>Build for <span style="color: #5c8dfc">Desktop</span></h3>
      <div layout="row" layout-align="center center" h100>
             <div flex="33" layout="column" layout-align="center center">
                 <img src="../../img/electron-logo.svg" width="55%" class="img-plain"/>
             </div>
             <div layout="column" flex layout-align="center center">
-<pre style="font-size: 130%"><code class="shell" data-trim>
-$ npm install -g ionic
+<pre style="font-size: 70%"><code class="shell" data-trim>
+$ npm install electron --save-dev --save-exact
+</code></pre>
+<pre style="font-size: 70%; margin-top:  -1.5%"><code class="shell" data-trim>
+$ ionic build --prod
+</code></pre>
+<div class="fragment">
+    <div style="text-align: left; width: 100%;">Add index.js at the production app root</div>
+<pre style="font-size: 50%"><code class="shell" data-trim>
+const { app, BrowserWindow } = require('electron')
+const path = require('path')
+const url = require('url')
+
+app.on('ready', () => {
+    const win = new BrowserWindow({ width: 1000, height: 800 })
+    win.loadURL(url.format({
+        pathname: path.join(__dirname, 'index.html'),
+        protocol: 'file:',
+        slashes: true
+    }))
+});
+</code></pre>
+</div>
+<pre class="fragment" style="font-size: 90%; margin-top:  -1.5%"><code class="shell" data-trim>
+$ ./node_modules/.bin/electron www/
 </code></pre>
             </div>
         </div>
     <aside class="notes">
         <b></b>
     </aside>
-</section> -->
+</section>
+
+<section data-background-video="./img/use_case/ionic_desktop.mp4" data-background-video-loop  data-background-color="#262528">
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
 
 <!-- <section>
     <h2><span style="color: #5c8dfc">Ionic Twitter</span> PWA an <span style="color: #5c8dfc">Open Source</span> version of <span style="color: #5c8dfc">m.twitter.com</span> PWA</h2>
