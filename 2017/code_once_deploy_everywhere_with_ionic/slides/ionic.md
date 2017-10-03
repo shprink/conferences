@@ -16,10 +16,10 @@
             <ul>
                 <li><span style="color: #5c8dfc">Open Source</span> project (MIT licensed)</li>
                 <li>100% <span style="color: #5c8dfc">Web technology </span> based</li>
-                <li>Build apps for <span style="color: #5c8dfc">many platforms</span> (Android, iOS, Desktop, PWA, etc.)</li>
-                <li>2013: <span style="color: #5c8dfc">V1</span> release (AngularJS)</li>
-                <li>2017: <span style="color: #5c8dfc">V2/V3</span> release (Angular)</li>
-                <li>Soon: <span style="color: #5c8dfc">V4</span> release (Angular/Stencil)</li>
+                <li>Builds <span style="color: #5c8dfc">cross platform apps</span> (Android, iOS, Desktop, PWA, etc.)</li>
+                <li>2013: <span style="color: #5c8dfc">V1</span> (AngularJS)</li>
+                <li>2017: <span style="color: #5c8dfc">V2/V3</span> (Angular)</li>
+                <li>Soon: <span style="color: #5c8dfc">V4</span> (Stencil)</li>
             </ul>
         </div>
     </div>
@@ -32,17 +32,17 @@
 
 <section data-background-color="#000">
     <h3>Stencil</h3>
+    <h5>A COMPILER FOR WEB COMPONENTS</h5>
     <div layout="row" layout-align="center center">
         <div layout="column" flex="33" layout-align="center center">
             <img src="../../img/stencil_logo.gif" style="margin: 0" width="100%" class="img-plain"/>
         </div>
         <div layout="column" flex="66" layout-align="center center">
             <ul>
-                <li>A <span style="color: #5c8dfc">compiler</span> for <span style="color: #5c8dfc">Web components</span> </li>
+                <li><span style="color: #5c8dfc">Open Source</span> project (MIT licensed)</li>
                 <li>Builds <span style="color: #5c8dfc">100% vanilla</span> custom elements</li>
                 <li>Allows <span style="color: #5c8dfc">SSR</span> and <span style="color: #5c8dfc">Async rendering</span></li>
                 <li>Based on <span style="color: #5c8dfc">TypeScript</span> and <span style="color: #5c8dfc">JSX</span></li>
-                <li><span style="color: #5c8dfc">MIT </span> licensed</li>
             </ul>
         </div>
     </div>
@@ -53,7 +53,7 @@
     </aside>
 </section>
 
-<section data-background-color="#000" class="stretch">
+<section class="stretch">
     <h3>Stencil Component</h3>
 <pre style="font-size: 90%;" ><code class="html" data-trim>
 <my-hostname></my-hostname>
@@ -85,13 +85,15 @@ export class Hostname {
     </aside>
 </section>
 
-<section data-background-color="#000" class="stretch">
+<section class="stretch">
     <h3>Stencil Component <span style="color : #5c8dfc">Props</span></h3>
 <pre style="font-size: 90%;" ><code class="html" data-trim>
 <my-name-is name="Julien"></my-name-is>
 // My name is Julien
 </code></pre>
-<pre style="font-size: 55%;" class="fragment"><code class="typescript" data-trim>
+<pre style="font-size: 75%;" class="fragment"><code class="typescript" data-trim>
+import { Component, Prop } from '@stencil/core';
+
 @Component({
   tag: 'my-name-is',
   styleUrl: 'my-name-is.scss'
@@ -99,26 +101,19 @@ export class Hostname {
 export class MyNameIs {
   @Prop() name: string;
 
-  @PropWillChange('name')
-  willChangeHandler(newValue: string) {
-    console.log('New name:', newValue);
-  }
-
   render() {
     return (<p>My name is {this.name}</p>);
   }
 }
 </code></pre>
-    <div class="fragment current-only" data-code-block="2" data-code-focus="6"></div>
-    <div class="fragment current-only" data-code-block="2" data-code-focus="13-15"></div>
-    <div class="fragment current-only" data-code-block="2" data-code-focus="8-11"></div>
+    <div class="fragment current-only" data-code-block="2" data-code-focus="8"></div>
+    <div class="fragment current-only" data-code-block="2" data-code-focus="10-13"></div>
     <aside class="notes">
-        <b>Props represent data that come from outside a component</b>
+        <b>Props or properties represent data that come from outside a component</b>
         <b></b>
         <ol>
             <li>@Prop decorator defines what external property we expect. Here "name" as a string.</li>
             <li>In the render function we can access "name" using "this" DOT "name" AND Everytime "name" changes, the render function will be called</li>
-            <li>If we want to do advanced features we can also subscribe to the "name" changes with the @PropWillChange decorator</li>
         </ol>
     </aside>
 </section>
@@ -155,7 +150,7 @@ export class Counter {
     <aside class="notes">
         <b>State represents the internal data of a component</b>
         <ol>
-            <li>@State decorator defines our internal state. Here "count" as a number with a default value of 1.</li>
+            <li>@State decorator defines our internal state. Here "count" is a number with default to 1.</li>
             <li>In the render function we can access "count" using "this" DOT "count" the same way we access Props</li>
             <li>We have access to life cycle events such as "componentDidLoad" to start our counter. Every seconds this.count reference changes and the component rerenders</li>
         </ol>
@@ -232,9 +227,9 @@ export class Counter {
     <aside class="notes">
         <b>Ionic comes with dozens of components out of the box and each component has the look and feel of its original platform</b>
         <ol>
-            <li>FOr instance buttons: On the left side we have material design button for Android and on the right iOS buttons</li>
+            <li>For instance buttons: On the left side we have material design button for Android and on the right iOS buttons, and all of that with the same codebase!</li>
         </ol>
-        <b>With Ionic you get the majority of the components you might need to create a good user experience.</b>
+        <b>With Ionic you get all the components needed to create a good UI.</b>
     </aside>
 </section>
 
@@ -282,12 +277,12 @@ export class Counter {
 
 <!-- ONE LANGUAGE -->
 
-<section>
+<!-- <section>
     <h2>only <span style="color: #5c8dfc">one language</span> and <span style="color: #5c8dfc">one codebase</span> are necessary</h2>
     <aside class="notes">
         <b></b>
     </aside>
-</section>
+</section> -->
 
 <section>
     <h3>All you need is <span style="color: #5c8dfc">JavaScript</span></h3>
@@ -325,14 +320,13 @@ export class Counter {
     <img src="../../img/electron-logo.svg" style="margin: 0 10px; opacity: 0.8" width="15%" class="img-plain fragment zoom-in"/>
     <img src="../../img/chrome-logo-white.png" style="margin: 0 10px; opacity: 0.8" width="15%" class="img-plain fragment zoom-in"/>
     <aside class="notes">
-        <b>With only one codebase based on Web technologies we are able to create applications for...</b>
+        <b>With only one codebase we are able to create applications for many platforms...</b>
         <ol>
-            <li>many platforms! Among those we have</li>
             <li>Android</li>
             <li>iOS</li>
             <li>Windows Universal</li>
             <li>Desktop apps with Electron</li>
-            <li>and of course browsers</li>
+            <li>and of course the browsers</li>
             <li>It is one codebase to rule them all</li>
         </ol>
         <b></b>
@@ -340,20 +334,9 @@ export class Counter {
 </section>
 
 <section>
-    <h2><span style="color: #5c8dfc">Ionic apps</span> are <span style="color: #5c8dfc">Native apps</span></h2>
-    <aside class="notes">
-        <b>Ionic applications are native applications. They can be installed on Google Play, the App Store or any sotre your platform uses. How does this work? ...</b>
-    </aside>
-</section>
-
-<section>
-    <h3>Cordova <span style="color: #5c8dfc">Native app</span> shell</h3>
-     <div layout="row" layout-align="center center">
-            <div layout="column" flex="33" layout-align="center center">
-                 <img src="./img/hybrid.png" class="img-plain"/>
-            </div>
-            <div layout="column" flex layout-align="center center" style="margin-left: 10px">
-                <div class="box shell " data-fragment-index="1" w100 style="position: relative">
+    <h3><span style="color: #5c8dfc">Ionic apps</span> are <span style="color: #5c8dfc">Native apps</span></h3>
+     <div layout="column" layout-align="center center">
+                <div class="box shell fragment" data-fragment-index="1" w100 style="position: relative">
                     <div class="box ionic fragment zoom-in"  data-fragment-index="5" w100 style="position: relative">
                         <img src="../../img/ionic-logo-square-white.png" style="margin: 0; height: 48px; position: absolute; left: 10px;"  class="img-plain"/>
                         Ionic Components
@@ -377,13 +360,12 @@ export class Counter {
                         <img src="./img/native_features.png" class="img-plain" style="margin:0" />
                     </div>
                 </div>
-            </div>
         </div>
         https://cordova.apache.org
     <aside class="notes">
-        <b>... well Cordova is the magic behind the native capabilities. It is an open source project that provides a native shell for a lot of platforms</b>
+        <b>onic applications are native applications. They can be installed on Google Play, the App Store or any sotre your platform uses. How does this work? </b>
         <ol>
-            <li>This native shell has access to all the device hardware, exactly the same as any native app.</li>
+            <li>Cordova is the magic behind the native capabilities. It is an open source project that provides a native shell for a lot of platforms. This native shell has access to all the device hardware, exactly the same as any native app.</li>
             <li>The native shell runs a Webview which is a simple browser</li>
             <li>We can control the hardware via HTLM5 for some features or via Cordova API for missing features</li>
             <li>On top of all of that stack you can build your application using Ionic Web Components and any framework you want or not framework at all.</li>
@@ -396,86 +378,39 @@ export class Counter {
 
 <section>
     <h3><span style="color: #5c8dfc">Ionic apps</span> are also <span style="color: #5c8dfc">Progressive Web Apps</span> (PWA)</h3>
-    <ul>
-        <li class="fragment">Preconfigured <span style="color: #5c8dfc">Service worker</span>
-            <ul>
-                <li><span style="color: #5c8dfc">Assets caching</span> (HTML, JS, CSS, Images, Fonts etc.)</li>
-                <li><span style="color: #5c8dfc">Network caching</span> (NetworkFirst Strategy)</li>
+    <div layout="row" layout-align="center center">
+        <div layout="column" flex="33" layout-align="center center">
+             <img src="./img/add-to-home-screen.gif" style="margin: 0" width="100%" class="img-plain"/>
+        </div>
+        <div layout="column" flex="66" layout-align="center center">
+             <ul>
+                <li class="fragment" data-fragment-index="1"><span style="color: #5c8dfc">Installable</span> without stores</li>
+                <li class="fragment" data-fragment-index="2"><span style="color: #5c8dfc">Discoverable</span></li>
+                <li class="fragment" data-fragment-index="2"><span style="color: #5c8dfc">Universal</span> (every device, browser)</li>
+                <li class="fragment" data-fragment-index="2"><span style="color: #5c8dfc">Offline</span> capability </li>
+                <li class="fragment" data-fragment-index="2">Always <span style="color: #5c8dfc">up to date</span></li>
+                <li class="fragment" data-fragment-index="2"><span style="color: #5c8dfc">Safe</span> (https)</li>
+                <li class="fragment" data-fragment-index="2"><span style="color: #5c8dfc">Re-engageable</span> (push notifications)</li>
+                <li class="fragment" data-fragment-index="2"><span style="color: #5c8dfc">Linkable</span> (easy sharing via links)</li>
             </ul>
-        </li>
-        <li class="fragment">Preconfigured <span style="color: #5c8dfc">Manifest.json</span>
-            <ul>
-                <li>Application name</li>
-                <li>Icons list</li>
-                <li>Fullscreen strategy</li>
-            </ul></li>
-    </ul>
+        </div>
+    </div>
     <aside class="notes">
         <b>We just saw that Ionic apps were Native apps that can be installed via stores but did you know that Ionic apps are also Progressive Web apps by default?</b>
         <ol>
-            <li>Every Ionic app has a Preconfigured Service worker </li>
-            <li>And also a Preconfigured Manifest.json! This file has all the informations that are required to qualify as a Progressive Web App: name, icons, background color etc.</li>
+            <li>Ionic apps are installable without stores, they can be added to the homescreen as shown in this video. </li>
+            <li>They are discoverable by search engines, Universal etc.</li>
         </ol>
-    </aside>
-</section>
-
-<section>
-    <h2>How do we <span style="color: #5c8dfc">start?</span></h2>
-    <aside class="notes">
-        <b>How to start using Ionic?</b>
-    </aside>
-</section>
-
-<section>
-    <h3><span style="color: #5c8dfc">Ionic CLI</span> is the entry point</h3>
-<pre style="font-size: 130%"><code class="shell" data-trim>
-$ npm install -g ionic
-</code></pre>
-    <ul>
-         <li class="fragment">Create new Applications</li>
-         <li class="fragment">Create new Pages, Components, Providers</li>
-         <li class="fragment">Run a local dev server</li>
-         <li class="fragment">Run on emulator or on device</li>
-         <li class="fragment">Build for every platform...</li>
-    </ul>
-    <aside class="notes">
-        <b>To install Ionic on your machine we first need to install the Ionic CLI. It can be installed globally with npm.</b>
-         <ol>
-            <li>The CLI can help you Create new Application</li>
-            <li>new Pages, Components, Providers etc.</li>
-            <li>It can run a local server based on webpack</li>
-            <li>It can run the app on emulator or on device</li>
-            <li>and allow you to buid for every known platforms</li>
-            <li>As you can see all you need is the CLI</li>
-        </ol>
-        <b>All you need is Ionic CLI</b>
     </aside>
 </section>
 
 <!-- CONCLUSION  -->
 
-<section>
-    <h3 style="color:#fff;"><span style="color: #5c8dfc">Ionic</span> is one of the best SDK to build <span style="color: #5c8dfc">cross platform apps</span></h3>
-    <ul>
-        <li class="fragment">Large <span style="color: #5c8dfc">set of components </span> to choose from</li>
-        <li class="fragment">Only <span style="color: #5c8dfc">one programming language</span> needed (JS)</li>
-        <li class="fragment">Only <span style="color: #5c8dfc">one codebase</span> for all platforms</li>
-        <li class="fragment">Ionic apps are <span style="color: #5c8dfc">Native Apps</span></li>
-        <li class="fragment">Ionic apps are <span style="color: #5c8dfc">Progressive Web Apps</span></li>
-        <li class="fragment">Access to <span style="color: #5c8dfc">any native Hardware</span> (via cordova plugins)</li>
-        <li class="fragment"><span style="color: #5c8dfc">No build configuration</span> (Ionic CLI)</li>
-    </ul>
+<!-- <section>
+    <h3 style="color:#fff;"><span style="color: #5c8dfc">Ionic</span> provides all the <span style="color: #5c8dfc">tools</span> to be <span style="color: #5c8dfc">productive</span></h3>
     <aside class="notes">
-        <b>We saw earlier that, nowadays, we have to go multi platform and to do so, the Web is the best platform. To code once and deploy everywhere using the Web, Ionic is clearly a good option.</b>
-        <ol>
-            <li>A large set of components are available out of the box</li>
-            <li>only one programming language is needed and it is the most popular one: JavaScript</li>
-            <li>Only one codebase is necessary to build on every platforms with platform specific look and feel</li>
-            <li>Ionic Apps are Native Apps that can be installed on the stores</li>
-            <li>Ionic Apps are also Progressive Web Apps</li>
-            <li>We can access any native hardware via Cordova plugins or HTML5</li>
-            <li>To finish with Ionic CLI you do not have to worry about complex webpack configuration, it is already done for you</li>
-        </ol>
-        <b>You do not have to take my work for it. I am going to show you</b>
+        <b>The Web now provides the tools to create almost anything!</b>
+        <br/>
+        <b> What we are missing now are tools to be productive when buiding applications. That is where Ionic comes into place!</b>
     </aside>
-</section>
+</section> -->

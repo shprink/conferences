@@ -1,7 +1,26 @@
 <section>
-    <h2>Build <span style="color: #5c8dfc">Everywhere</span></h2>
+    <h2>How do we <span style="color: #5c8dfc">start?</span></h2>
     <aside class="notes">
-        <b></b>
+        <b>How to start using Ionic?</b>
+    </aside>
+</section>
+
+<section>
+    <h3><span style="color: #5c8dfc">Ionic CLI</span> is the entry point</h3>
+<pre style="font-size: 130%"><code class="shell" data-trim>
+$ npm install -g ionic
+</code></pre>
+    <ul>
+         <li class="fragment"><span style="color: #5c8dfc">Creates</span> new Apps, Pages, Components, Services</li>
+         <li class="fragment"><span style="color: #5c8dfc">Runs</span> a dev server, the emulator or on device</li>
+         <li class="fragment"><span style="color: #5c8dfc">Builds</span> for every platform</li>
+    </ul>
+    <aside class="notes">
+        <b>To install Ionic on your machine we first need to install the Ionic CLI. It can be installed globally with npm.</b>
+         <ol>
+            <li>...</li>
+        </ol>
+        <b>All you need is Ionic CLI</b>
     </aside>
 </section>
 
@@ -35,7 +54,7 @@ $ ionic start
     </aside>
 </section>
 
-<section data-background-video="./img/use_case/ionic_start.mp4" data-background-video-loop  data-background-color="#262528">
+<section data-background-video="./img/use_case/ionic_start.mp4" data-background-color="#262528">
     <aside class="notes">
         <b></b>
     </aside>
@@ -51,7 +70,7 @@ $ ionic serve
     </aside>
 </section>
 
-<section data-background-video="./img/use_case/ionic_serve.mp4" data-background-video-loop  data-background-color="#262528">
+<section data-background-video="./img/use_case/ionic_serve.mp4" data-background-color="#262528">
     <aside class="notes">
         <b></b>
     </aside>
@@ -202,6 +221,34 @@ $ ./node_modules/.bin/electron www/
 <section data-background-video="./img/use_case/ionic_desktop.mp4" data-background-video-loop  data-background-color="#262528">
     <aside class="notes">
         <b></b>
+    </aside>
+</section>
+
+<!-- CONCLUSION  -->
+
+<section>
+    <h3 style="color:#fff;">takeaways</h3>
+    <h5 class="fragment">use <span style="color: #5c8dfc">the WEB capabilities</span> </h5>
+    <h5 class="fragment">CREATE <span style="color: #5c8dfc">BEAUTIFUL UI </span>WITH <span style="color: #5c8dfc">IONIC</span></h5>
+    <h5 class="fragment">BUILD <span style="color: #5c8dfc">FOR EVERY PLATFORM</span></h5>
+    <h5 class="fragment">BE <span style="color: #5c8dfc">PRODUCTIVE</span></h5>
+    <!-- <ul>
+        <li class="fragment"><span style="color: #5c8dfc">Multi platform</span> is the <span style="color: #5c8dfc">new norm</span></li>
+        <li class="fragment">The <span style="color: #5c8dfc">Web</span> now <span style="color: #5c8dfc">provides</span> the <span style="color: #5c8dfc">tools to create</span> almost <span style="color: #5c8dfc">anything</span></li>
+        <li class="fragment"><span style="color: #5c8dfc">Ionic</span> provides <span style="color: #5c8dfc">Framework agnostic</span> components to be <span style="color: #5c8dfc">productive</span></li>
+        <li class="fragment">Only <span style="color: #5c8dfc">one codebase</span> for all platforms</li>
+    </ul> -->
+    <aside class="notes">
+        <b>We saw earlier that, nowadays, we have to go multi platform and to do so, the Web is the best platform. To code once and deploy everywhere using the Web, Ionic is clearly a good option.</b>
+        <ol>
+            <li>It is an exciting time to be a Web developer with what the web has to offer. with y</li>
+            <li>Ionic provides great Web components to build your user interface, use them as much as you can</li>
+            <li>multiplatform has become a new norm and that's a fact, do not fight it, just go multiplatform</li>
+            <li>Ionic Apps are also Progressive Web Apps</li>
+            <li>We can access any native hardware via Cordova plugins or HTML5</li>
+            <li>To finish with Ionic CLI you do not have to worry about complex webpack configuration, it is already done for you</li>
+        </ol>
+        <b>You do not have to take my work for it. I am going to show you</b>
     </aside>
 </section>
 

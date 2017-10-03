@@ -86,42 +86,11 @@
     <div layout="column" layout-align="center center" h100>
        <div style="background-color: rgba(0, 0, 0, 0.4); padding: 20px; border-radius: 5px;">
             <h3 style="color:#fff; margin:0 0 10px 0">and even in the air!</h3>
-            <h5 style="color:#fff; margin:0">turn ON your mobile <span style="color: #5c8dfc">bluetooth</span> and <span style="color: #5c8dfc">location</span> to receive a link to the slides</h5>
+            <h5 style="color:#fff; margin:0">turn ON your mobile <span style="color: #5c8dfc">internet, bluetooth</span> and <span style="color: #5c8dfc">location</span> to receive a link to the slides</h5>
         </div>
     </div>
     <aside class="notes">
         and even in the air!. My machine here acts as a beacon to broadcast the link to this slides via the Physical Web!
-    </aside>
-</section>
-
-<!-- EVOLUTION  -->
-
-<section>
-    <h2>The <span style="color: #5c8dfc">Web</span> is <span style="color: #5c8dfc">evolving</span></h2>
-    <aside class="notes">
-        <b>The web is evolving all the time</b>
-    </aside>
-</section>
-
-<section>
-    <h3><span style="color: #5c8dfc">HTML5</span> keeps <span style="color: #5c8dfc">improving</span></h3>
-    <ul >
-        <li class="fragment">`navigator.vibrate(200)`</li>
-        <li class="fragment">`navigator.getBattery()`</li>
-        <li class="fragment">`navigator.connection`</li>
-        <li class="fragment">`navigator.geolocation`</li>
-        <li class="fragment">... and much <a href="http://mobilehtml5.org/" target="_blank">more</a></li>
-    </ul>
-    <aside class="notes">
-        <b>HTML5 is now capable of controlling your device hardware. We can for instance access the following APIS:</b>
-        <ul>
-            <li>Vibration API</li>
-            <li>Batterie status API</li>
-            <li>Network Information API</li>
-            <li>Geolocation API</li>
-            <li>and much more</li>
-        </ul>
-        <b>The Web evolving and in the meantime...</b>
     </aside>
 </section>
 
@@ -188,6 +157,48 @@
     </aside>
 </section>
 
+<!-- EVOLUTION  -->
+
+<section>
+    <h2>The <span style="color: #5c8dfc">Web</span> is <span style="color: #5c8dfc">evolving</span></h2>
+    <aside class="notes">
+        <b>The web is evolving all the time</b>
+    </aside>
+</section>
+
+<section>
+    <h3><span style="color: #5c8dfc">HTML5</span> keeps <span style="color: #5c8dfc">improving</span></h3>
+    <ul >
+        <li class="fragment">`navigator.vibrate(200)`</li>
+        <li class="fragment">`navigator.getBattery()`</li>
+        <li class="fragment">`navigator.connection`</li>
+        <li class="fragment">`navigator.geolocation`</li>
+        <li class="fragment">`navigator.bluetooth`</li>
+    </ul>
+    <aside class="notes">
+        <b>HTML5 is now capable of controlling your device hardware. We can for instance access the following APIS:</b>
+        <ul>
+            <li>Vibration API</li>
+            <li>Batterie status API</li>
+            <li>Network Information API</li>
+            <li>Geolocation API</li>
+            <li>and even take control of machines with the bluethooth API!</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h3>Control <span style="color: #5c8dfc">machines</span> with <span style="color: #5c8dfc">webpages</span> </h3>
+    <a href="https://urish.github.io/webble-mip/" target="_blank"><img src="./img/mip_web.png"  style="margin:0" class="img-plain"/></a>
+    <img src="./img/mip_top.png"  style="margin:0; position: absolute; transform: rotate(-90deg); right: -30%; animation-duration: 8s" width="50%" class="img-plain shake-left-right animated infinite"/>
+    <br/>
+    https://github.com/urish/webble-mip by Uri Shaked
+    <aside class="notes">
+        <b></b>
+        <b>The Web evolving in the right direction and in the meantime...</b>
+    </aside>
+</section>
+
 <!-- <section>
         <h3><span style="color: #5c8dfc">Browsers</span> are <span style="color: #5c8dfc">self upgrading</span> </h3>
         <ul>
@@ -218,11 +229,11 @@
     <h3><span style="color: #5c8dfc">Background</span> processes with <span style="color: #5c8dfc">Service Workers</span></h3>
     <ul>
         <li class="fragment"><span style="color: #5c8dfc">Runs</span> even when the <span style="color: #5c8dfc">webpage is closed</span></li>
-        <li class="fragment">Can <span style="color: #5c8dfc">cache</span> assets and HTTP requests</li>
-        <li class="fragment">Can <span style="color: #5c8dfc">update</span> your app <span style="color: #5c8dfc">in the background</span></li>
-        <li class="fragment">Can manage <span style="color: #5c8dfc">Push Notifications</span></li>
-        <li class="fragment"><img src="../../img/new.gif" style="margin:0" class="img-plain"/><a href="https://webkit.org/status/#specification-service-workers" target="_blank" style="color: #5c8dfc"> Safari support</a> is under development</li>
+        <li class="fragment"><span style="color: #5c8dfc">Caches</span> assets and HTTP requests</li>
+        <li class="fragment"><span style="color: #5c8dfc">Updates</span> your app in the background</li>
+        <li class="fragment">Manages <span style="color: #5c8dfc">Push Notifications</span></li>
     </ul>
+    <p class="fragment"><img src="../../img/new.gif" style="margin:0" class="img-plain"/><a href="https://webkit.org/status/#specification-service-workers" target="_blank" style="color: #5c8dfc"> Safari support</a> is under development</p>
     <aside class="notes">
         <b>...Background processes using Service Workers? A service worker is just a JavaScript file that is ran by your browser in the background. <br/>It is completely separated from your webpage and handles events fired either by the webpage itself or the browser</b>
         <ul>
@@ -239,14 +250,14 @@
 <section>
     <h3><span style="color: #5c8dfc">Multi threading</span> with <span style="color: #5c8dfc">Web workers</span></h3>
     <ul>
-        <li class="fragment">Main thread <span style="color: #5c8dfc">can delegate</span> expensive <span style="color: #5c8dfc">operations</span></li>
-        <li class="fragment">A worker has its <span style="color: #5c8dfc">own event loop</span> and <span style="color: #5c8dfc">memory space</span></li>
+        <li class="fragment"><span style="color: #5c8dfc">Delegates</span> expensive <span style="color: #5c8dfc">operations</span></li>
+        <li class="fragment"><span style="color: #5c8dfc">Own event loop</span> and memory space</li>
         <li class="fragment">Available in <span style="color: #5c8dfc">all major Browsers</span>
 <pre style="font-size: 105%;"><code class="shell" data-trim>
 var myWorker = new Worker('worker.js')
 </code></pre>
         </li>
-        <li class="fragment">Communicate via <span style="color: #5c8dfc">PostMessage API</span>
+        <li class="fragment">Communicates via <span style="color: #5c8dfc">PostMessage API</span>
 <pre style="font-size: 105%;"><code class="shell" data-trim>
 myWorker.postMessage(DATA);
 </code></pre>
@@ -270,22 +281,10 @@ myWorker.onmessage = e => e.data;
 <!-- CONCLUSION  -->
 
 <section>
-    <h3 style="color:#fff;">The <span style="color: #5c8dfc">Web</span> is <span style="color: #5c8dfc">best platform</span> to build <span style="color: #5c8dfc">cross platform apps</span></h3>
-    <ul>
-        <li class="fragment" data-fragment-index="1">Standard runtime <span style="color: #5c8dfc">available everywhere</span></li>
-        <li class="fragment" data-fragment-index="2"><span style="color: #5c8dfc">Performance</span> is improving all the time</li>
-        <li class="fragment" data-fragment-index="3">Native capability to <span style="color: #5c8dfc">access hardware</span> (via HTML5)</li>
-        <li class="fragment" data-fragment-index="4"><span style="color: #5c8dfc">Offline</span> support (via SW)</li>
-        <li class="fragment" data-fragment-index="4"><span style="color: #5c8dfc">Multi threading</span> support (via WW)</li>
-    </ul>
+    <h3 style="color:#fff;">The <span style="color: #5c8dfc">Web</span> now <span style="color: #5c8dfc">provides</span> the <span style="color: #5c8dfc">tools to create</span> almost <span style="color: #5c8dfc">anything</span></h3>
     <aside class="notes">
-        <b>We saw previously that we better go multi platform to reach everybody and for me the Web is the best platform for that. Here is a recap of the reasons why:</b>
-        <ul>
-            <li>First of all The Web is a Standard runtime that is available everywhere</li>
-            <li>The browsers and devices performance are upgrading all the time</li>
-            <li>We can already communicate with the hardware via HTML5 API</li>
-            <li>And The Web has now killer features such as background processes and Multithreading support!</li>
-        </ul>
-        <b>Trust me on that, it is an exciting time to be a Web Developer! <br/> The Web now provides the tools to create almost anything. What we are missing now is a Software Developer Kit (SDK) to create applications and be productive. That is where Ionic comes into place!</b>
+        <b>The Web now provides the tools to create almost anything!</b>
+        <br/>
+        <b> What we are missing now are tools to be productive when buiding applications. That is where Ionic comes into place!</b>
     </aside>
 </section>

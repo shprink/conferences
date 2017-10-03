@@ -122,6 +122,24 @@
   animation-name: rubberBand;
 }
 
+@keyframes shakeLeftRight {
+  from, to {
+    transform: translate3d(0, 0, 0) rotate(-90deg);
+  }
+
+  10%, 30%, 50%, 70%, 90% {
+    transform: translate3d(-10px, 0, 0) rotate(-90deg);
+  }
+
+  20%, 40%, 60%, 80% {
+    transform: translate3d(10px, 0, 0) rotate(-90deg);
+  }
+}
+
+.shake-left-right {
+  animation-name: shakeLeftRight;
+}
+
 @keyframes shake {
   from, to {
     transform: translate3d(0, 0, 0);
