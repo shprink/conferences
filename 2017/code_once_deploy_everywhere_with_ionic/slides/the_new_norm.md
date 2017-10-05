@@ -1,15 +1,11 @@
 <section>
     <h2><span style="color: #5c8dfc">Multi platform</span> is the <span style="color: #5c8dfc">new norm</span></h2>
     <aside class="notes">
-        <b>Why do we have to "Code once and deploy everywhere"? Well it is because Multi Platform has become the new norm. To highlight this I will tell you what a typical day of mine is!</b>
-        <ul>
-            <li>Wake up a 8</li>
-            <li>check my email/social networks on my cellphone</li>
-            <li>Go to work and work on a desktop machine</li>
-            <li>For the lunch break I often watch my favorite series on a smartTV</li>
-            <li>And in the evening I relax using a tablet</li>
-        </ul>
-        <b>As you can see in a normal day I use up to 4 devices that are connected to the internet. We are actually all going multi platform and we have numbers to confirm it.</b>
+        <b>Why do we have to "Code once and deploy everywhere"? It is because Multi Platform has become the new norm. I myself use up to 4 smart devices in a normal day. Cellphone, tablet, desktop and tv</b>
+        <br/>
+        [QUESTION]: How many devices do you use in a day?
+        <br/>
+        <b>Most of us are going multi platform and We have numbers to confirm this trend.</b>
     </aside>
 </section>
 
@@ -36,6 +32,18 @@
 
 <section>
     <h3><span style="color: #5c8dfc">multi-platform</span> is <span style="color: #5c8dfc">challenging</span></h3>
+    <img src="../../img/commitstrip_native.jpg" style="margin:0" width="30%" class="img-plain"/>
+    <br/>
+    <a href="http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/" target="_blank">commitstrip.com</a>
+    <aside class="notes">
+        <b>...Developping for different platforms can be really challenging
+        <br/> Creating and mantainning several native applications somehow looks like this. The project looks fancy but it is hard to get there!
+        <br/> Why is it that complicated?</b>
+    </aside>
+</section>
+
+<section>
+    <h3><span style="color: #5c8dfc">multi-platform</span> is <span style="color: #5c8dfc">challenging</span></h3>
     <ul>
         <li class="fragment">Different programming <span style="color: #5c8dfc">languages</span></li>
         <li class="fragment">Different developers <span style="color: #5c8dfc">skills</span></li>
@@ -43,12 +51,11 @@
         <li class="fragment">Different <span style="color: #5c8dfc">OS versions</span></li>
     </ul>
     <aside class="notes">
-        <b>...Developping for different platforms can be really challenging</b>
         <ul>
             <li>We must use Different programming languages</li>
             <li>that requires Different developer skills</li>
-            <li>Devices have different hardware to communicate to</li>
-            <li>and the market is framented with many Operating System versions</li>
+            <li>Devices have different hardware to communicate with</li>
+            <li>and the market is framented with many Operating System and OS versions</li>
         </ul>
         <b>For all these reasons developping for different platforms is challenging, not productive and expensive! <br/> Do we have alternatives?</b>
     </aside>

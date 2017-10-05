@@ -78,7 +78,7 @@
         </div>
     </div>
     <aside class="notes">
-        in cars. Indeed Tesla for instance added a Web browser in their cars and this is a real trend in the industry.
+        in cars. Tesla has integrated a Web browser in their cars and this is a real trend in the industry.
     </aside>
 </section>
 
@@ -194,8 +194,7 @@
     <br/>
     https://github.com/urish/webble-mip by Uri Shaked
     <aside class="notes">
-        <b></b>
-        <b>The Web evolving in the right direction and in the meantime...</b>
+        <b>We are going to control my little robot here just using the Web.</b>
     </aside>
 </section>
 
@@ -240,7 +239,7 @@
             <li>It can run even when your webpage is closed</li>
             <li>it can leverage the Offline capability via Network and Assets caching.</li>
             <li>it can update your app in the background by replacing assets</li>
-            <li>A service worker can manage Web Push notifications to re engage users</li>
+            <li>it can manage Web Push notifications to re engage users</li>
             <li>Available on Chrome, Firefox, Opera and soon on Safari</li>
         </ul>
         <b>Ok so background processes is a really cool feature but what do we miss the most to improve Web performance? We are missing multi threading!</b>
@@ -283,7 +282,7 @@ myWorker.onmessage = e => e.data;
 <section>
     <h3 style="color:#fff;">The <span style="color: #5c8dfc">Web</span> now <span style="color: #5c8dfc">provides</span> the <span style="color: #5c8dfc">tools to create</span> almost <span style="color: #5c8dfc">anything</span></h3>
     <aside class="notes">
-        <b>The Web now provides the tools to create almost anything!</b>
+        <b>We have just seen that the Web now provides the tools to create almost anything!</b>
         <br/>
         <b> What we are missing now are tools to be productive when buiding applications. That is where Ionic comes into place!</b>
     </aside>

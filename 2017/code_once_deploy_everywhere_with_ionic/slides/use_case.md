@@ -227,28 +227,34 @@ $ ./node_modules/.bin/electron www/
 <!-- CONCLUSION  -->
 
 <section>
-    <h3 style="color:#fff;">takeaways</h3>
-    <h5 class="fragment">use <span style="color: #5c8dfc">the WEB capabilities</span> </h5>
+    <h3 style="color:#fff;">Conclusion</h3>
+    <div layout="row" layout-align="center center">
+        <div layout="column" flex="33" layout-align="center center">
+            <img src="../../img/commitstrip_native.jpg" style="margin:0" class="img-plain"/>
+        </div>
+        <div layout="column" flex="33" layout-align="center center">
+            <img src="../../img/commitstrip_hybrid_2014.jpg" style="margin:0" class="img-plain fragment"/>
+        </div>
+        <div layout="column" flex="33" layout-align="center center">
+            <img src="../../img/commitstrip_hybrid_2017.jpg" style="margin:0" class="img-plain fragment"/>
+        </div>
+    </div>
+    <a href="http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/" target="_blank">commitstrip.com</a>
+    <!--<h5 class="fragment">use <span style="color: #5c8dfc">the WEB capabilities</span> </h5>
     <h5 class="fragment">CREATE <span style="color: #5c8dfc">BEAUTIFUL UI </span>WITH <span style="color: #5c8dfc">IONIC</span></h5>
     <h5 class="fragment">BUILD <span style="color: #5c8dfc">FOR EVERY PLATFORM</span></h5>
     <h5 class="fragment">BE <span style="color: #5c8dfc">PRODUCTIVE</span></h5>
-    <!-- <ul>
+     <ul>
         <li class="fragment"><span style="color: #5c8dfc">Multi platform</span> is the <span style="color: #5c8dfc">new norm</span></li>
         <li class="fragment">The <span style="color: #5c8dfc">Web</span> now <span style="color: #5c8dfc">provides</span> the <span style="color: #5c8dfc">tools to create</span> almost <span style="color: #5c8dfc">anything</span></li>
         <li class="fragment"><span style="color: #5c8dfc">Ionic</span> provides <span style="color: #5c8dfc">Framework agnostic</span> components to be <span style="color: #5c8dfc">productive</span></li>
         <li class="fragment">Only <span style="color: #5c8dfc">one codebase</span> for all platforms</li>
     </ul> -->
     <aside class="notes">
-        <b>We saw earlier that, nowadays, we have to go multi platform and to do so, the Web is the best platform. To code once and deploy everywhere using the Web, Ionic is clearly a good option.</b>
-        <ol>
-            <li>It is an exciting time to be a Web developer with what the web has to offer. with y</li>
-            <li>Ionic provides great Web components to build your user interface, use them as much as you can</li>
-            <li>multiplatform has become a new norm and that's a fact, do not fight it, just go multiplatform</li>
-            <li>Ionic Apps are also Progressive Web Apps</li>
-            <li>We can access any native hardware via Cordova plugins or HTML5</li>
-            <li>To finish with Ionic CLI you do not have to worry about complex webpack configuration, it is already done for you</li>
-        </ol>
-        <b>You do not have to take my work for it. I am going to show you</b>
+        <b>I started this talk with this image, developing and maintaining native apps for every platform is painful.
+        <br/>To tackle this problem Hybrid apps, Web apps that run on native shells were invented. At the beginning it looked like this</b>
+        <br/>We saw together that Web evolved and now provides the tools to create almost anything. We also saw that with Ionic we can create great UI, Framework agnostic Components and build for every platform in minutes.</b>
+        <br/>To me it looks more like this now. The castel is not as fancy as the native one, I am not gonna lie but the result is still amazing.</b>
     </aside>
 </section>
 
@@ -258,7 +264,7 @@ $ ./node_modules/.bin/electron www/
         <b></b>
     </aside>
 </section> -->
-<!-- 
+<!--
 <section class="stretch">
      <div layout="row" layout-align="center center" h100>
             <div flex="33" layout="column" h100 w100 style="">

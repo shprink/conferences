@@ -26,7 +26,7 @@
     <aside class="notes">
         <b>...</b>
         <br/>
-        <b>Stencil is the latest project created by the Ionic team, and will eventually replace Angular in long term but for now all we know is that Ionic v4 will mix Angular and Stencil. Let's see what Stencil is...</b>
+        <b>Stencil is the latest project created by the Ionic team..</b>
     </aside>
 </section>
 
@@ -225,7 +225,7 @@ export class Counter {
         </div>
     </div>
     <aside class="notes">
-        <b>Ionic comes with dozens of components out of the box and each component has the look and feel of its original platform</b>
+        <b>Ionic comes with dozens of components out of the box and each component has the look and feel of its original platform it was built for</b>
         <ol>
             <li>For instance buttons: On the left side we have material design button for Android and on the right iOS buttons, and all of that with the same codebase!</li>
         </ol>
@@ -365,7 +365,8 @@ export class Counter {
     <aside class="notes">
         <b>onic applications are native applications. They can be installed on Google Play, the App Store or any sotre your platform uses. How does this work? </b>
         <ol>
-            <li>Cordova is the magic behind the native capabilities. It is an open source project that provides a native shell for a lot of platforms. This native shell has access to all the device hardware, exactly the same as any native app.</li>
+            <li>Cordova is the magic behind the native capabilities. It is an open source project that provides a native shell for a lot of platforms.</li>
+            <li>This native shell has access to all the device hardware, exactly the same as any native app.</li>
             <li>The native shell runs a Webview which is a simple browser</li>
             <li>We can control the hardware via HTLM5 for some features or via Cordova API for missing features</li>
             <li>On top of all of that stack you can build your application using Ionic Web Components and any framework you want or not framework at all.</li>
