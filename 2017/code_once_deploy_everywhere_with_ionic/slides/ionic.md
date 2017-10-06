@@ -47,7 +47,13 @@
         </div>
     </div>
     <aside class="notes">
-        <b>...</b>
+        <b>This project is really new, it was announced a month ago, so we are pionneers here!</b>
+        <ol>
+            <li>Open Source</li>
+            <li>Create native custom elements that can run on any browser natively</li>
+            <li>Support server side rendering and async rendering which aim to make app faster by prioritizing UI updates.</li>
+            <li>Based on TypeScript and JSX</li>
+        </ol>
         <br/>
         <b>Let's see what a stencil component looks like</b>
     </aside>
@@ -152,7 +158,7 @@ export class Counter {
         <ol>
             <li>@State decorator defines our internal state. Here "count" is a number with default to 1.</li>
             <li>In the render function we can access "count" using "this" DOT "count" the same way we access Props</li>
-            <li>We have access to life cycle events such as "componentDidLoad" to start our counter. Every seconds this.count reference changes and the component rerenders</li>
+            <li>We have access to life cycle events such as "componentDidLoad", "componentDidUnload" and many others to start our counter when needed. Here we launch the timer when the component mounted in the DOM. Every seconds this.count reference changes and the component rerenders</li>
         </ol>
     </aside>
 </section>
@@ -287,10 +293,10 @@ export class Counter {
 <section>
     <h3>All you need is <span style="color: #5c8dfc">JavaScript</span></h3>
     <div layout="row" layout-align="center center">
-        <div layout="column" flex="33" layout-align="center center">
+        <!-- <div layout="column" flex="33" layout-align="center center">
             <img src="../../img/objective-c-logo.png" style="margin: 50px 0" class="img-plain fragment"/>
             <img src="../../img/red_cross.png" style="position: absolute" width="25%" class="img-plain fragment zoom-in"/>
-        </div>
+        </div> -->
         <div layout="column" flex="33" layout-align="center center">
             <img src="../../img/swift-logo.png" style="margin: 50px 0" class="img-plain fragment"/>
             <img src="../../img/red_cross.png" style="position: absolute" width="25%" class="img-plain fragment zoom-in"/>
@@ -342,15 +348,15 @@ export class Counter {
                         Ionic Components
                     </div>
                     <div class="box angular fragment zoom-in"  data-fragment-index="5" w100 style="position: relative">
-                        Angular | React | Vue | Plain JS
+                        Angular | React | Vue | Vanilla JS
                     </div>
-                    <div class="box hardware fragment zoom-in" data-fragment-index="4" w100 style="position: relative">
-                        <img src="../../img/js-logo.png" style="margin: 0; height: 48px; position: absolute; left: 10px;"  class="img-plain"/>Hardware Bridge
-                    </div>
-                    <div class="box browser fragment zoom-in"  data-fragment-index="3" w100 style="position: relative">
+                    <div class="box browser fragment zoom-in"  data-fragment-index="4" w100 style="position: relative">
                         <img src="../../img/chromium-logo.png" style="margin: 0; height: 48px; position: absolute; left: 10px;"  class="img-plain"/>
                         <img src="../../img/wkwebview-logo.png" style="margin: 0; height: 48px; position: absolute; left: 58px;"  class="img-plain"/>
                         Webview
+                    </div>
+                    <div class="box hardware fragment zoom-in" data-fragment-index="3" w100 style="position: relative">
+                        <img src="../../img/js-logo.png" style="margin: 0; height: 48px; position: absolute; left: 10px;"  class="img-plain"/>Hardware JS API
                     </div>
                     Cordova native shell
                 </div>
@@ -367,9 +373,9 @@ export class Counter {
         <ol>
             <li>Cordova is the magic behind the native capabilities. It is an open source project that provides a native shell for a lot of platforms.</li>
             <li>This native shell has access to all the device hardware, exactly the same as any native app.</li>
+            <li>We can control the hardware via a JavaScript API</li>
             <li>The native shell runs a Webview which is a simple browser</li>
-            <li>We can control the hardware via HTLM5 for some features or via Cordova API for missing features</li>
-            <li>On top of all of that stack you can build your application using Ionic Web Components and any framework you want or not framework at all.</li>
+            <li>On top of all of that stack you can build your application using any framework you want or not framework at all.</li>
         </ol>
         <b>Your Ionic Components have therefore access to every API needed to build a complete application.</b>
     </aside>

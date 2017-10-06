@@ -32,7 +32,7 @@
 
 <section>
     <h3><span style="color: #5c8dfc">multi-platform</span> is <span style="color: #5c8dfc">challenging</span></h3>
-    <img src="../../img/commitstrip_native.jpg" style="margin:0" width="30%" class="img-plain"/>
+    <img src="../../img/commitstrip_native.jpg" style="margin:0" width="40%" class="img-plain"/>
     <br/>
     <a href="http://www.commitstrip.com/en/2014/08/18/the-dilemna-of-mobile-apps-development/" target="_blank">commitstrip.com</a>
     <aside class="notes">

@@ -66,13 +66,16 @@ $ ionic start
 $ ionic serve
 </code></pre>
     <aside class="notes">
-        <b></b>
     </aside>
 </section>
 
 <section data-background-video="./img/use_case/ionic_serve.mp4" data-background-color="#262528">
     <aside class="notes">
-        <b></b>
+        <ul>
+            <li>Ionic serve will start Webpack, and package all your assets.</li>
+            <li>once Webpack is done it will start your application on a specific port</li>
+            <li>Now every changes that you make on your code will be live reloaded</li>
+        </ul>
     </aside>
 </section>
 
@@ -88,7 +91,9 @@ $ ionic serve --lab
 
 <section data-background-video="./img/use_case/ionic_serve_lab.mp4" data-background-video-loop  data-background-color="#262528">
     <aside class="notes">
-        <b></b>
+        <b>This command is the same as the previous BUT you can simulate a specific platform. Here iOS, Android and Windows.
+        <br/>
+        With this tool you can quickly see how your app will render on device.</b>
     </aside>
 </section>
 
@@ -121,13 +126,6 @@ $ ionic build --prod
 <pre style="font-size: 80%"><code class="shell" data-trim>
 $ ionic cordova platform add ios@latest
 </code></pre>
-<pre style="font-size: 50%; margin-top:  -2.5%" class="fragment"><code class="shell" data-trim>
-Installing "cordova-plugin-device" for ios
-Installing "cordova-plugin-splashscreen" for ios
-Installing "cordova-plugin-statusbar" for ios
-Installing "cordova-plugin-whitelist" for ios
-Installing "ionic-plugin-keyboard" for ios
-</code></pre>
 <pre style="font-size: 80%" class="fragment"><code class="shell" data-trim>
 $ ionic cordova build ios --prod
 </code></pre>
@@ -154,13 +152,6 @@ $ ionic cordova build ios --prod
 <p>Required: Android SDK, Gradle, Ant, Java JDK</p>
 <pre style="font-size: 80%" class=""><code class="shell" data-trim>
 $ ionic cordova platform add android@latest
-</code></pre>
-<pre style="font-size: 50%; margin-top:  -2.5%" class=""><code class="shell" data-trim>
-Installing "cordova-plugin-device" for android
-Installing "cordova-plugin-splashscreen" for android
-Installing "cordova-plugin-statusbar" for android
-Installing "cordova-plugin-whitelist" for android
-Installing "ionic-plugin-keyboard" for android
 </code></pre>
 <pre style="font-size: 80%" class=""><code class="shell" data-trim>
 $ ionic cordova build android --prod
@@ -192,7 +183,7 @@ $ npm install electron --save-dev --save-exact
 $ ionic build --prod
 </code></pre>
 <div class="fragment">
-    <div style="text-align: left; width: 100%;">Add index.js at the production app root</div>
+    <div style="text-align: left; width: 100%;">Add index.js at the app root</div>
 <pre style="font-size: 50%"><code class="shell" data-trim>
 const { app, BrowserWindow } = require('electron')
 const path = require('path')
@@ -214,13 +205,15 @@ $ ./node_modules/.bin/electron www/
             </div>
         </div>
     <aside class="notes">
-        <b></b>
+        <b>To build for desktops you need to install Electron. Electron is an Open Source project that provides native desktop shells for Linux, OSX and Windows.
+        <br/>
+        If you have used Slack or VsCode on your desktop machine then you have already ran Electon</b>
     </aside>
 </section>
 
 <section data-background-video="./img/use_case/ionic_desktop.mp4" data-background-video-loop  data-background-color="#262528">
     <aside class="notes">
-        <b></b>
+        <b>The result is the following, a desktop app that can be installed on your favorite desktop OS store.</b>
     </aside>
 </section>
 
@@ -252,8 +245,8 @@ $ ./node_modules/.bin/electron www/
     </ul> -->
     <aside class="notes">
         <b>I started this talk with this image, developing and maintaining native apps for every platform is painful.
-        <br/>To tackle this problem Hybrid apps, Web apps that run on native shells were invented. At the beginning it looked like this</b>
-        <br/>We saw together that Web evolved and now provides the tools to create almost anything. We also saw that with Ionic we can create great UI, Framework agnostic Components and build for every platform in minutes.</b>
+        <br/>To tackle this problem Hybrid apps (Web apps that run on native shells) were invented. At the beginning it looked like this</b>
+        <br/>We saw together that Web evolved and now provides the tools to create almost anything. We also saw that with Ionic we can create great UI, we can use Framework agnostic Components and build for every platform in minutes.</b>
         <br/>To me it looks more like this now. The castel is not as fancy as the native one, I am not gonna lie but the result is still amazing.</b>
     </aside>
 </section>
