@@ -160,9 +160,9 @@
 <!-- EVOLUTION  -->
 
 <section>
-    <h2>The <span style="color: #5c8dfc">Web</span> is <span style="color: #5c8dfc">evolving</span></h2>
+    <h2>The <span style="color: #5c8dfc">Web</span> is <span style="color: #5c8dfc">evolving</span> fast</h2>
     <aside class="notes">
-        <b>The web is evolving all the time</b>
+        <b>The web evolves all the time and has features that open new possibilities to Web developers.</b>
     </aside>
 </section>
 
@@ -217,12 +217,12 @@
 
 <!-- EVOLUTION  -->
 
-<section>
+<!-- <section>
     <h2>The <span style="color: #5c8dfc">Web</span> has <span style="color: #5c8dfc">new capabilities</span></h2>
     <aside class="notes">
         <b>The Web is just not evolving, it also has new capabilities, features that open new possibilities to Web developers. For instance...</b>
     </aside>
-</section>
+</section> -->
 
 <section>
     <h3><span style="color: #5c8dfc">Background</span> processes with <span style="color: #5c8dfc">Service Workers</span></h3>
@@ -234,7 +234,7 @@
     </ul>
     <p class="fragment"><img src="../../img/new.gif" style="margin:0" class="img-plain"/><a href="https://webkit.org/status/#specification-service-workers" target="_blank" style="color: #5c8dfc"> Safari support</a> is under development</p>
     <aside class="notes">
-        <b>...Background processes using Service Workers? A service worker is just a JavaScript file that is ran by your browser in the background. <br/>It is completely separated from your webpage and handles events fired either by the webpage itself or the browser</b>
+        <b>Service Workers is new feature. A service worker is just a JavaScript file that is ran by your browser in the background. <br/>It is completely separated from your webpage and handles events fired either by the webpage itself or the browser</b>
         <ul>
             <li>It can run even when your webpage is closed</li>
             <li>it can leverage the Offline capability via Network and Assets caching.</li>
@@ -242,7 +242,7 @@
             <li>it can manage Web Push notifications to re engage users</li>
             <li>Available on Chrome, Firefox, Opera and soon on Safari</li>
         </ul>
-        <b>Ok so background processes is a really cool feature but what do we miss the most to improve Web performance? We are missing multi threading!</b>
+        <b>Ok so now What do we miss the most to improve Web performance? We are missing multi threading!</b>
     </aside>
 </section>
 
