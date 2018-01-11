@@ -6,8 +6,6 @@
   "subdomain": "revealjs",
   "main": "js/reveal.js",
   "scripts": {
-    "test": "grunt test",
-    "start": "grunt serve",
     "beacon": "node -e \"require('eddystone-beacon').advertiseUrl('http://bit.ly/2xSLYZl');\""
   },
   "author": {

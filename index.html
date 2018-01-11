@@ -32,7 +32,8 @@
 		.big {
 			font-size: 50px;
 		}
-		h3.header{
+
+		h3.header {
 			border-bottom: 1px solid #2c3e50;
 		}
 	</style>
@@ -321,10 +322,19 @@
 				eventLink: 'https://mobileera.rocks/',
 				link: './2017/code_once_deploy_everywhere_with_ionic',
 				tags: ['ionic', 'ionic2', 'angular2']
+			}, {
+				name: 'Make Web Components Great Again with StencilJS',
+				city: 'Helsinki',
+				country: 'Finland',
+				date: '2018-03-02 11:55:00',
+				eventName: 'mgVikings 2018',
+				eventLink: 'https://ngvikings.org/schedule/day2?sessionId=112',
+				link: './2018/make_web_components_great_again_with_stencil',
+				tags: ['ionic', 'ionic2', 'angular2']
 			}];
 			var isDev = location.hostname === '127.0.0.1';
 
-			talks = talks.filter(function(talk) {
+			talks = talks.filter(function (talk) {
 				var talkDate = moment(talk.date);
 				var futureTalk = talkDate.diff(moment()) > 0;
 				return isDev || !futureTalk;
@@ -349,7 +359,7 @@
 				countries[talk.country] = true;
 			});
 
-			Object.keys(perYear).sort(function(a, b) { return b - a }).map(function(year){
+			Object.keys(perYear).sort(function (a, b) { return b - a }).map(function (year) {
 				injectYearTable(year, perYear[year]);
 			});
 
