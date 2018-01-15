@@ -77,8 +77,9 @@
 			<div class="slides">
 		        <!-- <section data-markdown="../../slides/about-me.md"></section> -->
 		        <section data-markdown="slides/intro.md"></section>
-		        <section data-markdown="slides/summary.md"></section>
 		        <section data-markdown="slides/commitstrip.md"></section>
+		        <section data-markdown="slides/material.md"></section>
+		        <section data-markdown="slides/summary.md"></section>
 		        <section data-markdown="slides/wc_specs.md"></section>
 				<section data-background-video="../../img/meme/thankyou.mp4" data-background-video-loop  data-background-color="#ffffff"></section>
 			</div>
@@ -91,6 +92,15 @@
 		<script src="../../lib/js/head.min.js"></script>
 		<script src="../../js/reveal.js"></script>
 		<script src="../../js/init.js"></script>
+		<script>
+			Reveal.addEventListener('slidechanged', function( event ) {
+				// event.currentSlide, event.indexh, event.indexv
+					console.log(event.currentSlide, event.indexh, event.indexv)
+				if (event.indexh === 2 && event.indexv === 11){
+					setTimeout(function(){jQuery('.counter.counter-commit"').counterUp({ time: 2500 })}, 500);
+				}
+			});
+		</script>
 	</body>
 
 </html>

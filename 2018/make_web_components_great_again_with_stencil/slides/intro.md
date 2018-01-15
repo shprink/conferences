@@ -28,12 +28,5 @@
          </div>
     </div>
     <aside class="notes">
-        <b>Hello my name is Julien, I am a freelancer on Toptal and I am really excited to present you an overview of what we can do with the Web and Ionic.</b>
-        <br/>
-        Before I start I have a couple of questions to get to know you better
-        <br/>
-        [QUESTIONS]
-        <br/>
-        <b>What do we want as entrepreuneurs, project managers or even developers? WE want to create the best products in a minimum amount of time and money right?. I will show you that with the Web and Ionic you have the possibility to "Code only once and deploy everywhere".</b>
     </aside>
 </section>
