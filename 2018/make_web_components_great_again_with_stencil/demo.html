@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Make Web Components Great Again with StencilJS | Julien Renaux, Mobile Era - Helsinki, Finland, March 2nd 2018</title>
+
+    <meta name="description" content="Make Web Components Great Again with StencilJS slides">
+    <meta name="author" content="Julien Renaux">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <script src="./polyfills/webcomponents-loader.js"></script>
+    <script src="./polyfills/document-register-element.js"></script>
+    <script src="./components/google-button.js"></script>
+    <script src="./components/my-name-is.js"></script>
+    <script src="./components/my-checkbox.js"></script>
+    <script src="./components/todos.js"></script>
+</head>
+
+<body>
+    <script>
+        const $checkbox = document.createElement('my-checkbox');
+        $checkbox.addEventListener('onToggle', e => {
+            console.log('Is it checked?', e.detail)
+        });
+        document.body.appendChild($checkbox);
+    </script>
+</body>
+
+</html>
