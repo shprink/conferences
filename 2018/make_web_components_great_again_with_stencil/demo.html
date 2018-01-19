@@ -18,17 +18,25 @@
     <script src="./polyfills/document-register-element.js"></script>
     <script src="./components/google-button.js"></script>
     <script src="./components/my-name-is.js"></script>
+    <script src="./components/my-name-is-shadow.js"></script>
     <script src="./components/my-checkbox.js"></script>
     <script src="./components/todos.js"></script>
 </head>
 
 <body>
+    <!-- <style>h2 { color: black; }</style>
+    <my-name-is name="Julien"></my-name-is>
+    <my-name-is-shadow name="Julien"></my-name-is-shadow> -->
+    <template>
+        <h2>Hello World!</h2>
+    </template>
     <script>
-        const $checkbox = document.createElement('my-checkbox');
-        $checkbox.addEventListener('onToggle', e => {
-            console.log('Is it checked?', e.detail)
-        });
-        document.body.appendChild($checkbox);
+        // Get the template element
+        const template = document.querySelector('template');
+        // Clone the template content
+        const $clone = document.importNode(template.content, true);
+        // Apppend it to the page
+        document.body.appendChild($clone);
     </script>
 </body>
 

@@ -7,23 +7,23 @@
 </section>
 
 <section>
-    <ul style="list-style-type: none; margin-left: 0; display: flex; flex-direction: row;" >
-        <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
+    <ul style="list-style-type: none; margin-left: 0; display: flex; flex-direction: row; justify-content: center;" >
+        <li style="margin: 0 20px; display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
             <i class="fa fa-code" style="font-size: 4em"></i>
             <span>Custom Elements</span>
         </li>
-        <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
+        <li style="margin: 0 20px; display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
             <i class="fa fa-user-secret" style="font-size: 4em"></i>
             <span>Shadow DOM</span>
         </li>
-        <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
+        <li style="margin: 0 20px; display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
             <i class="fa fa-cog" style="font-size: 4em"></i>
             <span>HTML templates</span>
         </li>
-        <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
+        <!-- <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
             <i class="fa fa-external-link" style="font-size: 4em"></i>
             <span>HTML imports</span>
-        </li>
+        </li> -->
     </ul>
     <aside class="notes">
         <b></b>
@@ -63,7 +63,7 @@ window.customElements
     </aside>
 </section>
 
-<section>
+<!-- <section>
 <h3>Extending native HTML elements</h3>
 <p>Polyfill: WebReflection/document-register-element</p>
 <pre style="font-size: 60%"><code class="js" data-trim>
@@ -84,7 +84,7 @@ window.customElements
     <aside class="notes">
         <b></b>
     </aside>
-</section>
+</section> -->
 
 <section>
 <h3>WC Lifecycle hooks</h3>
@@ -217,26 +217,20 @@ class MyTodos extends HTMLElement {
 
 <section class="strech">
 <h3>Events</h3>
+<h4 style="text-align: left;">Dispatch</h4>
 <pre style="font-size: 50%"><code class="js" data-trim>
-class MyCheckbox extends HTMLElement {
+class MyComponent extends HTMLElement {
     connectedCallback() {
-        this.innerHTML = '<input type="checkbox"/>';
-        this.$checkbox = this.querySelector('input');
-        this.$checkbox.addEventListener('click', (e) => {
-            const event = new CustomEvent('onToggle', { detail: e.target.checked })
-            this.dispatchEvent(event);
-        });
+        const event = new CustomEvent('onSomething', { detail: Date.now() })
+        this.dispatchEvent(event);
     }
 }
-
-window.customElements.define('my-checkbox', MyCheckbox);
 </code></pre>
-<pre style="font-size: 65%"><code class="js" data-trim>
-const $checkbox = document.createElement('my-checkbox');
-$checkbox.addEventListener('onToggle', e => {
-    console.log('Is it checked?', e.detail)
+<h4 style="text-align: left;">Listen</h4>
+<pre style="font-size: 75%"><code class="js" data-trim>
+$myComponent.addEventListener('onSomething', e => {
+    console.log('Init at', e.detail)
 });
-document.body.appendChild($checkbox);
 </code></pre>
     <aside class="notes">
         <b>To finish on custom elements, we need to learn how to dispatch events.</b>
@@ -259,6 +253,82 @@ document.body.appendChild($checkbox);
 </section>
 
 <section>
+<h3>Adding a shadowRoot</h3>
+<pre style="font-size: 50%"><code class="js" data-trim>
+class MyNameIs extends HTMLElement {
+    static get observedAttributes() {
+        return ['name'];
+    }
+    attributeChangedCallback(name, oldValue, newValue) {
+        this.innerHTML = \`<h2>Hello my name is ${newValue}</h2>\`
+    }
+}
+</code></pre>
+<pre style="font-size: 50%" class="fragment"><code class="js" data-trim>
+class MyNameIsShadow extends HTMLElement {
+    constructor() {
+        super();
+        this.attachShadow({ 'mode': 'open' });
+    }
+    static get observedAttributes() {
+        return ['name'];
+    }
+    attributeChangedCallback(name, oldValue, newValue) {
+        this.shadowRoot.innerHTML = \`<h2>Hello my name is ${newValue}</h2>\`
+    }
+}
+</code></pre>
+    <div class="fragment current-only" data-code-block="2" data-code-focus="4,10"></div>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section data-background-video="./videos/shadow-dom-color.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
+    <aside class="notes">
+        <b>We have two components, one without shadowDOM, one with shadowDOM. Changes in the document style applies only to the component without shadow DOM. the other one is encapsulated.</b>
+    </aside>
+</section>
+
+<section>
+<h3>Adding Shadow DOM to Angular</h3>
+<pre style="font-size: 80%"><code class="js" data-trim>
+import { ViewEncapsulation } from '@angular/core';
+</code></pre>
+<table class="fragment" style="zoom:0.65; margin: 60px">
+    <tbody>
+        <tr>
+        <td align="left" style="font-weight: bold;">ViewEncapsulation.None</td>
+        <td align="left" style="font-weight: bold;">No Shadow DOM at all</td>
+        </tr>
+        <tr>
+        <td align="left"  style="font-weight: bold;">ViewEncapsulation.Emulated (default)</td>
+        <td align="left"  style="font-weight: bold;">Style encapsulation emulation</td>
+        </tr>
+        <tr>
+        <td align="left"  style="font-weight: bold;">ViewEncapsulation.Native</td>
+        <td align="left"  style="font-weight: bold;">Native Shadow DOM</td>
+        </tr>
+    </tbody>
+</table>
+<pre class="fragment" style="font-size: 80%"><code class="js" data-trim>
+@Component({
+  encapsulation: ViewEncapsulation.Native
+})
+class MyComponent {}
+</code></pre>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<!-- <section data-background-video="./videos/shadow-dom-query.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section> -->
+
+<section>
     <ul style="list-style-type: none; margin-left: 0;" >
         <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
             <i class="fa fa-cog" style="font-size: 4em"></i>
@@ -269,11 +339,65 @@ document.body.appendChild($checkbox);
         "Give the ability to create reusable piece of HTML that can be used at runtime"
     </blockquote>
     <aside class="notes">
-        <b></b>
+        <b>the template element allow us to make </b>
     </aside>
 </section>
 
 <section>
+<h3>HTML templates</h3>
+<pre style="font-size: 75%"><code class="html" data-trim>
+<template>
+    <img src="path/to/your/image.png" />
+</template>
+</code></pre>
+<pre class="fragment" style="font-size: 65%"><code class="js" data-trim>
+// Get the template element
+const template = document.querySelector('template');
+// Clone the template content
+const $clone = document.importNode(template.content, true);
+// Apppend it to the page
+document.body.appendChild($clone);
+&nbsp;
+</code></pre>
+<div class="fragment current-only" data-code-block="2" data-code-focus="1-2"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="3-4"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="5-6"></div>
+    <aside class="notes">
+        <b>If we insert this html into a page, we won't see Hello World on screen!</b>
+    </aside>
+</section>
+
+<section>
+<img src="../../img/angular-logo.png" class="img-plain"/>
+<h4>We use HTML templates all the time</h4>
+<div layout="row" layout-align="center center">
+    <div layout="column" flex="45" layout-align="center center">
+<pre style="font-size: 60%"><code class="html" data-trim>
+<p *ngIf="isActive">Hello</p>
+</code></pre>
+    </div>
+    <div layout="column" flex="10" layout-align="center center">
+        <i class="fa fa-arrow-circle-right"></i>
+    </div>
+    <div layout="column" flex="45" layout-align="center center">
+<pre style="font-size: 55%"><code class="html" data-trim>
+<template [ngIf]="isActive">
+  <p>Hello</p>
+</template>
+</code></pre>
+    </div>
+</div>
+<div class="fragment">
+    Same for <code style="color: #5c8dfc">\*ngFor</code> & <code style="color: #5c8dfc">\*ngSwitch</code>
+</div>
+    <aside class="notes">
+        <b>As Angular developers we use the template tag all the time without knowing it.</b>
+        <b>The ngIf directive here wraps the element inside a template tag so it is not rendered by the browser.</b>
+        <b>If you think about the previous image example, it is pretty handy!</b>
+    </aside>
+</section>
+
+<!-- <section>
     <ul style="list-style-type: none; margin-left: 0;" >
         <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
             <i class="fa fa-external-link" style="font-size: 4em"></i>
@@ -286,14 +410,38 @@ document.body.appendChild($checkbox);
     <aside class="notes">
         <b></b>
     </aside>
-</section>
+</section> -->
 
-<section>
+<!-- <section>
 
 <pre style="font-size: 80%"><code class="html"><link rel="import" href="google-map.html">
 </code></pre>
 <pre class="fragment" style="font-size: 80%"><code class="html"><google-map></google-map>
 </code></pre>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section> -->
+
+<section>
+    <ul style="list-style-type: none; margin-left: 0; display: flex; flex-direction: row; justify-content: center;" >
+        <li style="margin: 0 20px; display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
+            <i class="fa fa-code" style="font-size: 4em"></i>
+            <span>Custom Elements</span>
+        </li>
+        <li style="margin: 0 20px; display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
+            <i class="fa fa-user-secret" style="font-size: 4em"></i>
+            <span>Shadow DOM</span>
+        </li>
+        <li style="margin: 0 20px; display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
+            <i class="fa fa-cog" style="font-size: 4em"></i>
+            <span>HTML templates</span>
+        </li>
+        <!-- <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
+            <i class="fa fa-external-link" style="font-size: 4em"></i>
+            <span>HTML imports</span>
+        </li> -->
+    </ul>
     <aside class="notes">
         <b></b>
     </aside>
@@ -343,8 +491,16 @@ document.body.appendChild($checkbox);
     </tr></tbody>
     </table>
     https://github.com/webcomponents/webcomponentsjs
+
+<pre style="font-size: 55%"><code class="html" data-trim>
+<script>
+  window.addEventListener('WebComponentsReady', function() {
+    // At this point we are guaranteed that all required polyfills have loaded
+  });
+</script>
+</code></pre>
     <aside class="notes">
-        <b></b>
+        <b>Alternatively, this repo also comes with webcomponents-loader.js, a client-side loader that dynamically loads the minimum polyfill bundle, using feature detection.</b>
     </aside>
 </section>
 
