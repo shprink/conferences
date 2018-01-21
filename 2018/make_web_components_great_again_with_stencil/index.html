@@ -14,6 +14,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
+		<link href="../../css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="../../css/reveal.css">
 		<link rel="stylesheet" href="../../css/animate.css">
 		<link rel="stylesheet" href="../../css/overwrite.css">
@@ -45,6 +46,9 @@
 		</script>
 		<script src="./polyfills/webcomponents-loader.js"></script>
 		<script src="./polyfills/document-register-element.js"></script>
+		<script src="./components/todo/todo-input.js"></script>
+		<script src="./components/todo/todo-item.js"></script>
+		<script src="./components/todo/my-todo.js"></script>
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -53,15 +57,8 @@
 			.reveal pre {
 				width: 100% !important;
 			}
-			.date{
-				position: fixed;
-				top: 10px;
-				right: 10px;
-			}
-			.wrapper{
-				background-color: rgba(0, 0, 0, 0.4);
-				padding: 20px; 
-				border-radius: 5px;
+			:root {
+				--blue: #5c8dfc;
 			}
 			.fragment.visible.current-only:not(.current-fragment){
 				display: none;
@@ -81,11 +78,11 @@
 		        <section data-markdown="slides/intro.md"></section>
 		        <section data-markdown="slides/problems.md"></section>
 		        <section data-markdown="slides/wc_specs.md"></section>
+		        <section data-markdown="slides/stencil.md"></section>
 				<section data-background-video="../../img/meme/thankyou.mp4" data-background-video-loop  data-background-color="#ffffff"></section>
 			</div>
 
 		</div>
-		<script src="./components/google-button.js"></script>
 
 		<script src="../../lib/js/jquery.1.10.2.js"></script>
 		<script src="../../lib/js/waypoints.min.js"></script>

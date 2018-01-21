@@ -89,19 +89,19 @@ window.customElements
 <section>
 <h3>WC Lifecycle hooks</h3>
 <img src="../../img/web_component-logo.png" height="150" class="img-plain"/>
-<table style="zoom:0.85; margin-bottom: 60px">
+<table style="zoom:0.85; margin-bottom: 60px"  class="table table-striped table-dark">
     <tbody>
         <tr>
         <td style="font-weight: bold;">connectedCallback</td>
-        <td align="left">Called when the <span style="color: #5c8dfc">element is inserted</span></td>
+        <td align="left">Called when the <span style="color: var(--primary)">element is inserted</span></td>
         </tr>
         <tr>
         <td style="font-weight: bold;">disconnectedCallback</td>
-        <td align="left">Called when the <span style="color: #5c8dfc">element is removed</span></td>
+        <td align="left">Called when the <span style="color: var(--primary)">element is removed</span></td>
         </tr>
         <tr>
         <td style="font-weight: bold;">attributeChangedCallback</td>
-        <td align="left">Called when an <span style="color: #5c8dfc">attribute has changed</span></td>
+        <td align="left">Called when an <span style="color: var(--primary)">attribute has changed</span></td>
         </tr>
     </tbody>
 </table>
@@ -112,7 +112,7 @@ window.customElements
 
 <section>
 <h3>Lifecycle hooks</h3>
-<table style="zoom:0.85; margin-bottom: 60px">
+<table style="zoom:0.85; margin-bottom: 60px"  class="table table-striped table-dark">
     <thead>
     <tr>
     <th align="center"><img src="../../img/web_component-logo.png" height="150" class="img-plain"/></th>
@@ -295,7 +295,7 @@ class MyNameIsShadow extends HTMLElement {
 <pre style="font-size: 80%"><code class="js" data-trim>
 import { ViewEncapsulation } from '@angular/core';
 </code></pre>
-<table class="fragment" style="zoom:0.65; margin: 60px">
+<table style="zoom:0.65; " class="fragment table table-striped table-dark">
     <tbody>
         <tr>
         <td align="left" style="font-weight: bold;">ViewEncapsulation.None</td>
@@ -388,7 +388,7 @@ document.body.appendChild($clone);
     </div>
 </div>
 <div class="fragment">
-    Same for <code style="color: #5c8dfc">\*ngFor</code> & <code style="color: #5c8dfc">\*ngSwitch</code>
+    Same for <code style="color: var(--primary)">\*ngFor</code> & <code style="color: var(--primary)">\*ngSwitch</code>
 </div>
     <aside class="notes">
         <b>As Angular developers we use the template tag all the time without knowing it.</b>
@@ -423,24 +423,56 @@ document.body.appendChild($clone);
     </aside>
 </section> -->
 
+
 <section>
-    <ul style="list-style-type: none; margin-left: 0; display: flex; flex-direction: row; justify-content: center;" >
-        <li style="margin: 0 20px; display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
-            <i class="fa fa-code" style="font-size: 4em"></i>
-            <span>Custom Elements</span>
-        </li>
-        <li style="margin: 0 20px; display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
-            <i class="fa fa-user-secret" style="font-size: 4em"></i>
-            <span>Shadow DOM</span>
-        </li>
-        <li style="margin: 0 20px; display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
-            <i class="fa fa-cog" style="font-size: 4em"></i>
-            <span>HTML templates</span>
-        </li>
-        <!-- <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
-            <i class="fa fa-external-link" style="font-size: 4em"></i>
-            <span>HTML imports</span>
-        </li> -->
+    <h3>Browser support</h3>
+    <!-- <img src="./img/caniuse/browser_support_january_2018.png" class="img-plain fragment"/> -->
+    <table style="zoom:0.8; margin-bottom: 60px"  class="table table-striped table-dark">
+    <thead>
+    <tr>
+    <th></th>
+    <th align="center">IE11</th>
+    <th align="center">Edge</th>
+    <th align="center">Firefox</th>
+    <th align="center">Chrome</th>
+    <th align="center">Safari 9+</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td>Custom Elements</td>
+    <td align="center" style="background-color: #bc392a;">11</td>
+    <td align="center" style="background-color: #bc392a;">16</td>
+    <td align="center" style="background-color: #bc392a;">57</td>
+    <td align="center" style="background-color: #9eb40b;">63</td>
+    <td align="center" style="background-color: #9eb40b;">11</td>
+    </tr>
+    <tr>
+    <td>Shadow DOM</td>
+    <td align="center" style="background-color: #bc392a;">11</td>
+    <td align="center" style="background-color: #bc392a;">16</td>
+    <td align="center" style="background-color: #bc392a;">57</td>
+    <td align="center" style="background-color: #32ac41;">63</td>
+    <td align="center" style="background-color: #9eb40b;">11</td>
+    </tr>
+    <tr>
+    <td>HTML Templates</td>
+    <td align="center" style="background-color: #bc392a;">11</td>
+    <td align="center" style="background-color: #9eb40b;">16</td>
+    <td align="center" style="background-color: #32ac41;">57</td>
+    <td align="center" style="background-color: #32ac41;">63</td>
+    <td align="center" style="background-color: #32ac41;">11</td>
+    </tr></tbody>
+    </table>
+    <table style="zoom:0.6; margin-bottom: 60px">
+    <tbody>
+    <tr>
+    <td align="center" style="background-color: #32ac41;">Supported</td>
+    <td align="center" style="background-color: #9eb40b;">Partial Support</td>
+    <td align="center" style="background-color: #bc392a;">Not Supported</td>
+    </tr>
+    </tbody>
+    </table>
     </ul>
     <aside class="notes">
         <b></b>
@@ -449,56 +481,56 @@ document.body.appendChild($clone);
 
 <section>
     <h3>Polyfill support</h3>
-    <table style="zoom:0.6; margin-bottom: 60px">
+    <p>github.com/webcomponents/webcomponentsjs</p>
+    <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
     <thead>
     <tr>
-    <th>Polyfill</th>
-    <th align="center">IE11+</th>
-    <th align="center">Chrome</th>
+    <th></th>
+    <th align="center">IE11</th>
+    <th align="center">Edge</th>
     <th align="center">Firefox</th>
+    <th align="center">Chrome</th>
     <th align="center">Safari 9+</th>
-    <th align="center">Chrome Android</th>
-    <th align="center">Mobile Safari</th>
     </tr>
     </thead>
     <tbody>
     <tr>
     <td>Custom Elements</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
     <tr>
-    <td>HTML Imports</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
+    <td>Shadow DOM</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
     <tr>
-    <td>Shady CSS/DOM</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
-    <td align="center">✓</td>
+    <td>HTML Templates</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
+    <td align="center" style="background-color: #32ac41;">✓</td>
     </tr></tbody>
     </table>
-    https://github.com/webcomponents/webcomponentsjs
+<div class="fragment">
+    <h4>Only load what's needed on the platform</h4>
 
 <pre style="font-size: 55%"><code class="html" data-trim>
+<script src="./webcomponents-loader.js"></script>
 <script>
   window.addEventListener('WebComponentsReady', function() {
-    // At this point we are guaranteed that all required polyfills have loaded
+    // All required polyfills have loaded
   });
 </script>
 </code></pre>
+</div>
     <aside class="notes">
         <b>Alternatively, this repo also comes with webcomponents-loader.js, a client-side loader that dynamically loads the minimum polyfill bundle, using feature detection.</b>
     </aside>
@@ -528,20 +560,20 @@ export class AppModule { }
 </section>
 
 <section>
-    <h3>Pros of Web Components</h3>
+    <h3>Why use Web Components</h3>
     <ol>
-        <li class="fragment">Extend existing elements</li>
+        <li class="fragment">Reusable components</li>
         <li class="fragment">Style encapsulation</li>
         <li class="fragment">No dependencies #useThePlatform</li>
-        <li class="fragment">Run with any modern Framework</li>
+        <li class="fragment">Framework Agnostic</li>
         <li class="fragment">Works in all major browsers (with polyfills)</li>
     </ol>
-    <h3 class="fragment" style="margin: 20px 0">Cons</h3>
+    <!-- <h3 class="fragment" style="margin: 20px 0">Cons</h3>
     <ol>
         <li class="fragment">Manual DOM manipulation</li>
         <li class="fragment">Manual event listeners</li>
         <li class="fragment">Manual transpiling to ES5 (babel)</li>
-    </ol>
+    </ol> -->
     <aside class="notes">
         <b></b>
     </aside>

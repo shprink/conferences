@@ -39,7 +39,7 @@
 </section>
 
 <section>
-    <h2>We need a <span style="color: #5c8dfc">universal</span> way to create <span style="color: #5c8dfc">reusable components</span> that can  <span style="color: #5c8dfc">last for a while</span></h2>
+    <h2>We need a <span style="color: var(--primary)">universal</span> way to create <span style="color: var(--primary)">reusable components</span> that can  <span style="color: var(--primary)">last for a while</span></h2>
     <aside class="notes">
         <b></b>
     </aside>

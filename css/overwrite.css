@@ -249,3 +249,7 @@ html.background-opacity-30 .slide-background.present {
 html.background-opacity-50 .slide-background.present {
     opacity: 0.5;
 }
+
+[hidden] {
+    display: inherit !important;
+} 
