@@ -87,7 +87,7 @@ input {
     width: 90%;
 }
 
-.reveal pre code{
+.reveal pre code {
     max-height: initial !important;
 }
 
@@ -218,19 +218,19 @@ code.snippet {
     padding-right: 5px
 }
 
-[h100]{
+[h100] {
     height: 100%;
 }
 
-[w100]{
+[w100] {
     width: 100%;
 }
 
-.video-opacity-50 video{
+.video-opacity-50 video {
     opacity: 0.5;
 }
 
-.video-opacity-30 video{
+.video-opacity-30 video {
     opacity: 0.3;
 }
 
@@ -252,4 +252,8 @@ html.background-opacity-50 .slide-background.present {
 
 [hidden] {
     display: inherit !important;
-} 
+}
+
+.reveal asciinema-player pre {
+    width: 99ch !important;
+}

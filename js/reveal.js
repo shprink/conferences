@@ -3262,6 +3262,9 @@
 			// Vimeo postMessage API
 			else if( /player\.vimeo\.com\//.test( iframe.getAttribute( 'src' ) ) && iframe.hasAttribute( 'data-autoplay' ) ) {
 				iframe.contentWindow.postMessage( '{"method":"play"}', '*' );
+			}// asciinema postMessage API
+ 			else if( /asciinema\.org\/api\/asciicasts\//.test( iframe.getAttribute( 'src' ) ) && iframe.hasAttribute( 'data-autoplay' ) ) {
+				iframe.contentWindow.postMessage( ['asciicast:play'], '*' );
 			}
 			// Generic postMessage API
 			else {

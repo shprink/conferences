@@ -1,0 +1,1810 @@
+{
+  "version": 1,
+  "width": 99,
+  "height": 23,
+  "duration": 28.9289,
+  "command": null,
+  "title": null,
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/bash"
+  },
+  "stdout": [
+    [
+      0.019107,
+      "\u001b[?1034h"
+    ],
+    [
+      0.000108,
+      "bash-3.2$ "
+    ],
+    [
+      0.85086,
+      "gi"
+    ],
+    [
+      3.6e-05,
+      "t clo"
+    ],
+    [
+      2.5e-05,
+      "ne "
+    ],
+    [
+      2.6e-05,
+      "ht"
+    ],
+    [
+      2.5e-05,
+      "tp"
+    ],
+    [
+      2.4e-05,
+      "s:"
+    ],
+    [
+      2.4e-05,
+      "//"
+    ],
+    [
+      3.1e-05,
+      "gi"
+    ],
+    [
+      2.4e-05,
+      "th"
+    ],
+    [
+      2.3e-05,
+      "ub"
+    ],
+    [
+      2.3e-05,
+      ".c"
+    ],
+    [
+      9.6e-05,
+      "o"
+    ],
+    [
+      2.7e-05,
+      "m/ionic"
+    ],
+    [
+      2.3e-05,
+      "-t"
+    ],
+    [
+      2.9e-05,
+      "e"
+    ],
+    [
+      3.2e-05,
+      "am"
+    ],
+    [
+      2.5e-05,
+      "/s"
+    ],
+    [
+      2.4e-05,
+      "te"
+    ],
+    [
+      2.7e-05,
+      "n"
+    ],
+    [
+      2.4e-05,
+      "ci"
+    ],
+    [
+      3.1e-05,
+      "l"
+    ],
+    [
+      2.4e-05,
+      "-a"
+    ],
+    [
+      2.6e-05,
+      "p"
+    ],
+    [
+      2.4e-05,
+      "p-"
+    ],
+    [
+      7.3e-05,
+      "star"
+    ],
+    [
+      2.8e-05,
+      "t"
+    ],
+    [
+      2.3e-05,
+      "e"
+    ],
+    [
+      2.4e-05,
+      "r"
+    ],
+    [
+      2.3e-05,
+      " m"
+    ],
+    [
+      7.9e-05,
+      "y"
+    ],
+    [
+      2.7e-05,
+      "-app"
+    ],
+    [
+      2.5e-05,
+      "\r\n"
+    ],
+    [
+      0.031675,
+      "Cloning into 'my-app'...\r\n"
+    ],
+    [
+      0.852701,
+      "remote: Counting objects: 248, done.\u001b[K\r\n"
+    ],
+    [
+      0.00047,
+      "remote: Compressing objects:  25% (1/4)   \u001b[K\rremote: Compressing objects:  50% (2/4)   \u001b[K\rremote: Compressing objects:  75% (3/4)   \u001b[K\rremote: Compressing objects: 100% (4/4)   \u001b[K\rremote: Compressing objects: 100% (4/4), done.\u001b[K\r\n"
+    ],
+    [
+      0.007599,
+      "Receiving objects:   0% (1/248)   \r"
+    ],
+    [
+      0.00031,
+      "Receiving objects:   1% (3/248)   \r"
+    ],
+    [
+      3e-05,
+      "Receiving objects:   2% (5/248)   \r"
+    ],
+    [
+      0.000209,
+      "Receiving objects:   3% (8/248)   \rReceiving objects:   4% (10/248)   \r"
+    ],
+    [
+      2.8e-05,
+      "Receiving objects:   5% (13/248)   \r"
+    ],
+    [
+      5.3e-05,
+      "Receiving objects:   6% (15/248)   \r"
+    ],
+    [
+      0.000388,
+      "Receiving objects:   7% (18/248)   \r"
+    ],
+    [
+      6.2e-05,
+      "Receiving objects:   8% (20/248)   \r"
+    ],
+    [
+      0.000165,
+      "Receiving objects:   9% (23/248)   \r"
+    ],
+    [
+      3.9e-05,
+      "Receiving objects:  10% (25/248)   \r"
+    ],
+    [
+      0.000102,
+      "Receiving objects:  11% (28/248)   \r"
+    ],
+    [
+      0.000125,
+      "Receiving objects:  12% (30/248)   \r"
+    ],
+    [
+      0.108057,
+      "Receiving objects:  13% (33/248)   \r"
+    ],
+    [
+      9.7e-05,
+      "Receiving objects:  14% (35/248)   \r"
+    ],
+    [
+      0.000383,
+      "Receiving objects:  15% (38/248)   \r"
+    ],
+    [
+      0.000182,
+      "Receiving objects:  16% (40/248)   \r"
+    ],
+    [
+      6.5e-05,
+      "Receiving objects:  17% (43/248)   \r"
+    ],
+    [
+      9.3e-05,
+      "Receiving objects:  18% (45/248)   \r"
+    ],
+    [
+      0.000261,
+      "Receiving objects:  19% (48/248)   \r"
+    ],
+    [
+      4.8e-05,
+      "Receiving objects:  20% (50/248)   \r"
+    ],
+    [
+      0.000104,
+      "Receiving objects:  21% (53/248)   \r"
+    ],
+    [
+      0.000243,
+      "Receiving objects:  22% (55/248)   \r"
+    ],
+    [
+      0.000147,
+      "Receiving objects:  23% (58/248)   \r"
+    ],
+    [
+      2.8e-05,
+      "Receiving objects:  24% (60/248)   \r"
+    ],
+    [
+      2.3e-05,
+      "Receiving objects:  25% (62/248)   \r"
+    ],
+    [
+      0.134233,
+      "Receiving objects:  26% (65/248)   \rReceiving objects:  27% (67/248)   \r"
+    ],
+    [
+      0.000229,
+      "Receiving objects:  28% (70/248)   \r"
+    ],
+    [
+      7.8e-05,
+      "Receiving objects:  29% (72/248)   \r"
+    ],
+    [
+      0.00025,
+      "Receiving objects:  30% (75/248)   \rReceiving objects:  31% (77/248)   \r"
+    ],
+    [
+      4.1e-05,
+      "Receiving objects:  32% (80/248)   \r"
+    ],
+    [
+      2.5e-05,
+      "Receiving objects:  33% (82/248)   \r"
+    ],
+    [
+      0.038466,
+      "Receiving objects:  34% (85/248)   \r"
+    ],
+    [
+      4.5e-05,
+      "Receiving objects:  35% (87/248)   \r"
+    ],
+    [
+      0.062453,
+      "Receiving objects:  36% (90/248)   \r"
+    ],
+    [
+      9.2e-05,
+      "Receiving objects:  37% (92/248)   \r"
+    ],
+    [
+      0.000156,
+      "Receiving objects:  38% (95/248)   \r"
+    ],
+    [
+      0.000224,
+      "Receiving objects:  39% (97/248)   \r"
+    ],
+    [
+      0.00011,
+      "Receiving objects:  40% (100/248)   \r"
+    ],
+    [
+      7.9e-05,
+      "Receiving objects:  41% (102/248)   \r"
+    ],
+    [
+      6.6e-05,
+      "Receiving objects:  42% (105/248)   \r"
+    ],
+    [
+      6.1e-05,
+      "Receiving objects:  43% (107/248)   \r"
+    ],
+    [
+      9.4e-05,
+      "Receiving objects:  44% (110/248)   \r"
+    ],
+    [
+      5.1e-05,
+      "Receiving objects:  45% (112/248)   \r"
+    ],
+    [
+      8.8e-05,
+      "Receiving objects:  46% (115/248)   \r"
+    ],
+    [
+      9.6e-05,
+      "Receiving objects:  47% (117/248)   \r"
+    ],
+    [
+      0.039947,
+      "Receiving objects:  48% (120/248)   \r"
+    ],
+    [
+      6.5e-05,
+      "Receiving objects:  49% (122/248)   \r"
+    ],
+    [
+      5.6e-05,
+      "Receiving objects:  50% (124/248)   \r"
+    ],
+    [
+      0.000225,
+      "Receiving objects:  51% (127/248)   \r"
+    ],
+    [
+      3.1e-05,
+      "Receiving objects:  52% (129/248)   \rReceiving objects:  53% (132/248)   \r"
+    ],
+    [
+      2.8e-05,
+      "Receiving objects:  54% (134/248)   \r"
+    ],
+    [
+      0.000118,
+      "Receiving objects:  55% (137/248)   \r"
+    ],
+    [
+      4.1e-05,
+      "Receiving objects:  56% (139/248)   \r"
+    ],
+    [
+      0.013081,
+      "Receiving objects:  57% (142/248)   \r"
+    ],
+    [
+      5.3e-05,
+      "Receiving objects:  58% (144/248)   \r"
+    ],
+    [
+      0.000225,
+      "Receiving objects:  59% (147/248)   \r"
+    ],
+    [
+      0.073873,
+      "Receiving objects:  60% (149/248)   \r"
+    ],
+    [
+      4.9e-05,
+      "Receiving objects:  61% (152/248)   \r"
+    ],
+    [
+      0.000147,
+      "Receiving objects:  62% (154/248)   \r"
+    ],
+    [
+      0.010779,
+      "Receiving objects:  63% (157/248)   \r"
+    ],
+    [
+      5e-05,
+      "Receiving objects:  64% (159/248)   \r"
+    ],
+    [
+      0.000165,
+      "Receiving objects:  65% (162/248)   \rReceiving objects:  66% (164/248)   \r"
+    ],
+    [
+      3.4e-05,
+      "Receiving objects:  67% (167/248)   \r"
+    ],
+    [
+      2.9e-05,
+      "Receiving objects:  68% (169/248)   \r"
+    ],
+    [
+      0.000133,
+      "Receiving objects:  69% (172/248)   \r"
+    ],
+    [
+      3.4e-05,
+      "Receiving objects:  70% (174/248)   \rReceiving objects:  71% (177/248)   \r"
+    ],
+    [
+      6e-05,
+      "Receiving objects:  72% (179/248)   \r"
+    ],
+    [
+      7e-05,
+      "Receiving objects:  73% (182/248)   \r"
+    ],
+    [
+      3.1e-05,
+      "Receiving objects:  74% (184/248)   \r"
+    ],
+    [
+      8.5e-05,
+      "Receiving objects:  75% (186/248)   \rReceiving objects:  76% (189/248)   \r"
+    ],
+    [
+      0.013264,
+      "Receiving objects:  77% (191/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      0.000171,
+      "Receiving objects:  78% (194/248), 156.01 KiB | 303.00 KiB/s   \rReceiving objects:  79% (196/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      7.1e-05,
+      "Receiving objects:  80% (199/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      4.8e-05,
+      "Receiving objects:  81% (201/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      8.5e-05,
+      "Receiving objects:  82% (204/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      0.000311,
+      "Receiving objects:  83% (206/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      0.013205,
+      "Receiving objects:  84% (209/248), 156.01 KiB | 303.00 KiB/s   \rReceiving objects:  85% (211/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      4.3e-05,
+      "Receiving objects:  86% (214/248), 156.01 KiB | 303.00 KiB/s   \rReceiving objects:  87% (216/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      0.000347,
+      "Receiving objects:  88% (219/248), 156.01 KiB | 303.00 KiB/s   \rReceiving objects:  89% (221/248), 156.01 KiB | 303.00 KiB/s   \rReceiving objects:  90% (224/248), 156.01 KiB | 303.00 KiB/s   \rReceiving objects:  91% (226/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      3.3e-05,
+      "Receiving objects:  92% (229/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      0.000144,
+      "Receiving objects:  93% (231/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      6.8e-05,
+      "Receiving objects:  94% (234/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      0.066105,
+      "remote: Total 248 (delta 0), reused 3 (delta 0), pack-reused 244\u001b[K\r\n"
+    ],
+    [
+      0.000621,
+      "Receiving objects:  95% (236/248), 156.01 KiB | 303.00 KiB/s   \rReceiving objects:  96% (239/248), 156.01 KiB | 303.00 KiB/s   \rReceiving objects:  97% (241/248), 156.01 KiB | 303.00 KiB/s   \rReceiving objects:  98% (244/248), 156.01 KiB | 303.00 KiB/s   \rReceiving objects:  99% (246/248), 156.01 KiB | 303.00 KiB/s   \rReceiving objects: 100% (248/248), 156.01 KiB | 303.00 KiB/s   \r"
+    ],
+    [
+      3.9e-05,
+      "Receiving objects: 100% (248/248), 183.32 KiB | 303.00 KiB/s, done.\r\n"
+    ],
+    [
+      0.000499,
+      "Resolving deltas:   0% (0/122)   \r"
+    ],
+    [
+      0.000487,
+      "Resolving deltas:   1% (2/122)   \r"
+    ],
+    [
+      0.000545,
+      "Resolving deltas:   3% (4/122)   \rResolving deltas:   6% (8/122)   \r"
+    ],
+    [
+      0.000812,
+      "Resolving deltas:  15% (19/122)   \r"
+    ],
+    [
+      3.8e-05,
+      "Resolving deltas:  19% (24/122)   \r"
+    ],
+    [
+      0.000325,
+      "Resolving deltas:  20% (25/122)   \rResolving deltas:  21% (26/122)   \rResolving deltas:  22% (27/122)   \r"
+    ],
+    [
+      0.000205,
+      "Resolving deltas:  23% (29/122)   \r"
+    ],
+    [
+      3e-05,
+      "Resolving deltas:  24% (30/122)   \r"
+    ],
+    [
+      0.000321,
+      "Resolving deltas:  27% (34/122)   \rResolving deltas:  30% (37/122)   \rResolving deltas:  31% (38/122)   \r"
+    ],
+    [
+      0.000201,
+      "Resolving deltas:  33% (41/122)   \r"
+    ],
+    [
+      0.000834,
+      "Resolving deltas:  37% (46/122)   \rResolving deltas:  38% (47/122)   \r"
+    ],
+    [
+      0.000737,
+      "Resolving deltas:  40% (49/122)   \rResolving deltas:  45% (55/122)   \rResolving deltas:  46% (57/122)   \r"
+    ],
+    [
+      0.0006,
+      "Resolving deltas:  59% (73/122)   \r"
+    ],
+    [
+      0.000541,
+      "Resolving deltas:  63% (78/122)   \rResolving deltas:  64% (79/122)   \rResolving deltas:  65% (80/122)   \rResolving deltas:  66% (81/122)   \rResolving deltas:  67% (82/122)   \r"
+    ],
+    [
+      3.8e-05,
+      "Resolving deltas:  68% (83/122)   \r"
+    ],
+    [
+      0.000263,
+      "Resolving deltas:  74% (91/122)   \rResolving deltas:  76% (93/122)   \r"
+    ],
+    [
+      0.000265,
+      "Resolving deltas:  83% (102/122)   \r"
+    ],
+    [
+      0.008175,
+      "Resolving deltas: 100% (122/122)   \r"
+    ],
+    [
+      9.7e-05,
+      "Resolving deltas: 100% (122/122), done.\r\n"
+    ],
+    [
+      0.031355,
+      "bash-3.2$ "
+    ],
+    [
+      1.562504,
+      "c"
+    ],
+    [
+      0.063931,
+      "d"
+    ],
+    [
+      0.144528,
+      " "
+    ],
+    [
+      0.639385,
+      "m"
+    ],
+    [
+      0.248553,
+      "y-app/"
+    ],
+    [
+      0.992019,
+      "\r\n"
+    ],
+    [
+      0.000335,
+      "bash-3.2$ "
+    ],
+    [
+      1.319837,
+      "n"
+    ],
+    [
+      0.231617,
+      "p"
+    ],
+    [
+      0.079705,
+      "m"
+    ],
+    [
+      0.264164,
+      " "
+    ],
+    [
+      0.503735,
+      "i"
+    ],
+    [
+      0.064039,
+      "n"
+    ],
+    [
+      0.184209,
+      "s"
+    ],
+    [
+      0.096307,
+      "t"
+    ],
+    [
+      0.15353,
+      "a"
+    ],
+    [
+      0.213896,
+      "l"
+    ],
+    [
+      0.256562,
+      "l"
+    ],
+    [
+      0.392562,
+      "\r\n"
+    ],
+    [
+      1.071642,
+      "\u001b[?25l"
+    ],
+    [
+      0.003162,
+      "⸨\u001b[90m░░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ rollbackFailedOptional: \u001b[34;40mverb\u001b[0m \u001b[35mnpm-session\u001b[0m a1bf361ab03e85a3\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.063167,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠇ preinstall:@stencil/starter: \u001b[32minfo\u001b[0m \u001b[35mlifecycle\u001b[0m @stencil/starter@0.0.1~preinsta\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.508817,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadAllDepsIntoIdealTree\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.063882,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadAllDepsIntoIdealTree\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050527,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadAllDepsIntoIdealTree\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.054717,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadAllDepsIntoIdealTree\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050353,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadAllDepsIntoIdealTree\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052867,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadAllDepsIntoIdealTree\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050157,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadAllDepsIntoIdealTree\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051739,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadAllDepsIntoIdealTree\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.054021,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadAllDepsIntoIdealTree\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050115,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadAllDepsIntoIdealTree\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05596,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m loadAllDepsIntoIdealTree\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049736,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m tag manifest for @stencil/dev-server@latest fetc\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.054916,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠇ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m tag manifest for @stencil/dev-server@latest fetc\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050839,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠋ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m tag manifest for @stencil/core@next fetched in 6\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050486,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠋ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m tag manifest for @stencil/core@next fetched in 6\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052027,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m version manifest for node-sass@4.7.2 fetched in\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050155,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m version manifest for node-sass@4.7.2 fetched in\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050308,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠇ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for anymatch@^2.0.0 fetched in 10\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052058,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for @ionic/discover@^0.3.3 fetche\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049772,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠹ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for is-glob@^4.0.0 fetched in 134\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052178,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠏ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for is-glob@^3.1.0 fetched in 108\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049826,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠇ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for micromatch@^3.1.4 fetched in\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049906,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠧ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for escodegen@^1.9.0 fetched in 1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05038,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠴ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for escodegen@^1.9.0 fetched in 1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051814,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for workbox-cache-expiration@^3.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050831,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠋ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for workbox-cache-expiration@^3.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.053109,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠸ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for workbox-cache-expiration@^3.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049459,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for har-validator@~2.0.6 fetched\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050172,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠹ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for har-validator@~2.0.6 fetched\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.055015,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠧ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for workbox-core@^3.0.0-alpha.3 f\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050449,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for har-validator@~5.0.3 fetched\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049841,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠋ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for split-string@^3.0.2 fetched i\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049559,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for extglob@^2.0.2 fetched in 70m\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049864,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠸ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for nanomatch@^1.2.5 fetched in 7\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050634,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠏ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for extend-shallow@^3.0.0 fetched\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049678,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠋ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for use@^2.0.0 fetched in 84ms\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050458,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for cryptiles@3.x.x fetched in 92\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.04927,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠴ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for expand-brackets@^2.1.4 fetche\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050108,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠹ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for class-utils@^0.3.5 fetched in\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049851,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠏ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for class-utils@^0.3.5 fetched in\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050067,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for get-value@^2.0.6 fetched in 6\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050006,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠧ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for static-extend@^0.1.1 fetched\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050976,
+      "⸨\u001b[7m \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for object-copy@^0.1.0 fetched in\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050079,
+      "⸨\u001b[7m  \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠇ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mpacote\u001b[0m range manifest for copy-descriptor@^0.1.0 fetche\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.04982,
+      "⸨\u001b[7m  \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠋ loadDep:to-regex: \u001b[7msill\u001b[0m \u001b[35mresolveWithNewModule\u001b[0m to-regex@3.0.1 checking install\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05264,
+      "⸨\u001b[7m  \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠇ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mresolveWithNewModule\u001b[0m unset-value@1.0.0 checking install\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050582,
+      "⸨\u001b[7m  \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mresolveWithNewModule\u001b[0m isobject@2.1.0 checking installabl\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050913,
+      "⸨\u001b[7m  \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mresolveWithNewModule\u001b[0m resolve-url@0.2.1 checking install\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050523,
+      "⸨\u001b[7m  \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠋ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mresolveWithNewModule\u001b[0m kind-of@5.1.0 checking installable\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050298,
+      "⸨\u001b[7m  \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mresolveWithNewModule\u001b[0m isobject@3.0.1 checking installabl\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.053179,
+      "⸨\u001b[7m  \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ loadDep:mime-types: \u001b[7msill\u001b[0m \u001b[35mresolveWithNewModule\u001b[0m qs@6.5.1 checking installable\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05193,
+      "⸨\u001b[7m  \u001b[27m\u001b[90m░░░░░░░░░░░░░░░░\u001b[0m⸩ ⠼ loadDep:xtend: \u001b[7msill\u001b[0m \u001b[35mresolveWithNewModule\u001b[0m is-my-json-valid@2.17.1 checking i\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049183,
+      "⸨\u001b[7m   \u001b[27m\u001b[90m░░░░░░░░░░░░░░░\u001b[0m⸩ ⠦ fetchMetadata: \u001b[7msill\u001b[0m \u001b[35mresolveWithNewModule\u001b[0m jsonfile@4.0.0 checking installabl\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.354696,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ diffTrees: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m generateActionsToTake\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.058858,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ diffTrees: \u001b[7msill\u001b[0m \u001b[35minstall\u001b[0m generateActionsToTake\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.163432,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.048171,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051941,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.053275,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050191,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05016,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.054924,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.053048,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050511,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050089,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052407,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049985,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050301,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050343,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05353,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050858,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050893,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051012,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050346,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.053068,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠧ extract:jest: \u001b[34;40mverb\u001b[0m \u001b[35mlock\u001b[0m using /Users/julienrenaux/.npm/_locks/staging-e0902\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.062719,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠹ extract:kind-of: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m @stencil/router@0.0.23\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050524,
+      "⸨\u001b[7m       \u001b[27m\u001b[90m░░░░░░░░░░░\u001b[0m⸩ ⠼ extract:hoek: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m @stencil/core@0.2.3\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049924,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠏ extract:sntp: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m yargs-parser@5.0.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049812,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠴ extract:aws-sign2: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m jest-runner@21.2.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050758,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠸ extract:assert-plus: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m y18n@3.2.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049793,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠦ extract:aproba: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m jsdom@11.5.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050541,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠙ extract:boom: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m istanbul-api@1.1.14\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050327,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠦ extract:jest-runner: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m rimraf@2.6.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049854,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠙ extract:@types/node: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m glob@7.1.2\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050302,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠴ extract:glob: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m cliui@3.2.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049727,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠙ extract:worker-farm: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m workbox-cacheable-response@3.0.0-alpha.6\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05256,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠇ extract:xml-name-validator: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m optionator@0.8.2\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050271,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠸ extract:acorn: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m yargs@3.10.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049968,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠸ extract:acorn: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m punycode@2.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049971,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠇ extract:fstream: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m websocket-extensions@0.1.2\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052537,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠏ extract:npmlog: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m request@2.83.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.04791,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠴ extract:jest-cli: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m babel-plugin-istanbul@4.1.5\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051338,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠸ extract:yargs: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m read-pkg@2.0.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.053493,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠧ extract:punycode: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m stdout-stream@1.4.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051662,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠋ extract:vlq: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m snapdragon@0.8.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05161,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠏ extract:http-signature: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m is-accessor-descriptor@0.1.6\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.04968,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠴ extract:is-data-descriptor: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m set-value@0.4.3\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050084,
+      "⸨\u001b[7m        \u001b[27m\u001b[90m░░░░░░░░░░\u001b[0m⸩ ⠇ extract:uuid: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m levn@0.3.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050471,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠋ extract:workbox-build: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m whatwg-url@4.8.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052057,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠋ extract:chokidar: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m is-data-descriptor@0.1.4\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049851,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠦ extract:trim-newlines: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m is-number@3.0.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049873,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠙ extract:kind-of: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m chalk@1.1.3\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051768,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠸ extract:babel-helpers: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m string_decoder@1.0.3\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049703,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠼ extract:hoek: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m kind-of@5.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050591,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠴ extract:ansi-regex: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m extend-shallow@3.0.2\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050349,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠸ extract:string-template: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m kind-of@3.2.2\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049194,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠧ extract:spdx-expression-parse: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m jest-environment-node@21.2.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050996,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠧ extract:kind-of: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m shebang-command@1.2.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049304,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠸ extract:assert-plus: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m sax@1.2.4\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05029,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠋ extract:set-immediate-shim: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m repeating@2.0.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05049,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠴ extract:is-accessor-descriptor: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m center-align@0.1.3\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049598,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠙ extract:isobject: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m regex-not@1.0.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050531,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠧ extract:expand-range: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m regenerator-runtime@0.11.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052261,
+      "⸨\u001b[7m         \u001b[27m\u001b[90m░░░░░░░░░\u001b[0m⸩ ⠹ extract:expect: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m jest-snapshot@21.2.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050028,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠴ extract:string_decoder: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m pinkie-promise@2.0.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.054001,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠙ extract:hawk: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m path-to-regexp@1.7.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.04982,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠼ extract:source-map: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m parse-glob@3.0.4\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051002,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠹ extract:load-json-file: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m p-cancelable@0.3.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049452,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠸ extract:prelude-ls: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m isobject@3.0.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050549,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠇ extract:os-homedir: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m is-fullwidth-code-point@1.0.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050611,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠋ extract:performance-now: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m array-unique@0.3.2\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050251,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠹ extract:fb-watchman: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m mem@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051925,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠧ extract:mem: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m loose-envify@1.3.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.061298,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠼ extract:minimist: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m lazy-cache@1.0.4\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.04149,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠋ extract:natural-compare: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m jsesc@1.3.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050492,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠙ extract:debug: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m strip-bom@3.0.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050064,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠦ extract:jsonify: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m pify@2.3.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050173,
+      "⸨\u001b[7m          \u001b[27m\u001b[90m░░░░░░░░\u001b[0m⸩ ⠋ extract:supports-color: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m ansi-styles@3.2.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052882,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠦ extract:json-schema-traverse: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m string-width@2.1.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.053003,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠏ extract:left-pad: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m jest-mock@21.2.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050832,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠹ extract:pify: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m jest-docblock@21.2.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05041,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠏ extract:pify: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m source-map@0.5.7\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052711,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠼ extract:chalk: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m is-property@1.0.2\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050152,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠧ extract:chalk: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m extend-shallow@2.0.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049843,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠼ extract:is-property: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m is-accessor-descriptor@0.1.6\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050098,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠙ extract:has-flag: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m kind-of@6.0.2\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050654,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠦ extract:kind-of: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m imurmurhash@0.1.4\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050949,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠹ extract:is-accessor-descriptor: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m camelcase@1.2.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050928,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠧ extract:has-unicode: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m for-own@0.1.5\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.054956,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠴ extract:hoek: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m extsprintf@1.3.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050564,
+      "⸨\u001b[7m           \u001b[27m\u001b[90m░░░░░░░\u001b[0m⸩ ⠼ extract:async: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m combined-stream@1.0.5\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05245,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠸ extract:combined-stream: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m component-emitter@1.2.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052144,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ extract:is-arrayish: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m bytes@1.0.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050407,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ extract:color-convert: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m babel-plugin-syntax-object-rest-spread@\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051444,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠼ extract:browser-resolve: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-union@3.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050354,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:core-util-is: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050603,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:asn1: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05061,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:babylon: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049952,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:aws4: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050106,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:source-map: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049896,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:resolve: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050578,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:jsdom: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050175,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:jsdom: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051595,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:jsdom: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049046,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:jsdom: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050653,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:jsdom: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049747,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:cssstyle: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050115,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:cssstyle: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050054,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:cssstyle: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050195,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:cssstyle: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050248,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:cssstyle: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050832,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:cssstyle: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050528,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:cssstyle: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.054143,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:lodash: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050942,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:lodash: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051937,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:lodash: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.04985,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:lodash: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049756,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:lodash: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051461,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:lodash: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051353,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:lodash: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050722,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:lodash: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.054314,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:core-js: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052827,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:core-js: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.053237,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:core-js: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05444,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:core-js: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050262,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:core-js: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049436,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ extract:typescript: \u001b[7msill\u001b[0m \u001b[35mextract\u001b[0m arr-flatten@1.1.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.066934,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ finalize:jest: \u001b[7msill\u001b[0m \u001b[35mdoSerial\u001b[0m finalize 6742\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049996,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ finalize:nwmatcher: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050059,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ finalize:binary-extensions: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049697,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ finalize:esutils: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/no\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050388,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ finalize:assert-plus: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-ap\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049707,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠼ finalize:qs: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/node_mo\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050113,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ finalize:generate-function: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050975,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠸ finalize:has-ansi: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/n\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051043,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠇ finalize:hoek: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/node_\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050496,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠇ finalize:is-data-descriptor: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stenci\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050568,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠹ finalize:has-values: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050034,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ finalize:supports-color: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.04999,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠼ finalize:supports-color: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049689,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠇ finalize:lcid: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/node_\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050124,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ finalize:debug: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/node\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050812,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ finalize:define-property: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/m\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049605,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠼ finalize:path-key: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/n\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049479,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ finalize:private: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/no\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050292,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠼ finalize:request-promise-core: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/sten\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049848,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ finalize:snapdragon-node: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/m\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050136,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ finalize:is-data-descriptor: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stenci\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050037,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠹ finalize:to-object-path: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.0498,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠏ finalize:bcrypt-pbkdf: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-a\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051435,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠏ finalize:use: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/node_m\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049962,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠼ finalize:request: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/no\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049817,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠼ finalize:wrap-ansi: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049931,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠸ finalize:os-locale: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/my-app/\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.094309,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:jest: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049685,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:jest: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.073925,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:jest: \u001b[7msill\u001b[0m \u001b[35mfinalize\u001b[0m /Users/julienrenaux/Sites/stencil/\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051818,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠸ refresh-package-json:esprima: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrenaux\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052805,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:source-map: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienren\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.056358,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:source-map: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienren\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052497,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ refresh-package-json:rimraf: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrenaux/\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052677,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:har-validator: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julien\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051533,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:har-validator: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julien\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050307,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠏ refresh-package-json:wrap-ansi: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrena\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.06285,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ refresh-package-json:rollup-plugin-commonjs: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Use\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.060408,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:http-signature: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julie\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049308,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠇ refresh-package-json:read-pkg-up: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienre\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.054028,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠧ refresh-package-json:snapdragon: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienren\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050573,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ refresh-package-json:kind-of: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrenaux\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.04925,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:isobject: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrenau\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050221,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ refresh-package-json:jest-changed-files: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/j\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049469,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:symbol-tree: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienre\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.056404,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠼ refresh-package-json:ansi-regex: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienren\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051776,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ refresh-package-json:source-map: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienren\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050924,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ refresh-package-json:jest-message-util: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/ju\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05463,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠧ refresh-package-json:estree-walker: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julien\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05235,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:repeat-element: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julie\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050096,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ refresh-package-json:string_decoder: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julie\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.057656,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ refresh-package-json:path-is-absolute: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/jul\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052487,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ refresh-package-json:parse-json: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienren\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052111,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:object-visit: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienr\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.05134,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠏ refresh-package-json:@ionic/discover: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/juli\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051094,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ refresh-package-json:nan: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrenaux/Sit\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050445,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠇ refresh-package-json:invariant: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrena\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.054399,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ refresh-package-json:kind-of: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrenaux\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.143311,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠏ refresh-package-json:json-stringify-safe: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.005511,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠏ refresh-package-json:json-stringify-safe: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.046161,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ refresh-package-json:strip-ansi: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienren\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050623,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:strip-ansi: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienren\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050704,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠦ refresh-package-json:ansi-styles: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienre\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051771,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠼ refresh-package-json:isemail: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrenaux\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049924,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠇ refresh-package-json:is-equal-shallow: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/jul\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050292,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠏ refresh-package-json:is-extglob: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienren\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.057479,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ refresh-package-json:is-descriptor: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julien\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052381,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠹ refresh-package-json:hosted-git-info: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/juli\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049701,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠹ refresh-package-json:jsonfile: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrenau\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.051655,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ refresh-package-json:sshpk: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrenaux/S\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052905,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠼ refresh-package-json:signal-exit: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienre\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.04923,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠏ refresh-package-json:jsbn: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrenaux/Si\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.054063,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ refresh-package-json:har-schema: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienren\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.055072,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠇ refresh-package-json:fast-deep-equal: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/juli\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.048781,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ refresh-package-json:combined-stream: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/juli\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.053067,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠋ refresh-package-json:core-util-is: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienr\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.050268,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠹ refresh-package-json:isobject: \u001b[7msill\u001b[0m \u001b[35mrefresh-package-json\u001b[0m /Users/julienrenau\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.23604,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠴ preinstall:arr-flatten: \u001b[32minfo\u001b[0m \u001b[35mlifecycle\u001b[0m arr-flatten@1.1.0~preinstall: arr-fl\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.061737,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠹ build:jest: \u001b[7msill\u001b[0m \u001b[35mdoSerial\u001b[0m build 6742\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.055246,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠼ build:escape-string-regexp: \u001b[34;40mverb\u001b[0m \u001b[35mlinkMans\u001b[0m escape-string-regexp@1.0.5\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049306,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠏ build:imurmurhash: \u001b[34;40mverb\u001b[0m \u001b[35mlinkMans\u001b[0m imurmurhash@0.1.4\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.049808,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠧ build:fb-watchman: \u001b[34;40mverb\u001b[0m \u001b[35mlinkMans\u001b[0m fb-watchman@2.0.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.052592,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠧ build:bcrypt-pbkdf: \u001b[34;40mverb\u001b[0m \u001b[35mlinkMans\u001b[0m bcrypt-pbkdf@1.0.1\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.04939,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠏ build:istanbul-lib-source-maps: \u001b[34;40mverb\u001b[0m \u001b[35mlinkMans\u001b[0m istanbul-lib-source-maps@1.2.\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.123814,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠹ install:nan: \u001b[32minfo\u001b[0m \u001b[35mlifecycle\u001b[0m nan@2.7.0~install: nan@2.7.0\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.003989,
+      "\r\u001b[K\u001b[?25h"
+    ],
+    [
+      0.005916,
+      "\r\n> fsevents@1.1.2 install /Users/julienrenaux/Sites/stencil/my-app/node_modules/fsevents\r\n> node install\r\n\r\n"
+    ],
+    [
+      1.060359,
+      "[fsevents] Success: \"/Users/julienrenaux/Sites/stencil/my-app/node_modules/fsevents/lib/binding/Release/node-v57-darwin-x64/fse.node\" already installed\r\n"
+    ],
+    [
+      0.001408,
+      "Pass --update-binary to reinstall or --build-from-source to recompile\r\n"
+    ],
+    [
+      0.071134,
+      "\u001b[?25l"
+    ],
+    [
+      0.000433,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠙ install:sass-graph: \u001b[32minfo\u001b[0m \u001b[35mlifecycle\u001b[0m sass-graph@2.2.4~install: sass-graph@2.2\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.001359,
+      "\r\u001b[K\u001b[?25h"
+    ],
+    [
+      0.000244,
+      "\r\n> node-sass@4.7.2 install /Users/julienrenaux/Sites/stencil/my-app/node_modules/@stencil/core/node_modules/node-sass\r\n> node scripts/install.js\r\n\r\n"
+    ],
+    [
+      0.595123,
+      "Cached binary found at /Users/julienrenaux/.npm/node-sass/4.7.2/darwin-x64-57_binding.node\r\n"
+    ],
+    [
+      0.17873,
+      "\u001b[?25l"
+    ],
+    [
+      0.00044,
+      "⸨\u001b[7m            \u001b[27m\u001b[90m░░░░░░\u001b[0m⸩ ⠏ postinstall:sass-graph: \u001b[32minfo\u001b[0m \u001b[35mlifecycle\u001b[0m sass-graph@2.2.4~postinstall: sass-g\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.001158,
+      "\r\u001b[K\u001b[?25h"
+    ],
+    [
+      0.000197,
+      "\r\n> node-sass@4.7.2 postinstall /Users/julienrenaux/Sites/stencil/my-app/node_modules/@stencil/core/node_modules/node-sass\r\n> node scripts/build.js\r\n\r\n"
+    ],
+    [
+      0.551551,
+      "Binary found at /Users/julienrenaux/Sites/stencil/my-app/node_modules/@stencil/core/node_modules/node-sass/vendor/darwin-x64-57/binding.node\r\n"
+    ],
+    [
+      0.0009,
+      "Testing binary\r\n"
+    ],
+    [
+      0.027344,
+      "Binary is fine\r\n"
+    ],
+    [
+      0.611668,
+      "\u001b[?25l"
+    ],
+    [
+      0.000395,
+      "⸨\u001b[7m             \u001b[27m\u001b[90m░░░░░\u001b[0m⸩ ⠙ prepare:@stencil/starter: \u001b[32minfo\u001b[0m \u001b[35mlifecycle\u001b[0m @stencil/starter@0.0.1~prepare: @s\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.081195,
+      "⸨\u001b[7m             \u001b[27m\u001b[90m░░░░░\u001b[0m⸩ ⠴ prepare:@stencil/starter: \u001b[32minfo\u001b[0m \u001b[35mlifecycle\u001b[0m @stencil/starter@0.0.1~prepare: @s\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.048917,
+      "⸨\u001b[7m             \u001b[27m\u001b[90m░░░░░\u001b[0m⸩ ⠴ prepare:@stencil/starter: \u001b[32minfo\u001b[0m \u001b[35mlifecycle\u001b[0m @stencil/starter@0.0.1~prepare: @s\u001b[0m\u001b[K\r"
+    ],
+    [
+      0.013255,
+      "\r\u001b[K\u001b[?25h"
+    ],
+    [
+      3e-05,
+      "added 871 packages in 18.023s\r\n"
+    ],
+    [
+      0.031577,
+      "bash-3.2$ "
+    ]
+  ]
+}

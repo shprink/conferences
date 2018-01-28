@@ -10,26 +10,47 @@ Reveal.initialize({
     transition: 'slide', // none/fade/slide/convex/concave/zoom
     backgroundTransition: 'fade',
 
+    chart: {
+        defaults: {
+            global: {
+                title: { fontColor: "#FFF" },
+                legend: {
+                    labels: { fontColor: "#FFF" },
+                },
+            },
+            scale: {
+                scaleLabel: { fontColor: "#FFF" },
+                gridLines: { color: "#FFF", zeroLineColor: "#FFF" },
+                ticks: { fontColor: "#FFF" },
+            }
+        },
+        line: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"], "borderDash": [[5, 10], [0, 0]] },
+        bar: { backgroundColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+        horizontalBar: { backgroundColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+        pie: { backgroundColor: [["rgba(0,0,0,.8)", "rgba(220,20,20,.8)", "rgba(20,220,20,.8)", "rgba(220,220,20,.8)", "rgba(20,20,220,.8)"]] },
+        radar: { borderColor: ["rgba(20,220,220,.8)", "rgba(220,120,120,.8)", "rgba(20,120,220,.8)"] },
+    },
+
     // Optional reveal.js plugins
     dependencies: [{
         src: '../../lib/js/classList.js',
-        condition: function() {
+        condition: function () {
             return !document.body.classList;
         }
     }, {
         src: '../../plugin/markdown/marked.js',
-        condition: function() {
+        condition: function () {
             return !!document.querySelector('[data-markdown]');
         }
     }, {
         src: '../../plugin/markdown/markdown.js',
-        condition: function() {
+        condition: function () {
             return !!document.querySelector('[data-markdown]');
         }
     }, {
         src: '../../plugin/highlight/highlight.js',
         async: false,
-        callback: function() {
+        callback: function () {
             // hljs.initHighlightingOnLoad();
         }
     }, {
@@ -38,17 +59,22 @@ Reveal.initialize({
     }, {
         src: '../../plugin/notes/notes.js',
         async: true
-    },{
-      src: '../../plugin/reveal-code-focus/reveal-code-focus.js',
-      async: true,
-      callback: function() {
-        RevealCodeFocus();
-      }
-    }]
+    }, {
+        src: '../../plugin/asciinema-player.js',
+        async: true
+    }, {
+        src: '../../plugin/reveal-code-focus/reveal-code-focus.js',
+        async: true,
+        callback: function () {
+            RevealCodeFocus();
+        }
+    },
+    { src: '../../plugin/reveal.js-plugins-master/chart/Chart.min.js' },
+    { src: '../../plugin/reveal.js-plugins-master/chart/csv2chart.js' },]
 });
 
 // https://gist.github.com/geek1011/1841acca111b7dbb3cd902497f255ba0
-window.printRevealNotes = function() {
+window.printRevealNotes = function () {
     /* Open the window */
     var w = window.open('about:blank'); /* Open a blank window */
 

@@ -1,0 +1,416 @@
+<section>
+    <h2>Case study: Todo list</h2>
+    <div style="margin: 50px 0;">
+    <img src="../../img/web_component-logo.png" height="150" class="img-plain"/>
+    <img src="../../img/stencil-logo.png" height="150" class="img-plain"/>
+    <img src="../../img/polymer-logo.png" height="150" class="img-plain"/>
+    <img src="../../img/angular-logo.png" height="150" class="img-plain"/>
+    </div>
+
+    Repo: https://github.com/shprink/web-components-todo
+    Demo: https://wc-todo.firebaseapp.com
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section>
+    <img src="./img/todo.gif" class="img-plain"/>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section>
+    <h3>Lines of code (only JS)</h3>
+    <canvas data-chart="horizontalBar">
+, Native, StencilJS, Polymer, Angular Elements
+<!-- This is a comment that will be ignored -->
+Lines of code (only JS), 155, 102, 128, 89
+    <!--
+{
+    "data": {
+        "datasets": [
+            {
+                "label": "My First Dataset",
+                "data": [
+                    65,
+                    59,
+                    80,
+                    81,
+                    56,
+                    55,
+                    40
+                ],
+                "fill": false,
+                "backgroundColor": [
+                    "#ef5a25",
+                    "white",
+                    "#1b7de1",
+                    "#d8002c"
+                ],
+                "borderColor": [
+                    "#f05118",
+                    "white",
+                    "#1d4b9e",
+                    "#bb0029"
+                ],
+                "borderWidth": 1
+            }
+        ]
+    },
+    "options": {
+        "responsive": true,
+        "scales": {
+            "yAxes": [
+                {
+                    "stacked": true,
+                    "ticks": {
+                        "fontSize": 25
+                    },
+                    "gridLines": {
+                        "display": false
+                    }
+                }
+            ],
+            "xAxes": [
+                {
+                    "stacked": false,
+                    "ticks": {
+                        "beginAtZero": true
+                    },
+                    "gridLines": {
+                        "color": "rgba(255, 255, 255, 0.2)"
+                    }
+                }
+            ]
+        },
+        "legend": {
+            "display": false
+        }
+    }
+}
+    -->
+    </canvas>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section>
+    <h3>ES2015 Code size Min and Gzipped (in KB)</h3>
+    <canvas data-chart="horizontalBar">
+, Native, StencilJS, Polymer, Angular Elements
+<!-- This is a comment that will be ignored -->
+Code Size (in kb), 2.3, 8.3, 50, 258
+    <!--
+{
+    "data": {
+        "datasets": [
+            {
+                "label": "My First Dataset",
+                "data": [
+                    65,
+                    59,
+                    80,
+                    81,
+                    56,
+                    55,
+                    40
+                ],
+                "fill": false,
+                "backgroundColor": [
+                    "#ef5a25",
+                    "white",
+                    "#1b7de1",
+                    "#d8002c"
+                ],
+                "borderColor": [
+                    "#f05118",
+                    "white",
+                    "#1d4b9e",
+                    "#bb0029"
+                ],
+                "borderWidth": 1
+            }
+        ]
+    },
+    "options": {
+        "responsive": true,
+        "scales": {
+            "yAxes": [
+                {
+                    "stacked": true,
+                    "ticks": {
+                        "fontSize": 25
+                    },
+                    "gridLines": {
+                        "display": false
+                    }
+                }
+            ],
+            "xAxes": [
+                {
+                    "stacked": false,
+                    "ticks": {
+                        "beginAtZero": true
+                    },
+                    "gridLines": {
+                        "color": "rgba(255, 255, 255, 0.2)"
+                    }
+                }
+            ]
+        },
+        "legend": {
+            "display": false
+        }
+    }
+}
+    -->
+    </canvas>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section>
+    <h3>Lighthouse Performance</h3>
+    <div layout="row" layout-align="center center">
+        <div flex="25" style="position: relative;">
+            <canvas data-chart="doughnut">
+            ,
+            Performance, 99, 1
+            <!--
+            {
+            "data": {
+                "datasets": [
+                    {
+                        "label": "My First Dataset",
+                        "data": [
+                            99
+                        ],
+                        "fill": false,
+                        "backgroundColor": [
+                            "#44b164",
+                            "#222"
+                        ],
+                        "borderColor": [
+                            "#44b164",
+                            "#222"
+                        ],
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "display": false
+                }
+            }
+            }
+            -->
+            </canvas>
+            <span style="position: absolute; top: 35px; left: 0; right: 0;">99</span>
+            <h4>Native</h4>
+        </div>
+        <div flex="25" style="position: relative;">
+            <canvas data-chart="doughnut">
+            ,
+            Performance, 99, 1
+            <!--
+            {
+            "data": {
+                "datasets": [
+                    {
+                        "label": "My First Dataset",
+                        "data": [
+                            99
+                        ],
+                        "fill": false,
+                        "backgroundColor": [
+                            "#44b164",
+                            "#222"
+                        ],
+                        "borderColor": [
+                            "#44b164",
+                            "#222"
+                        ],
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "display": false
+                }
+            }
+            }
+            -->
+            </canvas>
+            <span style="position: absolute; top: 35px; left: 0; right: 0;">99</span>
+            <h4>StencilJS</h4>
+        </div>
+        <div flex="25" style="position: relative;">
+            <canvas data-chart="doughnut">
+            ,
+            Performance, 99, 1
+            <!--
+            {
+            "data": {
+                "datasets": [
+                    {
+                        "label": "My First Dataset",
+                        "data": [
+                            99
+                        ],
+                        "fill": false,
+                        "backgroundColor": [
+                            "#44b164",
+                            "#222"
+                        ],
+                        "borderColor": [
+                            "#44b164",
+                            "#222"
+                        ],
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "display": false
+                }
+            }
+            }
+            -->
+            </canvas>
+            <span style="position: absolute; top: 35px; left: 0; right: 0;">83</span>
+            <h4>Polymer</h4>
+        </div>
+        <div flex="25" style="position: relative;">
+            <canvas data-chart="doughnut">
+            ,
+            Performance, 83, 17
+            <!--
+            {
+            "data": {
+                "datasets": [
+                    {
+                        "label": "My First Dataset",
+                        "fill": false,
+                        "backgroundColor": [
+                            "#44b164",
+                            "#222"
+                        ],
+                        "borderColor": [
+                            "#44b164",
+                            "#222"
+                        ],
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "display": false
+                }
+            }
+            }
+            -->
+            </canvas>
+            <span style="position: absolute; top: 35px; left: 0; right: 0;">83</span>
+            <h4>Angular Elements</h4>
+        </div>
+    </div>
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section>
+    <h3>First meaningful paint on Mobile 3G</h3>
+    <canvas data-chart="horizontalBar">
+, Native, StencilJS, Polymer, Angular Elements
+<!-- This is a comment that will be ignored -->
+First meaningful paint (in ms), 1400, 1250, 128, 3200
+    <!--
+{
+    "data": {
+        "datasets": [
+            {
+                "label": "My First Dataset",
+                "data": [
+                    65,
+                    59,
+                    80,
+                    81,
+                    56,
+                    55,
+                    40
+                ],
+                "fill": false,
+                "backgroundColor": [
+                    "#ef5a25",
+                    "white",
+                    "#1b7de1",
+                    "#d8002c"
+                ],
+                "borderColor": [
+                    "#f05118",
+                    "white",
+                    "#1d4b9e",
+                    "#bb0029"
+                ],
+                "borderWidth": 1
+            }
+        ]
+    },
+    "options": {
+        "responsive": true,
+        "scales": {
+            "yAxes": [
+                {
+                    "stacked": true,
+                    "ticks": {
+                        "fontSize": 25
+                    },
+                    "gridLines": {
+                        "display": false
+                    }
+                }
+            ],
+            "xAxes": [
+                {
+                    "stacked": false,
+                    "ticks": {
+                        "beginAtZero": true
+                    },
+                    "gridLines": {
+                        "color": "rgba(255, 255, 255, 0.2)"
+                    }
+                }
+            ]
+        },
+        "legend": {
+            "display": false
+        }
+    }
+}
+    -->
+    </canvas>
+    <aside class="notes">
+        <b>First meaningful paint measures when the primary content of a page is visible</b>
+    </aside>
+</section>
+
+<section>
+    <h3>First meaningful paint</h3>
+
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>

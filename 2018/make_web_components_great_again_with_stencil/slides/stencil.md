@@ -204,6 +204,14 @@
 </section>
 
 <section>
+    <img src="./img/stencil_ecosystem.jpg" width="70%" class="img-plain"/>
+        <!-- <img src="../../img/ionic-logo.png" class="img-plain" width="75%" style="margin: 0;"/> -->
+    <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section>
     <h3>Getting started</h3>
 <h4 style="text-align: left;">Clone and Install the starter kit</h4>
 <pre style="font-size: 65%"><code class="shell" data-trim>
@@ -223,6 +231,13 @@ npm test
     </aside>
 </section>
 
+<section class="strech">
+    <h3>Getting started</h3>
+    <asciinema-player data-autoplay theme="brightnucleus" src="./asciinema/get_started.json" cols="99" rows="23"></asciinema-player>
+    <aside class="notes">
+    </aside>
+</section>
+
 
 <section>
     <h3>Why use StencilJS</h3>
@@ -234,12 +249,6 @@ npm test
         <li><span style="color: var(--blue)">Faster time to first meaningful paint</span> (Prerendering)</li>
         <li><span style="color: var(--blue)">Better SEO</span> (Prerendering)</li>
     </ol>
-    <!-- <h3 class="fragment" style="margin: 20px 0">Cons</h3>
-    <ol>
-        <li class="fragment">Manual DOM manipulation</li>
-        <li class="fragment">Manual event listeners</li>
-        <li class="fragment">Manual transpiling to ES5 (babel)</li>
-    </ol> -->
     <aside class="notes">
         <b></b>
     </aside>
