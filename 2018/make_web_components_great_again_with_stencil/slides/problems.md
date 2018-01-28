@@ -1,6 +1,5 @@
 <section data-transition="none">
     <h2>We are facing two major problems</h2>
-    <img src="./img/commitstrip/commitstrip.png" class="img-plain"/>
     <aside class="notes">
         <b>As front end developers we are facing two major problems</b>
     </aside>
