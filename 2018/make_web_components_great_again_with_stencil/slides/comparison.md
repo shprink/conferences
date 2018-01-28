@@ -102,7 +102,7 @@ Lines of code (only JS), 155, 102, 128, 89
     <canvas data-chart="horizontalBar">
 , Native, StencilJS, Polymer, Angular Elements
 <!-- This is a comment that will be ignored -->
-Code Size (in kb), 2.3, 8.3, 50, 258
+Code Size (in kb), 2.3, 8.3, 126, 258
     <!--
 {
     "data": {
@@ -255,7 +255,7 @@ Code Size (in kb), 2.3, 8.3, 50, 258
         <div flex="25" style="position: relative;">
             <canvas data-chart="doughnut">
             ,
-            Performance, 99, 1
+            Performance, 95, 5
             <!--
             {
             "data": {
@@ -267,11 +267,11 @@ Code Size (in kb), 2.3, 8.3, 50, 258
                         ],
                         "fill": false,
                         "backgroundColor": [
-                            "#44b164",
+                            "#a1a530",
                             "#222"
                         ],
                         "borderColor": [
-                            "#44b164",
+                            "#a1a530",
                             "#222"
                         ],
                         "borderWidth": 1
@@ -287,7 +287,7 @@ Code Size (in kb), 2.3, 8.3, 50, 258
             }
             -->
             </canvas>
-            <span style="position: absolute; top: 35px; left: 0; right: 0;">83</span>
+            <span style="position: absolute; top: 35px; left: 0; right: 0;">95</span>
             <h4>Polymer</h4>
         </div>
         <div flex="25" style="position: relative;">
@@ -302,11 +302,11 @@ Code Size (in kb), 2.3, 8.3, 50, 258
                         "label": "My First Dataset",
                         "fill": false,
                         "backgroundColor": [
-                            "#44b164",
+                            "#d8b93f",
                             "#222"
                         ],
                         "borderColor": [
-                            "#44b164",
+                            "#d8b93f",
                             "#222"
                         ],
                         "borderWidth": 1
@@ -336,7 +336,7 @@ Code Size (in kb), 2.3, 8.3, 50, 258
     <canvas data-chart="horizontalBar">
 , Native, StencilJS, Polymer, Angular Elements
 <!-- This is a comment that will be ignored -->
-First meaningful paint (in ms), 1400, 1250, 128, 3200
+First meaningful paint (in ms), 1400, 1250, 1970, 3200
     <!--
 {
     "data": {
@@ -408,8 +408,7 @@ First meaningful paint (in ms), 1400, 1250, 128, 3200
 </section>
 
 <section>
-    <h3>First meaningful paint</h3>
-
+    <h3>Conclusion</h3>
     <aside class="notes">
         <b></b>
     </aside>
