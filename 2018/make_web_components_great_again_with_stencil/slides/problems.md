@@ -1,17 +1,16 @@
-<section data-transition="none">
+<section>
     <h2>We are facing two major problems</h2>
     <aside class="notes">
         <b>As front end developers we are facing two major problems</b>
     </aside>
 </section>
 
-<section data-transition="none">
-    <h3>The industry is moving too fast</h3>
-    <img src="./img/commitstrip/commitstrip.png" class="img-plain"/>
+<section data-background-image="../../img/front_end_logos.png">
+    <h2 style="text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);">The industry is moving too fast</h2>
+    <!-- <img src="./img/commitstrip/commitstrip.png" class="img-plain"/> -->
     <aside class="notes">
         <b>The first problem is that the industry is evolving at a pace that is getting out of control!</b>
-        <b>READ</b>
-        <b>I am sure we all have experienced that</b>
+        <b>there are many alternatives to do the same things, and the APIs keep changing</b>
     </aside>
 </section>
 
@@ -32,8 +31,9 @@
         <!-- <img style="position: absolute; left: calc(50% - 250px);" src="./img/material/illuminati.png" class="img-plain fragment zoom-in"/> -->
     </div>
     <aside class="notes">
-        <b>The second problem is that to support our favorite frameworks, libraries, we keep creating the same code over and over again!</b>
-        <b>Imagine what we could have built if we had combined all the efforts on those libraries!</b>
+        <b>The second problem that the industry has, is that in order to support our favorite frameworks, libraries, we keep creating the same code over and over again!</b>
+        <b>Those projects are implementations of the material design spec for different frameworks.</b>
+        <b>After all it is just some buttons with a ripple effect! What's the point for all this?</b>
     </aside>
 </section>
 

@@ -22,85 +22,36 @@
 </section>
 
 <section>
-    <h3>Lines of code (only JS)</h3>
-    <canvas data-chart="horizontalBar">
-, Native, StencilJS, Polymer, Angular Elements
-<!-- This is a comment that will be ignored -->
-Lines of code (only JS), 155, 102, 128, 89
-    <!--
-{
-    "data": {
-        "datasets": [
-            {
-                "label": "My First Dataset",
-                "data": [
-                    65,
-                    59,
-                    80,
-                    81,
-                    56,
-                    55,
-                    40
-                ],
-                "fill": false,
-                "backgroundColor": [
-                    "#ef5a25",
-                    "white",
-                    "#1b7de1",
-                    "#d8002c"
-                ],
-                "borderColor": [
-                    "#f05118",
-                    "white",
-                    "#1d4b9e",
-                    "#bb0029"
-                ],
-                "borderWidth": 1
-            }
-        ]
-    },
-    "options": {
-        "responsive": true,
-        "scales": {
-            "yAxes": [
-                {
-                    "stacked": true,
-                    "ticks": {
-                        "fontSize": 25
-                    },
-                    "gridLines": {
-                        "display": false
-                    }
-                }
-            ],
-            "xAxes": [
-                {
-                    "stacked": false,
-                    "ticks": {
-                        "beginAtZero": true
-                    },
-                    "gridLines": {
-                        "color": "rgba(255, 255, 255, 0.2)"
-                    }
-                }
-            ]
-        },
-        "legend": {
-            "display": false
-        }
-    }
-}
-    -->
-    </canvas>
+    <h3>Full disclosure</h3>
+    <ul>
+         <li class="fragment">I try not be biased</li>
+         <li class="fragment">I followed the docs</li>
+         <li class="fragment">No optimizations was made</li>
+         <li class="fragment">⚠️ Angular Elements is in early stage</li>
+    </ul>
     <aside class="notes">
-        <b></b>
+        <b>Before we start I wanted to emphasize that...</b>
+        <ul>
+            <li>I am not biased: I am not payed by anyone, I tried to be as factual as possible</li>
+            <li>I followed the docs: like a normal user would do</li>
+            <li>no optimizations was made: the results that I am about to share are what you get out of the box</li>
+            <li>Angular Elements is a proof of concept right now, it is far from being optimized, be patient</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h3>Lines of code</h3>
+    <img src="./img/stencil_vs_wc.png" class="img-plain"/>
+    <aside class="notes">
+        <b>As you can see the whole industry converge to the same</b>
     </aside>
 </section>
 
 <section>
     <h3>ES2015 Code size Min and Gzipped (in KB)</h3>
     <canvas data-chart="horizontalBar">
-, Native, StencilJS, Polymer, Angular Elements
+, Native, StencilJS, Polymer 2, Angular Elements
 <!-- This is a comment that will be ignored -->
 Code Size (in kb), 2.3, 8.3, 126, 258
     <!--
@@ -288,7 +239,7 @@ Code Size (in kb), 2.3, 8.3, 126, 258
             -->
             </canvas>
             <span style="position: absolute; top: 35px; left: 0; right: 0;">95</span>
-            <h4>Polymer</h4>
+            <h4>Polymer 2</h4>
         </div>
         <div flex="25" style="position: relative;">
             <canvas data-chart="doughnut">
@@ -334,7 +285,7 @@ Code Size (in kb), 2.3, 8.3, 126, 258
 <section>
     <h3>First meaningful paint on Mobile 3G</h3>
     <canvas data-chart="horizontalBar">
-, Native, StencilJS, Polymer, Angular Elements
+, Native, StencilJS, Polymer 2, Angular Elements
 <!-- This is a comment that will be ignored -->
 First meaningful paint (in ms), 1400, 1250, 1970, 3200
     <!--

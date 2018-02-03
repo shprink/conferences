@@ -34,38 +34,64 @@
 		}
 
 		h3.header {
-			border-bottom: 1px solid #2c3e50;
+			margin-bottom: 20px;
 		}
 	</style>
 </head>
 
-<body id="page-top" class="index">
+<body id="page-top" class="index bg-dark text-white">
+	<template id="table-template">
+		<table class="table table-hover table-dark table-striped table-bordered">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Talk</th>
+					<th>Location</th>
+					<th>Event</th>
+					<!--<th>Tags</th>-->
+					<th>Photos</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</template>
 	<!-- Portfolio Grid Section -->
-	<section id="portfolio">
+	<section>
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2>Talks</h2>
-					<hr class="star-primary">
+					<h2  style="margin-bottom: 20px;">Talks</h2>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-sm-4 text-center">
-					<div class="panel panel-primary">
-						<div class="panel-heading">Talks</div>
-						<div class="panel-body big" id="talk-count"></div>
+					<div class="card bg-dark text-white">
+						<div class="card-header">
+							<h5 class="card-title" style="margin-bottom: 0;">Talks</h5>
+						</div>
+						<div class="card-body">
+							<div class="card-text big" id="talk-count"></div>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-4 text-center">
-					<div class="panel panel-primary">
-						<div class="panel-heading">Cities</div>
-						<div class="panel-body big" id="city-count"></div>
+					<div class="card bg-dark text-white">
+						<div class="card-header">
+							<h5 class="card-title" style="margin-bottom: 0;">Cities</h5>
+						</div>
+						<div class="card-body">
+							<div class="card-text big" id="city-count"></div>
+						</div>
 					</div>
 				</div>
 				<div class="col-sm-4 text-center">
-					<div class="panel panel-primary">
-						<div class="panel-heading">Countries</div>
-						<div class="panel-body big" id="country-count"></div>
+					<div class="card bg-dark text-white">
+						<div class="card-header">
+							<h5 class="card-title" style="margin-bottom: 0;">Countries</h5>
+						</div>
+						<div class="card-body">
+							<div class="card-text big" id="country-count"></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -74,20 +100,8 @@
 
 			<div class="row">
 				<!--<p class="alert alert-info">Tip: to see the talks associated notes, type "s" when browsing one.</p>-->
-				<div class="col-sm-12 portfolio-item" id="tableWrapper">
-					<table class="table table-striped">
-						<thead>
-							<tr>
-								<th>Date</th>
-								<th>Talk</th>
-								<th>Location</th>
-								<th>Event</th>
-								<!--<th>Tags</th>-->
-								<th>Photos</th>
-							</tr>
-						</thead>
-						<tbody></tbody>
-					</table>
+				<div class="col-sm-12 portfolio-item" id="tableWrapper" style="margin-top: 20px;">
+
 				</div>
 			</div>
 		</div>
@@ -327,7 +341,7 @@
 				city: 'Helsinki',
 				country: 'Finland',
 				date: '2018-03-02 11:55:00',
-				eventName: 'mgVikings 2018',
+				eventName: 'ngVikings 2018',
 				eventLink: 'https://ngvikings.org/schedule/day2?sessionId=112',
 				link: './2018/make_web_components_great_again_with_stencil',
 				tags: ['ionic', 'ionic2', 'angular2']
@@ -343,9 +357,6 @@
 			});
 
 			var countries = {}, cities = {}, uniqTalks = {}, perYear = {};
-			var tableTemplate = $('#tableWrapper').clone();
-			$('#tableWrapper').empty();
-
 			$.each(talks, function (i, talk) {
 				var talkDate = moment(talk.date);
 				var year = talkDate.format('YYYY');
@@ -364,7 +375,7 @@
 			});
 
 			function injectYearTable(year, talks) {
-				var newTemplate = tableTemplate.clone();
+				var newTemplate = $(document.importNode(document.querySelector('#table-template').content, true));
 				$.each(talks, function (i, talk) {
 					var talkTags = [];
 					$.each(talk.tags, function (i, tag) {

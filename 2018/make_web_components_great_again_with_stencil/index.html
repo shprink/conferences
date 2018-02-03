@@ -45,11 +45,11 @@
 			link.href = window.location.search.match(/print-pdf/gi) ? '../../css/print/pdf.css' : '../../css/print/paper.css';
 			document.getElementsByTagName('head')[0].appendChild(link);
 		</script>
-		<script src="./polyfills/webcomponents-loader.js"></script>
+		<!-- <script src="./polyfills/webcomponents-loader.js"></script>
 		<script src="./polyfills/document-register-element.js"></script>
 		<script src="./components/todo/todo-input.js"></script>
 		<script src="./components/todo/todo-item.js"></script>
-		<script src="./components/todo/my-todo.js"></script>
+		<script src="./components/todo/my-todo.js"></script> -->
 
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
@@ -58,21 +58,30 @@
 			.reveal pre {
 				width: 100% !important;
 			}
+			#section-title{
+				position: fixed;
+				top: 20px;
+				left: 20px;
+				font-size: 1.2em;
+			}
 			:root {
 				--blue: #5c8dfc;
+				--angular: #ff1515;
 			}
 			.fragment.visible.current-only:not(.current-fragment){
 				display: none;
 			}
+			html.custom-elements #section-title:before { content: "Custom Elements"; }
+			html.shadow-dom #section-title:before { content: "Shadow DOM"; }
+			html.html-templates #section-title:before { content: "HTML Templates"; }
 		</style>
 	</head>
 
 	<body>
-
 		<a href="../.." class="back-button">Back to talks</a>
 		<div class="reveal">
+			<div id="section-title"></div>
 			<section class="twitter" data-markdown="../../slides/twitter.md"></section>
-
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 		        <!-- <section data-markdown="../../slides/about-me.md"></section> -->

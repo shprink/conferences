@@ -2,7 +2,7 @@
     <img src="../../img/web_component-logo.png" class="img-plain"/>
     <h2>Web Components <br/>Specifications</h2>
     <aside class="notes">
-        <b></b>
+        <b>Let's talk about the Web Components specs</b>
     </aside>
 </section>
 
@@ -26,7 +26,8 @@
         </li> -->
     </ul>
     <aside class="notes">
-        <b></b>
+        <b>There are three important specs that we need to learn about today</b>
+        <b>Custom Elements, Shadow DOM and HTML Templates</b>
     </aside>
 </section>
 
@@ -41,11 +42,11 @@
         "Custom Elements is a capability for creating your own custom HTML elements with its own methods and properties"
     </blockquote>
     <aside class="notes">
-        <b></b>
+        <b>Custom Elements allow you to create your own HTML elements such as a div tag or something more elaborate like the video tag</b>
     </aside>
 </section>
 
-<section>
+<section data-state="custom-elements">
 <h3>Creating a custom element</h3>
 <pre style="font-size: 80%"><code class="js" data-trim>
 class MyComponent extends HTMLElement {
@@ -53,13 +54,19 @@ class MyComponent extends HTMLElement {
         super();
     }
 }
+</code></pre>
+<pre class="fragment" style="font-size: 80%"><code class="js" data-trim>
 window.customElements
       .define('my-component', MyComponent);
 </code></pre>
 <pre class="fragment" style="font-size: 80%"><code class="html"><my-component></my-component>
 </code></pre>
     <aside class="notes">
-        <b></b>
+        <b>Here is how to create a Web Component, all you need to do is to extends HTMLElement Class.</b>
+        <ul>
+            <li>To be able to use this Web Component we need to register it. To do this we use the custom element define method. It takes the tag name and the Class reference as arguments</li>
+            <li>Then we can insert this new component in the DOM</li>
+        </ul>
     </aside>
 </section>
 
@@ -86,62 +93,57 @@ window.customElements
     </aside>
 </section> -->
 
-<section>
-<h3>WC Lifecycle hooks</h3>
-<img src="../../img/web_component-logo.png" height="150" class="img-plain"/>
-<table style="zoom:0.85; margin-bottom: 60px"  class="table table-striped table-dark">
-    <tbody>
-        <tr>
-        <td style="font-weight: bold;">connectedCallback</td>
-        <td align="left">Called when the <span style="color: var(--primary)">element is inserted</span></td>
-        </tr>
-        <tr>
-        <td style="font-weight: bold;">disconnectedCallback</td>
-        <td align="left">Called when the <span style="color: var(--primary)">element is removed</span></td>
-        </tr>
-        <tr>
-        <td style="font-weight: bold;">attributeChangedCallback</td>
-        <td align="left">Called when an <span style="color: var(--primary)">attribute has changed</span></td>
-        </tr>
-    </tbody>
-</table>
-    <aside class="notes">
-        <b></b>
-    </aside>
-</section>
-
-<section>
+<section data-state="custom-elements">
 <h3>Lifecycle hooks</h3>
 <table style="zoom:0.85; margin-bottom: 60px"  class="table table-striped table-dark">
     <thead>
     <tr>
     <th align="center"><img src="../../img/web_component-logo.png" height="150" class="img-plain"/></th>
-    <th align="center"><img src="../../img/angular-logo.png" height="150" class="img-plain"/></th>
+    <th align="center"><img class="fragment img-plain" data-fragment-index="4" src="../../img/angular-logo.png" height="150" /></th>
+    <th align="center"></th>
     </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr class="fragment" data-fragment-index="1">
         <td align="center" style="font-weight: bold;">connectedCallback</td>
-        <td align="center" style="font-weight: bold;">ngOnInit</td>
+        <td align="center" style="font-weight: bold;">
+            <span class="fragment" data-fragment-index="4" style="color: var(--angular)">ngOnInit</span>
+        </td>
+        <td align="left" style="color: var(--light)">Element is inserted</td>
         </tr>
-        <tr>
+        <tr class="fragment" data-fragment-index="2">
         <td align="center"  style="font-weight: bold;">disconnectedCallback</td>
-        <td align="center"  style="font-weight: bold;">ngOnDestroy</td>
+        <td align="center" style="font-weight: bold;">
+            <span class="fragment" data-fragment-index="4" style="color: var(--angular)">ngOnDestroy</span>
+        </td>
+        <td align="left" style="color: var(--light)">Element is removed</td>
         </tr>
-        <tr>
+        <tr class="fragment" data-fragment-index="3">
         <td align="center"  style="font-weight: bold;">attributeChangedCallback</td>
-        <td align="center"  style="font-weight: bold;">ngOnChanges</td>
+        <td align="center" style="font-weight: bold;">
+            <span class="fragment" data-fragment-index="4" style="color: var(--angular)">ngOnChanges</span>
+        </td>
+        <td align="left" style="color: var(--light)">Attribute has changed</td>
         </tr>
     </tbody>
 </table>
     <aside class="notes">
-        <b></b>
+        <b>Web components have three lifecycle hooks</b>
+        <ul>
+            <li>connectedCallback is called when the component is inserted in the DOM</li>
+            <li>disconnectedCallback is called when it is removed from the DOM</li>
+            <li>and attributeChangedCallback is called when an attribute that we are listening to has changed</li>
+            <li>The equivalent in Angular are the following that you already know</li>
+        </ul>
     </aside>
 </section>
 
-<section>
-<h3>Attributes</h3>
-<pre style="font-size: 60%"><code class="js" data-trim>
+<section data-state="custom-elements">
+<h3>Listening to Attributes changes</h3>
+<pre style="font-size: 80%"><code class="html" data-trim>
+<my-name-is name="Julien"></my-name-is>
+</code></pre>
+<pre  class="fragment" style="font-size: 60%"><code class="js" data-trim>
 class MyNameIs extends HTMLElement {
     static get observedAttributes() {
         return ['name'];
@@ -150,14 +152,16 @@ class MyNameIs extends HTMLElement {
         this.innerHTML = \`Hello my name is ${newValue}\`
     }
 }
-
-window.customElements.define('my-name-is', MyNameIs);
 </code></pre>
-<pre class="fragment" style="font-size: 80%"><code class="html" data-trim>
-<my-name-is name="Julien"></my-name-is>
-</code></pre>
+<div class="fragment current-only" data-code-block="2" data-code-focus="2-4"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="5-7"></div>
     <aside class="notes">
-        <b></b>
+        <b>If we have a custom element that has a `name` attribute, how to we listen to changes?</b>
+        <ul>
+            <li>All you need to do is to use the observedAttributes getter which shoud return an array of attributes names.</li>
+            <li>Then using the attributeChangedCallback we can update the data in the DOM manually</li>
+        </ul>
+        <b>Here is a demo of that custom element</b>
     </aside>
 </section>
 
@@ -167,14 +171,62 @@ window.customElements.define('my-name-is', MyNameIs);
     </aside>
 </section>
 
-<section>
+<section data-state="custom-elements">
+<i style="font-size: 200px; color: yellow" class="fa fa-exclamation-triangle"></i>
 <h3>Attributes can only be strings!</h3>
     <aside class="notes">
-        <b>How to pass complex data such as arrays or ojects to our components then?</b>
+        <b>Be careful, attributes can only be strings. How do we pass complex data such as arrays or ojects to our components then?</b>
     </aside>
 </section>
 
-<section class="strech">
+<section data-state="custom-elements">
+<h3>Properties</h3>
+<pre style="font-size: 55%"><code class="js" data-trim>
+class MyTodos extends HTMLElement {
+    constructor() {
+        super();
+        this.\_list = [];
+    }
+    set list(data) {
+        this.\_list = data;
+    }
+    get list() {
+        return this.\_list;
+    }
+}
+</code></pre>
+<div class="fragment current-only" data-code-block="1" data-code-focus="4"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="6-8"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="9-11"></div>
+<div class="fragment">
+    <h4>Set</h4>
+<pre style="font-size: 55%"><code class="js" data-trim>
+document.querySelector('my-todo').list = ['first item', 'second item'];
+</code></pre>
+</div>
+<div class="fragment">
+    <h4>Get</h4>
+<pre style="font-size: 75%"><code class="js" data-trim>
+document.querySelector('my-todo').list;
+// ['first item', second item]
+</code></pre>
+</div>
+    <aside class="notes">
+        <b>To pass complexe data into a Web component we need to use properties</b>
+        <b>Let's say that we have a todo list component</b>
+        <ul>
+            <li>First thing is to initiate our list in the constructor</li>
+            <li>To set the list from the outside we can use a Setter List</li>
+            <li>To get the internal list from the outside we can use a Getter List</li>
+            <li>Then setting data is as easy as getting the element reference and use the setter list</li>
+            <li>We can do the same to get the inernal list</li>
+        </ul>
+        <b>Let's see a demo</b>
+    </aside>
+</section>
+
+<!--
+<section>
 <h3>Properties</h3>
 <pre style="font-size: 45%"><code class="js" data-trim>
 class MyTodos extends HTMLElement {
@@ -208,6 +260,7 @@ class MyTodos extends HTMLElement {
         <b></b>
     </aside>
 </section>
+-->
 
 <section data-background-video="./videos/todos.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
     <aside class="notes">
@@ -215,7 +268,7 @@ class MyTodos extends HTMLElement {
     </aside>
 </section>
 
-<section class="strech">
+<section data-state="custom-elements">
 <h3>Events</h3>
 <h4 style="text-align: left;">Dispatch</h4>
 <pre style="font-size: 50%"><code class="js" data-trim>
@@ -252,7 +305,7 @@ $myComponent.addEventListener('onSomething', e => {
     </aside>
 </section>
 
-<section>
+<section data-state="shadow-dom">
 <h3>Adding a shadowRoot</h3>
 <pre style="font-size: 50%"><code class="js" data-trim>
 class MyNameIs extends HTMLElement {
@@ -290,7 +343,7 @@ class MyNameIsShadow extends HTMLElement {
     </aside>
 </section>
 
-<section>
+<section data-state="shadow-dom">
 <h3>Adding Shadow DOM to Angular</h3>
 <pre style="font-size: 80%"><code class="js" data-trim>
 import { ViewEncapsulation } from '@angular/core';
@@ -343,7 +396,7 @@ class MyComponent {}
     </aside>
 </section>
 
-<section>
+<section data-state="html-templates">
 <h3>HTML templates</h3>
 <pre style="font-size: 75%"><code class="html" data-trim>
 <template>
@@ -367,7 +420,7 @@ document.body.appendChild($clone);
     </aside>
 </section>
 
-<section>
+<section data-state="html-templates">
 <img src="../../img/angular-logo.png" class="img-plain"/>
 <h4>We use HTML templates all the time</h4>
 <div layout="row" layout-align="center center">
@@ -482,7 +535,7 @@ document.body.appendChild($clone);
 <section>
     <h3>Polyfill support</h3>
     <p>github.com/webcomponents/webcomponentsjs</p>
-    <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
+    <table style="zoom:0.7; margin-bottom: 60px" class="table table-striped table-dark">
     <thead>
     <tr>
     <th></th>
@@ -543,16 +596,19 @@ document.body.appendChild($clone);
     <img src="../../img/angular-logo.png" class="img-plain"/>
     <span style="font-size: 80px; margin: 0px 25px;">?</span>
 </div>
-<pre class="fragment" style="font-size: 50%"><code class="typescript" data-trim>
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+<pre class="fragment" style="font-size: 75%"><code class="typescript" data-trim>
+import {
+    NgModule,
+    CUSTOM_ELEMENTS_SCHEMA,
+} from '@angular/core';
 
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
 </code></pre>
-<div class="fragment current-only" data-code-block="1" data-code-focus="1"></div>
-<div class="fragment current-only" data-code-block="1" data-code-focus="1,4"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="3"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="3,7"></div>
 
     <aside class="notes">
         <b>This tells Angular’s template compiler to allow web components and their attributes. Web Components are first-class citizens in the Angular ecosystem</b>
