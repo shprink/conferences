@@ -274,19 +274,30 @@ class MyTodos extends HTMLElement {
 <pre style="font-size: 50%"><code class="js" data-trim>
 class MyComponent extends HTMLElement {
     connectedCallback() {
-        const event = new CustomEvent('onSomething', { detail: Date.now() })
+        const event = new CustomEvent('onConnected', { detail: Date.now() })
         this.dispatchEvent(event);
     }
 }
 </code></pre>
+<div class="fragment current-only" data-code-block="1" data-code-focus="3"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="4"></div>
 <h4 style="text-align: left;">Listen</h4>
 <pre style="font-size: 75%"><code class="js" data-trim>
-$myComponent.addEventListener('onSomething', e => {
+$myComponent.addEventListener('onConnected', e => {
     console.log('Init at', e.detail)
 });
 </code></pre>
+<div class="fragment current-only" data-code-block="2" data-code-focus="1"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="2"></div>
     <aside class="notes">
         <b>To finish on custom elements, we need to learn how to dispatch events.</b>
+        <ul>
+            <li>First we need to create a custom event with a name, and detail if we want to add data to the event</li>
+            <li>Then we can dispatch this event using the internal dispatchEvent method</li>
+            <li>to get this event from outside the component we need to add an event listener to it</li>
+            <li>Then when it is triggered we can get the event detail, here the date</li>
+        </ul>
+        <b>We are done talking about custom elements, let's talk about shadow DOM</b>
     </aside>
 </section>
 
@@ -301,7 +312,7 @@ $myComponent.addEventListener('onSomething', e => {
         "Shadow DOM provides encapsulation for DOM and CSS"
     </blockquote>
     <aside class="notes">
-        <b></b>
+        <b>Shadow DOM is a ways to encapsulate your DOM and CSS so nothing leaks out of your component</b>
     </aside>
 </section>
 
@@ -331,9 +342,16 @@ class MyNameIsShadow extends HTMLElement {
     }
 }
 </code></pre>
+    <div class="fragment current-only" data-code-block="2" data-code-focus="4"></div>
     <div class="fragment current-only" data-code-block="2" data-code-focus="4,10"></div>
     <aside class="notes">
-        <b></b>
+        <b>We are going to add the shadow DOM to the component MyNameIs that we saw earlier.</b>
+        <ul>
+            <li>First we attach the shadow DOM to our component in an opened mode.</li>
+            <li>There are two modes, opened and closed. In the open mode you can access the shadow root from the outside. The shadow root is the node that encapsulates your component</li>
+            <li>Then when we refer to the dom, we need to refer to the shadow root but the rest is the same</li>
+        </ul>
+        <b>Let's see a demo</b>
     </aside>
 </section>
 
@@ -351,16 +369,16 @@ import { ViewEncapsulation } from '@angular/core';
 <table style="zoom:0.65; " class="fragment table table-striped table-dark">
     <tbody>
         <tr>
+        <td align="left"  style="font-weight: bold;">ViewEncapsulation.Emulated (default)</td>
+        <td align="left"  style="font-weight: bold;">Shadow DOM emulation</td>
+        </tr>
+        <tr class="fragment">
         <td align="left" style="font-weight: bold;">ViewEncapsulation.None</td>
         <td align="left" style="font-weight: bold;">No Shadow DOM at all</td>
         </tr>
-        <tr>
-        <td align="left"  style="font-weight: bold;">ViewEncapsulation.Emulated (default)</td>
-        <td align="left"  style="font-weight: bold;">Style encapsulation emulation</td>
-        </tr>
-        <tr>
+        <tr class="fragment">
         <td align="left"  style="font-weight: bold;">ViewEncapsulation.Native</td>
-        <td align="left"  style="font-weight: bold;">Native Shadow DOM</td>
+        <td align="left"  style="font-weight: bold;">Shadow DOM</td>
         </tr>
     </tbody>
 </table>
@@ -370,8 +388,16 @@ import { ViewEncapsulation } from '@angular/core';
 })
 class MyComponent {}
 </code></pre>
+    <div class="fragment current-only" data-code-block="2" data-code-focus="2"></div>
     <aside class="notes">
-        <b></b>
+        <b>We can add the shadow DOM to Angular components pretty easily with ViewEncapsulation</b>
+        <ul>
+            <li>ViewEncapsulation has three values, the default is Emulated. All the style that you add to your component will be prefixed by a unique ID</li>
+            <li>Then we have None, your CSS remains untouched, there is no prefix added to it</li>
+            <li>The last value is Native, native means that the shadow is enabled</li>
+            <li>To use the encapsulation that you want, we need to use the encapsulation property of the AtComponent decorator.</li>
+        </ul>
+        <b>Pretty easy right?!</b>
     </aside>
 </section>
 
@@ -388,35 +414,49 @@ class MyComponent {}
             <span>HTML templates</span>
         </li>
     </ul>
+<pre style="font-size: 75%; width: 70% !important;"><code class="html" data-trim>
+<template><!-- children --></template>
+</code></pre>
      <blockquote>
         "Give the ability to create reusable piece of HTML that can be used at runtime"
     </blockquote>
     <aside class="notes">
-        <b>the template element allow us to make </b>
+        <b>Let's talk about HTML templates now. the template tag is really powerful, it never renders children unless you ask for it</b>
     </aside>
 </section>
 
 <section data-state="html-templates">
 <h3>HTML templates</h3>
 <pre style="font-size: 75%"><code class="html" data-trim>
+<img src="path/to/your/image.png" />
+</code></pre>
+<pre class="fragment" style="font-size: 75%"><code class="html" data-trim>
 <template>
     <img src="path/to/your/image.png" />
 </template>
 </code></pre>
 <pre class="fragment" style="font-size: 65%"><code class="js" data-trim>
 // Get the template element
-const template = document.querySelector('template');
-// Clone the template content
-const $clone = document.importNode(template.content, true);
+const $template = document.querySelector('template');
+// Deep clone the template content
+const $clone = document.importNode($template.content, true);
 // Apppend it to the page
 document.body.appendChild($clone);
 &nbsp;
 </code></pre>
-<div class="fragment current-only" data-code-block="2" data-code-focus="1-2"></div>
-<div class="fragment current-only" data-code-block="2" data-code-focus="3-4"></div>
-<div class="fragment current-only" data-code-block="2" data-code-focus="5-6"></div>
+<div class="fragment current-only" data-code-block="3" data-code-focus="1-2"></div>
+<div class="fragment current-only" data-code-block="3" data-code-focus="3-4"></div>
+<div class="fragment current-only" data-code-block="3" data-code-focus="5-6"></div>
     <aside class="notes">
-        <b>If we insert this html into a page, we won't see Hello World on screen!</b>
+        <b>What is the problem with this line here? The problem is that even if your image is outside of the viewport, the browser will fetch the image anyway. It is a waste of resource.</b>
+        <ul>
+            <li>Now if we wrap the same image inside a template tag, then nothing happens. The browser will not fetch the resource.</li>
+            <li>To include the image on the page we first need to get the template node reference</li>
+            <li>Then we can clone the content of our templace</li>
+            <li>To finish we can append the clone anywhere in the page.</li>
+            <li>At this point the image will be loaded by the browser</li>
+        </ul>
+        <b></b>
     </aside>
 </section>
 
@@ -429,10 +469,10 @@ document.body.appendChild($clone);
 <p *ngIf="isActive">Hello</p>
 </code></pre>
     </div>
-    <div layout="column" flex="10" layout-align="center center">
+    <div class="fragment" data-fragment-index="2" layout="column" flex="10" layout-align="center center">
         <i class="fa fa-arrow-circle-right"></i>
     </div>
-    <div layout="column" flex="45" layout-align="center center">
+    <div class="fragment" data-fragment-index="2" layout="column" flex="45" layout-align="center center">
 <pre style="font-size: 55%"><code class="html" data-trim>
 <template [ngIf]="isActive">
   <p>Hello</p>
@@ -445,8 +485,10 @@ document.body.appendChild($clone);
 </div>
     <aside class="notes">
         <b>As Angular developers we use the template tag all the time without knowing it.</b>
-        <b>The ngIf directive here wraps the element inside a template tag so it is not rendered by the browser.</b>
-        <b>If you think about the previous image example, it is pretty handy!</b>
+        <ul>
+            <li>The ngIf directive here wraps the element inside a template tag so it is not rendered by the browser.</li>
+            <li>It is the same for *ngFor & *ngSwitch</li>
+        </ul>
     </aside>
 </section>
 
@@ -480,7 +522,7 @@ document.body.appendChild($clone);
 <section>
     <h3>Browser support</h3>
     <!-- <img src="./img/caniuse/browser_support_january_2018.png" class="img-plain fragment"/> -->
-    <table style="zoom:0.8; margin-bottom: 60px"  class="table table-striped table-dark">
+    <table style="zoom:0.8; margin-bottom: 60px" data-fragment-index="1" class="fragment table table-striped table-dark">
     <thead>
     <tr>
     <th></th>
@@ -517,7 +559,7 @@ document.body.appendChild($clone);
     <td align="center" style="background-color: #32ac41;">11</td>
     </tr></tbody>
     </table>
-    <table style="zoom:0.6; margin-bottom: 60px">
+    <table style="zoom:0.6; margin-bottom: 60px" class="fragment" data-fragment-index="1">
     <tbody>
     <tr>
     <td align="center" style="background-color: #32ac41;">Supported</td>
@@ -528,13 +570,16 @@ document.body.appendChild($clone);
     </table>
     </ul>
     <aside class="notes">
-        <b></b>
+        <b>We are now done the specs, let's talk about Browser support</b>
+        <ul>
+            <li>Basically Web components only work natively on Chrome</li>
+        </ul>
+        <b>But that's not something you should worried about. Things are now evolving really fast with the current adoption of Web components by developers and also because we have Polyfills</b>
     </aside>
 </section>
 
 <section>
     <h3>Polyfill support</h3>
-    <p>github.com/webcomponents/webcomponentsjs</p>
     <table style="zoom:0.7; margin-bottom: 60px" class="table table-striped table-dark">
     <thead>
     <tr>
@@ -574,6 +619,7 @@ document.body.appendChild($clone);
     </table>
 <div class="fragment">
     <h4>Only load what's needed on the platform</h4>
+    <p>github.com/webcomponents/webcomponentsjs</p>
 
 <pre style="font-size: 55%"><code class="html" data-trim>
 <script src="./webcomponents-loader.js"></script>
@@ -585,7 +631,10 @@ document.body.appendChild($clone);
 </code></pre>
 </div>
     <aside class="notes">
-        <b>Alternatively, this repo also comes with webcomponents-loader.js, a client-side loader that dynamically loads the minimum polyfill bundle, using feature detection.</b>
+        <b>We now have polyfills that cover all the latest browsers so your components will work everywhere.</b>
+        <ul>
+            <li>If you are worried about the polyfill size, you can use a loader that you can find on github and that only loads the required polyfill at runtime for the browser you use.</li>
+        </ul>
     </aside>
 </section>
 
@@ -607,10 +656,9 @@ import {
 })
 export class AppModule { }
 </code></pre>
-<div class="fragment current-only" data-code-block="1" data-code-focus="3"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="3,7"></div>
-
     <aside class="notes">
+        <b>Ok great, but can we use Web components in Angular?</b>
         <b>This tells Angular’s template compiler to allow web components and their attributes. Web Components are first-class citizens in the Angular ecosystem</b>
     </aside>
 </section>
