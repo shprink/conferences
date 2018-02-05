@@ -7,14 +7,32 @@
 </section>
 
 <section>
-    <h2 style="text-transform: initial;">StencilJS is <span style="color: var(--primary)">NOT ANOTHER FRAMEWORK</span></h2>
+    <h2 style="text-transform: initial;">StencilJS is <span style="color: var(--blue)">NOT ANOTHER FRAMEWORK</span></h2>
     <aside class="notes">
     </aside>
 </section>
 
 <section>
-    <h2 style="text-transform: initial;">StencilJS is <span style="color: var(--blue)">A COMPILER</span> that generates <span style="color: var(--primary)">WEB COMPONENTS</span></h2>
+    <h3>Stencil</h3>
+    <ul>
+        <li class="fragment"><span style="color: var(--blue)">Open Source</span> project</li>
+        <li class="fragment">Created by the <span style="color: var(--blue)">Ionic Team</span> in 2017</li>
+        <li class="fragment">Outputs standards compliant <span style="color: var(--blue)">Custom Elements</span></li>
+    </ul>
     <aside class="notes">
+        <b>Stencil is...</b>
+        <ol>
+            <li>Open Source</li>
+            <li>created by the Ionic team in late 2017</li>
+            <li>And it outputs Custom Elements</li>
+        </ol>
+    </aside>
+</section>
+
+<section>
+    <h2 style="text-transform: initial;">StencilJS is <span style="color: var(--blue)">A COMPILER</span> that generates <span style="color: var(--blue)">WEB COMPONENTS</span></h2>
+    <aside class="notes">
+        <b>Stencil is basically a compiler that generates Web Components</b>
     </aside>
 </section>
 
@@ -40,14 +58,7 @@
     </thead>
     <tbody>
     <tr>
-        <td>JSX</td>
-        <td align="center" style="background-color: #bc392a;">⨯</td>
-        <td align="center" style="background-color: #bc392a;">⨯</td>
-        <td align="center" style="background-color: #32ac41;">✓</td>
-        <td align="center" style="background-color: #32ac41;">✓</td>
-    </tr>
-    <tr>
-        <td>Virtual DOM</td>
+        <td>JSX / Virtual DOM</td>
         <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
@@ -68,7 +79,7 @@
         <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
     <tr>
-        <td>Decorator</td>
+        <td>Decorators</td>
         <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
         <td align="center" style="background-color: #bc392a;">⨯</td>
@@ -81,17 +92,18 @@
         <td align="center" style="background-color: #32ac41;">✓</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
-    <tr>
-        <td>Data binding</td>
-        <td align="center" style="background-color: #bc392a;">⨯</td>
-        <td align="center" style="background-color: #32ac41;">✓</td>
-        <td align="center" style="background-color: #32ac41;">✓</td>
-        <td align="center" style="background-color: #32ac41;">✓</td>
-    </tr>
     </tbody>
     </table>
     <aside class="notes">
-        <b>Out of the box using the Web components spec none of these features or tools are available</b>
+        <b>This is what you get out of the box when using Stencil</b>
+        <ol>
+            <li>Performant DOM updates with the virtual DOM</li>
+            <li>Async rendering which is new in React 16 and aims to prioritize UI updates.</li>
+            <li>Type checking with TypeScript</li>
+            <li>Decorators</li>
+            <li>Server side rendering</li>
+        </ol>
+        <b>Stencil</b>
     </aside>
 </section>
 
@@ -103,19 +115,24 @@
     <th align="center">
         <img src="../../img/angular-logo.png" width="130" class="img-plain"/>
     </th>
-    <th align="center" colspan="2">
+    <th align="center">
         <img src="../../img/stencil-logo.png" width="130" class="img-plain"/>
     </th>
+    <th align="center"></th>
     </tr>
     </thead>
     <tbody>
     <tr>
-        <td align="left">@Component</td>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--angular)">@Component</span>
+        </td>
         <td align="left">@Component</td>
         <td align="left">Decorate a class</td>
     </tr>
     <tr>
-        <td align="left">@Input</td>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--angular)">@Input</span>
+        </td>
         <td align="left">@Prop</td>
         <td align="left">Class prop as element prop</td>
     </tr>
@@ -125,24 +142,31 @@
         <td align="left">Internal data</td>
     </tr>
     <tr>
-        <td align="left">@Event</td>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--angular)">@Event</span>
+        </td>
         <td align="left">@Output</td>
         <td align="left">Custom event</td>
     </tr>
     <tr>
-        <td align="left">@HostListener</td>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--angular)">@HostListener</span>
+        </td>
         <td align="left">@Listen</td>
         <td align="left">Listen to custom events</td>
     </tr>
     <tr>
-        <td align="left">@ElementRef</td>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--angular)">@ElementRef</span>
+        </td>
         <td align="left">@Element</td>
         <td align="left">DOM ref to current component</td>
     </tr>
     </tbody>
     </table>
     <aside class="notes">
-        <b>All of those Angular decorator that you already know about have an equivalent with Stencil</b>
+        <b>All the Angular decorators that you already know about have an equivalent with Stencil</b>
+        <b>The only exception is the State decorator. State represente the internal state of the component</b>
     </aside>
 </section>
 
@@ -159,35 +183,109 @@
     </thead>
     <tbody>
     <tr>
-        <td align="left">componentWillLoad</td>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--react)">componentWillLoad</span>
+        </td>
         <td align="left">Will load but has not rendered yet</td>
     </tr>
     <tr>
-        <td align="left">componentDidLoad</td>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--react)">componentDidLoad</span>
+        </td>
         <td align="left">Loaded and has rendered</td>
     </tr>
     <tr>
-        <td align="left">componentWillUpdate</td>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--react)">componentWillUpdate</span>
+        </td>
         <td align="left">Will update and re-render</td>
     </tr>
     <tr>
-        <td align="left">componentDidUpdate</td>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--react)">componentDidUpdate</span>
+        </td>
         <td align="left">Finished updating.</td>
     </tr>
     <tr>
-        <td align="left">componentDidUnload</td>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--react)">componentDidUnload</span>
+        </td>
         <td align="left">Removed from the DOM</td>
     </tr>
     </tbody>
     </table>
     <aside class="notes">
+        <b>The stencil life cycle hooks are exactly identical to React's hooks.</b>
+    </aside>
+</section>
+
+<section>
+    <h3>Component created with Stencil</h3>
+<pre style="font-size: 85%;"><code class="typescript" data-trim>
+import { Component, Prop } from '@stencil/core';
+
+@Component({
+  tag: 'my-name-is',
+  styleUrl: 'my-name-is.scss'
+})
+export class MyNameIs {
+  @Prop() name: string;
+
+  render() {
+    return (<p>My name is {this.name}</p>);
+  }
+}
+</code></pre>
+<div class="fragment current-only" data-code-block="1" data-code-focus="3-6"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="8,10-13"></div>
+    <aside class="notes">
+        <b>Our first code example is the use of the Prop decorator</b>
+    </aside>
+</section>
+
+<section>
+    <h3>Component created with Stencil</h3>
+<pre style="font-size: 65%;"><code class="typescript" data-trim>
+@Component({
+  tag: 'counter',
+  styleUrl: 'counter.scss'
+})
+export class Counter {
+  @State() count: number = 1;
+
+  componentDidLoad() {
+    setInterval(
+      () => this.count = this.count + 1,
+    1000);
+  }
+  componentDidUnload() { // unregister interval }
+
+  render() {
+    return (
+      <p>Counter: {this.count}</p>
+    );
+  }
+}
+</code></pre>
+<div class="fragment current-only" data-code-block="1" data-code-focus="6"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="8-12"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="15-19"></div>
+    <aside class="notes">
+        <b></b>
     </aside>
 </section>
 
 <section>
     <h3>Prerendering</h3>
- 
     <aside class="notes">
+        <b></b>
+    </aside>
+</section>
+
+<section>
+    <h3>ES Modules</h3>
+    <aside class="notes">
+        <b></b>
     </aside>
 </section>
 
@@ -231,25 +329,9 @@ npm test
     </aside>
 </section>
 
-<section class="strech">
+<!-- <section class="strech">
     <h3>Getting started</h3>
     <asciinema-player data-autoplay theme="brightnucleus" src="./asciinema/get_started.json" cols="99" rows="23"></asciinema-player>
     <aside class="notes">
     </aside>
-</section>
-
-
-<section>
-    <h3>Why use StencilJS</h3>
-    <ol>
-        <li><span style="color: var(--blue)">Interoperability</span></li>
-        <li><span style="color: var(--blue)">Write less code</span> (Decorator, JSX)</li>
-        <li><span style="color: var(--blue)">Write better code</span> (Static Type-checking)</li>
-        <li><span style="color: var(--blue)">DOM manipulation performance</span> (Virtual DOM)</li>
-        <li><span style="color: var(--blue)">Faster time to first meaningful paint</span> (Prerendering)</li>
-        <li><span style="color: var(--blue)">Better SEO</span> (Prerendering)</li>
-    </ol>
-    <aside class="notes">
-        <b></b>
-    </aside>
-</section>
+</section> -->

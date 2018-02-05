@@ -10,14 +10,15 @@
     Repo: https://github.com/shprink/web-components-todo
     Demo: https://wc-todo.firebaseapp.com
     <aside class="notes">
-        <b></b>
+        <b>To finish this presentation I wanted to show you numbers. I created a project that aim to compare different libraries that export Web Components. Today we are going compare The natice implementation, with Stencil, Polymer 2 and Angular Elements</b>
+        <b>The code and the demo are available on Github</b>
     </aside>
 </section>
 
 <section>
     <img src="./img/todo.gif" class="img-plain"/>
     <aside class="notes">
-        <b></b>
+        <b>The app is a simple todo list, where you can add, remove and check items.</b>
     </aside>
 </section>
 
@@ -41,15 +42,23 @@
 </section>
 
 <section>
-    <h3>Lines of code</h3>
+    <h3>Code length</h3>
     <img src="./img/stencil_vs_wc.png" class="img-plain"/>
     <aside class="notes">
-        <b>As you can see the whole industry converge to the same</b>
+        <b>In terms of code length, what we can see is that with Stencil and Angular Elements you write less code.</b>
+        <b>Polymer is more verbose because it is not compiled and does not use decorators. Polymer 3 which is not stable yet will be simimlar to stencil and angular in termes of code length.</b>
+        <b>Why is code lenght important to me?</b>
     </aside>
 </section>
 
 <section>
-    <h3>ES2015 Code size Min and Gzipped (in KB)</h3>
+    <h2 style="text-transform: initial;">The less code you write <span style="color: var(--blue)">the less bugs you will introduce</span></h2>
+    <aside class="notes">
+    </aside>
+</section>
+
+<section>
+    <h4>Assets Dowloaded by the Browser (in KB)</h4>
     <canvas data-chart="horizontalBar">
 , Native, StencilJS, Polymer 2, Angular Elements
 <!-- This is a comment that will be ignored -->
@@ -120,7 +129,8 @@ Code Size (in kb), 2.3, 8.3, 126, 258
     -->
     </canvas>
     <aside class="notes">
-        <b></b>
+        <b>In terms of the assets size, we can see that it is hard to compete with the native implementation. Stencil however has great results. as well, the difference is the VDOM that needs to be shipped as well.</b>
+        <b>Polymer and Angular Elements are not optimized out of the box as far as I could see.</b>
     </aside>
 </section>
 
@@ -244,7 +254,7 @@ Code Size (in kb), 2.3, 8.3, 126, 258
         <div flex="25" style="position: relative;">
             <canvas data-chart="doughnut">
             ,
-            Performance, 83, 17
+            Performance, 79, 21
             <!--
             {
             "data": {
@@ -273,17 +283,17 @@ Code Size (in kb), 2.3, 8.3, 126, 258
             }
             -->
             </canvas>
-            <span style="position: absolute; top: 35px; left: 0; right: 0;">83</span>
+            <span style="position: absolute; top: 35px; left: 0; right: 0;">79</span>
             <h4>Angular Elements</h4>
         </div>
     </div>
     <aside class="notes">
-        <b></b>
+        <b>If you run lighthouse on those implementation you will see that Native and Stencil are scoring the best. Polymer and Angular are still pretty good but lower.</b>
     </aside>
 </section>
 
 <section>
-    <h3>First meaningful paint on Mobile 3G</h3>
+    <h3>First meaningful paint</h3>
     <canvas data-chart="horizontalBar">
 , Native, StencilJS, Polymer 2, Angular Elements
 <!-- This is a comment that will be ignored -->
@@ -354,12 +364,22 @@ First meaningful paint (in ms), 1400, 1250, 1970, 3200
     -->
     </canvas>
     <aside class="notes">
-        <b>First meaningful paint measures when the primary content of a page is visible</b>
+        <b>First meaningful paint measures when the primary content of a page is visible, it is not necessarily interactive yet.</b>
+        <b>What we can see is that Stencil is faster than the native implementation. How is it possible?</b>
+        <b>Stencil prerenders every of your application routes with the HTML that your are supposed to see after parsing.</b>
     </aside>
 </section>
 
 <section>
-    <h3>Conclusion</h3>
+    <h3>Why StencilJS makes Web Components great again?</h3>
+    <ol>
+        <li><span style="color: var(--blue)">Interoperability</span></li>
+        <li><span style="color: var(--blue)">Write less code</span> (Decorator, JSX)</li>
+        <li><span style="color: var(--blue)">Write better code</span> (Static Type-checking)</li>
+        <li><span style="color: var(--blue)">DOM manipulation performance</span> (Virtual DOM)</li>
+        <li><span style="color: var(--blue)">Faster time to first meaningful paint</span> (Prerendering)</li>
+        <!-- <li><span style="color: var(--blue)">Better SEO</span> (Prerendering)</li> -->
+    </ol>
     <aside class="notes">
         <b></b>
     </aside>

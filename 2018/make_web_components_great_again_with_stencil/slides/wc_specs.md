@@ -659,26 +659,43 @@ export class AppModule { }
 <div class="fragment current-only" data-code-block="1" data-code-focus="3,7"></div>
     <aside class="notes">
         <b>Ok great, but can we use Web components in Angular?</b>
-        <b>This tells Angular’s template compiler to allow web components and their attributes. Web Components are first-class citizens in the Angular ecosystem</b>
+        <ul>
+            <li>The answer is YES, with CUSTOM_ELEMENTS_SCHEMA, Web Components become first-class citizens in the Angular ecosystem.</li>
+        </ul>
     </aside>
 </section>
 
 <section>
-    <h3>Why use Web Components</h3>
+    <h3>Pros</h3>
     <ol>
-        <li class="fragment">Reusable components</li>
+        <li class="fragment">Reusable piece of code</li>
         <li class="fragment">Style encapsulation</li>
-        <li class="fragment">No dependencies #useThePlatform</li>
+        <li class="fragment">No dependencies `#useThePlatform`</li>
         <li class="fragment">Framework Agnostic</li>
-        <li class="fragment">Works in all major browsers (with polyfills)</li>
+        <li class="fragment">Works in all major browsers `(with polyfills)`</li>
     </ol>
-    <!-- <h3 class="fragment" style="margin: 20px 0">Cons</h3>
-    <ol>
-        <li class="fragment">Manual DOM manipulation</li>
-        <li class="fragment">Manual event listeners</li>
-        <li class="fragment">Manual transpiling to ES5 (babel)</li>
-    </ol> -->
     <aside class="notes">
-        <b></b>
+        <b>Let's recap why Web Components are something worth checking out</b>
+    </aside>
+</section>
+
+<section>
+    <h3>Cons</h3>
+    <ol>
+        <li class="fragment">Manual data binding `(innerHTML vs appendChild?)`</li>
+        <li class="fragment">No declarative Event Bindings `(onSomething)=""`</li>
+        <li class="fragment">Attributes and Properties difference</li>
+        <li class="fragment">Can be a bit verbose</li>
+    </ol>
+    <aside class="notes">
+        <b>Let's recap why Web Components are something worth checking out</b>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li>And Since we do a lot of things manually, the code can be a bit verbose, and we are going to see that later on.</li>
+            <li></li>
+        </ul>
+        <b>One solution to fix all of these limitations is to use StencilJS</b>
     </aside>
 </section>

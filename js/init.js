@@ -59,9 +59,9 @@ Reveal.initialize({
     }, {
         src: '../../plugin/notes/notes.js',
         async: true
-    }, {
-        src: '../../plugin/asciinema-player.js',
-        async: true
+    // }, {
+    //     src: '../../plugin/asciinema-player.js',
+    //     async: true
     }, {
         src: '../../plugin/reveal-code-focus/reveal-code-focus.js',
         async: true,
