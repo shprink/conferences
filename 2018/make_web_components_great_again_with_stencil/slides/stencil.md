@@ -9,11 +9,12 @@
 <section>
     <h2 style="text-transform: initial;">StencilJS is <span style="color: var(--blue)">NOT ANOTHER FRAMEWORK</span></h2>
     <aside class="notes">
+        <b>To make things clear before we start:</b>
     </aside>
 </section>
 
 <section>
-    <h3>Stencil</h3>
+    <h3>StencilJS</h3>
     <ul>
         <li class="fragment"><span style="color: var(--blue)">Open Source</span> project</li>
         <li class="fragment">Created by the <span style="color: var(--blue)">Ionic Team</span> in 2017</li>
@@ -97,13 +98,13 @@
     <aside class="notes">
         <b>This is what you get out of the box when using Stencil</b>
         <ol>
-            <li>Performant DOM updates with the virtual DOM</li>
-            <li>Async rendering which is new in React 16 and aims to prioritize UI updates.</li>
+            <li>JSX and virtual DOM are a matter of preferences, personally I love it</li>
+            <li>Async rendering which is new in React 16 and aims to prioritize UI updates. High priority updates are ran first, then low priority updates.</li>
             <li>Type checking with TypeScript</li>
             <li>Decorators</li>
             <li>Server side rendering</li>
         </ol>
-        <b>Stencil</b>
+        <b>As you can see Stencil kinda mixed the best features and tools of Angular and React and to me is it a perfect combo</b>
     </aside>
 </section>
 
@@ -166,7 +167,7 @@
     </table>
     <aside class="notes">
         <b>All the Angular decorators that you already know about have an equivalent with Stencil</b>
-        <b>The only exception is the State decorator. State represente the internal state of the component</b>
+        <b>The only exception is the State decorator. State represente the internal state of the component and it is inspired by React</b>
     </aside>
 </section>
 
@@ -215,7 +216,7 @@
     </tbody>
     </table>
     <aside class="notes">
-        <b>The stencil life cycle hooks are exactly identical to React's hooks.</b>
+        <b>Stencil has the exact same life cycle hooks as React.</b>
     </aside>
 </section>
 
@@ -237,9 +238,15 @@ export class MyNameIs {
 }
 </code></pre>
 <div class="fragment current-only" data-code-block="1" data-code-focus="3-6"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="8"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="8,10-13"></div>
     <aside class="notes">
-        <b>Our first code example is the use of the Prop decorator</b>
+        <b>Let's see an example of a Stencil Component</b>
+        <ul>
+            <li>First of all we decorate our Class with the At Component decorator, we give it a tag name and a styleURL exactly how you would do in Angular</li>
+            <li>Then we use the At Prop decorator to let the component know that we want to listen to the prop name changes.</li>
+            <li>To finish we need to implement the render method that return JSX. Everytime the prop name changes, the component will update by calling the render method again.</li>
+        </ul>
     </aside>
 </section>
 
@@ -258,7 +265,6 @@ export class Counter {
       () => this.count = this.count + 1,
     1000);
   }
-  componentDidUnload() { // unregister interval }
 
   render() {
     return (
@@ -269,9 +275,14 @@ export class Counter {
 </code></pre>
 <div class="fragment current-only" data-code-block="1" data-code-focus="6"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="8-12"></div>
-<div class="fragment current-only" data-code-block="1" data-code-focus="15-19"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="14-19"></div>
     <aside class="notes">
-        <b></b>
+        <b>Now another example of a counter that increments every one second. To demontrate this we need to use the State decorator</b>
+        <ul>
+            <li>First of all we declare `count` here as a state</li>
+            <li>In the componentDidLoad hook, we start the counter</li>
+            <li></li>
+        </ul>
     </aside>
 </section>
 
@@ -283,7 +294,11 @@ export class Counter {
 </section>
 
 <section>
-    <h3>ES Modules</h3>
+    <h3>Native ES Module support</h3>
+<pre style="font-size: 65%;"><code class="typescript" data-trim>
+import { MyLib } from './my-lib.js';
+</code></pre>
+    <img src="./img/es_modules.png" class="img-plain"/>
     <aside class="notes">
         <b></b>
     </aside>

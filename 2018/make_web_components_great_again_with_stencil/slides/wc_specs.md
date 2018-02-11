@@ -133,33 +133,42 @@ window.customElements
             <li>connectedCallback is called when the component is inserted in the DOM</li>
             <li>disconnectedCallback is called when it is removed from the DOM</li>
             <li>and attributeChangedCallback is called when an attribute that we are listening to has changed</li>
-            <li>The equivalent in Angular are the following that you already know</li>
+            <li>These hooks have an equivalent in Angular that you already know about</li>
         </ul>
     </aside>
 </section>
 
 <section data-state="custom-elements">
-<h3>Listening to Attributes changes</h3>
+<h4>Observing Attributes needs to be explicit</h4>
 <pre style="font-size: 80%"><code class="html" data-trim>
 <my-name-is name="Julien"></my-name-is>
 </code></pre>
-<pre  class="fragment" style="font-size: 60%"><code class="js" data-trim>
+<pre  class="fragment" style="font-size: 70%"><code class="js" data-trim>
 class MyNameIs extends HTMLElement {
-    static get observedAttributes() {
-        return ['name'];
+  static get observedAttributes() {
+    return ['name', 'another-attr'];
+  }
+  attributeChangedCallback(name, oldValue, newValue) {
+    switch (name) {
+      case 'name':
+        this.innerHTML = \`Hello my name is ${newValue}\`;
+      case 'another-attr':
+        // another-attr changed
     }
-    attributeChangedCallback(name, oldValue, newValue) {
-        this.innerHTML = \`Hello my name is ${newValue}\`
-    }
+  }
 }
 </code></pre>
 <div class="fragment current-only" data-code-block="2" data-code-focus="2-4"></div>
-<div class="fragment current-only" data-code-block="2" data-code-focus="5-7"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="5"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="7-8"></div>
     <aside class="notes">
-        <b>If we have a custom element that has a `name` attribute, how to we listen to changes?</b>
+        <b>Observing Attributes changes is not a feature that is out of the box with the native spec. It needs to be explicit.</b>
+        <b>If we have a custom element like this one. how do we listen to the `name` attribute changes?</b>
         <ul>
-            <li>All you need to do is to use the observedAttributes getter which shoud return an array of attributes names.</li>
-            <li>Then using the attributeChangedCallback we can update the data in the DOM manually</li>
+            <li>All you need to do is to use the observedAttributes getter which shoud return an array of attributes names that you want to listen to.</li>
+            <li>Everytime one of those attribute changes attributeChangedCallback will be called with the old and new value</li>
+            <li>Then we can update the DOM manually and print something out</li>
+            <li>In this case we want to print `hello my name is` then the name that is passed from the name attribute</li>
         </ul>
         <b>Here is a demo of that custom element</b>
     </aside>
@@ -184,7 +193,6 @@ class MyNameIs extends HTMLElement {
 <pre style="font-size: 55%"><code class="js" data-trim>
 class MyTodos extends HTMLElement {
     constructor() {
-        super();
         this.\_list = [];
     }
     set list(data) {
@@ -195,9 +203,9 @@ class MyTodos extends HTMLElement {
     }
 }
 </code></pre>
-<div class="fragment current-only" data-code-block="1" data-code-focus="4"></div>
-<div class="fragment current-only" data-code-block="1" data-code-focus="6-8"></div>
-<div class="fragment current-only" data-code-block="1" data-code-focus="9-11"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="3"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="5-7"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="8-10"></div>
 <div class="fragment">
     <h4>Set</h4>
 <pre style="font-size: 55%"><code class="js" data-trim>
@@ -264,18 +272,22 @@ class MyTodos extends HTMLElement {
 
 <section data-background-video="./videos/todos.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
     <aside class="notes">
-        <b></b>
+        <ul>
+            <li>set</li>
+            <li>get</li>
+            <li>reset</li>
+        </ul>
     </aside>
 </section>
 
 <section data-state="custom-elements">
 <h3>Events</h3>
 <h4 style="text-align: left;">Dispatch</h4>
-<pre style="font-size: 50%"><code class="js" data-trim>
+<pre style="font-size: 58%"><code class="js" data-trim>
 class MyComponent extends HTMLElement {
     connectedCallback() {
-        const event = new CustomEvent('onConnected', { detail: Date.now() })
-        this.dispatchEvent(event);
+        const e = new CustomEvent('onConnected', { detail: Date.now() })
+        this.dispatchEvent(e);
     }
 }
 </code></pre>
@@ -284,7 +296,7 @@ class MyComponent extends HTMLElement {
 <h4 style="text-align: left;">Listen</h4>
 <pre style="font-size: 75%"><code class="js" data-trim>
 $myComponent.addEventListener('onConnected', e => {
-    console.log('Init at', e.detail)
+    console.log('Connected at', e.detail)
 });
 </code></pre>
 <div class="fragment current-only" data-code-block="2" data-code-focus="1"></div>
@@ -292,10 +304,10 @@ $myComponent.addEventListener('onConnected', e => {
     <aside class="notes">
         <b>To finish on custom elements, we need to learn how to dispatch events.</b>
         <ul>
-            <li>First we need to create a custom event with a name, and detail if we want to add data to the event</li>
+            <li>First of all we need an event to dispatch. It could be a mouse Event, a Keyboard or a custom event. We give a name and the detail we want to export.</li>
             <li>Then we can dispatch this event using the internal dispatchEvent method</li>
             <li>to get this event from outside the component we need to add an event listener to it</li>
-            <li>Then when it is triggered we can get the event detail, here the date</li>
+            <li>Then we can react to the event and get the detail. here the date</li>
         </ul>
         <b>We are done talking about custom elements, let's talk about shadow DOM</b>
     </aside>
@@ -318,7 +330,7 @@ $myComponent.addEventListener('onConnected', e => {
 
 <section data-state="shadow-dom">
 <h3>Adding a shadowRoot</h3>
-<pre style="font-size: 50%"><code class="js" data-trim>
+<pre style="font-size: 60%"><code class="js" data-trim>
 class MyNameIs extends HTMLElement {
     static get observedAttributes() {
         return ['name'];
@@ -328,7 +340,7 @@ class MyNameIs extends HTMLElement {
     }
 }
 </code></pre>
-<pre style="font-size: 50%" class="fragment"><code class="js" data-trim>
+<pre style="font-size: 55%" class="fragment"><code class="js" data-trim>
 class MyNameIsShadow extends HTMLElement {
     constructor() {
         super();
@@ -347,8 +359,7 @@ class MyNameIsShadow extends HTMLElement {
     <aside class="notes">
         <b>We are going to add the shadow DOM to the component MyNameIs that we saw earlier.</b>
         <ul>
-            <li>First we attach the shadow DOM to our component in an opened mode.</li>
-            <li>There are two modes, opened and closed. In the open mode you can access the shadow root from the outside. The shadow root is the node that encapsulates your component</li>
+            <li>First we use attachShadow method to create the shadowRoot, which is the node that encapsulates your component. There are two modes, opened and closed. In the open mode you can access the shadow root from the outside, in the closed mode you cannot.</li>
             <li>Then when we refer to the dom, we need to refer to the shadow root but the rest is the same</li>
         </ul>
         <b>Let's see a demo</b>
@@ -469,10 +480,10 @@ document.body.appendChild($clone);
 <p *ngIf="isActive">Hello</p>
 </code></pre>
     </div>
-    <div class="fragment" data-fragment-index="2" layout="column" flex="10" layout-align="center center">
+    <div layout="column" flex="10" layout-align="center center">
         <i class="fa fa-arrow-circle-right"></i>
     </div>
-    <div class="fragment" data-fragment-index="2" layout="column" flex="45" layout-align="center center">
+    <div layout="column" flex="45" layout-align="center center">
 <pre style="font-size: 55%"><code class="html" data-trim>
 <template [ngIf]="isActive">
   <p>Hello</p>
@@ -522,7 +533,7 @@ document.body.appendChild($clone);
 <section>
     <h3>Browser support</h3>
     <!-- <img src="./img/caniuse/browser_support_january_2018.png" class="img-plain fragment"/> -->
-    <table style="zoom:0.8; margin-bottom: 60px" data-fragment-index="1" class="fragment table table-striped table-dark">
+    <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
     <thead>
     <tr>
     <th></th>
@@ -535,7 +546,7 @@ document.body.appendChild($clone);
     </thead>
     <tbody>
     <tr>
-    <td>Custom Elements</td>
+    <td>Custom Elements v1</td>
     <td align="center" style="background-color: #bc392a;">11</td>
     <td align="center" style="background-color: #bc392a;">16</td>
     <td align="center" style="background-color: #bc392a;">57</td>
@@ -543,7 +554,7 @@ document.body.appendChild($clone);
     <td align="center" style="background-color: #9eb40b;">11</td>
     </tr>
     <tr>
-    <td>Shadow DOM</td>
+    <td>Shadow DOM v1</td>
     <td align="center" style="background-color: #bc392a;">11</td>
     <td align="center" style="background-color: #bc392a;">16</td>
     <td align="center" style="background-color: #bc392a;">57</td>
@@ -559,7 +570,7 @@ document.body.appendChild($clone);
     <td align="center" style="background-color: #32ac41;">11</td>
     </tr></tbody>
     </table>
-    <table style="zoom:0.6; margin-bottom: 60px" class="fragment" data-fragment-index="1">
+    <table style="zoom:0.6; margin-bottom: 60px">
     <tbody>
     <tr>
     <td align="center" style="background-color: #32ac41;">Supported</td>
@@ -572,15 +583,16 @@ document.body.appendChild($clone);
     <aside class="notes">
         <b>We are now done the specs, let's talk about Browser support</b>
         <ul>
-            <li>Basically Web components only work natively on Chrome</li>
+            <li>Basically all the specs that I just showed you only work natively on Chrome</li>
         </ul>
-        <b>But that's not something you should worried about. Things are now evolving really fast with the current adoption of Web components by developers and also because we have Polyfills</b>
+        <b>But that's not something you should worried about. First of all this is evolving really fast lately, and also because we have Polyfills</b>
     </aside>
 </section>
 
 <section>
     <h3>Polyfill support</h3>
-    <table style="zoom:0.7; margin-bottom: 60px" class="table table-striped table-dark">
+    <p>github.com/webcomponents/webcomponentsjs</p>
+    <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
     <thead>
     <tr>
     <th></th>
@@ -593,7 +605,7 @@ document.body.appendChild($clone);
     </thead>
     <tbody>
     <tr>
-    <td>Custom Elements</td>
+    <td>Custom Elements v1</td>
     <td align="center" style="background-color: #32ac41;">✓</td>
     <td align="center" style="background-color: #32ac41;">✓</td>
     <td align="center" style="background-color: #32ac41;">✓</td>
@@ -601,7 +613,7 @@ document.body.appendChild($clone);
     <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
     <tr>
-    <td>Shadow DOM</td>
+    <td>Shadow DOM v1</td>
     <td align="center" style="background-color: #32ac41;">✓</td>
     <td align="center" style="background-color: #32ac41;">✓</td>
     <td align="center" style="background-color: #32ac41;">✓</td>
@@ -617,10 +629,9 @@ document.body.appendChild($clone);
     <td align="center" style="background-color: #32ac41;">✓</td>
     </tr></tbody>
     </table>
-<div class="fragment">
+<!-- <div class="fragment">
     <h4>Only load what's needed on the platform</h4>
     <p>github.com/webcomponents/webcomponentsjs</p>
-
 <pre style="font-size: 55%"><code class="html" data-trim>
 <script src="./webcomponents-loader.js"></script>
 <script>
@@ -629,12 +640,12 @@ document.body.appendChild($clone);
   });
 </script>
 </code></pre>
-</div>
+</div> -->
     <aside class="notes">
-        <b>We now have polyfills that cover all the latest browsers so your components will work everywhere.</b>
-        <ul>
+        <b>With Polyfills Web components will work everywhere.</b>
+        <!-- <ul>
             <li>If you are worried about the polyfill size, you can use a loader that you can find on github and that only loads the required polyfill at runtime for the browser you use.</li>
-        </ul>
+        </ul> -->
     </aside>
 </section>
 
@@ -645,7 +656,7 @@ document.body.appendChild($clone);
     <img src="../../img/angular-logo.png" class="img-plain"/>
     <span style="font-size: 80px; margin: 0px 25px;">?</span>
 </div>
-<pre class="fragment" style="font-size: 75%"><code class="typescript" data-trim>
+<pre class="fragment" data-fragment-index="1" style="font-size: 75%"><code class="typescript" data-trim>
 import {
     NgModule,
     CUSTOM_ELEMENTS_SCHEMA,
@@ -656,11 +667,12 @@ import {
 })
 export class AppModule { }
 </code></pre>
+<h3 class="fragment" data-fragment-index="1">Seamless integration!</h3>
 <div class="fragment current-only" data-code-block="1" data-code-focus="3,7"></div>
     <aside class="notes">
         <b>Ok great, but can we use Web components in Angular?</b>
         <ul>
-            <li>The answer is YES, with CUSTOM_ELEMENTS_SCHEMA, Web Components become first-class citizens in the Angular ecosystem.</li>
+            <li>The answer is YES, with CUSTOM_ELEMENTS_SCHEMA, Web Components become first-class citizens in the Angular ecosystem. It is a seamless integration</li>
         </ul>
     </aside>
 </section>
@@ -670,31 +682,37 @@ export class AppModule { }
     <ol>
         <li class="fragment">Reusable piece of code</li>
         <li class="fragment">Style encapsulation</li>
-        <li class="fragment">No dependencies `#useThePlatform`</li>
+        <li class="fragment">No dependencies `#UseThePlatform`</li>
         <li class="fragment">Framework Agnostic</li>
         <li class="fragment">Works in all major browsers `(with polyfills)`</li>
     </ol>
     <aside class="notes">
         <b>Let's recap why Web Components are something worth checking out</b>
+        <ul>
+            <li>Custom elements are reusable piece of code</li>
+            <li>With Shadow Dom you style do not leak</li>
+            <li>No dependencies whatsoever</li>
+            <li>You can use Web components in Angular, React, Vue or by itself</li>
+            <li>With Polyfills your components run everywhere</li>
+        </ul>
     </aside>
 </section>
 
 <section>
     <h3>Cons</h3>
     <ol>
-        <li class="fragment">Manual data binding `(innerHTML vs appendChild?)`</li>
-        <li class="fragment">No declarative Event Bindings `(onSomething)=""`</li>
-        <li class="fragment">Attributes and Properties difference</li>
+        <li class="fragment">Manual data binding</li>
+        <li class="fragment">No declarative Custom Event Bindings `onSomething=""`</li>
+        <li class="fragment">Attributes and Properties difference adds complexity</li>
         <li class="fragment">Can be a bit verbose</li>
     </ol>
     <aside class="notes">
-        <b>Let's recap why Web Components are something worth checking out</b>
+        <b>The cons are</b>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>We need to apply the DOM updates manually</li>
+            <li>No declarative Custom Event Bindings. Meaning we need to use addEventListener and removeEventListener manually</li>
+            <li>Attributes and Properties difference  adds complexity</li>
             <li>And Since we do a lot of things manually, the code can be a bit verbose, and we are going to see that later on.</li>
-            <li></li>
         </ul>
         <b>One solution to fix all of these limitations is to use StencilJS</b>
     </aside>
