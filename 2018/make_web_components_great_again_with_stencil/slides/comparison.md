@@ -10,7 +10,7 @@
     Repo: https://github.com/shprink/web-components-todo
     Demo: https://wc-todo.firebaseapp.com
     <aside class="notes">
-        <b>To finish this presentation I wanted to show you numbers. I created a project that aim to compare different libraries that export Web Components. Today we are going compare The natice implementation, with Stencil, Polymer 2 and Angular Elements</b>
+        <b>To finish this presentation I wanted to show you numbers to get you excited about stencil. I created a project that aim to compare different libraries that export Web Components. Today we are going compare The native implementation, with Stencil, Polymer 2 and Angular Elements</b>
         <b>The code and the demo are available on Github</b>
     </aside>
 </section>
@@ -34,7 +34,7 @@
         <b>Before we start I wanted to emphasize that...</b>
         <ul>
             <li>I am not biased: I am not payed by anyone, I tried to be as factual as possible</li>
-            <li>I followed the docs: like a normal user would do</li>
+            <li>I followed the docs: like a normal user would do to start with those libraries</li>
             <li>no optimizations was made: the results that I am about to share are what you get out of the box</li>
             <li>Angular Elements is a proof of concept right now, it is far from being optimized, be patient</li>
         </ul>
@@ -129,7 +129,7 @@ Code Size (in kb), 2.3, 8.3, 126, 258
     -->
     </canvas>
     <aside class="notes">
-        <b>In terms of the assets size, we can see that it is hard to compete with the native implementation. Stencil however has great results. as well, the difference is the VDOM that needs to be shipped as well.</b>
+        <b>In terms of the assets size, we can see that it is hard to compete with the native implementation. Stencil however has great results as well. The difference is the Virtual DOM code needs to be shipped as well.</b>
         <b>Polymer and Angular Elements are not optimized out of the box as far as I could see.</b>
     </aside>
 </section>
@@ -364,9 +364,8 @@ First meaningful paint (in ms), 1400, 1250, 1970, 3200
     -->
     </canvas>
     <aside class="notes">
-        <b>First meaningful paint measures when the primary content of a page is visible, it is not necessarily interactive yet.</b>
-        <b>What we can see is that Stencil is faster than the native implementation. How is it possible?</b>
-        <b>Stencil prerenders every of your application routes with the HTML that your are supposed to see after parsing.</b>
+        <b>First meaningful paint measures when the primary content of a page is visible, it is not interactive yet.</b>
+        <b>What we can see is that Stencil is faster than the native implementation because or prerendering</b>
     </aside>
 </section>
 
@@ -376,7 +375,7 @@ First meaningful paint (in ms), 1400, 1250, 1970, 3200
         <li><span style="color: var(--blue)">Interoperability</span></li>
         <li><span style="color: var(--blue)">Write less code</span> (Decorator, JSX)</li>
         <li><span style="color: var(--blue)">Write better code</span> (Static Type-checking)</li>
-        <li><span style="color: var(--blue)">DOM manipulation performance</span> (Virtual DOM)</li>
+        <li><span style="color: var(--blue)">Optimized DOM manipulation</span> (Virtual DOM)</li>
         <li><span style="color: var(--blue)">Faster time to first meaningful paint</span> (Prerendering)</li>
         <!-- <li><span style="color: var(--blue)">Better SEO</span> (Prerendering)</li> -->
     </ol>

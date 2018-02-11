@@ -241,7 +241,7 @@ export class MyNameIs {
 <div class="fragment current-only" data-code-block="1" data-code-focus="8"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="8,10-13"></div>
     <aside class="notes">
-        <b>Let's see an example of a Stencil Component</b>
+        <b>Let's see an example of a Stencil Component. I re implemented the MyNameIs component</b>
         <ul>
             <li>First of all we decorate our Class with the At Component decorator, we give it a tag name and a styleURL exactly how you would do in Angular</li>
             <li>Then we use the At Prop decorator to let the component know that we want to listen to the prop name changes.</li>
@@ -277,32 +277,52 @@ export class Counter {
 <div class="fragment current-only" data-code-block="1" data-code-focus="8-12"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="14-19"></div>
     <aside class="notes">
-        <b>Now another example of a counter that increments every one second. To demontrate this we need to use the State decorator</b>
+        <b>Now another example of a counter that increments every one second.</b>
         <ul>
-            <li>First of all we declare `count` here as a state</li>
-            <li>In the componentDidLoad hook, we start the counter</li>
-            <li></li>
+            <li>First of all we declare `count` here as an internal state</li>
+            <li>In the componentDidLoad hook, we start incrementing the counter by one every second</li>
+            <li>To finish in the render method we return the current state. Everytime `count` changes the render method is called again.</li>
         </ul>
     </aside>
 </section>
 
 <section>
     <h3>Prerendering</h3>
+<pre style="font-size: 75%; width: 35% !important; text-align:center;"><code class="html" data-trim>
+<my-app></my-app>
+</code></pre>
+    <div class="fragment">
+        <h4>After production build:</h4>
+        <img src="./img/prerendering.png" class="img-plain"/>
+        <ul>
+            <li class="fragment">🚀 Blazing fast First meaningful paint</li>
+            <li class="fragment">Better SEO</li>
+        </ul>
+    </div>
     <aside class="notes">
-        <b></b>
+        <b>Prerendering is a really cool feature. With modern frameworks we are used to have only one component in our index.html. My-app is our component entry point</b>
+        <ul>
+            <li>Stencil prerenders server side the application for every Route entry point that you have.</li>
+            <li>The benefits are a Blazing fast First meaningful paint (your users see something as fast as possible)</li>
+            <li>Better Search Engine Optimization</li>
+        </ul>
     </aside>
 </section>
 
-<section>
+<!-- <section>
     <h3>Native ES Module support</h3>
 <pre style="font-size: 65%;"><code class="typescript" data-trim>
 import { MyLib } from './my-lib.js';
 </code></pre>
     <img src="./img/es_modules.png" class="img-plain"/>
     <aside class="notes">
-        <b></b>
+        <b>Rather than combining all of your source files together, Stencil uses native ES modules to load asynchronously</b>
+        <ul>
+            <li>Internally the compiler is using rollup to group common modules together</li>
+            <li>the browser makes the final decision of exactly which modules to load</li>
+        </ul>
     </aside>
-</section>
+</section> -->
 
 <section>
     <h2 style="text-transform: initial; display: flex; align-items: center; justify-content: center;">
@@ -316,13 +336,12 @@ import { MyLib } from './my-lib.js';
     </aside>
 </section>
 
-<section>
+<!-- <section>
     <img src="./img/stencil_ecosystem.jpg" width="70%" class="img-plain"/>
-        <!-- <img src="../../img/ionic-logo.png" class="img-plain" width="75%" style="margin: 0;"/> -->
     <aside class="notes">
         <b></b>
     </aside>
-</section>
+</section> -->
 
 <section>
     <h3>Getting started</h3>
@@ -333,12 +352,8 @@ cd my-app
 npm install
 </code></pre>
 <h4 style="text-align: left;">Start the web server</h4>
-<pre style="font-size: 65%"><code class="shell" data-trim>
+<pre style="font-size: 90%"><code class="shell" data-trim>
 npm start
-</code></pre>
-<h4 style="text-align: left;">Run the tests</h4>
-<pre style="font-size: 65%"><code class="shell" data-trim>
-npm test
 </code></pre>
     <aside class="notes">
     </aside>
