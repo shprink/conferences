@@ -5,6 +5,7 @@
     <img src="../../img/stencil-logo.png" height="150" class="img-plain"/>
     <img src="../../img/polymer-logo.png" height="150" class="img-plain"/>
     <img src="../../img/angular-logo.png" height="150" class="img-plain"/>
+    <img src="../../img/vue-logo.png" height="150" class="img-plain"/>
     </div>
 
     Repo: https://github.com/shprink/web-components-todo
@@ -28,7 +29,7 @@
          <li class="fragment">I try not be biased</li>
          <li class="fragment">I followed the docs</li>
          <li class="fragment">No optimizations was made</li>
-         <li class="fragment">⚠️ Angular Elements is in early stage</li>
+         <li class="fragment">⚠️ Angular Elements and Vue Web Component Wrapper are in early stage</li>
     </ul>
     <aside class="notes">
         <b>Before we start I wanted to emphasize that...</b>
@@ -58,38 +59,31 @@
 </section>
 
 <section>
-    <h4>Assets Dowloaded by the Browser (in KB)</h4>
+    <h5>Assets Dowloaded by the Browser (in KB)</h5>
     <canvas data-chart="horizontalBar">
-, Native, StencilJS, Polymer 2, Angular Elements
+, Native, StencilJS, Polymer 2, Angular Elements, Vue Wrapper
 <!-- This is a comment that will be ignored -->
-Code Size (in kb), 2.3, 8.3, 126, 258
+Code Size (in kb), 2.3, 8.3, 126, 258, 87
     <!--
 {
     "data": {
         "datasets": [
             {
                 "label": "My First Dataset",
-                "data": [
-                    65,
-                    59,
-                    80,
-                    81,
-                    56,
-                    55,
-                    40
-                ],
                 "fill": false,
                 "backgroundColor": [
                     "#ef5a25",
                     "white",
                     "#1b7de1",
-                    "#d8002c"
+                    "#d8002c",
+                    "#39AF78"
                 ],
                 "borderColor": [
                     "#f05118",
                     "white",
                     "#1d4b9e",
-                    "#bb0029"
+                    "#bb0029",
+                    "#39AF78"
                 ],
                 "borderWidth": 1
             }
@@ -136,20 +130,16 @@ Code Size (in kb), 2.3, 8.3, 126, 258
 
 <section>
     <h3>Lighthouse Performance</h3>
-    <div layout="row" layout-align="center center">
-        <div flex="25" style="position: relative;">
-            <canvas data-chart="doughnut">
+    <div layout="row" layout-align="center start">
+        <div flex="20" style="position: relative;">
+            <canvas data-chart="doughnut" style="margin: 20px 0">
             ,
-            Performance, 99, 1
+            Performance, 92, 8
             <!--
             {
             "data": {
                 "datasets": [
                     {
-                        "label": "My First Dataset",
-                        "data": [
-                            99
-                        ],
                         "fill": false,
                         "backgroundColor": [
                             "#44b164",
@@ -172,22 +162,18 @@ Code Size (in kb), 2.3, 8.3, 126, 258
             }
             -->
             </canvas>
-            <span style="position: absolute; top: 35px; left: 0; right: 0;">99</span>
-            <h4>Native</h4>
+            <span style="position: absolute; top: 44px; left: 0; right: 0;">92</span>
+            <img src="../../img/web_component-logo.png" height="150" class="img-plain"/>
         </div>
-        <div flex="25" style="position: relative;">
-            <canvas data-chart="doughnut">
+        <div flex="20" style="position: relative;">
+            <canvas data-chart="doughnut" style="margin: 20px 0">
             ,
-            Performance, 99, 1
+            Performance, 97, 3
             <!--
             {
             "data": {
                 "datasets": [
                     {
-                        "label": "My First Dataset",
-                        "data": [
-                            99
-                        ],
                         "fill": false,
                         "backgroundColor": [
                             "#44b164",
@@ -210,29 +196,25 @@ Code Size (in kb), 2.3, 8.3, 126, 258
             }
             -->
             </canvas>
-            <span style="position: absolute; top: 35px; left: 0; right: 0;">99</span>
-            <h4>StencilJS</h4>
+            <span style="position: absolute; top: 44px; left: 0; right: 0;">97</span>
+            <img src="../../img/stencil-logo.png" height="150" class="img-plain"/>
         </div>
-        <div flex="25" style="position: relative;">
-            <canvas data-chart="doughnut">
+        <div flex="20" style="position: relative;">
+            <canvas data-chart="doughnut" style="margin: 20px 0">
             ,
-            Performance, 95, 5
+            Performance, 94, 6
             <!--
             {
             "data": {
                 "datasets": [
                     {
-                        "label": "My First Dataset",
-                        "data": [
-                            99
-                        ],
                         "fill": false,
                         "backgroundColor": [
-                            "#a1a530",
+                            "#44b164",
                             "#222"
                         ],
                         "borderColor": [
-                            "#a1a530",
+                            "#44b164",
                             "#222"
                         ],
                         "borderWidth": 1
@@ -248,13 +230,13 @@ Code Size (in kb), 2.3, 8.3, 126, 258
             }
             -->
             </canvas>
-            <span style="position: absolute; top: 35px; left: 0; right: 0;">95</span>
-            <h4>Polymer 2</h4>
+            <span style="position: absolute; top: 44px; left: 0; right: 0;">94</span>
+            <img src="../../img/polymer-logo.png" height="150" class="img-plain"/>
         </div>
-        <div flex="25" style="position: relative;">
-            <canvas data-chart="doughnut">
+        <div flex="20" style="position: relative;">
+            <canvas data-chart="doughnut" style="margin: 20px 0">
             ,
-            Performance, 79, 21
+            Performance, 74, 26
             <!--
             {
             "data": {
@@ -283,8 +265,43 @@ Code Size (in kb), 2.3, 8.3, 126, 258
             }
             -->
             </canvas>
-            <span style="position: absolute; top: 35px; left: 0; right: 0;">79</span>
-            <h4>Angular Elements</h4>
+            <span style="position: absolute; top: 44px; left: 0; right: 0;">74</span>
+            <img src="../../img/angular-logo.png" height="150" class="img-plain"/>
+        </div>
+        <div flex="20" style="position: relative;">
+            <canvas data-chart="doughnut" style="margin: 20px 0">
+            ,
+            Performance, 73, 27
+            <!--
+            {
+            "data": {
+                "datasets": [
+                    {
+                        "label": "My First Dataset",
+                        "fill": false,
+                        "backgroundColor": [
+                            "#d8b93f",
+                            "#222"
+                        ],
+                        "borderColor": [
+                            "#d8b93f",
+                            "#222"
+                        ],
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "display": false
+                }
+            }
+            }
+            -->
+            </canvas>
+            <span style="position: absolute; top: 44px; left: 0; right: 0;">73</span>
+            <img src="../../img/vue-logo.png" height="150" class="img-plain"/>
         </div>
     </div>
     <aside class="notes">
@@ -295,9 +312,9 @@ Code Size (in kb), 2.3, 8.3, 126, 258
 <section>
     <h3>First meaningful paint</h3>
     <canvas data-chart="horizontalBar">
-, Native, StencilJS, Polymer 2, Angular Elements
+, Native, StencilJS, Polymer 2, Angular Elements, Vue Wrapper
 <!-- This is a comment that will be ignored -->
-First meaningful paint (in ms), 1400, 1250, 1970, 3200
+First meaningful paint (in ms), 2480, 1828, 2292, 4229, 4321
     <!--
 {
     "data": {
@@ -318,13 +335,15 @@ First meaningful paint (in ms), 1400, 1250, 1970, 3200
                     "#ef5a25",
                     "white",
                     "#1b7de1",
-                    "#d8002c"
+                    "#d8002c",
+                    "#39AF78"
                 ],
                 "borderColor": [
                     "#f05118",
                     "white",
                     "#1d4b9e",
-                    "#bb0029"
+                    "#bb0029",
+                    "#39AF78"
                 ],
                 "borderWidth": 1
             }
