@@ -96,7 +96,7 @@
     </tbody>
     </table>
     <aside class="notes">
-        <b>This is what you get out of the box when using Stencil</b>
+        <b>What you get out of the box is a mix a great features and tools from Angular and React</b>
         <ol>
             <li>JSX and virtual DOM are a matter of preferences, personally I love it</li>
             <li>Async rendering which is new in React 16 and aims to prioritize UI updates. High priority updates are ran first, then low priority updates.</li>
@@ -104,7 +104,29 @@
             <li>Decorators</li>
             <li>Server side rendering</li>
         </ol>
-        <b>As you can see Stencil kinda mixed the best features and tools of Angular and React and to me is it a perfect combo</b>
+        <b>To me is it a perfect combo</b>
+    </aside>
+</section>
+
+<section>
+    <h3>Prerendering</h3>
+<pre style="font-size: 75%; width: 35% !important; text-align:center;"><code class="html" data-trim>
+<my-app></my-app>
+</code></pre>
+    <div class="fragment">
+        <h4>After production build:</h4>
+        <img src="./img/prerendering.png" class="img-plain"/>
+        <ul>
+            <li class="fragment">🚀 Blazing fast First meaningful paint</li>
+            <li class="fragment">Better SEO</li>
+        </ul>
+    </div>
+    <aside class="notes">
+        <b>With modern frameworks we are used to have only one component in our index.html right. Stencil uses it server side rendering capability to prerender your app in production mode.</b>
+        <ul>
+            <li>The benefits are a Blazing fast First meaningful . Your users see your application as fast as possible. It won't be interactive though, but they will see something</li>
+            <li>Better Search Engine Optimization</li>
+        </ul>
     </aside>
 </section>
 
@@ -227,7 +249,7 @@ import { Component, Prop } from '@stencil/core';
 
 @Component({
   tag: 'my-name-is',
-  styleUrl: 'my-name-is.scss'
+  styleUrl: 'my-name-is.css'
 })
 export class MyNameIs {
   @Prop() name: string;
@@ -277,34 +299,11 @@ export class Counter {
 <div class="fragment current-only" data-code-block="1" data-code-focus="8-12"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="14-19"></div>
     <aside class="notes">
-        <b>Now another example of a counter that increments every one second.</b>
+        <b>Now another example of a counter that increment itself by one at every second.</b>
         <ul>
-            <li>First of all we declare `count` here as an internal state</li>
+            <li>First of all we declare `count` here as an internal state. The data is not something that comes from the outside of the component but rather live inside of it</li>
             <li>In the componentDidLoad hook, we start incrementing the counter by one every second</li>
             <li>To finish in the render method we return the current state. Everytime `count` changes the render method is called again.</li>
-        </ul>
-    </aside>
-</section>
-
-<section>
-    <h3>Prerendering</h3>
-<pre style="font-size: 75%; width: 35% !important; text-align:center;"><code class="html" data-trim>
-<my-app></my-app>
-</code></pre>
-    <div class="fragment">
-        <h4>After production build:</h4>
-        <img src="./img/prerendering.png" class="img-plain"/>
-        <ul>
-            <li class="fragment">🚀 Blazing fast First meaningful paint</li>
-            <li class="fragment">Better SEO</li>
-        </ul>
-    </div>
-    <aside class="notes">
-        <b>Prerendering is a really cool feature. With modern frameworks we are used to have only one component in our index.html. My-app is our component entry point</b>
-        <ul>
-            <li>Stencil prerenders server side the application for every Route entry point that you have.</li>
-            <li>The benefits are a Blazing fast First meaningful paint (your users see something as fast as possible)</li>
-            <li>Better Search Engine Optimization</li>
         </ul>
     </aside>
 </section>
@@ -331,7 +330,7 @@ import { MyLib } from './my-lib.js';
     </h2>
         <!-- <img src="../../img/ionic-logo.png" class="img-plain" width="75%" style="margin: 0;"/> -->
     <aside class="notes">
-        <b>In case you did not know Ionic 4 is powered by StencilJS!</b>
+        <b>In case you live under a rock, Ionic 4 is powered by StencilJS!</b>
         <b>It means that we can use the Ionic components that we all love as Angular developer but use it anywhere, with any framework or none at all</b>
     </aside>
 </section>
@@ -356,6 +355,7 @@ npm install
 npm start
 </code></pre>
     <aside class="notes">
+        <b>To start using Stencil all you </b>
     </aside>
 </section>
 

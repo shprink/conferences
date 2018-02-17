@@ -10,7 +10,6 @@
     <img src="./img/fwk_too_fast.png" class="img-plain"/>
     <aside class="notes">
         <b>The first problem is that the industry is evolving at a pace that is getting out of control!</b>
-        <b>there are too many alternatives to do the same things, and the APIs keep changing</b>
     </aside>
 </section>
 
@@ -43,6 +42,7 @@
         <b>And we keep creating the same code OVER and OVER and OVER again!</b>
         <b>Those projects are implementations of the material design spec for different frameworks.</b>
         <b>At the end it is just some buttons with a ripple effect right?</b>
+        <b>To fix those problems...</b>
     </aside>
 </section>
 
@@ -50,7 +50,6 @@
     <h2>We need a <span style="color: var(--primary)">universal</span> way to create <span style="color: var(--primary)">reusable components</span> that can  <span style="color: var(--primary)">last for a while</span></h2>
     <h2 class="fragment" style="text-transform: initial;">#UseThePlatform</h2>
     <aside class="notes">
-        <b>To fix those problems...</b>
         <b>The answer to those problems is to use the Web platform. and that's what we are going to learn today!</b>
     </aside>
 </section>

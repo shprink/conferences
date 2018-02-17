@@ -1,6 +1,7 @@
 <section>
     <img src="../../img/web_component-logo.png" class="img-plain"/>
     <h2>Web Components <br/>Specifications</h2>
+    <!-- <img src="../../img/meme/trump/web_components_specs.gif" style="margin: 0" width="100%" class="img-plain"/> -->
     <aside class="notes">
         <b>Let's talk about the Web Components specs</b>
     </aside>
@@ -42,7 +43,7 @@
         "Custom Elements is a capability for creating your own custom HTML elements with its own methods and properties"
     </blockquote>
     <aside class="notes">
-        <b>Custom Elements allow you to create your own HTML elements such as a div tag or something more elaborate like the video tag</b>
+        <b>Custom Elements allow you to create your own HTML elements</b>
     </aside>
 </section>
 
@@ -62,10 +63,10 @@ window.customElements
 <pre class="fragment" style="font-size: 80%"><code class="html"><my-component></my-component>
 </code></pre>
     <aside class="notes">
-        <b>Here is how to create a Web Component, all you need to do is to extends HTMLElement Class.</b>
+        <b>This is a Web Component, all you need to do is to use a ES2015 Class and extends HTMLElement.</b>
         <ul>
             <li>To be able to use this Web Component we need to register it. To do this we use the custom element define method. It takes the tag name and the Class reference as arguments</li>
-            <li>Then we can insert this new component in the DOM</li>
+            <li>Then we can insert this new component inside the DOM</li>
         </ul>
     </aside>
 </section>
@@ -133,7 +134,7 @@ window.customElements
             <li>connectedCallback is called when the component is inserted in the DOM</li>
             <li>disconnectedCallback is called when it is removed from the DOM</li>
             <li>and attributeChangedCallback is called when an attribute that we are listening to has changed</li>
-            <li>These hooks have an equivalent in Angular that you already know about</li>
+            <li>And here is the equivalent in Angular.</li>
         </ul>
     </aside>
 </section>
@@ -142,8 +143,9 @@ window.customElements
 <h4>Observing Attributes needs to be explicit</h4>
 <pre style="font-size: 80%"><code class="html" data-trim>
 <my-name-is name="Julien"></my-name-is>
+// Hello my name is Julien
 </code></pre>
-<pre  class="fragment" style="font-size: 70%"><code class="js" data-trim>
+<pre  class="fragment" style="font-size: 65%"><code class="js" data-trim>
 class MyNameIs extends HTMLElement {
   static get observedAttributes() {
     return ['name', 'another-attr'];
@@ -166,9 +168,8 @@ class MyNameIs extends HTMLElement {
         <b>If we have a custom element like this one. how do we listen to the `name` attribute changes?</b>
         <ul>
             <li>All you need to do is to use the observedAttributes getter which shoud return an array of attributes names that you want to listen to.</li>
-            <li>Everytime one of those attribute changes attributeChangedCallback will be called with the old and new value</li>
-            <li>Then we can update the DOM manually and print something out</li>
-            <li>In this case we want to print `hello my name is` then the name that is passed from the name attribute</li>
+            <li>Everytime one of those attribute changes attributeChangedCallback will be called with the name, the old and new value</li>
+            <li>Then we can do something, here we update the DOM</li>
         </ul>
         <b>Here is a demo of that custom element</b>
     </aside>
@@ -184,7 +185,11 @@ class MyNameIs extends HTMLElement {
 <i style="font-size: 200px; color: yellow" class="fa fa-exclamation-triangle"></i>
 <h3>Attributes can only be strings!</h3>
     <aside class="notes">
-        <b>Be careful, attributes can only be strings. How do we pass complex data such as arrays or ojects to our components then?</b>
+        <ul>
+            <li>Be careful, attributes can only be strings</li>
+            <li>So a name is perfect to be an attribute!</li>
+        </ul>
+        <b>But how do we pass complex data such as arrays or ojects to our components then?</b>
     </aside>
 </section>
 
@@ -206,28 +211,31 @@ class MyTodos extends HTMLElement {
 <div class="fragment current-only" data-code-block="1" data-code-focus="3"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="5-7"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="8-10"></div>
-<div class="fragment">
-    <h4>Set</h4>
-<pre style="font-size: 55%"><code class="js" data-trim>
-document.querySelector('my-todo').list = ['first item', 'second item'];
+
+<pre  class="fragment" style="font-size: 55%"><code class="js" data-trim>
+const $myTodos = document.querySelector('my-todos');
+// Get the list
+console.log($myTodos.list); // []
+// Set the list
+$myTodos.list = ['first item', 'second item'];
+// Get the list again
+console.log($myTodos.list); // ['first item', 'second item']
+&nbsp;
 </code></pre>
-</div>
-<div class="fragment">
-    <h4>Get</h4>
-<pre style="font-size: 75%"><code class="js" data-trim>
-document.querySelector('my-todo').list;
-// ['first item', second item]
-</code></pre>
-</div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="3"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="5"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="7"></div>
     <aside class="notes">
-        <b>To pass complexe data into a Web component we need to use properties</b>
+        <b>We need to use properties</b>
         <b>Let's say that we have a todo list component</b>
         <ul>
             <li>First thing is to initiate our list in the constructor</li>
             <li>To set the list from the outside we can use a Setter List</li>
             <li>To get the internal list from the outside we can use a Getter List</li>
-            <li>Then setting data is as easy as getting the element reference and use the setter list</li>
-            <li>We can do the same to get the inernal list</li>
+            <li>Now from outside of this component we can...</li>
+            <li>Get the current list</li>
+            <li>Set a new list</li>
+            <li>And check that the list has been updated</li>
         </ul>
         <b>Let's see a demo</b>
     </aside>
@@ -343,7 +351,6 @@ class MyNameIs extends HTMLElement {
 <pre style="font-size: 55%" class="fragment"><code class="js" data-trim>
 class MyNameIsShadow extends HTMLElement {
     constructor() {
-        super();
         this.attachShadow({ 'mode': 'open' });
     }
     static get observedAttributes() {
@@ -354,9 +361,9 @@ class MyNameIsShadow extends HTMLElement {
     }
 }
 </code></pre>
-    <div class="fragment current-only" data-code-block="2" data-code-focus="4"></div>
-    <div class="fragment current-only" data-code-block="2" data-code-focus="4,10"></div>
-    <aside class="notes">
+    <div class="fragment current-only" data-code-block="2" data-code-focus="3"></div>
+    <div class="fragment current-only" data-code-block="2" data-code-focus="3,9"></div>
+    <aside class="notes"
         <b>We are going to add the shadow DOM to the component MyNameIs that we saw earlier.</b>
         <ul>
             <li>First we use attachShadow method to create the shadowRoot, which is the node that encapsulates your component. There are two modes, opened and closed. In the open mode you can access the shadow root from the outside, in the closed mode you cannot.</li>
@@ -408,7 +415,7 @@ class MyComponent {}
             <li>The last value is Native, native means that the shadow is enabled</li>
             <li>To use the encapsulation that you want, we need to use the encapsulation property of the AtComponent decorator.</li>
         </ul>
-        <b>Pretty easy right?!</b>
+        <b>Pretty easy right and yet really powerful!</b>
     </aside>
 </section>
 
@@ -432,7 +439,7 @@ class MyComponent {}
         "Give the ability to create reusable piece of HTML that can be used at runtime"
     </blockquote>
     <aside class="notes">
-        <b>Let's talk about HTML templates now. the template tag is really powerful, it never renders children unless you ask for it</b>
+        <b>The last spec is HTML templates. this template tag is really powerful, it never renders children unless you ask for it</b>
     </aside>
 </section>
 
@@ -497,7 +504,7 @@ document.body.appendChild($clone);
     <aside class="notes">
         <b>As Angular developers we use the template tag all the time without knowing it.</b>
         <ul>
-            <li>The ngIf directive here wraps the element inside a template tag so it is not rendered by the browser.</li>
+            <li>The ngIf directive here wraps the element inside a template tag so it is not rendered by the browser by default.</li>
             <li>It is the same for *ngFor & *ngSwitch</li>
         </ul>
     </aside>
@@ -581,11 +588,11 @@ document.body.appendChild($clone);
     </table>
     </ul>
     <aside class="notes">
-        <b>We are now done the specs, let's talk about Browser support</b>
+        <b>Let's talk about Browser support: Basically your web components only work natively on Chrome. But that's not something you should worried about, because of two things:</b>
         <ul>
-            <li>Basically all the specs that I just showed you only work natively on Chrome</li>
+            <li>First of all all major browsers are commited to implement Web Components</li>
+            <li>and also because we have Polyfills for everything</li>
         </ul>
-        <b>But that's not something you should worried about. First of all this is evolving really fast lately, and also because we have Polyfills</b>
     </aside>
 </section>
 
@@ -670,7 +677,7 @@ export class AppModule { }
 <h3 class="fragment" data-fragment-index="1">Seamless integration!</h3>
 <div class="fragment current-only" data-code-block="1" data-code-focus="3,7"></div>
     <aside class="notes">
-        <b>Ok great, but can we use Web components in Angular?</b>
+        <b>Now you might wonder if you can use Web components in Angular?</b>
         <ul>
             <li>The answer is YES, with CUSTOM_ELEMENTS_SCHEMA, Web Components become first-class citizens in the Angular ecosystem. It is a seamless integration</li>
         </ul>
@@ -711,7 +718,7 @@ export class AppModule { }
         <ul>
             <li>We need to apply the DOM updates manually</li>
             <li>No declarative Custom Event Bindings. Meaning we need to use addEventListener and removeEventListener manually</li>
-            <li>Attributes and Properties difference  adds complexity</li>
+            <li>Attributes and Properties differences adds complexity</li>
             <li>And Since we do a lot of things manually, the code can be a bit verbose, and we are going to see that later on.</li>
         </ul>
         <b>One solution to fix all of these limitations is to use StencilJS</b>

@@ -29,6 +29,6 @@
     </div>
     <aside class="notes">
         <b>Hello, my name is Julien and Today I am really excited to present you "Make Web Components Great Again with StencilJS"!</b>
-        <b>You might wonder why this title? It has nothing to do with Donald Trump, it has to do with my experience in using web components</b>
+        <b>You might wonder why this title? Does it have anything to do with Donald Trump?</b>
     </aside>
 </section>
