@@ -1,5 +1,5 @@
 <section>
-    <h2>Case study: Todo list</h2>
+    <h2>Out of the box Case study</h2>
     <div style="margin: 50px 0;">
     <img src="../../img/web_component-logo.png" height="150" class="img-plain"/>
     <img src="../../img/stencil-logo.png" height="150" class="img-plain"/>
@@ -7,19 +7,29 @@
     <img src="../../img/angular-logo.png" height="150" class="img-plain"/>
     <img src="../../img/vue-logo.png" height="150" class="img-plain"/>
     </div>
-
     Repo: https://github.com/shprink/web-components-todo
     Demo: https://wc-todo.firebaseapp.com
     <aside class="notes">
-        <b>To finish this presentation I wanted to show you numbers to get you excited about stencil. I created a project that aim to compare different libraries that export Web Components. Today we are going compare The native implementation, with Stencil, Polymer 2 and Angular Elements</b>
-        <b>The code and the demo are available on Github</b>
+        <b>Now that we know about Stencil, let's see some numbers to get you excited about it! </b>
+        <ul>
+            <li>I created a project that aim to compare different libraries that create Web Components. </li>
+            <li>Today we are going compare The native implementation, with Stencil, Polymer 2, Angular Elements, and vue WC wrapper</li>
+            <li>The code and the demo are available on Github</li>
+        </ul>
     </aside>
 </section>
 
 <section>
+    <div style="margin: 0 0;">
+    <img src="../../img/web_component-logo.png" height="150" class="img-plain"/>
+    <img src="../../img/stencil-logo.png" height="150" class="img-plain"/>
+    <img src="../../img/polymer-logo.png" height="150" class="img-plain"/>
+    <img src="../../img/angular-logo.png" height="150" class="img-plain"/>
+    <img src="../../img/vue-logo.png" height="150" class="img-plain"/>
+    </div>
     <img src="./img/todo.gif" class="img-plain"/>
     <aside class="notes">
-        <b>The app is a simple todo list, where you can add, remove and check items.</b>
+        <b>The app is a simple todo list, where you can add, remove and check items that I implemented with the above the libraries.</b>
     </aside>
 </section>
 
@@ -34,10 +44,10 @@
     <aside class="notes">
         <b>Before we start I wanted to emphasize that...</b>
         <ul>
-            <li>I am not biased: I am not payed by anyone, I tried to be as factual as possible</li>
+            <li>I am not biased: I am not payed by anyone to say good things or bad things about any of those technologies</li>
             <li>I followed the docs: like a normal user would do to start with those libraries</li>
             <li>no optimizations was made: the results that I am about to share are what you get out of the box</li>
-            <li>Angular Elements is a proof of concept right now, it is far from being optimized, be patient</li>
+            <li>Angular Elements and Vue Wrapper are proof of concept at this point, take that into account when analysing the results</li>
         </ul>
     </aside>
 </section>
@@ -46,24 +56,26 @@
     <h3>Code length</h3>
     <img src="./img/stencil_vs_wc.png" class="img-plain"/>
     <aside class="notes">
-        <b>In terms of code length, what we can see is that with Stencil and Angular Elements you write less code.</b>
-        <b>Polymer is more verbose because it is not compiled and does not use decorators. Polymer 3 which is not stable yet will be simimlar to stencil and angular in termes of code length.</b>
+        <b>In terms of code length, what we can see is that Stencil, Angular and Vue are similar. Native and Polymer are a little bit more verbose.</b>
         <b>Why is code lenght important to me?</b>
     </aside>
 </section>
 
 <section>
-    <h2 style="text-transform: initial;">The less code you write <span style="color: var(--blue)">the less bugs you will introduce</span></h2>
+    <h2 style="text-transform: initial;">"The less code you write <span style="color: var(--blue)">the less bugs you will create</span>"</h2>
+    <p style="text-transform: initial; text-align: right;">- me at ngVikings 2018</p>
     <aside class="notes">
+        <b>The less code you write the less bugs you will create</b>
+        <b>Also the more maintainable your code will be</b>
     </aside>
 </section>
 
 <section>
     <h5>Assets Dowloaded by the Browser (in KB)</h5>
     <canvas data-chart="horizontalBar">
-, Native, StencilJS, Polymer 2, Angular Elements, Vue Wrapper
+, Native, StencilJS, Polymer 2, Vue Wrapper,  Angular Elements
 <!-- This is a comment that will be ignored -->
-Code Size (in kb), 2.3, 8.3, 126, 258, 87
+Code Size (in kb), 4.3, 10.7, 36.7, 87, 258
     <!--
 {
     "data": {
@@ -75,15 +87,15 @@ Code Size (in kb), 2.3, 8.3, 126, 258, 87
                     "#ef5a25",
                     "white",
                     "#1b7de1",
-                    "#d8002c",
-                    "#39AF78"
+                    "#39AF78",
+                    "#d8002c"
                 ],
                 "borderColor": [
                     "#f05118",
                     "white",
                     "#1d4b9e",
-                    "#bb0029",
-                    "#39AF78"
+                    "#39AF78",
+                    "#bb0029"
                 ],
                 "borderWidth": 1
             }
@@ -123,48 +135,17 @@ Code Size (in kb), 2.3, 8.3, 126, 258, 87
     -->
     </canvas>
     <aside class="notes">
-        <b>In terms of the assets size, we can see that it is hard to compete with the native implementation. Stencil however has great results as well. The difference is the Virtual DOM code needs to be shipped as well.</b>
-        <b>Polymer and Angular Elements are not optimized out of the box as far as I could see.</b>
+        <b>In terms of the assets size We basically have the native implementation, stencil and the others</b>
+        <ul>
+            <li>Stencil is a little bit bigger than the native because the Virtual DOM code is included.</li>
+            <li>The other implemenations are not optimized out of the box as far as I could see.</li>
+        </ul>
     </aside>
 </section>
 
 <section>
     <h3>Lighthouse Performance</h3>
     <div layout="row" layout-align="center start">
-        <div flex="20" style="position: relative;">
-            <canvas data-chart="doughnut" style="margin: 20px 0">
-            ,
-            Performance, 92, 8
-            <!--
-            {
-            "data": {
-                "datasets": [
-                    {
-                        "fill": false,
-                        "backgroundColor": [
-                            "#44b164",
-                            "#222"
-                        ],
-                        "borderColor": [
-                            "#44b164",
-                            "#222"
-                        ],
-                        "borderWidth": 1
-                    }
-                ]
-            },
-            "options": {
-                "responsive": true,
-                "legend": {
-                    "display": false
-                }
-            }
-            }
-            -->
-            </canvas>
-            <span style="position: absolute; top: 44px; left: 0; right: 0;">92</span>
-            <img src="../../img/web_component-logo.png" height="150" class="img-plain"/>
-        </div>
         <div flex="20" style="position: relative;">
             <canvas data-chart="doughnut" style="margin: 20px 0">
             ,
@@ -232,6 +213,40 @@ Code Size (in kb), 2.3, 8.3, 126, 258, 87
             </canvas>
             <span style="position: absolute; top: 44px; left: 0; right: 0;">94</span>
             <img src="../../img/polymer-logo.png" height="150" class="img-plain"/>
+        </div>
+        <div flex="20" style="position: relative;">
+            <canvas data-chart="doughnut" style="margin: 20px 0">
+            ,
+            Performance, 92, 8
+            <!--
+            {
+            "data": {
+                "datasets": [
+                    {
+                        "fill": false,
+                        "backgroundColor": [
+                            "#44b164",
+                            "#222"
+                        ],
+                        "borderColor": [
+                            "#44b164",
+                            "#222"
+                        ],
+                        "borderWidth": 1
+                    }
+                ]
+            },
+            "options": {
+                "responsive": true,
+                "legend": {
+                    "display": false
+                }
+            }
+            }
+            -->
+            </canvas>
+            <span style="position: absolute; top: 44px; left: 0; right: 0;">92</span>
+            <img src="../../img/web_component-logo.png" height="150" class="img-plain"/>
         </div>
         <div flex="20" style="position: relative;">
             <canvas data-chart="doughnut" style="margin: 20px 0">
@@ -312,9 +327,9 @@ Code Size (in kb), 2.3, 8.3, 126, 258, 87
 <section>
     <h3>First meaningful paint</h3>
     <canvas data-chart="horizontalBar">
-, Native, StencilJS, Polymer 2, Angular Elements, Vue Wrapper
+, StencilJS, Polymer 2, Native, Angular Elements, Vue Wrapper
 <!-- This is a comment that will be ignored -->
-First meaningful paint (in ms), 2480, 1828, 2292, 4229, 4321
+First meaningful paint (in ms), 1828, 2292, 2480, 4229, 4321
     <!--
 {
     "data": {
@@ -332,16 +347,16 @@ First meaningful paint (in ms), 2480, 1828, 2292, 4229, 4321
                 ],
                 "fill": false,
                 "backgroundColor": [
-                    "#ef5a25",
                     "white",
                     "#1b7de1",
+                    "#ef5a25",
                     "#d8002c",
                     "#39AF78"
                 ],
                 "borderColor": [
-                    "#f05118",
                     "white",
                     "#1d4b9e",
+                    "#f05118",
                     "#bb0029",
                     "#39AF78"
                 ],
@@ -394,7 +409,7 @@ First meaningful paint (in ms), 2480, 1828, 2292, 4229, 4321
         <li><span style="color: var(--blue)">Interoperability</span></li>
         <li><span style="color: var(--blue)">Write less code</span> (Decorator, JSX)</li>
         <li><span style="color: var(--blue)">Write better code</span> (Static Type-checking)</li>
-        <li><span style="color: var(--blue)">Optimized DOM manipulation</span> (Virtual DOM)</li>
+        <li><span style="color: var(--blue)">Easy & Optimized DOM manipulation</span> (Virtual DOM)</li>
         <li><span style="color: var(--blue)">Faster time to first meaningful paint</span> (Prerendering)</li>
         <!-- <li><span style="color: var(--blue)">Better SEO</span> (Prerendering)</li> -->
     </ol>

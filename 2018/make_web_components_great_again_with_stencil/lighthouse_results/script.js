@@ -3,9 +3,18 @@ const lighthouse = require('lighthouse');
 const chromeLauncher = require('chrome-launcher');
 const _find = require('lodash/find');
 const _set = require('lodash/set');
-const config = require('./config.js');
 
-// lighthouse('https://example.com/', { port: 9222 }, config);
+const config = {
+    "extends": "lighthouse:default",
+    "settings": {
+        "onlyCategories": ["performance"]
+    },
+    "categories": {
+        "performance": {
+            "weight": 1
+        }
+    }
+};
 
 function launchChromeAndRunLighthouse(url, flags = {}, config = null) {
     return chromeLauncher.launch(flags).then(chrome => {
@@ -19,7 +28,7 @@ const flags = {
     chromeFlags: ['--headless']
 };
 
-const endpoints = ['stencil'];
+const endpoints = ['native', 'stencil', 'polymer2', 'angular-elements', 'vue'];
 const results = {};
 const tryNumber = 5;
 
@@ -43,7 +52,6 @@ for (let i = 0; i < endpoints.length; i++) {
     }
 };
 promises.then(() => {
-    // console.log(results)
     Object.keys(results).forEach(endpoint => {
         const { performance, fmp } = results[endpoint];
         const perf = Math.round(performance.reduce((previous, current) => {
@@ -57,11 +65,5 @@ promises.then(() => {
         console.log('first-meaningful-paint', firstMeaningfull + ' ms')
     });
 })
-
-// launchChromeAndRunLighthouse('https://wc-todo.firebaseapp.com/native', flags, config).then(results => {
-//     // Use results!
-//     console.log(results.reportCategories[0].score)
-// });
-
 
 
