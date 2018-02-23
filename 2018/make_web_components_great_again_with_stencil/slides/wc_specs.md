@@ -195,24 +195,25 @@ class MyNameIs extends HTMLElement {
 
 <section data-state="custom-elements">
 <h3>Properties</h3>
-<pre style="font-size: 55%"><code class="js" data-trim>
+<pre style="font-size: 85%"><code class="js" data-trim>
 class MyTodos extends HTMLElement {
     constructor() {
         this.\_list = [];
     }
-    set list(data) {
-        this.\_list = data;
-    }
     get list() {
         return this.\_list;
     }
+    set list(data) {
+        this.\_list = data;
+        this.customRender(); // Update the DOM
+    }
 }
 </code></pre>
-<div class="fragment current-only" data-code-block="1" data-code-focus="3"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="2-4"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="5-7"></div>
-<div class="fragment current-only" data-code-block="1" data-code-focus="8-10"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="8-11"></div>
 
-<pre  class="fragment" style="font-size: 55%"><code class="js" data-trim>
+<!-- <pre  class="fragment" style="font-size: 55%"><code class="js" data-trim>
 const $myTodos = document.querySelector('my-todos');
 // Get the list
 console.log($myTodos.list); // []
@@ -224,18 +225,14 @@ console.log($myTodos.list); // ['first item', 'second item']
 </code></pre>
 <div class="fragment current-only" data-code-block="2" data-code-focus="3"></div>
 <div class="fragment current-only" data-code-block="2" data-code-focus="5"></div>
-<div class="fragment current-only" data-code-block="2" data-code-focus="7"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="7"></div> -->
     <aside class="notes">
         <b>We need to use properties</b>
         <b>Let's say that we have a todo list component</b>
         <ul>
             <li>First thing is to initiate our list in the constructor</li>
-            <li>To set the list from the outside we can use a Setter List</li>
             <li>To get the internal list from the outside we can use a Getter List</li>
-            <li>Now from outside of this component we can...</li>
-            <li>Get the current list</li>
-            <li>Set a new list</li>
-            <li>And check that the list has been updated</li>
+            <li>To set the list from the outside we can use a Setter List then we can update the DOM with the new values</li>
         </ul>
         <b>Let's see a demo</b>
     </aside>
@@ -383,7 +380,13 @@ class MyNameIsShadow extends HTMLElement {
 <h3>Adding Shadow DOM to Angular</h3>
 <pre style="font-size: 80%"><code class="js" data-trim>
 import { ViewEncapsulation } from '@angular/core';
+
+@Component({
+  encapsulation: ViewEncapsulation.Native
+})
+class MyComponent {}
 </code></pre>
+<div class="fragment current-only" data-code-block="1" data-code-focus="1,4"></div>
 <table style="zoom:0.65; " class="fragment table table-striped table-dark">
     <tbody>
         <tr>
@@ -391,22 +394,15 @@ import { ViewEncapsulation } from '@angular/core';
         <td align="left"  style="font-weight: bold;">Shadow DOM emulation</td>
         </tr>
         <tr class="fragment">
-        <td align="left" style="font-weight: bold;">ViewEncapsulation.None</td>
-        <td align="left" style="font-weight: bold;">No Shadow DOM at all</td>
-        </tr>
-        <tr class="fragment">
         <td align="left"  style="font-weight: bold;">ViewEncapsulation.Native</td>
         <td align="left"  style="font-weight: bold;">Shadow DOM</td>
         </tr>
+        <tr class="fragment">
+        <td align="left" style="font-weight: bold;">ViewEncapsulation.None</td>
+        <td align="left" style="font-weight: bold;">No Shadow DOM at all</td>
+        </tr>
     </tbody>
 </table>
-<pre class="fragment" style="font-size: 80%"><code class="js" data-trim>
-@Component({
-  encapsulation: ViewEncapsulation.Native
-})
-class MyComponent {}
-</code></pre>
-    <div class="fragment current-only" data-code-block="2" data-code-focus="2"></div>
     <aside class="notes">
         <b>We can add the shadow DOM to Angular components pretty easily with ViewEncapsulation</b>
         <ul>
@@ -544,7 +540,7 @@ document.body.appendChild($clone);
     <thead>
     <tr>
     <th></th>
-    <th align="center">IE11</th>
+    <th align="center">IE</th>
     <th align="center">Edge</th>
     <th align="center">Firefox</th>
     <th align="center">Chrome</th>
@@ -554,27 +550,27 @@ document.body.appendChild($clone);
     <tbody>
     <tr>
     <td>Custom Elements v1</td>
-    <td align="center" style="background-color: #bc392a;">11</td>
-    <td align="center" style="background-color: #bc392a;">16</td>
-    <td align="center" style="background-color: #bc392a;">57</td>
-    <td align="center" style="background-color: #9eb40b;">63</td>
-    <td align="center" style="background-color: #9eb40b;">11</td>
+    <td align="center" style="background-color: #bc392a;">v11</td>
+    <td align="center" style="background-color: #bc392a;">v16</td>
+    <td align="center" style="background-color: #bc392a;">v57</td>
+    <td align="center" style="background-color: #9eb40b;">v63</td>
+    <td align="center" style="background-color: #9eb40b;">v11</td>
     </tr>
     <tr>
     <td>Shadow DOM v1</td>
-    <td align="center" style="background-color: #bc392a;">11</td>
-    <td align="center" style="background-color: #bc392a;">16</td>
-    <td align="center" style="background-color: #bc392a;">57</td>
-    <td align="center" style="background-color: #32ac41;">63</td>
-    <td align="center" style="background-color: #9eb40b;">11</td>
+    <td align="center" style="background-color: #bc392a;">v11</td>
+    <td align="center" style="background-color: #bc392a;">v16</td>
+    <td align="center" style="background-color: #bc392a;">v57</td>
+    <td align="center" style="background-color: #32ac41;">v63</td>
+    <td align="center" style="background-color: #9eb40b;">v11</td>
     </tr>
     <tr>
     <td>HTML Templates</td>
-    <td align="center" style="background-color: #bc392a;">11</td>
-    <td align="center" style="background-color: #9eb40b;">16</td>
-    <td align="center" style="background-color: #32ac41;">57</td>
-    <td align="center" style="background-color: #32ac41;">63</td>
-    <td align="center" style="background-color: #32ac41;">11</td>
+    <td align="center" style="background-color: #bc392a;">v11</td>
+    <td align="center" style="background-color: #9eb40b;">v16</td>
+    <td align="center" style="background-color: #32ac41;">v57</td>
+    <td align="center" style="background-color: #32ac41;">v63</td>
+    <td align="center" style="background-color: #32ac41;">v11</td>
     </tr></tbody>
     </table>
     <table style="zoom:0.6; margin-bottom: 60px">
@@ -690,7 +686,6 @@ export class AppModule { }
         <li class="fragment">Reusable piece of code</li>
         <li class="fragment">Style encapsulation</li>
         <li class="fragment">No dependencies `#UseThePlatform`</li>
-        <li class="fragment">Framework Agnostic</li>
         <li class="fragment">Works in all major browsers `(with polyfills)`</li>
     </ol>
     <aside class="notes">
@@ -699,7 +694,6 @@ export class AppModule { }
             <li>Custom elements are reusable piece of code</li>
             <li>With Shadow Dom you style do not leak</li>
             <li>No dependencies whatsoever</li>
-            <li>You can use Web components in Angular, React, Vue or by itself</li>
             <li>With Polyfills your components run everywhere</li>
         </ul>
     </aside>
@@ -709,7 +703,7 @@ export class AppModule { }
     <h3>Cons</h3>
     <ol>
         <li class="fragment">Manual data binding</li>
-        <li class="fragment">No declarative Custom Event Bindings `onSomething=""`</li>
+        <li class="fragment">No Custom Event bindings `onSomething=""`</li>
         <li class="fragment">Attributes and Properties difference adds complexity</li>
         <li class="fragment">Can be a bit verbose</li>
     </ol>

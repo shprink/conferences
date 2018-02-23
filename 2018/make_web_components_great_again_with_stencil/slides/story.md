@@ -3,7 +3,7 @@
     <img src="../../img/polymer-logo.png" style="margin: 0" height="200" class="img-plain fragment"/>
     <img src="../../img/angularjs-logo.png" style="margin: 0" height="200" class="img-plain fragment"/>
     <img src="../../img/angular-logo.png" style="margin: 0" height="200" class="img-plain fragment"/>
-    <span style="font-size: 190px; vertical-align: top;" class="fragment">😱</span>
+    <span style="font-size: 170px; vertical-align: top;" class="fragment">😱</span>
     <img src="../../img/stencil-logo.png" style="margin: 0" height="200" class="img-plain fragment"/>
     <aside class="notes">
         <b>Here is my story!</b>

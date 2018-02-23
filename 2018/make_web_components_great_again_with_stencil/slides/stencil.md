@@ -22,6 +22,7 @@
     </ul>
     <aside class="notes">
         <b>Stencil is...</b>
+        <br/>
         <ol>
             <li>Open Source</li>
             <li>created by the Ionic team in late 2017</li>
@@ -38,22 +39,43 @@
 </section>
 
 <section>
-    <h3>What you get out of the box</h3>
+    <h2 style="text-transform: initial; margin-bottom: 0.1em;">StencilJS <span style="text-transform: uppercase;  color: var(--blue);">works everywhere</span></h2>
+    <h3 style="text-transform: initial; margin-bottom: 0.1em;" class="fragment">Loads polyfills on-demand</h3>
+    <aside class="notes">
+        <b>Stencil works everywhere! </b>
+        <br/>
+        <ul>
+            <li>it uses a dynamic loader to load the missing polyfills on browsers that need it.</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h2 style="text-transform: initial; margin-bottom: 0.1em;">StencilJS <span style="text-transform: uppercase;  color: var(--blue);">is Fast</span></h2>
+    <h3 style="text-transform: initial; margin-bottom: 0.1em;" class="fragment">Dynamically loads components</h3>
+    <aside class="notes">
+        <b>Stencil is fast</b>
+        <br/>
+        <ul>
+            <li>Stencil uses dynamic imports to load components so you load only what's necessary</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h3 class="no-margin">Tooling you get out of the box</h3>
     <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
     <thead>
         <tr>
         <th></th>
         <th align="center">
-            <img src="../../img/web_component-logo.png" width="130" class="img-plain"/>
+            <img src="../../img/angular-logo.png" width="130" class="img-plain no-margin"/>
         </th>
         <th align="center">
-            <img src="../../img/angular-logo.png" width="130" class="img-plain"/>
+            <img src="../../img/react-logo.png" width="130" class="img-plain no-margin"/>
         </th>
         <th align="center">
-            <img src="../../img/react-logo.png" width="130" class="img-plain"/>
-        </th>
-        <th align="center">
-            <img src="../../img/stencil-logo.png" width="130" class="img-plain"/>
+            <img src="../../img/stencil-logo.png" width="130" class="img-plain no-margin"/>
         </th>
         </tr>
     </thead>
@@ -61,34 +83,29 @@
     <tr>
         <td>JSX / Virtual DOM</td>
         <td align="center" style="background-color: #bc392a;">⨯</td>
-        <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
     <tr>
         <td>Async Rendering</td>
         <td align="center" style="background-color: #bc392a;">⨯</td>
-        <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
     <tr>
         <td>TypeScript</td>
-        <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
         <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
     <tr>
         <td>Decorators</td>
-        <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
         <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
     <tr>
         <td>Server side rendering</td>
-        <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
@@ -97,36 +114,15 @@
     </table>
     <aside class="notes">
         <b>What you get out of the box is a mix a great features and tools from Angular and React</b>
+        <br/>
         <ol>
-            <li>JSX and virtual DOM are a matter of preferences, personally I love it</li>
-            <li>Async rendering which is new in React 16 and aims to prioritize UI updates. High priority updates are ran first, then low priority updates.</li>
-            <li>Type checking with TypeScript</li>
-            <li>Decorators</li>
-            <li>Server side rendering</li>
+            <li>JSX, virtual DOM and Async rendering come from the React Ecosystem</li>
+            <!-- <li>Async rendering which is new in React 16 and aims to prioritize UI updates. High priority updates are ran first, then low priority updates.</li> -->
+            <li>TypeScript & Decorators come from the Angular Ecosystem</li>
+            <li>And Server side rendering that is common to both React and Angular</li>
         </ol>
-        <b>To me is it a perfect combo</b>
-    </aside>
-</section>
-
-<section>
-    <h3>Prerendering</h3>
-<pre style="font-size: 75%; width: 35% !important; text-align:center;"><code class="html" data-trim>
-<my-app></my-app>
-</code></pre>
-    <div class="fragment">
-        <h4>After production build:</h4>
-        <img src="./img/prerendering.png" class="img-plain"/>
-        <ul>
-            <li class="fragment">🚀 Blazing fast First meaningful paint</li>
-            <li class="fragment">Better SEO</li>
-        </ul>
-    </div>
-    <aside class="notes">
-        <b>With modern frameworks we are used to have only one component in our index.html right. Stencil uses it server side rendering capability to prerender your app in production mode.</b>
-        <ul>
-            <li>The benefits are a Blazing fast First meaningful . Your users see your application as fast as possible. It won't be interactive though, but they will see something</li>
-            <li>Better Search Engine Optimization</li>
-        </ul>
+        <br/>
+        <b>To me it is a really cool combo</b>
     </aside>
 </section>
 
@@ -194,7 +190,7 @@
 </section>
 
 <section>
-    <h3>Same Life Cycle hooks as React</h3>
+    <h3 style="margin-bottom: 0;">Same Lifecycle hooks as React</h3>
     <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
     <thead>
     <tr>
@@ -207,27 +203,9 @@
     <tbody>
     <tr>
         <td align="left" style="font-weight: bold;">
-            <span style="color: var(--react)">componentWillLoad</span>
-        </td>
-        <td align="left">Will load but has not rendered yet</td>
-    </tr>
-    <tr>
-        <td align="left" style="font-weight: bold;">
             <span style="color: var(--react)">componentDidLoad</span>
         </td>
         <td align="left">Loaded and has rendered</td>
-    </tr>
-    <tr>
-        <td align="left" style="font-weight: bold;">
-            <span style="color: var(--react)">componentWillUpdate</span>
-        </td>
-        <td align="left">Will update and re-render</td>
-    </tr>
-    <tr>
-        <td align="left" style="font-weight: bold;">
-            <span style="color: var(--react)">componentDidUpdate</span>
-        </td>
-        <td align="left">Finished updating.</td>
     </tr>
     <tr>
         <td align="left" style="font-weight: bold;">
@@ -235,15 +213,44 @@
         </td>
         <td align="left">Removed from the DOM</td>
     </tr>
+    <tr>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--react)">componentDidUpdate</span>
+        </td>
+        <td align="left">Finished updating.</td>
+    </tr>
+    </tbody>
+    </table>
+    <h5>New Hooks compared to custom elements:</h5>
+    <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
+    <tbody>
+    <tr>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--react)">componentWillLoad</span>
+        </td>
+        <td align="left">Will load but has not rendered yet</td>
+    </tr>
+    <tr>
+        <td align="left" style="font-weight: bold;">
+            <span style="color: var(--react)">componentWillUpdate</span>
+        </td>
+        <td align="left">Will update and re-render</td>
+    </tr>
     </tbody>
     </table>
     <aside class="notes">
-        <b>Stencil has the exact same life cycle hooks as React.</b>
+        <b>Stencil has the exact same life cycle hooks as React. 2 more than the native implementation to be more flexible</b>
     </aside>
 </section>
 
 <section>
-    <h3>Component created with Stencil</h3>
+    <h2>Let's see some code!</h2>
+    <aside class="notes">
+    </aside>
+</section>
+
+<section>
+    <h4>MyNameIs Component created with Stencil</h4>
 <pre style="font-size: 85%;"><code class="typescript" data-trim>
 import { Component, Prop } from '@stencil/core';
 
@@ -328,10 +335,21 @@ import { MyLib } from './my-lib.js';
         Ionic 4 is&nbsp;<span style="color: var(--blue)"> powered by</span>
         &nbsp;<img src="../../img/stencil-logo.png" width="130" class="img-plain"/>
     </h2>
+    <ul>
+        <li class="fragment">`<ion-card>` is now a Web Component</li>
+        <li class="fragment">Framework Agnostic</li>
+        <li class="fragment">Smaller ionic-angular package</li>
+    </ul>
         <!-- <img src="../../img/ionic-logo.png" class="img-plain" width="75%" style="margin: 0;"/> -->
     <aside class="notes">
-        <b>In case you live under a rock, Ionic 4 is powered by StencilJS!</b>
-        <b>It means that we can use the Ionic components that we all love as Angular developer but use it anywhere, with any framework or none at all</b>
+        <b>In case you lived under a rock for the past few months, Ionic 4 is powered by StencilJS!</b>
+        <b>What does it mean exactly?</b>
+        <ul>
+            <li>ALl the Ionic components are now Web Components</li>
+            <li>Ionic is now Framework agnostic, we can use Ionic Everywhere</li>
+            <li>And if you use Ionic with Angular, it means a smaller bundle</li>
+        </ul>
+        <b>Sounds amazing right? let's see how to get started with </b>
     </aside>
 </section>
 
@@ -355,13 +373,16 @@ npm install
 npm start
 </code></pre>
     <aside class="notes">
-        <b>To start using Stencil all you </b>
+        <b>To start using Stencil all you need to do is to clone and install the starter app</b>
+        <b>Then if you run `npm start` the dev server will start and you will get this:</b>
     </aside>
 </section>
 
-<!-- <section class="strech">
-    <h3>Getting started</h3>
-    <asciinema-player data-autoplay theme="brightnucleus" src="./asciinema/get_started.json" cols="99" rows="23"></asciinema-player>
+<section class="stretch" data-background-color="#fff">
+    <img src="./img/stencil_starter.gif"  class="img-plain"/>
     <aside class="notes">
+        <b>The starter app has only two pages.</b>
+        <b>You get an example on how to create components and how to use Stencil router</b>
+        <b>Now that we know about Stencil, let's see some numbers to get you excited</b>
     </aside>
-</section> -->
+</section>
