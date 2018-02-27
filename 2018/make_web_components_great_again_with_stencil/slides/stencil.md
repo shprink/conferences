@@ -57,7 +57,7 @@
         <b>Stencil is fast</b>
         <br/>
         <ul>
-            <li>Stencil uses dynamic imports to load components so you load only what's necessary</li>
+            <li>Stencil uses dynamic imports to load components, so you only load what's necessary at a given time.</li>
         </ul>
     </aside>
 </section>
@@ -270,7 +270,7 @@ export class MyNameIs {
 <div class="fragment current-only" data-code-block="1" data-code-focus="8"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="8,10-13"></div>
     <aside class="notes">
-        <b>Let's see an example of a Stencil Component. I re implemented the MyNameIs component</b>
+        <b>I re implemented the MyNameIs component</b>
         <ul>
             <li>First of all we decorate our Class with the At Component decorator, we give it a tag name and a styleURL exactly how you would do in Angular</li>
             <li>Then we use the At Prop decorator to let the component know that we want to listen to the prop name changes.</li>
@@ -279,6 +279,7 @@ export class MyNameIs {
     </aside>
 </section>
 
+<!-- 
 <section>
     <h3>Component created with Stencil</h3>
 <pre style="font-size: 65%;"><code class="typescript" data-trim>
@@ -313,7 +314,7 @@ export class Counter {
             <li>To finish in the render method we return the current state. Everytime `count` changes the render method is called again.</li>
         </ul>
     </aside>
-</section>
+</section> -->
 
 <!-- <section>
     <h3>Native ES Module support</h3>

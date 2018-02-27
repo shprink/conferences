@@ -6,7 +6,6 @@
         <img src="../../img/polymer-logo.png" height="85" class="img-plain no-margin"/>
         <img src="../../img/skatejs-logo.png" height="85" class="img-plain no-margin"/>
         <img src="../../img/angular-logo.png" height="85" class="img-plain no-margin"/>
-        <img src="../../img/vue-logo.png" height="85" class="img-plain no-margin"/>
     </div>
     <img src="./img/todo.gif" class="img-plain no-margin" width="500" />
     <br/>
@@ -35,7 +34,7 @@
     </aside>
 </section> -->
 
-<!-- <section>
+<section>
     <h3>Full disclosure</h3>
     <ul>
          <li class="fragment">I try not be biased</li>
@@ -51,7 +50,7 @@
             <li>Angular Elements is a proof of concept at this point, take that into account when analysing the results</li>
         </ul>
     </aside>
-</section> -->
+</section>
 
 <section>
     <h4>Code length</h4>
@@ -74,9 +73,9 @@
 <section>
     <h5>Assets Dowloaded by the Browser (in KB)</h5>
     <canvas data-chart="horizontalBar">
-, Native, SkateJS, StencilJS, Polymer 2, Vue Wrapper,  Angular Elements
+, Native, SkateJS, StencilJS, Polymer 2, Angular Elements
 <!-- This is a comment that will be ignored -->
-Code Size (in kb), 4.3, 7, 10.7, 36.7, 87, 258
+Code Size (in kb), 4.3, 7, 10.7, 36.7, 258
     <!--
 {
     "data": {
@@ -89,7 +88,6 @@ Code Size (in kb), 4.3, 7, 10.7, 36.7, 87, 258
                     "#1b4678",
                     "white",
                     "#f4224d",
-                    "#39AF78",
                     "#d8002c"
                 ],
                 "borderColor": [
@@ -97,7 +95,6 @@ Code Size (in kb), 4.3, 7, 10.7, 36.7, 87, 258
                     "#1b4678",
                     "white",
                     "#f4224d",
-                    "#39AF78",
                     "#bb0029"
                 ],
                 "borderWidth": 1
@@ -150,9 +147,9 @@ Code Size (in kb), 4.3, 7, 10.7, 36.7, 87, 258
 <section>
     <h5>First meaningful paint (in ms)</h5>
     <canvas data-chart="horizontalBar">
-, StencilJS + Prerendering, SkateJS, Polymer 2, StencilJS, Native, Angular Elements, Vue Wrapper
+, StencilJS + Prerendering, Native, SkateJS, Polymer 2, StencilJS, Angular Elements
 <!-- This is a comment that will be ignored -->
-First meaningful paint (in ms), 1828, 2131, 2292, 2319, 2480, 4229, 4321
+First meaningful paint (in ms), 1828, 2085, 2131, 2292, 2319, 4229
     <!--
 {
     "data": {
@@ -162,21 +159,19 @@ First meaningful paint (in ms), 1828, 2131, 2292, 2319, 2480, 4229, 4321
                 "fill": false,
                 "backgroundColor": [
                     "white",
+                    "#ef5a25",
                     "#1b4678",
                     "#f4224d",
                     "white",
-                    "#ef5a25",
-                    "#d8002c",
-                    "#39AF78"
+                    "#d8002c"
                 ],
                 "borderColor": [
                     "white",
+                    "#f05118",
                     "#1b4678",
                     "#f4224d",
                     "white",
-                    "#f05118",
-                    "#bb0029",
-                    "#39AF78"
+                    "#bb0029"
                 ],
                 "borderWidth": 1
             }
@@ -262,9 +257,9 @@ First meaningful paint (in ms), 1828, 2131, 2292, 2319, 2480, 4229, 4321
 <section>
     <h5>Overall Lighthouse Performance</h5>
     <canvas data-chart="horizontalBar">
-, StencilJS + Prerendering, SkateJS, Polymer 2, Native, StencilJS, Angular Elements, Vue Wrapper
+, StencilJS + Prerendering, Native, SkateJS, Polymer 2, StencilJS, Angular Elements
 <!-- This is a comment that will be ignored -->
-Lighthouse Performance, 97, 95, 94, 92, 91, 74, 73
+Lighthouse Performance, 97, 95, 95, 94,  91, 74
     <!--
 {
     "data": {
@@ -274,21 +269,19 @@ Lighthouse Performance, 97, 95, 94, 92, 91, 74, 73
                 "fill": false,
                 "backgroundColor": [
                     "white",
+                    "#ef5a25",
                     "#1b4678",
                     "#f4224d",
-                    "#ef5a25",
                     "white",
-                    "#d8002c",
-                    "#39AF78"
+                    "#d8002c"
                 ],
                 "borderColor": [
                     "white",
+                    "#f05118",
                     "#1b4678",
                     "#f4224d",
-                    "#f05118",
                     "white",
-                    "#bb0029",
-                    "#39AF78"
+                    "#bb0029"
                 ],
                 "borderWidth": 1
             }
@@ -328,7 +321,7 @@ Lighthouse Performance, 97, 95, 94, 92, 91, 74, 73
     -->
     </canvas>
     <aside class="notes">
-        <b>If we take a look at the Overall Lighthouse Performance, once again we have two groups: skate, stencil, native, polymer and the others</b>
+        <b>If we take a look at the Overall Lighthouse Performance, once again Stencil + prerendering beats Native. Skate, polymer and stencil are pretty close to each others.</b>
     </aside>
 </section>
 
@@ -378,6 +371,10 @@ Lighthouse Performance, 97, 95, 94, 92, 91, 74, 73
         <li class="fragment"><span style="color: var(--blue)">Allows SEO</span> (SSR)</li>
     </ol>
     <aside class="notes">
+        <b>Let's conclude this talk</b>
+        <br/>
+        <b>Why StencilJS makes Web Components great again?</b>
+        <br/>
         <ul>
             <li></li>
             <li></li>

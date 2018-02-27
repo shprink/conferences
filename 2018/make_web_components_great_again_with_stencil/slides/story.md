@@ -3,7 +3,7 @@
     <img src="../../img/polymer-logo.png" style="margin: 0" height="200" class="img-plain fragment"/>
     <img src="../../img/angularjs-logo.png" style="margin: 0" height="200" class="img-plain fragment"/>
     <img src="../../img/angular-logo.png" style="margin: 0" height="200" class="img-plain fragment"/>
-    <span style="font-size: 170px; vertical-align: top;" class="fragment">😱</span>
+    <img src="./img/scream.png" style="margin: 0" height="200" class="img-plain fragment"/>
     <img src="../../img/stencil-logo.png" style="margin: 0" height="200" class="img-plain fragment"/>
     <aside class="notes">
         <b>Here is my story!</b>
@@ -14,6 +14,6 @@
             <li>At this time I complitely forgot about the Web components specs</li>
             <li>But in late 2017 I discovered StencilJS and something happened in my mind... I regain interest and confidence about Web components!</li>
         </ul>
-        <b>Let's see the problems that StencilJS is trying to resolve</b>
+        <b>Let's see the problems that the Web Components and StencilJS is trying to resolve</b>
     </aside>
 </section>

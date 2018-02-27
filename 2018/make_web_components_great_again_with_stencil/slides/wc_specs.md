@@ -171,15 +171,14 @@ class MyNameIs extends HTMLElement {
             <li>Everytime one of those attribute changes attributeChangedCallback will be called with the name, the old and new value</li>
             <li>Then we can do something, here we update the DOM</li>
         </ul>
-        <b>Here is a demo of that custom element</b>
     </aside>
 </section>
 
-<section data-background-video="./videos/my-name-is.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
+<!-- <section data-background-video="./videos/my-name-is.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
     <aside class="notes">
         <b></b>
     </aside>
-</section>
+</section> -->
 
 <section data-state="custom-elements">
 <i style="font-size: 200px; color: yellow" class="fa fa-exclamation-triangle"></i>
@@ -195,8 +194,8 @@ class MyNameIs extends HTMLElement {
 
 <section data-state="custom-elements">
 <h3>Properties</h3>
-<pre style="font-size: 85%"><code class="js" data-trim>
-class MyTodos extends HTMLElement {
+<pre style="font-size: 55%"><code class="js" data-trim>
+class MyList extends HTMLElement {
     constructor() {
         this.\_list = [];
     }
@@ -213,28 +212,30 @@ class MyTodos extends HTMLElement {
 <div class="fragment current-only" data-code-block="1" data-code-focus="5-7"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="8-11"></div>
 
-<!-- <pre  class="fragment" style="font-size: 55%"><code class="js" data-trim>
-const $myTodos = document.querySelector('my-todos');
+<pre  class="fragment" style="font-size: 65%"><code class="js" data-trim>
+const $MyList = document.querySelector('my-list');
 // Get the list
-console.log($myTodos.list); // []
+console.log($MyList.list); // []
 // Set the list
-$myTodos.list = ['first item', 'second item'];
-// Get the list again
-console.log($myTodos.list); // ['first item', 'second item']
+$MyList.list = ['first item', 'second item'];
 &nbsp;
 </code></pre>
+<div class="fragment current-only" data-code-block="2" data-code-focus="1"></div>
 <div class="fragment current-only" data-code-block="2" data-code-focus="3"></div>
 <div class="fragment current-only" data-code-block="2" data-code-focus="5"></div>
-<div class="fragment current-only" data-code-block="2" data-code-focus="7"></div> -->
     <aside class="notes">
         <b>We need to use properties</b>
-        <b>Let's say that we have a todo list component</b>
+        <br/>
+        <b>Let's say that we have a component that displays a list of things</b>
         <ul>
-            <li>First thing is to initiate our list in the constructor</li>
-            <li>To get the internal list from the outside we can use a Getter List</li>
-            <li>To set the list from the outside we can use a Setter List then we can update the DOM with the new values</li>
+            <li>First thing is to initiate a private list in the constructor</li>
+            <li>To get this private list from the outside we can use a Getter with the name that you want. Here List</li>
+            <li>To set the list from the outside we can use a Setter List then we can update the DOM if we need to.</li>
+            <li>let's see an example on how to use that now</li>
+            <li>First we need to get a reference to the component</li>
+            <li>To get the current list we use the list getter.</li>
+            <li>To set the current list we use the list setter.</li>
         </ul>
-        <b>Let's see a demo</b>
     </aside>
 </section>
 
@@ -275,7 +276,7 @@ class MyTodos extends HTMLElement {
 </section>
 -->
 
-<section data-background-video="./videos/todos.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
+<!-- <section data-background-video="./videos/todos.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
     <aside class="notes">
         <ul>
             <li>set</li>
@@ -283,7 +284,7 @@ class MyTodos extends HTMLElement {
             <li>reset</li>
         </ul>
     </aside>
-</section>
+</section> -->
 
 <section data-state="custom-elements">
 <h3>Events</h3>
@@ -329,12 +330,14 @@ $myComponent.addEventListener('onConnected', e => {
         "Shadow DOM provides encapsulation for DOM and CSS"
     </blockquote>
     <aside class="notes">
-        <b>Shadow DOM is a ways to encapsulate your DOM and CSS so nothing leaks out of your component</b>
+        <b>Shadow DOM is basically a Node that encapsulate your whole component</b>
+        <br/>
+        <b>How to enable Shadow DOM</b>
     </aside>
 </section>
 
 <section data-state="shadow-dom">
-<h3>Adding a shadowRoot</h3>
+<h3>Enable Shadow DOM</h3>
 <pre style="font-size: 60%"><code class="js" data-trim>
 class MyNameIs extends HTMLElement {
     static get observedAttributes() {
@@ -361,10 +364,10 @@ class MyNameIsShadow extends HTMLElement {
     <div class="fragment current-only" data-code-block="2" data-code-focus="3"></div>
     <div class="fragment current-only" data-code-block="2" data-code-focus="3,9"></div>
     <aside class="notes"
-        <b>We are going to add the shadow DOM to the component MyNameIs that we saw earlier.</b>
+        <b>We are going to add the shadow DOM to the component MyNameIs that we saw earlier and that is really simple.</b>
         <ul>
             <li>First we use attachShadow method to create the shadowRoot, which is the node that encapsulates your component. There are two modes, opened and closed. In the open mode you can access the shadow root from the outside, in the closed mode you cannot.</li>
-            <li>Then when we refer to the dom, we need to refer to the shadow root but the rest is the same</li>
+            <li>Then when we refer to the dom, we need to refer to the shadowroot but the rest is the same</li>
         </ul>
         <b>Let's see a demo</b>
     </aside>
@@ -387,7 +390,7 @@ import { ViewEncapsulation } from '@angular/core';
 class MyComponent {}
 </code></pre>
 <div class="fragment current-only" data-code-block="1" data-code-focus="1,4"></div>
-<table style="zoom:0.65; " class="fragment table table-striped table-dark">
+<table style="zoom:0.85; " class="fragment table table-striped table-dark">
     <tbody>
         <tr>
         <td align="left"  style="font-weight: bold;">ViewEncapsulation.Emulated (default)</td>
@@ -407,9 +410,8 @@ class MyComponent {}
         <b>We can add the shadow DOM to Angular components pretty easily with ViewEncapsulation</b>
         <ul>
             <li>ViewEncapsulation has three values, the default is Emulated. All the style that you add to your component will be prefixed by a unique ID</li>
-            <li>Then we have None, your CSS remains untouched, there is no prefix added to it</li>
-            <li>The last value is Native, native means that the shadow is enabled</li>
-            <li>To use the encapsulation that you want, we need to use the encapsulation property of the AtComponent decorator.</li>
+            <li>Native for the Native shadow DOM</li>
+            <li>Last value is None, your CSS remains untouched</li>
         </ul>
         <b>Pretty easy right and yet really powerful!</b>
     </aside>
@@ -704,7 +706,7 @@ export class AppModule { }
     <ol>
         <li class="fragment">Manual data binding</li>
         <li class="fragment">No Custom Event bindings `onSomething=""`</li>
-        <li class="fragment">Attributes and Properties difference adds complexity</li>
+        <li class="fragment">Attributes/Properties complexity</li>
         <li class="fragment">Can be a bit verbose</li>
     </ol>
     <aside class="notes">
