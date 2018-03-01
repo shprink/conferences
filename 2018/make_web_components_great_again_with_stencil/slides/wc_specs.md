@@ -63,9 +63,9 @@ window.customElements
 <pre class="fragment" style="font-size: 80%"><code class="html"><my-component></my-component>
 </code></pre>
     <aside class="notes">
-        <b>This is a Web Component, all you need to do is to use a ES2015 Class and extends HTMLElement.</b>
+        <b>This is a Custom Element, all you need to do is to use a ES2015 Class and extends HTMLElement.</b>
         <ul>
-            <li>To be able to use this Web Component we need to register it. To do this we use the custom element define method. It takes the tag name and the Class reference as arguments</li>
+            <li>To be able to use this Custom Element we need to use the customElements API and the register method. It takes the tag name and the Class reference as arguments</li>
             <li>Then we can insert this new component inside the DOM</li>
         </ul>
     </aside>
@@ -129,11 +129,11 @@ window.customElements
     </tbody>
 </table>
     <aside class="notes">
-        <b>Web components have three lifecycle hooks</b>
+        <b>Custom Elements have three lifecycle hooks</b>
         <ul>
             <li>connectedCallback is called when the component is inserted in the DOM</li>
             <li>disconnectedCallback is called when it is removed from the DOM</li>
-            <li>and attributeChangedCallback is called when an attribute that we are listening to has changed</li>
+            <li>and attributeChangedCallback is called when an attribute value has changed</li>
             <li>And here is the equivalent in Angular.</li>
         </ul>
     </aside>
@@ -164,12 +164,14 @@ class MyNameIs extends HTMLElement {
 <div class="fragment current-only" data-code-block="2" data-code-focus="5"></div>
 <div class="fragment current-only" data-code-block="2" data-code-focus="7-8"></div>
     <aside class="notes">
-        <b>Observing Attributes changes is not a feature that is out of the box with the native spec. It needs to be explicit.</b>
+        <b>Observing Attributes changes is not a feature that is out of the box with the native spec.</b>
+        <br/>
         <b>If we have a custom element like this one. how do we listen to the `name` attribute changes?</b>
+        <br/>
         <ul>
             <li>All you need to do is to use the observedAttributes getter which shoud return an array of attributes names that you want to listen to.</li>
             <li>Everytime one of those attribute changes attributeChangedCallback will be called with the name, the old and new value</li>
-            <li>Then we can do something, here we update the DOM</li>
+            <li>Then we can do something with this data, here we update the DOM</li>
         </ul>
     </aside>
 </section>
@@ -231,7 +233,11 @@ $MyList.list = ['first item', 'second item'];
             <li>First thing is to initiate a private list in the constructor</li>
             <li>To get this private list from the outside we can use a Getter with the name that you want. Here List</li>
             <li>To set the list from the outside we can use a Setter List then we can update the DOM if we need to.</li>
-            <li>let's see an example on how to use that now</li>
+        </ul>
+        <br/>
+        <b>let's see an example on how to use that now</b>
+        <br/>
+        <ul>
             <li>First we need to get a reference to the component</li>
             <li>To get the current list we use the list getter.</li>
             <li>To set the current list we use the list setter.</li>
@@ -310,10 +316,12 @@ $myComponent.addEventListener('onConnected', e => {
     <aside class="notes">
         <b>To finish on custom elements, we need to learn how to dispatch events.</b>
         <ul>
-            <li>First of all we need an event to dispatch. It could be a mouse Event, a Keyboard or a custom event. We give a name and the detail we want to export.</li>
-            <li>Then we can dispatch this event using the internal dispatchEvent method</li>
+            <li>First of all we need an event to dispatch. It could be a mouse Event, a Keyboard or a custom event.</li>
+            <li>Then we dispatch this event at a given time. Here when the element is inserted into the DOM</li>
+        </ul>
+        <ul>
             <li>to get this event from outside the component we need to add an event listener to it</li>
-            <li>Then we can react to the event and get the detail. here the date</li>
+            <li>Then we can do something when the event is triggered.</li>
         </ul>
         <b>We are done talking about custom elements, let's talk about shadow DOM</b>
     </aside>
@@ -375,7 +383,10 @@ class MyNameIsShadow extends HTMLElement {
 
 <section data-background-video="./videos/shadow-dom-color.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
     <aside class="notes">
-        <b>We have two components, one without shadowDOM, one with shadowDOM. Changes in the document style applies only to the component without shadow DOM. the other one is encapsulated.</b>
+        <b>We have two components, my-name-is without shadowDOM, and my-name-is with shadowDOM.</b>
+        <ul>
+            <li>When we apply a document style change, such as a color of a title, it applies only to the component without shadow DOM, the other one is protected.</li>
+        </ul>
     </aside>
 </section>
 
@@ -413,7 +424,6 @@ class MyComponent {}
             <li>Native for the Native shadow DOM</li>
             <li>Last value is None, your CSS remains untouched</li>
         </ul>
-        <b>Pretty easy right and yet really powerful!</b>
     </aside>
 </section>
 
@@ -438,6 +448,8 @@ class MyComponent {}
     </blockquote>
     <aside class="notes">
         <b>The last spec is HTML templates. this template tag is really powerful, it never renders children unless you ask for it</b>
+        <br/>
+        <b>Let's see an example</b>
     </aside>
 </section>
 
@@ -464,13 +476,13 @@ document.body.appendChild($clone);
 <div class="fragment current-only" data-code-block="3" data-code-focus="3-4"></div>
 <div class="fragment current-only" data-code-block="3" data-code-focus="5-6"></div>
     <aside class="notes">
-        <b>What is the problem with this line here? The problem is that even if your image is outside of the viewport, the browser will fetch the image anyway. It is a waste of resource.</b>
+        <b>We have an image, the problem is that even if your image is outside of the viewport, the browser will fetch the image anyway. It is a waste of resource.</b>
         <ul>
             <li>Now if we wrap the same image inside a template tag, then nothing happens. The browser will not fetch the resource.</li>
             <li>To include the image on the page we first need to get the template node reference</li>
-            <li>Then we can clone the content of our templace</li>
+            <li>Then we deep clone the content</li>
             <li>To finish we can append the clone anywhere in the page.</li>
-            <li>At this point the image will be loaded by the browser</li>
+            <li>At this point the image will be fetched by the browser</li>
         </ul>
         <b></b>
     </aside>
@@ -586,10 +598,11 @@ document.body.appendChild($clone);
     </table>
     </ul>
     <aside class="notes">
-        <b>Let's talk about Browser support: Basically your web components only work natively on Chrome. But that's not something you should worried about, because of two things:</b>
+        <b>Let's talk about Browser support: Basically your web components only work natively on Chrome. 
+        <br/> But that's not something you should worried about for two reasons:</b>
         <ul>
-            <li>First of all all major browsers are commited to implement Web Components</li>
-            <li>and also because we have Polyfills for everything</li>
+            <li>First of all all major browsers are commited to support Web Components. And things are accelerating on firefox and safari lately</li>
+            <li>the second reason is because we have Polyfills for everything nowadays</li>
         </ul>
     </aside>
 </section>
@@ -647,7 +660,7 @@ document.body.appendChild($clone);
 </code></pre>
 </div> -->
     <aside class="notes">
-        <b>With Polyfills Web components will work everywhere.</b>
+        <b>With the right Polyfills Web components work everywhere.</b>
         <!-- <ul>
             <li>If you are worried about the polyfill size, you can use a loader that you can find on github and that only loads the required polyfill at runtime for the browser you use.</li>
         </ul> -->
@@ -677,7 +690,7 @@ export class AppModule { }
     <aside class="notes">
         <b>Now you might wonder if you can use Web components in Angular?</b>
         <ul>
-            <li>The answer is YES, with CUSTOM_ELEMENTS_SCHEMA, Web Components become first-class citizens in the Angular ecosystem. It is a seamless integration</li>
+            <li>The answer is YES, with CUSTOM_ELEMENTS_SCHEMA, we can use Web Components as if they were angular's components. It is a seamless integration</li>
         </ul>
     </aside>
 </section>
@@ -713,9 +726,9 @@ export class AppModule { }
         <b>The cons are</b>
         <ul>
             <li>We need to apply the DOM updates manually</li>
-            <li>No declarative Custom Event Bindings. Meaning we need to use addEventListener and removeEventListener manually</li>
+            <li>We cannot use directly on our components something like onSomething equal a function, we need to use event listeners</li>
             <li>Attributes and Properties differences adds complexity</li>
-            <li>And Since we do a lot of things manually, the code can be a bit verbose, and we are going to see that later on.</li>
+            <li>And Since we do a lot of things manually, the code can be a bit verbose.</li>
         </ul>
         <b>One solution to fix all of these limitations is to use StencilJS</b>
     </aside>

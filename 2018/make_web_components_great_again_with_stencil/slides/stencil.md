@@ -45,7 +45,7 @@
         <b>Stencil works everywhere! </b>
         <br/>
         <ul>
-            <li>it uses a dynamic loader to load the missing polyfills on browsers that need it.</li>
+            <li>it uses a dynamic polyfill loader to load the missing polyfills only when necessary.</li>
         </ul>
     </aside>
 </section>
@@ -119,10 +119,9 @@
             <li>JSX, virtual DOM and Async rendering come from the React Ecosystem</li>
             <!-- <li>Async rendering which is new in React 16 and aims to prioritize UI updates. High priority updates are ran first, then low priority updates.</li> -->
             <li>TypeScript & Decorators come from the Angular Ecosystem</li>
-            <li>And Server side rendering that is common to both React and Angular</li>
+            <li>And Server side rendering that is common to both</li>
         </ol>
         <br/>
-        <b>To me it is a really cool combo</b>
     </aside>
 </section>
 
@@ -185,7 +184,7 @@
     </table>
     <aside class="notes">
         <b>All the Angular decorators that you already know about have an equivalent with Stencil</b>
-        <b>The only exception is the State decorator. State represente the internal state of the component and it is inspired by React</b>
+        <b>The only exception is the State decorator. State represente the internal data of the component and it is inspired by React</b>
     </aside>
 </section>
 
@@ -239,7 +238,7 @@
     </tbody>
     </table>
     <aside class="notes">
-        <b>Stencil has the exact same life cycle hooks as React. 2 more than the native implementation to be more flexible</b>
+        <b>Stencil has the exact same life cycle hooks as React. which is two more than the native implementation</b>
     </aside>
 </section>
 
@@ -270,16 +269,17 @@ export class MyNameIs {
 <div class="fragment current-only" data-code-block="1" data-code-focus="8"></div>
 <div class="fragment current-only" data-code-block="1" data-code-focus="8,10-13"></div>
     <aside class="notes">
-        <b>I re implemented the MyNameIs component</b>
+        <b>I re implemented the MyNameIs component that we saw earlier with Stencil</b>
         <ul>
             <li>First of all we decorate our Class with the At Component decorator, we give it a tag name and a styleURL exactly how you would do in Angular</li>
-            <li>Then we use the At Prop decorator to let the component know that we want to listen to the prop name changes.</li>
-            <li>To finish we need to implement the render method that return JSX. Everytime the prop name changes, the component will update by calling the render method again.</li>
+            <li>Then we use the At Prop decorator to let the component know that we expect a name from outside the component.</li>
+            <li>To finish the render method must return JSX. Everytime the prop name changes, the component will update by calling the render method again.</li>
         </ul>
+        <br/>
+        <b>As you can see a Stencil component is a mix of Angular and React components</b>
     </aside>
 </section>
 
-<!-- 
 <section>
     <h3>Component created with Stencil</h3>
 <pre style="font-size: 65%;"><code class="typescript" data-trim>
@@ -314,7 +314,7 @@ export class Counter {
             <li>To finish in the render method we return the current state. Everytime `count` changes the render method is called again.</li>
         </ul>
     </aside>
-</section> -->
+</section>
 
 <!-- <section>
     <h3>Native ES Module support</h3>
@@ -350,7 +350,9 @@ import { MyLib } from './my-lib.js';
             <li>Ionic is now Framework agnostic, we can use Ionic Everywhere</li>
             <li>And if you use Ionic with Angular, it means a smaller bundle</li>
         </ul>
-        <b>Sounds amazing right? let's see how to get started with </b>
+        <b>It is clearly a win win situation for both Ionic that can now run everywhere and for us Angular users because we get a smaller bundle?</b>
+        <br/>
+        <b>Ok let's see how to get started with Stencil</b>
     </aside>
 </section>
 
@@ -374,16 +376,19 @@ npm install
 npm start
 </code></pre>
     <aside class="notes">
-        <b>To start using Stencil all you need to do is to clone and install the starter app</b>
-        <b>Then if you run `npm start` the dev server will start and you will get this:</b>
+        <b>To start using Stencil all you need to do is to clone and install the starter app that is available on github</b>
+        <br/>
+        <b>Then if you run `npm start` the dev server will start and you will get the following app:</b>
     </aside>
 </section>
 
 <section class="stretch" data-background-color="#fff">
     <img src="./img/stencil_starter.gif"  class="img-plain"/>
     <aside class="notes">
-        <b>The starter app has only two pages.</b>
-        <b>You get an example on how to create components and how to use Stencil router</b>
-        <b>Now that we know about Stencil, let's see some numbers to get you excited</b>
+        <b>The app starter is a Progressive Web App with it's own service worker, router and component examples.</b>
+        <br/>
+        <b>You get everything that you need to start your own application.</b>
+        <br/>
+        <b>Now that we know about Stencil, let's see some numbers to get you even more excited</b>
     </aside>
 </section>

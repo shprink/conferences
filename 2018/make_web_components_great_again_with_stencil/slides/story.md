@@ -14,6 +14,6 @@
             <li>At this time I complitely forgot about the Web components specs</li>
             <li>But in late 2017 I discovered StencilJS and something happened in my mind... I regain interest and confidence about Web components!</li>
         </ul>
-        <b>Let's see the problems that the Web Components and StencilJS is trying to resolve</b>
+        <b>Let's see the problems that the Web Components and StencilJS are trying to resolve</b>
     </aside>
 </section>

@@ -12,9 +12,11 @@
     Repo: https://github.com/shprink/web-components-todo
     Demos: https://wc-todo.firebaseapp.com
     <aside class="notes">
+        <b>Several month ago I wanted to compare the syntax and performance between all the alternatives we have to create Web Components.</b>
+        </br>
         <ul>
-            <li>I created a project that aims to compare different libraries that create Web Components. </li>
-            <li>Today we are going compare The native implementation, with...</li>
+            <li>For that reason I created this open source project that implements the same todo list with various Web Components technologies. </li>
+            <li>Today we are going compare The native implementation, with stencil, polymer, skateJS and Angular Elements</li>
         </ul>
     </aside>
 </section>
@@ -35,20 +37,27 @@
 </section> -->
 
 <section>
-    <h3>Full disclosure</h3>
-    <ul>
+    <i style="font-size: 200px; color: yellow" class="fa fa-exclamation-triangle"></i>
+    <h3>Angular Elements is in early stage</h3>
+    <!-- <ul>
          <li class="fragment">I try not be biased</li>
-         <li class="fragment">No optimizations was made</li>
-         <li class="fragment">⚠️ Angular Elements is in early stage</li>
-    </ul>
+         <li class="fragment"></li>
+    </ul> -->
     <aside class="notes">
         <b>Before we start I wanted to emphasize that...</b>
         <ul>
-            <li>I am not biased: I am not payed by anyone to say good things or bad things about any of those technologies</li>
+            <!-- <li>I am not biased: I am not payed by anyone to say good things or bad things about any of those technologies</li>
             <li>I followed the docs: like a normal user would do to start with those libraries</li>
-            <li>no optimizations was made: the results that I am about to share are what you get out of the box</li>
-            <li>Angular Elements is a proof of concept at this point, take that into account when analysing the results</li>
+            <li>no optimizations was made: the results that I am about to share are what you get out of the box</li> -->
+            <li>Angular Elements is a proof of concept at this point, take that into consideration when analysing the results</li>
         </ul>
+    </aside>
+</section>
+
+<section data-background-color="#fff">
+    <img src="./img/angular_elements.png"  class="img-plain"/>
+    <aside class="notes">
+        <b>Also don't miss the chance to learn about angular elements with Pascal at six twenty five</b>
     </aside>
 </section>
 
@@ -56,7 +65,7 @@
     <h4>Code length</h4>
     <img src="./img/stencil_vs_wc.png" class="img-plain no-margin"/>
     <aside class="notes">
-        <b>In terms of code length, what we can see is that Native custom element is the most verbose version. Polymer is a little bit less verbose and then we have the rest: Stencil, Angular, Vue & SkateJS that are similar.</b>
+        <b>In terms of code length, what we can see is that Native custom element is the most verbose version. <br/>The others are kinda similar.</b>
         <b>Why is code lenght important to me?</b>
     </aside>
 </section>
@@ -64,9 +73,7 @@
 <section>
     <h2 style="text-transform: initial;">The less code you write <span style="color: var(--blue)">the less bugs you will create</span></h2>
     <aside class="notes">
-        <b>The less code you write the less bugs you will create</b>
-        <br/>
-        <b>And also the more maintainable your code will be</b>
+        <b>This is my motto: "The less code you write the less bugs you will create" and also the more maintainable your code will be. So it is very important to me</b>
     </aside>
 </section>
 
@@ -135,10 +142,10 @@ Code Size (in kb), 4.3, 7, 10.7, 36.7, 258
     -->
     </canvas>
     <aside class="notes">
-        <b>In terms of the assets size We basically have the native implementation, SkateJS, Stencil and the others</b>
+        <b>In terms of the assets size it is hard to beat the native implementation because it has 0 dependencies. But SkateJS and Stencil are pretty close</b>
         <ul>
-            <li>Both Stencil & SkateJS use an HTML renderer such as VDOM, that's the reason they are bigger than native.</li>
-            <li>Stencil is a little bit bigger than SkateJS because it also includes the dynamic polyfill loader. Stencil is the only one that works everywhere</li>
+            <li>Both Stencil & SkateJS use an HTML renderer such as VDOM or lit-html, that's one of the reason they are bigger than native.</li>
+            <li>Stencil is a little bit bigger than SkateJS because it also includes the dynamic polyfill loader. Stencil is the only one that works on every browser by default</li>
         </ul>
     </aside>
 </section>
@@ -214,10 +221,10 @@ First meaningful paint (in ms), 1828, 2085, 2131, 2292, 2319, 4229
         <b>First meaningful paint measures when the primary content of a page is visible, the faster the better of course.</b>
         <br/>
         <ul>
-            <li>let's put stencil + prerendering asides for now</li>
-            <li>Skate, Polymer, Native and Stencil are pretty close to each other, then there is the rest.</li>
-            <li>stencil + prerendering is the fastest. let's see what is prerendering</li>
+            <li>If we put stencil + prerendering asides for now</li>
+            <li>Native, Skate, Polymer and Stencil are pretty close to each other.</li>
         </ul>
+        <b>To understand why stencil + prerendering is the fastest. We need to learn about prerendering</b>
     </aside>
 </section>
 
@@ -225,14 +232,16 @@ First meaningful paint (in ms), 1828, 2085, 2131, 2292, 2319, 4229
     <h2 style="text-transform: initial;"> <span style="color: var(--blue)">Prerendering</span> comes <span style="color: var(--blue)">out of the box</span> with StencilJS</h2>
     <div layout="row" layout-align="center center">
         <div layout="column" flex="30" layout-align="center center">
-<pre style="font-size: 65%;text-align:center;"><code class="html" data-trim>
-<my-app></my-app>
+<pre style="font-size: 60%;text-align:left;"><code class="html" data-trim>
+&lt;body&gt;
+  <my-app></my-app>
+&lt;/body&gt;
 </code></pre>
         </div>
-        <div layout="column" flex="5" layout-align="center center">
+        <div class="fragment" data-fragment-index="1" layout="column" flex="5" layout-align="center center">
             <i class="fa fa-arrow-circle-right"></i>
         </div>
-        <div layout="column" flex="60" layout-align="center center">
+        <div class="fragment" data-fragment-index="1" layout="column" flex="60" layout-align="center center">
             <img src="./img/prerendering.png" class="img-plain"/>
         </div>
     </div>
@@ -243,12 +252,13 @@ First meaningful paint (in ms), 1828, 2085, 2131, 2292, 2319, 4229
     <aside class="notes">
         <b>Prerendering comes out of the box with Stencil!</b>
         <br/>
-        <b>With modern frameworks we are used to have only one component in our index.html right?</b>
-        <br/>
-        <b>Stencil uses it server side rendering capability to prerender your app in production mode.</b>
+        <b>With modern frameworks we are used to have only one component in our index.html exactly as on the left side here</b>
         <br/>
         <ul>
-            <li>The benefits are a Blazing fast First meaningful . Your users see your application as fast as possible</li>
+            <li>Stencil uses it server side rendering capability to prerender your app in production mode</li>
+        </ul>
+        <ul>
+            <li>The benefits are a Blazing fast First meaningful paint. Your users will see your application as fast as possible</li>
             <li>Better Search Engine Optimization</li>
         </ul>
     </aside>
@@ -321,7 +331,8 @@ Lighthouse Performance, 97, 95, 95, 94,  91, 74
     -->
     </canvas>
     <aside class="notes">
-        <b>If we take a look at the Overall Lighthouse Performance, once again Stencil + prerendering beats Native. Skate, polymer and stencil are pretty close to each others.</b>
+        <b>If we take a look at the Overall Lighthouse Performance, once again Stencil + prerendering beats Native.
+        <br/> Skate, polymer and stencil are above 90 by default which is a great score.</b>
     </aside>
 </section>
 
@@ -366,7 +377,6 @@ Lighthouse Performance, 97, 95, 95, 94,  91, 74
         <li class="fragment"><span style="color: var(--blue)">Works everywhere</span> (Dynamic Polyfill loader)</li>
         <li class="fragment"><span style="color: var(--blue)">Loads fast</span> (Prerendering, dynamic import)</li>
         <li class="fragment"><span style="color: var(--blue)">Less verbose</span> (Decorators, JSX renderer)</li>
-        <li class="fragment"><span style="color: var(--blue)">Robust code</span> (Static Type-checking)</li>
         <li class="fragment"><span style="color: var(--blue)">Optimized DOM manipulation</span> (Virtual DOM)</li>
         <li class="fragment"><span style="color: var(--blue)">Allows SEO</span> (SSR)</li>
     </ol>
@@ -376,14 +386,14 @@ Lighthouse Performance, 97, 95, 95, 94,  91, 74
         <b>Why StencilJS makes Web Components great again?</b>
         <br/>
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li>With TypeScript you can be aware of errors before runtime, and that's really powerful</li>
-            <li></li>
-            <li></li>
+            <li>Stencil works everywhere</li>
+            <li>Stencil is fast</li>
+            <li>Stencil components are concise</li>
+            <li>Stencil optimizes the DOM manipulation by default</li>
+            <li>And Stencil allows Search Engine Optimization</li>
         </ul>
         <br/>
-        <b>That's it for me, I hope you guys are existed about Web Component and want to know more about Stencil, if you do I will be around if you have any questions.</b>
+        <b>That's it for me,
+        <br/>I hope you guys are excited about Web Components and Stencil, if you are I will be in the speaker room to answer your questions. thanks very much</b>
     </aside>
 </section>

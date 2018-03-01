@@ -42,7 +42,7 @@
         <b>And we keep creating the same code OVER and OVER and OVER again!</b>
         <br/>
         <b>Those projects are implementations of the material design spec for different frameworks.</b>
-        <b>At the end it is just some buttons with a ripple effect right?</b>
+        <b>It is a waste of resource because at the end it is just some buttons with a ripple effect right?</b>
         <br/>
         <b>To fix those problems...</b>
     </aside>
@@ -53,6 +53,6 @@
     <h2 class="fragment" style="text-transform: initial;">#UseThePlatform</h2>
     <aside class="notes">
         <p>WE NEED A UNIVERSAL WAY TO CREATE REUSABLE COMPONENTS THAT CAN LAST FOR A WHILE</p>
-        <b>The answer to those problems is to use the Web platform. and that's what we are going to learn today!</b>
+        <b>A solution to that very problem is to use the Web platform. and that's what we are going to learn today!</b>
     </aside>
 </section>
