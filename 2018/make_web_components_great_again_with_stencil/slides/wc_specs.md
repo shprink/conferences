@@ -164,7 +164,7 @@ class MyNameIs extends HTMLElement {
 <div class="fragment current-only" data-code-block="2" data-code-focus="5"></div>
 <div class="fragment current-only" data-code-block="2" data-code-focus="7-8"></div>
     <aside class="notes">
-        <b>Observing Attributes changes is not a feature that is out of the box with the native spec.</b>
+        <b>Unfortunetly, Observing Attributes changes is not a feature that is out of the box with the native spec.</b>
         <br/>
         <b>If we have a custom element like this one. how do we listen to the `name` attribute changes?</b>
         <br/>
@@ -188,7 +188,6 @@ class MyNameIs extends HTMLElement {
     <aside class="notes">
         <ul>
             <li>Be careful, attributes can only be strings</li>
-            <li>So a name is perfect to be an attribute!</li>
         </ul>
         <b>But how do we pass complex data such as arrays or ojects to our components then?</b>
     </aside>
@@ -375,7 +374,7 @@ class MyNameIsShadow extends HTMLElement {
         <b>We are going to add the shadow DOM to the component MyNameIs that we saw earlier and that is really simple.</b>
         <ul>
             <li>First we use attachShadow method to create the shadowRoot, which is the node that encapsulates your component. There are two modes, opened and closed. In the open mode you can access the shadow root from the outside, in the closed mode you cannot.</li>
-            <li>Then when we refer to the dom, we need to refer to the shadowroot but the rest is the same</li>
+            <li>Then when we refer to the dom, we need to refer to the shadowroot instead of just innerHTML but the rest is the same</li>
         </ul>
         <b>Let's see a demo</b>
     </aside>
@@ -708,7 +707,7 @@ export class AppModule { }
         <ul>
             <li>Custom elements are reusable piece of code</li>
             <li>With Shadow Dom you style do not leak</li>
-            <li>No dependencies whatsoever</li>
+            <li>There is No dependencies whatsoever</li>
             <li>With Polyfills your components run everywhere</li>
         </ul>
     </aside>

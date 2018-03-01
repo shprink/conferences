@@ -26,7 +26,7 @@
         <ol>
             <li>Open Source</li>
             <li>created by the Ionic team in late 2017</li>
-            <li>And it outputs Custom Elements</li>
+            <li>And it outputs standard Custom Elements</li>
         </ol>
     </aside>
 </section>

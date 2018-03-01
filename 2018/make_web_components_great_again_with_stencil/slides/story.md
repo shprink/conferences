@@ -10,8 +10,8 @@
         <ul>
             <li>4 years ago I discovered Polymer and Web components spec. I was not impressed at all because at the time we had</li>
             <li>the fantastic AngularJS framework, we had directives, two way data binding, it was the best...</li>
-            <li>...Until Angular came out! We migrated our apps and I suppose we are all very happy with the result.</li>
-            <li>At this time I complitely forgot about the Web components specs</li>
+            <li>...Until Angular came out! We migrated our apps, it was painful but worth it.</li>
+            <li>At this time I completely forgot about the Web components specs</li>
             <li>But in late 2017 I discovered StencilJS and something happened in my mind... I regain interest and confidence about Web components!</li>
         </ul>
         <b>Let's see the problems that the Web Components and StencilJS are trying to resolve</b>
