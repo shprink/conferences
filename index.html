@@ -50,6 +50,7 @@
 					<th>Event</th>
 					<!--<th>Tags</th>-->
 					<th>Photos</th>
+					<th>Video</th>
 				</tr>
 			</thead>
 			<tbody></tbody>
@@ -60,7 +61,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 text-center">
-					<h2  style="margin-bottom: 20px;">Talks</h2>
+					<h2 style="margin-bottom: 20px;">Talks</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -344,7 +345,15 @@
 				eventName: 'ngVikings 2018',
 				eventLink: 'https://ngvikings.org/schedule/day2?sessionId=112',
 				link: './2018/make_web_components_great_again_with_stencil',
-				tags: ['ionic', 'ionic2', 'angular2']
+				tags: ['ionic', 'ionic2', 'angular2'],
+				photos: [{
+					src: 'photos/2018-03-01/ngvikings-1.jpg'
+				}, {
+					src: 'photos/2018-03-01/ngvikings-2.jpg'
+				}, {
+					src: 'photos/2018-03-01/ngvikings-3.jpg'
+				}],
+				video: 'https://youtu.be/hQ9vHusMscw',
 			}];
 			var isDev = location.hostname === '127.0.0.1';
 
@@ -395,6 +404,10 @@
 
 					row.push(talk.photos
 						? '<td class="text-center"><button class="btn btn-xs btn-primary img-slideshow"><i class="fa fa-photo"></i></button></td>'
+						: '<td></td>');
+
+					row.push(talk.video
+						? '<td class="text-center"><a href="' + talk.video +  '" target="_blank" class="btn btn-xs btn-primary"><i class="fa fa-play"></i></button></td>'
 						: '<td></td>');
 
 					row.push('</tr>');

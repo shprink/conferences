@@ -66,6 +66,7 @@
     <img src="./img/stencil_vs_wc.png" class="img-plain no-margin"/>
     <aside class="notes">
         <b>In terms of code length, what we can see is that Native custom element is the most verbose version. <br/>The others are kinda similar.</b>
+        <br/>
         <b>Why is code lenght important to me?</b>
     </aside>
 </section>
@@ -73,7 +74,7 @@
 <section>
     <h2 style="text-transform: initial;">The less code you write <span style="color: var(--blue)">the less bugs you will create</span></h2>
     <aside class="notes">
-        <b>This is my motto: "The less code you write the less bugs you will create" and also the more maintainable your code will be. So it is very important to me</b>
+        <b>Because this is my motto: "The less code you write the less bugs you will create" and also the more maintainable your code will be. So it is very important to me</b>
     </aside>
 </section>
 
@@ -394,6 +395,6 @@ Lighthouse Performance, 97, 95, 95, 94,  91, 74
         </ul>
         <br/>
         <b>That's it for me,
-        <br/>I hope you guys are excited about Web Components and Stencil, if you are I will be in the speaker room to answer your questions. thanks very much</b>
+        <br/>I hope you guys are excited about Web Components and Stencil,<br/> and if you are I will be in the office hours room with Stencil stickers! thanks very much</b>
     </aside>
 </section>

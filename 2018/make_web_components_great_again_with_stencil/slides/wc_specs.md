@@ -65,7 +65,7 @@ window.customElements
     <aside class="notes">
         <b>This is a Custom Element, all you need to do is to use a ES2015 Class and extends HTMLElement.</b>
         <ul>
-            <li>To be able to use this Custom Element we need to use the customElements API and the register method. It takes the tag name and the Class reference as arguments</li>
+            <li>To be able to use this Custom Element we need to use the customElements API and the define method. It takes the tag name and the Class reference as arguments</li>
             <li>Then we can insert this new component inside the DOM</li>
         </ul>
     </aside>
@@ -501,9 +501,9 @@ document.body.appendChild($clone);
     </div>
     <div layout="column" flex="45" layout-align="center center">
 <pre style="font-size: 55%"><code class="html" data-trim>
-<template [ngIf]="isActive">
+<ng-template [ngIf]="isActive">
   <p>Hello</p>
-</template>
+</ng-template>
 </code></pre>
     </div>
 </div>
@@ -513,7 +513,7 @@ document.body.appendChild($clone);
     <aside class="notes">
         <b>As Angular developers we use the template tag all the time without knowing it.</b>
         <ul>
-            <li>The ngIf directive here wraps the element inside a template tag so it is not rendered by the browser by default.</li>
+            <li>The ngIf directive here wraps the element inside a ng-template tag which is Angular own implementation of the template tag so it is not rendered by the browser by default.</li>
             <li>It is the same for *ngFor & *ngSwitch</li>
         </ul>
     </aside>
@@ -705,7 +705,7 @@ export class AppModule { }
     <aside class="notes">
         <b>Let's recap why Web Components are something worth checking out</b>
         <ul>
-            <li>Custom elements are reusable piece of code</li>
+            <li>Custom elements are reusable pieces of code</li>
             <li>With Shadow Dom you style do not leak</li>
             <li>There is No dependencies whatsoever</li>
             <li>With Polyfills your components run everywhere</li>
@@ -724,7 +724,7 @@ export class AppModule { }
     <aside class="notes">
         <b>The cons are</b>
         <ul>
-            <li>We need to apply the DOM updates manually</li>
+            <li>We need to apply the DOM updates manually with innerHTML for instance.</li>
             <li>We cannot use directly on our components something like onSomething equal a function, we need to use event listeners</li>
             <li>Attributes and Properties differences adds complexity</li>
             <li>And Since we do a lot of things manually, the code can be a bit verbose.</li>
