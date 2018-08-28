@@ -133,6 +133,8 @@
 				'architecture': 'Architecture',
 				'wordpress': 'Wordpress',
 				'performance': 'Performance',
+				'webComponents': 'Web Components',
+				'stenciljs': 'Stencil JS',
 			};
 			var talks = [{
 				name: 'Cross platform apps with Ionic Framework',
@@ -345,7 +347,7 @@
 				eventName: 'ngVikings 2018',
 				eventLink: 'https://ngvikings.org/schedule/day2?sessionId=112',
 				link: './2018/make_web_components_great_again_with_stencil',
-				tags: ['ionic', 'ionic2', 'angular2'],
+				tags: ['ionic', 'ionic2', 'angular2', 'webComponents', 'stenciljs'],
 				photos: [{
 					src: 'photos/2018-03-01/ngvikings-1.jpg'
 				}, {
@@ -354,7 +356,17 @@
 					src: 'photos/2018-03-01/ngvikings-3.jpg'
 				}],
 				video: 'https://youtu.be/hQ9vHusMscw',
+			}, {
+				name: 'Workshop Web Component Native vs StencilJS',
+				city: 'Toulouse',
+				country: 'France',
+				date: '2018-09-21 09:00:00',
+				eventName: 'Monkey Tech Days 7',
+				eventLink: 'https://www.meetup.com/MonkeyTechDays/events/251431123/',
+				link: './2018/web_component_native_vs_stenciljs',
+				tags: ['ionic', 'webComponents', 'stenciljs'],
 			}];
+
 			var isDev = location.hostname === '127.0.0.1';
 
 			talks = talks.filter(function (talk) {
