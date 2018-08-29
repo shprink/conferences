@@ -91,13 +91,6 @@
         <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
     <tr>
-        <td>Async Rendering</td>
-        <td align="center" style="background-color: #bc392a;">⨯</td>
-        <td align="center" style="background-color: #bc392a;">⨯</td>
-        <td align="center" style="background-color: #32ac41;">✓</td>
-        <td align="center" style="background-color: #32ac41;">✓</td>
-    </tr>
-    <tr>
         <td>TypeScript</td>
         <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
@@ -133,72 +126,39 @@
     </aside>
 </section>
 
-<section>
-    <h3>Decorators inspired by Angular</h3>
+<!-- <section>
+    <h3>List of decorators</h3>
     <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
-    <thead>
-    <tr>
-    <th align="center">
-        <img src="../../img/angular-logo.png" width="130" class="img-plain"/>
-    </th>
-    <th align="center">
-        <img src="../../img/stencil-logo.png" width="130" class="img-plain"/>
-    </th>
-    <th align="center"></th>
-    </tr>
-    </thead>
     <tbody>
     <tr>
-        <td align="left" style="font-weight: bold;">
-            <span style="color: var(--angular)">@Component</span>
-        </td>
         <td align="left">@Component</td>
         <td align="left">Decorate a class</td>
     </tr>
     <tr>
-        <td align="left" style="font-weight: bold;">
-            <span style="color: var(--angular)">@Input</span>
-        </td>
         <td align="left">@Prop</td>
         <td align="left">Class prop as element prop</td>
     </tr>
     <tr>
-        <td align="left"></td>
         <td align="left">@State</td>
         <td align="left">Internal data</td>
     </tr>
     <tr>
-        <td align="left" style="font-weight: bold;">
-            <span style="color: var(--angular)">@Event</span>
-        </td>
         <td align="left">@Event</td>
         <td align="left">Custom event</td>
     </tr>
     <tr>
-        <td align="left" style="font-weight: bold;">
-            <span style="color: var(--angular)">@HostListener</span>
-        </td>
         <td align="left">@Listen</td>
         <td align="left">Listen to custom events</td>
     </tr>
     <tr>
-        <td align="left" style="font-weight: bold;">
-            <span style="color: var(--angular)"></span>
-        </td>
         <td align="left">@Method</td>
         <td align="left">Expose methods on the public API</td>
     </tr>
     <tr>
-        <td align="left" style="font-weight: bold;">
-            <span style="color: var(--angular)"></span>
-        </td>
         <td align="left">@Watch</td>
         <td align="left">Fire method when attr changes</td>
     </tr>
     <tr>
-        <td align="left" style="font-weight: bold;">
-            <span style="color: var(--angular)">@ElementRef</span>
-        </td>
         <td align="left">@Element</td>
         <td align="left">DOM ref to current component</td>
     </tr>
@@ -208,35 +168,51 @@
         <b>All the Angular decorators that you already know about have an equivalent with Stencil</b>
         <b>The only exception is the State decorator. State represente the internal data of the component and it is inspired by React</b>
     </aside>
-</section>
+</section> -->
+
 
 <section>
-    <h3 style="margin-bottom: 0;">Same Lifecycle hooks as React</h3>
+<h3>Creating a component</h3>
+<pre style="font-size: 80%"><code class="ts" data-trim>
+import { Component } from '@stencil/core';
+
+@Component({
+  tag: 'my-component'
+})
+export class MyComponent {
+  render() {
+    return "Hello World";
+  }
+}
+</code></pre>
+<div class="fragment current-only" data-code-focus="1"></div>
+<div class="fragment current-only" data-code-focus="3"></div>
+<div class="fragment current-only" data-code-focus="6"></div>
+<div class="fragment current-only" data-code-focus="7"></div>
+    <aside class="notes">
+    </aside>
+</section>
+
+
+<section>
+    <h3>LIFECYCLE HOOKS</h3>
     <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
-    <thead>
-    <tr>
-    <th align="center" colspan="2">
-        <img src="../../img/react-logo.png" width="130" class="img-plain"/>
-        <img src="../../img/stencil-logo.png" width="130" class="img-plain"/>
-    </th>
-    </tr>
-    </thead>
     <tbody>
     <tr>
         <td align="left" style="font-weight: bold;">
-            <span style="color: var(--react)">componentDidLoad</span>
+            <span>componentDidLoad</span>
         </td>
-        <td align="left">Loaded and has rendered</td>
+        <td align="left">Element inserted and rendered</td>
     </tr>
     <tr>
         <td align="left" style="font-weight: bold;">
-            <span style="color: var(--react)">componentDidUnload</span>
+            <span>componentDidUnload</span>
         </td>
-        <td align="left">Removed from the DOM</td>
+        <td align="left">Element removed</td>
     </tr>
     <tr>
         <td align="left" style="font-weight: bold;">
-            <span style="color: var(--react)">componentDidUpdate</span>
+            <span>componentDidUpdate</span>
         </td>
         <td align="left">Finished updating.</td>
     </tr>
@@ -247,13 +223,13 @@
     <tbody>
     <tr>
         <td align="left" style="font-weight: bold;">
-            <span style="color: var(--react)">componentWillLoad</span>
+            <span>componentWillLoad</span>
         </td>
         <td align="left">Will load but has not rendered yet</td>
     </tr>
     <tr>
         <td align="left" style="font-weight: bold;">
-            <span style="color: var(--react)">componentWillUpdate</span>
+            <span>componentWillUpdate</span>
         </td>
         <td align="left">Will update and re-render</td>
     </tr>
@@ -264,20 +240,18 @@
     </aside>
 </section>
 
-<section>
-    <h2>Let's see some code!</h2>
-    <aside class="notes">
-    </aside>
-</section>
 
 <section>
-    <h4>MyNameIs Component created with Stencil</h4>
-<pre style="font-size: 85%;"><code class="typescript" data-trim>
+    <h4>Observing Attributes changes</h4>
+<pre style="font-size: 80%"><code class="html" data-trim>
+<my-name-is name="Julien"></my-name-is>
+// Hello my name is Julien
+</code></pre>
+<pre style="font-size: 70%;"><code class="typescript" data-trim>
 import { Component, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'my-name-is',
-  styleUrl: 'my-name-is.css'
+  tag: 'my-name-is'
 })
 export class MyNameIs {
   @Prop() name: string;
@@ -287,103 +261,72 @@ export class MyNameIs {
   }
 }
 </code></pre>
-<div class="fragment current-only" data-code-block="1" data-code-focus="3-6"></div>
-<div class="fragment current-only" data-code-block="1" data-code-focus="8"></div>
-<div class="fragment current-only" data-code-block="1" data-code-focus="8,10-13"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="1"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="7"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="10"></div>
     <aside class="notes">
-        <b>I re implemented the MyNameIs component that we saw earlier with Stencil</b>
-        <ul>
-            <li>First of all we decorate our Class with the At Component decorator, we give it a tag name and a styleURL exactly how you would do in Angular</li>
-            <li>Then we use the At Prop decorator to let the component know that we expect a name from outside the component.</li>
-            <li>To finish the render method must return JSX. Everytime the prop name changes, the component will update by calling the render method again.</li>
-        </ul>
-        <br/>
-        <b>As you can see a Stencil component is a mix of Angular and React components</b>
     </aside>
 </section>
 
+
 <section>
-    <h3>Component created with Stencil</h3>
-<pre style="font-size: 65%;"><code class="typescript" data-trim>
-@Component({
-  tag: 'counter',
-  styleUrl: 'counter.scss'
-})
-export class Counter {
-  @State() count: number = 1;
+<i style="font-size: 200px; color: yellow" class="fa fa-exclamation-triangle"></i>
+<h3>@Prop supports primitive & complex types</h3>
+    <aside class="notes">
+    </aside>
+</section>
 
-  componentDidLoad() {
-    setInterval(
-      () => this.count = this.count + 1,
-    1000);
-  }
 
-  render() {
-    return (
-      <p>Counter: {this.count}</p>
-    );
+<section>
+<h3>Events</h3>
+<h4 style="text-align: left;">Dispatch</h4>
+<pre style="font-size: 58%"><code class="js" data-trim>
+import { Event, EventEmitter } from '@stencil/core';
+
+export class TodoList {
+  @Event() todoCompleted: EventEmitter;
+
+  todoCompletedHandler(todo: Todo) {
+    this.todoCompleted.emit(todo);
   }
 }
 </code></pre>
-<div class="fragment current-only" data-code-block="1" data-code-focus="6"></div>
-<div class="fragment current-only" data-code-block="1" data-code-focus="8-12"></div>
-<div class="fragment current-only" data-code-block="1" data-code-focus="14-19"></div>
-    <aside class="notes">
-        <b>Now another example of a counter that increment itself by one at every second.</b>
-        <ul>
-            <li>First of all we declare `count` here as an internal state. The data is not something that comes from the outside of the component but rather live inside of it</li>
-            <li>In the componentDidLoad hook, we start incrementing the counter by one every second</li>
-            <li>To finish in the render method we return the current state. Everytime `count` changes the render method is called again.</li>
-        </ul>
-    </aside>
-</section>
+<div class="fragment current-only" data-code-block="1" data-code-focus="1"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="4"></div>
+<div class="fragment current-only" data-code-block="1" data-code-focus="7"></div>
+<h4 style="text-align: left;">Listen</h4>
+<pre style="font-size: 58%"><code class="js" data-trim>
+import { Listen } from '@stencil/core';
 
-<!-- <section>
-    <h3>Native ES Module support</h3>
-<pre style="font-size: 65%;"><code class="typescript" data-trim>
-import { MyLib } from './my-lib.js';
+export class TodoApp {
+  @Listen('todoCompleted')
+  todoCompletedHandler(event: CustomEvent) {
+    console.log('Received: ', event.detail);
+  }
+}
 </code></pre>
-    <img src="./img/es_modules.png" class="img-plain"/>
-    <aside class="notes">
-        <b>Rather than combining all of your source files together, Stencil uses native ES modules to load asynchronously</b>
-        <ul>
-            <li>Internally the compiler is using rollup to group common modules together</li>
-            <li>the browser makes the final decision of exactly which modules to load</li>
-        </ul>
-    </aside>
-</section> -->
+<div class="fragment current-only" data-code-block="2" data-code-focus="1"></div>
+<div class="fragment current-only" data-code-block="2" data-code-focus="4,5"></div>
+    <aside class="notes"> </aside>
+</section>
 
 <section>
-    <h2 style="text-transform: initial; display: flex; align-items: center; justify-content: center;">
-        Ionic 4 is&nbsp;<span style="color: var(--blue)"> powered by</span>
-        &nbsp;<img src="../../img/stencil-logo.png" width="130" class="img-plain"/>
-    </h2>
-    <ul>
-        <li class="fragment">`<ion-card>` is now a Web Component</li>
-        <li class="fragment">Framework Agnostic</li>
-        <li class="fragment">Smaller ionic-angular package</li>
-    </ul>
-        <!-- <img src="../../img/ionic-logo.png" class="img-plain" width="75%" style="margin: 0;"/> -->
-    <aside class="notes">
-        <b>In case you lived under a rock for the past few months, Ionic 4 is powered by StencilJS!</b>
-        <b>What does it mean exactly?</b>
-        <ul>
-            <li>ALl the Ionic components are now Web Components</li>
-            <li>Ionic is now Framework agnostic, we can use Ionic Everywhere</li>
-            <li>And if you use Ionic with Angular, it means a smaller bundle</li>
-        </ul>
-        <b>It is clearly a win win situation for both Ionic that can now run everywhere and for us Angular users because we get a smaller bundle?</b>
-        <br/>
-        <b>Ok let's see how to get started with Stencil</b>
-    </aside>
-</section>
+<h3>Enabling Shadow DOM</h3>
+<pre style="font-size: 80%"><code class="ts" data-trim>
+import { Component } from '@stencil/core';
 
-<!-- <section>
-    <img src="./img/stencil_ecosystem.jpg" width="70%" class="img-plain"/>
-    <aside class="notes">
-        <b></b>
-    </aside>
-</section> -->
+@Component({
+  tag: 'my-component',
+  shadow: true
+})
+export class MyComponent {
+  render() {
+    return "Hello World";
+  }
+}
+</code></pre>
+<div class="fragment current-only" data-code-block="1" data-code-focus="5"></div>
+</section>
 
 <section>
     <h3>Getting started</h3>

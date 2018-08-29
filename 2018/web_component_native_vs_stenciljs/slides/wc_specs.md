@@ -63,6 +63,9 @@ class MyComponent extends HTMLElement {
     constructor() {
         super();
     }
+    connectedCallback() {
+        this.innerHTML = "Hello World";
+    }
 }
 </code></pre>
 <pre class="fragment" style="font-size: 80%"><code class="js" data-trim>
@@ -107,17 +110,17 @@ window.customElements
 <h3>Lifecycle hooks</h3>
 <table style="zoom:0.85; margin-bottom: 60px"  class="table table-striped table-dark">
     <tbody>
-        <tr class="fragment" data-fragment-index="1">
+        <tr data-fragment-index="1">
         <td align="center" style="font-weight: bold;">connectedCallback</td>
-        <td align="left" style="color: var(--light)">Element is inserted</td>
+        <td align="left" style="color: var(--light)">Element inserted</td>
         </tr>
-        <tr class="fragment" data-fragment-index="2">
+        <tr data-fragment-index="2">
         <td align="center"  style="font-weight: bold;">disconnectedCallback</td>
-        <td align="left" style="color: var(--light)">Element is removed</td>
+        <td align="left" style="color: var(--light)">Element removed</td>
         </tr>
-        <tr class="fragment" data-fragment-index="3">
+        <tr data-fragment-index="3">
         <td align="center"  style="font-weight: bold;">attributeChangedCallback</td>
-        <td align="left" style="color: var(--light)">Attribute has changed</td>
+        <td align="left" style="color: var(--light)">Attribute changed</td>
         </tr>
     </tbody>
 </table>
@@ -133,22 +136,20 @@ window.customElements
 </section>
 
 <section data-state="custom-elements">
-<h4>Observing Attributes needs to be explicit</h4>
+<h4>Observing Attributes changes</h4>
 <pre style="font-size: 80%"><code class="html" data-trim>
 <my-name-is name="Julien"></my-name-is>
 // Hello my name is Julien
 </code></pre>
-<pre  class="fragment" style="font-size: 65%"><code class="js" data-trim>
+<pre  class="fragment" style="font-size: 70%"><code class="js" data-trim>
 class MyNameIs extends HTMLElement {
   static get observedAttributes() {
-    return ['name', 'another-attr'];
+    return ['name'];
   }
   attributeChangedCallback(name, oldValue, newValue) {
     switch (name) {
       case 'name':
-        this.innerHTML = \`Hello my name is ${newValue}\`;
-      case 'another-attr':
-        // another-attr changed
+        this.innerHTML = \`My name is ${newValue}\`;
     }
   }
 }
@@ -337,7 +338,7 @@ $myComponent.addEventListener('onConnected', e => {
 </section>
 
 <section data-state="shadow-dom">
-<h3>Enable Shadow DOM</h3>
+<h3>Enabling Shadow DOM</h3>
 <pre style="font-size: 60%"><code class="js" data-trim>
 class MyNameIs extends HTMLElement {
     static get observedAttributes() {
