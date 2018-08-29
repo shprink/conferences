@@ -1,9 +1,18 @@
 <section>
     <img src="../../img/web_component-logo.png" class="img-plain"/>
-    <h2>Web Components <br/>Specifications</h2>
+    <h2>Web Components</h2>
     <!-- <img src="../../img/meme/trump/web_components_specs.gif" style="margin: 0" width="100%" class="img-plain"/> -->
     <aside class="notes">
         <b>Let's talk about the Web Components specs</b>
+    </aside>
+</section>
+
+<section>
+    <ul>
+        <li>Specs from <span style="color: var(--blue)">World Wide Web Consortium</span> (W3C)</li>
+        <li>First draft in <span style="color: var(--blue)">2012</span></li>
+    </ul>
+    <aside class="notes">
     </aside>
 </section>
 
@@ -97,33 +106,17 @@ window.customElements
 <section data-state="custom-elements">
 <h3>Lifecycle hooks</h3>
 <table style="zoom:0.85; margin-bottom: 60px"  class="table table-striped table-dark">
-    <thead>
-    <tr>
-    <th align="center"><img src="../../img/web_component-logo.png" height="150" class="img-plain"/></th>
-    <th align="center"><img class="fragment img-plain" data-fragment-index="4" src="../../img/angular-logo.png" height="150" /></th>
-    <th align="center"></th>
-    </tr>
-    </thead>
     <tbody>
         <tr class="fragment" data-fragment-index="1">
         <td align="center" style="font-weight: bold;">connectedCallback</td>
-        <td align="center" style="font-weight: bold;">
-            <span class="fragment" data-fragment-index="4" style="color: var(--angular)">ngOnInit</span>
-        </td>
         <td align="left" style="color: var(--light)">Element is inserted</td>
         </tr>
         <tr class="fragment" data-fragment-index="2">
         <td align="center"  style="font-weight: bold;">disconnectedCallback</td>
-        <td align="center" style="font-weight: bold;">
-            <span class="fragment" data-fragment-index="4" style="color: var(--angular)">ngOnDestroy</span>
-        </td>
         <td align="left" style="color: var(--light)">Element is removed</td>
         </tr>
         <tr class="fragment" data-fragment-index="3">
         <td align="center"  style="font-weight: bold;">attributeChangedCallback</td>
-        <td align="center" style="font-weight: bold;">
-            <span class="fragment" data-fragment-index="4" style="color: var(--angular)">ngOnChanges</span>
-        </td>
         <td align="left" style="color: var(--light)">Attribute has changed</td>
         </tr>
     </tbody>
@@ -187,9 +180,9 @@ class MyNameIs extends HTMLElement {
 <h3>Attributes can only be strings!</h3>
     <aside class="notes">
         <ul>
-            <li>Be careful, attributes can only be strings</li>
+            <li>Les attributs ne peuvent qu'etre des strings</li>
+            <li>SI on veut passer des types non primitif tel que des objects ou array il faut utiliser les properties</li>
         </ul>
-        <b>But how do we pass complex data such as arrays or ojects to our components then?</b>
     </aside>
 </section>
 
@@ -389,48 +382,11 @@ class MyNameIsShadow extends HTMLElement {
     </aside>
 </section>
 
-<section data-state="shadow-dom">
-<h3>Adding Shadow DOM to Angular</h3>
-<pre style="font-size: 80%"><code class="js" data-trim>
-import { ViewEncapsulation } from '@angular/core';
-
-@Component({
-  encapsulation: ViewEncapsulation.Native
-})
-class MyComponent {}
-</code></pre>
-<div class="fragment current-only" data-code-block="1" data-code-focus="1,4"></div>
-<table style="zoom:0.85; " class="fragment table table-striped table-dark">
-    <tbody>
-        <tr>
-        <td align="left"  style="font-weight: bold;">ViewEncapsulation.Emulated (default)</td>
-        <td align="left"  style="font-weight: bold;">Shadow DOM emulation</td>
-        </tr>
-        <tr class="fragment">
-        <td align="left"  style="font-weight: bold;">ViewEncapsulation.Native</td>
-        <td align="left"  style="font-weight: bold;">Shadow DOM</td>
-        </tr>
-        <tr class="fragment">
-        <td align="left" style="font-weight: bold;">ViewEncapsulation.None</td>
-        <td align="left" style="font-weight: bold;">No Shadow DOM at all</td>
-        </tr>
-    </tbody>
-</table>
-    <aside class="notes">
-        <b>We can add the shadow DOM to Angular components pretty easily with ViewEncapsulation</b>
-        <ul>
-            <li>ViewEncapsulation has three values, the default is Emulated. All the style that you add to your component will be prefixed by a unique ID</li>
-            <li>Native for the Native shadow DOM</li>
-            <li>Last value is None, your CSS remains untouched</li>
-        </ul>
-    </aside>
-</section>
-
-<!-- <section data-background-video="./videos/shadow-dom-query.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
+<section data-background-video="./videos/shadow-dom-query.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
     <aside class="notes">
         <b></b>
     </aside>
-</section> -->
+</section>
 
 <section>
     <ul style="list-style-type: none; margin-left: 0;" >
@@ -487,103 +443,44 @@ document.body.appendChild($clone);
     </aside>
 </section>
 
-<section data-state="html-templates">
-<img src="../../img/angular-logo.png" class="img-plain"/>
-<h4>We use HTML templates all the time</h4>
-<div layout="row" layout-align="center center">
-    <div layout="column" flex="45" layout-align="center center">
-<pre style="font-size: 60%"><code class="html" data-trim>
-<p *ngIf="isActive">Hello</p>
-</code></pre>
-    </div>
-    <div layout="column" flex="10" layout-align="center center">
-        <i class="fa fa-arrow-circle-right"></i>
-    </div>
-    <div layout="column" flex="45" layout-align="center center">
-<pre style="font-size: 55%"><code class="html" data-trim>
-<ng-template [ngIf]="isActive">
-  <p>Hello</p>
-</ng-template>
-</code></pre>
-    </div>
-</div>
-<div class="fragment">
-    Same for <code style="color: var(--primary)">\*ngFor</code> & <code style="color: var(--primary)">\*ngSwitch</code>
-</div>
-    <aside class="notes">
-        <b>As Angular developers we use the template tag all the time without knowing it.</b>
-        <ul>
-            <li>The ngIf directive here wraps the element inside a ng-template tag which is Angular own implementation of the template tag so it is not rendered by the browser by default.</li>
-            <li>It is the same for *ngFor & *ngSwitch</li>
-        </ul>
-    </aside>
-</section>
-
-<!-- <section>
-    <ul style="list-style-type: none; margin-left: 0;" >
-        <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
-            <i class="fa fa-external-link" style="font-size: 4em"></i>
-            <span>HTML imports</span>
-        </li>
-    </ul>
-     <blockquote>
-        "HTML Imports is intended to be the packaging mechanism for web components"
-    </blockquote>
-    <aside class="notes">
-        <b></b>
-    </aside>
-</section> -->
-
-<!-- <section>
-
-<pre style="font-size: 80%"><code class="html"><link rel="import" href="google-map.html">
-</code></pre>
-<pre class="fragment" style="font-size: 80%"><code class="html"><google-map></google-map>
-</code></pre>
-    <aside class="notes">
-        <b></b>
-    </aside>
-</section> -->
-
-
 <section>
     <h3>Browser support</h3>
     <!-- <img src="./img/caniuse/browser_support_january_2018.png" class="img-plain fragment"/> -->
-    <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
+    <table style="zoom:0.75; margin-bottom: 60px" class="table table-bordered table-striped table-dark">
     <thead>
     <tr>
     <th></th>
-    <th align="center">IE</th>
-    <th align="center">Edge</th>
-    <th align="center">Firefox</th>
-    <th align="center">Chrome</th>
-    <th align="center">Safari 9+</th>
+    <th align="center">IE 11</th>
+    <th align="center">Edge 17</th>
+    <th align="center">Firefox 61</th>
+    <th align="center">Chrome 68</th>
+    <th align="center">Safari 11</th>
     </tr>
     </thead>
     <tbody>
     <tr>
     <td>Custom Elements v1</td>
-    <td align="center" style="background-color: #bc392a;">v11</td>
-    <td align="center" style="background-color: #bc392a;">v16</td>
-    <td align="center" style="background-color: #bc392a;">v57</td>
-    <td align="center" style="background-color: #9eb40b;">v63</td>
-    <td align="center" style="background-color: #9eb40b;">v11</td>
+    <td align="center" style="background-color: #bc392a;"></td>
+    <td align="center" style="background-color: #bc392a;"></td>
+    <td align="center" style="background-color: #bc392a;"> <span style="color: #32ac41; font-size: 3rem; line-height: 3rem; margin-right: 20px;">\*</span><span style="background-color: #32ac41;">v63</span></td>
+    <td align="center" style="background-color: #32ac41;"></td>
+    <td align="center" style="background-color: #9eb40b;"></td>
     </tr>
     <tr>
     <td>Shadow DOM v1</td>
-    <td align="center" style="background-color: #bc392a;">v11</td>
-    <td align="center" style="background-color: #bc392a;">v16</td>
-    <td align="center" style="background-color: #bc392a;">v57</td>
-    <td align="center" style="background-color: #32ac41;">v63</td>
-    <td align="center" style="background-color: #9eb40b;">v11</td>
+    <td align="center" style="background-color: #bc392a;"></td>
+    <td align="center" style="background-color: #bc392a;"></td>
+    <td align="center" style="background-color: #bc392a;"> <span style="color: #32ac41; font-size: 3rem; line-height: 3rem; margin-right: 20px;">\*</span><span style="background-color: #32ac41;">v63</span></td>
+    <td align="center" style="background-color: #32ac41;"></td>
+    <td align="center" style="background-color: #9eb40b;"></td>
     </tr>
     <tr>
     <td>HTML Templates</td>
-    <td align="center" style="background-color: #bc392a;">v11</td>
-    <td align="center" style="background-color: #9eb40b;">v16</td>
-    <td align="center" style="background-color: #32ac41;">v57</td>
-    <td align="center" style="background-color: #32ac41;">v63</td>
-    <td align="center" style="background-color: #32ac41;">v11</td>
+    <td align="center" style="background-color: #bc392a;"></td>
+    <td align="center" style="background-color: #32ac41;"></td>
+    <td align="center" style="background-color: #32ac41;"></td>
+    <td align="center" style="background-color: #32ac41;"></td>
+    <td align="center" style="background-color: #32ac41;"></td>
     </tr></tbody>
     </table>
     <table style="zoom:0.6; margin-bottom: 60px">
@@ -595,6 +492,7 @@ document.body.appendChild($clone);
     </tr>
     </tbody>
     </table>
+    <p style="text-align: center"><span style="color: #32ac41;">\*</span> Behind flag</p>
     </ul>
     <aside class="notes">
         <b>Let's talk about Browser support: Basically your web components only work natively on Chrome. 
@@ -667,30 +565,35 @@ document.body.appendChild($clone);
 </section>
 
 <section>
-<div style="display:flex; flex-direction:row;align-items: center;justify-content: center;">
-    <img src="../../img/web_component-logo.png" class="img-plain"/>
-    <span style="font-size: 80px; margin: 0px 25px;">+</span>
-    <img src="../../img/angular-logo.png" class="img-plain"/>
-    <span style="font-size: 80px; margin: 0px 25px;">?</span>
-</div>
-<pre class="fragment" data-fragment-index="1" style="font-size: 75%"><code class="typescript" data-trim>
-import {
-    NgModule,
-    CUSTOM_ELEMENTS_SCHEMA,
-} from '@angular/core';
-
-@NgModule({
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
-})
-export class AppModule { }
-</code></pre>
-<h3 class="fragment" data-fragment-index="1">Seamless integration!</h3>
-<div class="fragment current-only" data-code-block="1" data-code-focus="3,7"></div>
+    <h3>Web Component Interoperability support</h3>
+    <!-- <img src="./img/caniuse/browser_support_january_2018.png" class="img-plain fragment"/> -->
+    <table style="zoom:0.75; margin-bottom: 60px" class="table table-bordered table-striped table-dark">
+    <tbody>
+    <tr>
+        <td>Angular 6</td>
+        <td align="center">100%</td>
+    </tr>
+    <tr>
+        <td>Vue</td>
+        <td align="center">100%</td>
+    </tr>
+    <tr>
+        <td>AngularJS</td>
+        <td align="center">100%</td>
+    </tr>
+    <tr>
+        <td>Preact</td>
+        <td align="center">91%</td>
+    </tr>
+    <tr>
+        <td>React</td>
+        <td align="center">71%</td>
+    </tr>
+    <tr>
+    </tbody>
+    </table>
+    https://custom-elements-everywhere.com/
     <aside class="notes">
-        <b>Now you might wonder if you can use Web components in Angular?</b>
-        <ul>
-            <li>The answer is YES, with CUSTOM_ELEMENTS_SCHEMA, we can use Web Components as if they were angular's components. It is a seamless integration</li>
-        </ul>
     </aside>
 </section>
 
