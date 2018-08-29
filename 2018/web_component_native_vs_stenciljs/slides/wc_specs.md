@@ -373,7 +373,7 @@ class MyNameIsShadow extends HTMLElement {
     </aside>
 </section>
 
-<section data-background-video="./videos/shadow-dom-color.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
+<!-- <section data-background-video="./videos/shadow-dom-color.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
     <aside class="notes">
         <b>We have two components, my-name-is without shadowDOM, and my-name-is with shadowDOM.</b>
         <ul>
@@ -386,7 +386,7 @@ class MyNameIsShadow extends HTMLElement {
     <aside class="notes">
         <b></b>
     </aside>
-</section>
+</section> -->
 
 <section>
     <ul style="list-style-type: none; margin-left: 0;" >
@@ -597,7 +597,7 @@ document.body.appendChild($clone);
     </aside>
 </section>
 
-<section>
+<!-- <section>
     <h3>Pros</h3>
     <ol>
         <li class="fragment">Reusable piece of code</li>
@@ -614,9 +614,9 @@ document.body.appendChild($clone);
             <li>With Polyfills your components run everywhere</li>
         </ul>
     </aside>
-</section>
+</section> -->
 
-<section>
+<!-- <section>
     <h3>Cons</h3>
     <ol>
         <li class="fragment">Manual data binding</li>
@@ -634,4 +634,4 @@ document.body.appendChild($clone);
         </ul>
         <b>One solution to fix all of these limitations is to use StencilJS</b>
     </aside>
-</section>
+</section> -->
