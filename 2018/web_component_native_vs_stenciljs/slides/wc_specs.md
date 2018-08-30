@@ -32,6 +32,7 @@
         </li>
         <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
             <i class="fa fa-external-link" style="font-size: 4em"></i>
+            <img src="../../img/red_cross.png" style="position: absolute" class="img-plain fragment zoom-in"/>
             <span>HTML imports</span>
         </li>
     </ul>
@@ -396,9 +397,6 @@ class MyNameIsShadow extends HTMLElement {
             <span>HTML templates</span>
         </li>
     </ul>
-<pre style="font-size: 75%; width: 70% !important;"><code class="html" data-trim>
-<template><!-- children --></template>
-</code></pre>
      <blockquote>
         "Give the ability to create reusable piece of HTML that can be used at runtime"
     </blockquote>
@@ -507,7 +505,6 @@ document.body.appendChild($clone);
 
 <section>
     <h3>Polyfill support</h3>
-    <p>github.com/webcomponents/webcomponentsjs</p>
     <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
     <thead>
     <tr>
@@ -545,6 +542,7 @@ document.body.appendChild($clone);
     <td align="center" style="background-color: #32ac41;">✓</td>
     </tr></tbody>
     </table>
+    https://github.com/webcomponents/webcomponentsjs
 <!-- <div class="fragment">
     <h4>Only load what's needed on the platform</h4>
     <p>github.com/webcomponents/webcomponentsjs</p>
