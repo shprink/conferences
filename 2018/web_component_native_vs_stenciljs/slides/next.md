@@ -10,3 +10,12 @@
         <b></b>
     </aside>
 </section>
+
+<section>
+    <img src="./img/stencil_vs_wc.png" class="img-plain no-margin"/>
+    <aside class="notes">
+        <b>In terms of code length, what we can see is that Native custom element is the most verbose version. <br/>The others are kinda similar.</b>
+        <br/>
+        <b>Why is code lenght important to me?</b>
+    </aside>
+</section>
