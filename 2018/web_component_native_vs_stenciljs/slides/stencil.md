@@ -62,7 +62,7 @@
     </aside>
 </section>
 
-<section>
+<!-- <section>
     <h3 class="no-margin">Tooling you get out of the box</h3>
     <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
     <thead>
@@ -118,13 +118,12 @@
         <br/>
         <ol>
             <li>JSX, virtual DOM and Async rendering come from the React Ecosystem</li>
-            <!-- <li>Async rendering which is new in React 16 and aims to prioritize UI updates. High priority updates are ran first, then low priority updates.</li> -->
             <li>TypeScript & Decorators come from the Angular Ecosystem</li>
             <li>And Server side rendering that is common to both</li>
         </ol>
         <br/>
     </aside>
-</section>
+</section> -->
 
 <!-- <section>
     <h3>List of decorators</h3>
@@ -171,7 +170,7 @@
 </section> -->
 
 
-<section>
+<!-- <section>
 <h3>Creating a component</h3>
 <pre style="font-size: 80%"><code class="ts" data-trim>
 import { Component } from '@stencil/core';
@@ -191,9 +190,9 @@ export class MyComponent {
 <div class="fragment current-only" data-code-focus="7"></div>
     <aside class="notes">
     </aside>
-</section>
+</section> -->
 
-
+<!-- 
 <section>
     <h3>LIFECYCLE HOOKS</h3>
     <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
@@ -238,10 +237,10 @@ export class MyComponent {
     <aside class="notes">
         <b>Stencil has the exact same life cycle hooks as React. which is two more than the native implementation</b>
     </aside>
-</section>
+</section> -->
 
 
-<section>
+<!-- <section>
     <h4>Observing Attributes changes</h4>
 <pre style="font-size: 80%"><code class="html" data-trim>
 <my-name-is name="Julien"></my-name-is>
@@ -266,18 +265,18 @@ export class MyNameIs {
 <div class="fragment current-only" data-code-block="2" data-code-focus="10"></div>
     <aside class="notes">
     </aside>
-</section>
+</section> -->
 
 
-<section>
+<!-- <section>
 <i style="font-size: 200px; color: yellow" class="fa fa-exclamation-triangle"></i>
 <h3>@Prop supports primitive & complex types</h3>
     <aside class="notes">
     </aside>
-</section>
+</section> -->
 
 
-<section>
+<!-- <section>
 <h3>Events</h3>
 <h4 style="text-align: left;">Dispatch</h4>
 <pre style="font-size: 58%"><code class="js" data-trim>
@@ -308,9 +307,9 @@ export class TodoApp {
 <div class="fragment current-only" data-code-block="2" data-code-focus="1"></div>
 <div class="fragment current-only" data-code-block="2" data-code-focus="4,5"></div>
     <aside class="notes"> </aside>
-</section>
+</section> -->
 
-<section>
+<!-- <section>
 <h3>Enabling Shadow DOM</h3>
 <pre style="font-size: 80%"><code class="ts" data-trim>
 import { Component } from '@stencil/core';
@@ -326,7 +325,7 @@ export class MyComponent {
 }
 </code></pre>
 <div class="fragment current-only" data-code-block="1" data-code-focus="5"></div>
-</section>
+</section> -->
 
 <section>
     <h3>Getting started</h3>

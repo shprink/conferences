@@ -30,10 +30,10 @@
             <i class="fa fa-cog" style="font-size: 4em"></i>
             <span>HTML templates</span>
         </li>
-        <!-- <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
+        <li style="display: flex; flex-direction: column; align-items: center; text-align: center; line-height: 1em;">
             <i class="fa fa-external-link" style="font-size: 4em"></i>
             <span>HTML imports</span>
-        </li> -->
+        </li>
     </ul>
     <aside class="notes">
         <b>There are three important specs that we need to learn about today</b>
@@ -56,7 +56,7 @@
     </aside>
 </section>
 
-<section data-state="custom-elements">
+<!-- <section data-state="custom-elements">
 <h3>Creating a custom element</h3>
 <pre style="font-size: 80%"><code class="js" data-trim>
 class MyComponent extends HTMLElement {
@@ -81,7 +81,7 @@ window.customElements
             <li>Then we can insert this new component inside the DOM</li>
         </ul>
     </aside>
-</section>
+</section> -->
 
 <!-- <section>
 <h3>Extending native HTML elements</h3>
@@ -106,7 +106,7 @@ window.customElements
     </aside>
 </section> -->
 
-<section data-state="custom-elements">
+<!-- <section data-state="custom-elements">
 <h3>Lifecycle hooks</h3>
 <table style="zoom:0.85; margin-bottom: 60px"  class="table table-striped table-dark">
     <tbody>
@@ -133,9 +133,9 @@ window.customElements
             <li>And here is the equivalent in Angular.</li>
         </ul>
     </aside>
-</section>
+</section> -->
 
-<section data-state="custom-elements">
+<!-- <section data-state="custom-elements">
 <h4>Observing Attributes changes</h4>
 <pre style="font-size: 80%"><code class="html" data-trim>
 <my-name-is name="Julien"></my-name-is>
@@ -168,7 +168,7 @@ class MyNameIs extends HTMLElement {
             <li>Then we can do something with this data, here we update the DOM</li>
         </ul>
     </aside>
-</section>
+</section> -->
 
 <!-- <section data-background-video="./videos/my-name-is.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
     <aside class="notes">
@@ -176,7 +176,7 @@ class MyNameIs extends HTMLElement {
     </aside>
 </section> -->
 
-<section data-state="custom-elements">
+<!-- <section data-state="custom-elements">
 <i style="font-size: 200px; color: yellow" class="fa fa-exclamation-triangle"></i>
 <h3>Attributes can only be strings!</h3>
     <aside class="notes">
@@ -185,9 +185,9 @@ class MyNameIs extends HTMLElement {
             <li>SI on veut passer des types non primitif tel que des objects ou array il faut utiliser les properties</li>
         </ul>
     </aside>
-</section>
+</section> -->
 
-<section data-state="custom-elements">
+<!-- <section data-state="custom-elements">
 <h3>Properties</h3>
 <pre style="font-size: 55%"><code class="js" data-trim>
 class MyList extends HTMLElement {
@@ -236,7 +236,7 @@ $MyList.list = ['first item', 'second item'];
             <li>To set the current list we use the list setter.</li>
         </ul>
     </aside>
-</section>
+</section> -->
 
 <!--
 <section>
@@ -285,7 +285,7 @@ class MyTodos extends HTMLElement {
     </aside>
 </section> -->
 
-<section data-state="custom-elements">
+<!-- <section data-state="custom-elements">
 <h3>Events</h3>
 <h4 style="text-align: left;">Dispatch</h4>
 <pre style="font-size: 58%"><code class="js" data-trim>
@@ -318,7 +318,7 @@ $myComponent.addEventListener('onConnected', e => {
         </ul>
         <b>We are done talking about custom elements, let's talk about shadow DOM</b>
     </aside>
-</section>
+</section> -->
 
 <section>
     <ul style="list-style-type: none; margin-left: 0;" >
@@ -337,7 +337,7 @@ $myComponent.addEventListener('onConnected', e => {
     </aside>
 </section>
 
-<section data-state="shadow-dom">
+<!-- <section data-state="shadow-dom">
 <h3>Enabling Shadow DOM</h3>
 <pre style="font-size: 60%"><code class="js" data-trim>
 class MyNameIs extends HTMLElement {
@@ -372,7 +372,7 @@ class MyNameIsShadow extends HTMLElement {
         </ul>
         <b>Let's see a demo</b>
     </aside>
-</section>
+</section> -->
 
 <!-- <section data-background-video="./videos/shadow-dom-color.mp4" data-background-video-loop data-background-color="#fff" data-background-video-playbackRate="0.7" data-background-style="cover">
     <aside class="notes">
@@ -409,7 +409,7 @@ class MyNameIsShadow extends HTMLElement {
     </aside>
 </section>
 
-<section data-state="html-templates">
+<!-- <section data-state="html-templates">
 <h3>HTML templates</h3>
 <pre style="font-size: 75%"><code class="html" data-trim>
 <img src="path/to/your/image.png" />
@@ -442,7 +442,7 @@ document.body.appendChild($clone);
         </ul>
         <b></b>
     </aside>
-</section>
+</section> -->
 
 <section>
     <h3>Browser support</h3>
