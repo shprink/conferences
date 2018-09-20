@@ -1,15 +1,17 @@
-<!-- <section>
-    <h2>Alternatives</h2>
+<section>
+    <h2>Alternatives to <span style="text-transform: uppercase;  color: var(--blue);">StencilJS</span></h2>
     <ul>
-        <li>[Polymer 3](https://www.polymer-project.org/)</li>
-        <li>[LitElement](https://github.com/Polymer/lit-element) by Polymer</li>
+        <li>[❤️ LitElement](https://github.com/Polymer/lit-element) by Polymer</li>
         <li>[SkateJS](http://skatejs.netlify.com/)</li>
+        <li>[Svelte](https://svelte.technology/)</li>
         <li>[Slim.js](http://slimjs.com/#/getting-started)</li>
+        <li>[Atomico](https://github.com/uppercod/atomico)</li>
+        <li>[Polymer](https://www.polymer-project.org/)</li>
     </ul>
     <aside class="notes">
         <b></b>
-    </aside>
-</section> -->
+    </aside> 
+</section>
 
 <section>
     <div style="margin: 0;">

@@ -7,18 +7,11 @@
 </section>
 
 <section>
-    <h2 style="text-transform: initial;">StencilJS is <span style="color: var(--blue)">NOT ANOTHER FRAMEWORK</span></h2>
-    <aside class="notes">
-        <b>To make things clear before we start:</b>
-    </aside>
-</section>
-
-<section>
     <h3>StencilJS</h3>
     <ul>
         <li class="fragment"><span style="color: var(--blue)">Open Source</span> project</li>
         <li class="fragment">Created by the <span style="color: var(--blue)">Ionic Team</span> in 2017</li>
-        <li class="fragment">Outputs standards compliant <span style="color: var(--blue)">Custom Elements</span></li>
+        <li class="fragment">3.9k ⭐️ on github</li>
     </ul>
     <aside class="notes">
         <b>Stencil is...</b>
@@ -26,8 +19,15 @@
         <ol>
             <li>Open Source</li>
             <li>created by the Ionic team in late 2017</li>
-            <li>And it outputs standard Custom Elements</li>
+            <li>3.9k</li>
         </ol>
+    </aside>
+</section>
+
+<section>
+    <h2 style="text-transform: initial;">StencilJS is <span style="color: var(--blue)">NOT ANOTHER FRAMEWORK</span></h2>
+    <aside class="notes">
+        <b>To make things clear before we start:</b>
     </aside>
 </section>
 
@@ -39,31 +39,7 @@
 </section>
 
 <section>
-    <h2 style="text-transform: initial; margin-bottom: 0.1em;">StencilJS <span style="text-transform: uppercase;  color: var(--blue);">works everywhere</span></h2>
-    <h3 style="text-transform: initial; margin-bottom: 0.1em;" class="fragment">Loads polyfills on-demand</h3>
-    <aside class="notes">
-        <b>Stencil works everywhere! </b>
-        <br/>
-        <ul>
-            <li>it uses a dynamic polyfill loader to load the missing polyfills only when necessary.</li>
-        </ul>
-    </aside>
-</section>
-
-<section>
-    <h2 style="text-transform: initial; margin-bottom: 0.1em;">StencilJS <span style="text-transform: uppercase;  color: var(--blue);">is Fast</span></h2>
-    <h3 style="text-transform: initial; margin-bottom: 0.1em;" class="fragment">Dynamically loads components</h3>
-    <aside class="notes">
-        <b>Stencil is fast</b>
-        <br/>
-        <ul>
-            <li>Stencil uses dynamic imports to load components, so you only load what's necessary at a given time.</li>
-        </ul>
-    </aside>
-</section>
-
-<!-- <section>
-    <h3 class="no-margin">Tooling you get out of the box</h3>
+    <h2 style="text-transform: initial;">StencilJS is <span style="color: var(--blue)">A SET</span> of <span style="color: var(--blue)">GREAT TOOLS</span></h2>
     <table style="zoom:0.8; margin-bottom: 60px" class="table table-striped table-dark">
     <thead>
         <tr>
@@ -105,10 +81,10 @@
         <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
     <tr>
-        <td>Server side rendering</td>
+        <td>Prerendering SSR</td>
         <td align="center" style="background-color: #bc392a;">⨯</td>
-        <td align="center" style="background-color: #32ac41;">✓</td>
-        <td align="center" style="background-color: #32ac41;">✓</td>
+        <td align="center" style="background-color: #bc392a;">⨯</td>
+        <td align="center" style="background-color: #bc392a;">⨯</td>
         <td align="center" style="background-color: #32ac41;">✓</td>
     </tr>
     </tbody>
@@ -122,6 +98,30 @@
             <li>And Server side rendering that is common to both</li>
         </ol>
         <br/>
+    </aside>
+</section>
+
+<section>
+    <h2 style="text-transform: initial; margin-bottom: 0.1em;">StencilJS <span style="text-transform: uppercase;  color: var(--blue);">works everywhere</span></h2>
+    <h3 style="text-transform: initial; margin-bottom: 0.1em;" class="fragment">Loads polyfills on-demand</h3>
+    <aside class="notes">
+        <b>Stencil works everywhere! </b>
+        <br/>
+        <ul>
+            <li>it uses a dynamic polyfill loader to load the missing polyfills only when necessary.</li>
+        </ul>
+    </aside>
+</section>
+
+<!-- <section>
+    <h2 style="text-transform: initial; margin-bottom: 0.1em;">StencilJS <span style="text-transform: uppercase;  color: var(--blue);">is Fast</span></h2>
+    <h3 style="text-transform: initial; margin-bottom: 0.1em;" class="fragment">Dynamically loads components</h3>
+    <aside class="notes">
+        <b>Stencil is fast</b>
+        <br/>
+        <ul>
+            <li>Stencil uses dynamic imports to load components, so you only load what's necessary at a given time.</li>
+        </ul>
     </aside>
 </section> -->
 
@@ -327,8 +327,7 @@ export class MyComponent {
 <div class="fragment current-only" data-code-block="1" data-code-focus="5"></div>
 </section> -->
 
-
-<section>
+<!-- <section>
     <h2 style="text-transform: initial;"> <span style="color: var(--blue)">Prerendering</span> comes <span style="color: var(--blue)">out of the box</span></h2>
     <div layout="row" layout-align="center center">
         <div layout="column" flex="30" layout-align="center center">
@@ -362,7 +361,7 @@ export class MyComponent {
             <li>Better Search Engine Optimization</li>
         </ul>
     </aside>
-</section>
+</section> -->
 
 <section>
     <h3>Stencil Syntax is short</h3>

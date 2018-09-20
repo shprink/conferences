@@ -1,5 +1,5 @@
 <section>
-    <h2>I want to build an app in 2018</h2>
+    <h2>I want to build a Web app in 2018</h2>
     <aside class="notes">
         <b></b>
     </aside>
@@ -57,7 +57,7 @@
     <img src="./img/fwk_too_fast.png" class="img-plain"/>
     <aside class="notes">
         <p><b>En plus de ca</b></p>
-        <p>l'industrie evolue trop rapidement</p>
+        <p>l'industrie evolue a un rythme effréné</p>
         <p><b>Les choix precedents sont obsolete tres rapidement</b></p>
     </aside>
 </section>
@@ -70,6 +70,8 @@
         <img src="../../img/angular-logo.png" height="200" class="img-plain no-margin"/>
     </div>
     <aside class="notes">
+        <p>Malgres le choix du meilleur framework, vous vous rendez vite compte que l'interopérabilité n'est pas possible ou difficilement</p>
+        <p></p>
     </aside>
 </section>
 
@@ -90,18 +92,19 @@
         <!-- <img style="position: absolute; left: calc(50% - 250px);" src="./img/material/illuminati.png" class="img-plain fragment zoom-in"/> -->
     </div>
     <aside class="notes">
-        <p><b>Tout ces projets sont des implementations des specs Material design pour plusieurs framework</b></p>
-        <p>C'est clairement un perte de temps et de resource sachant que ca ne reste ques des ripples effects sur des boutons</p>
+        <p><b>Nous reinventons la roue en permanence</b></p>
+        <p>Tout ces projets sont des implementations des specs Material design pour plusieurs framework</p>
+        <p>C'est clairement une perte de resource monumentale sachant que ca ne reste que des ripples effects sur des boutons</p>
     </aside>
 </section>
 
 <section>
     <h2>All this complexity is coming to an end with <span style="color: var(--primary)">Web Components</span></h2>
     <aside class="notes">
-        <p><b>Promesses de web components</b></p>
+        <p><b>Promesses de web components</b>, pourquoi investir dans les WB?</p>
         <ul>
-            <li>Deleguer au navigateur le plus possible au lieu de nos frameworks favoris</li>
-            <li>Mutualiser les resources</li>
+            <li>Deleguer au navigateur le plus possible au lieu de Deleguer a nos frameworks favoris</li>
+            <li>On va pouvoir mutualiser les resources</li>
             <li>Capitaliser sur des elements web vraiment commun sur le long terme</li>
         </ul>
     </aside>
@@ -120,7 +123,9 @@ native   ▉▎ 2.5kb
     </ul>
     <aside class="notes">
         <p><b>Pour finir de vous convaincre</b></p>
-        <p>apres l'aspect plus philosophique penchant nous sur l'aspect benchmark, l'aspect</p>
+        <p>apres l'aspect plus philosophique de pourquoi utiliser les WB, penchant nous sur les chiffres!</p>
+        <p>....</p>
+        <p>On voit clairement l'importance de deleguer le maximum de code au navigateur</p>
     </aside>
 </section>
 
