@@ -327,6 +327,49 @@ export class MyComponent {
 <div class="fragment current-only" data-code-block="1" data-code-focus="5"></div>
 </section> -->
 
+
+<section>
+    <h2 style="text-transform: initial;"> <span style="color: var(--blue)">Prerendering</span> comes <span style="color: var(--blue)">out of the box</span></h2>
+    <div layout="row" layout-align="center center">
+        <div layout="column" flex="30" layout-align="center center">
+<pre style="font-size: 60%;text-align:left;"><code class="html" data-trim>
+&lt;body&gt;
+  <my-app></my-app>
+&lt;/body&gt;
+</code></pre>
+        </div>
+        <div class="fragment" data-fragment-index="1" layout="column" flex="5" layout-align="center center">
+            <i class="fa fa-arrow-circle-right"></i>
+        </div>
+        <div class="fragment" data-fragment-index="1" layout="column" flex="60" layout-align="center center">
+            <img src="./img/prerendering.png" class="img-plain"/>
+        </div>
+    </div>
+    <ul>
+        <li class="fragment">🚀 Blazing fast First Meaningful Paint</li>
+        <li class="fragment">Better SEO</li>
+    </ul>
+    <aside class="notes">
+        <b>Prerendering comes out of the box with Stencil!</b>
+        <br/>
+        <b>With modern frameworks we are used to have only one component in our index.html exactly as on the left side here</b>
+        <br/>
+        <ul>
+            <li>Stencil uses it server side rendering capability to prerender your app in production mode</li>
+        </ul>
+        <ul>
+            <li>The benefits are a Blazing fast First meaningful paint. Your users will see your application as fast as possible</li>
+            <li>Better Search Engine Optimization</li>
+        </ul>
+    </aside>
+</section>
+
+<section>
+    <h3>Stencil Syntax is short</h3>
+    <img src="./img/stencil_vs_wc.png" class="img-plain no-margin"/>
+    <aside class="notes"></aside>
+</section>
+
 <section>
     <h3>Getting started</h3>
 <pre style="font-size: 65%"><code class="shell" data-trim>

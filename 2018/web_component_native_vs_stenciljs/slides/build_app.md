@@ -49,7 +49,6 @@
 <section>
     <h2>Developping an app in JS in not easy anymore...</h2>
     <aside class="notes">
-        <b></b>
     </aside>
 </section>
 
@@ -57,7 +56,8 @@
     <h2 style="text-shadow: 0px 0px 15px rgba(0, 0, 0, 1);">The industry is moving too fast...</h2>
     <img src="./img/fwk_too_fast.png" class="img-plain"/>
     <aside class="notes">
-        <p>Nous avons d'autres problemes, l'industrie evolue trop rapidement</p>
+        <p><b>En plus de ca</b></p>
+        <p>l'industrie evolue trop rapidement</p>
         <p><b>Les choix precedents sont obsolete tres rapidement</b></p>
     </aside>
 </section>
@@ -90,19 +90,55 @@
         <!-- <img style="position: absolute; left: calc(50% - 250px);" src="./img/material/illuminati.png" class="img-plain fragment zoom-in"/> -->
     </div>
     <aside class="notes">
-        <b>Tout ces projets sont des implementations des specs Material design pour plusieurs framework</b>
-        <br/>
-        <b>C'est clairement un perte de temps et de resource sachant que </b>
-        <b>It is a waste of resource because at the end it is just some buttons with a ripple effect right?</b>
-        <br/>
-        <b>Il n'y a pas encore de mutualisation des resources</b>
+        <p><b>Tout ces projets sont des implementations des specs Material design pour plusieurs framework</b></p>
+        <p>C'est clairement un perte de temps et de resource sachant que ca ne reste ques des ripples effects sur des boutons</p>
     </aside>
 </section>
 
 <section>
     <h2>All this complexity is coming to an end with <span style="color: var(--primary)">Web Components</span></h2>
-    <h3 style="text-transform: initial;">#UseThePlatform</h3>
     <aside class="notes">
-        <p></b>
+        <p><b>Promesses de web components</b></p>
+        <ul>
+            <li>Deleguer au navigateur le plus possible au lieu de nos frameworks favoris</li>
+            <li>Mutualiser les resources</li>
+            <li>Capitaliser sur des elements web vraiment commun sur le long terme</li>
+        </ul>
     </aside>
 </section>
+
+<section>
+<h2>Size matters (Gzipped)</h2>
+<pre style="font-size: 25px; color: white;">
+angular  ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 59kb
+stencil  ▉▉▉▉▉▋ 11kb
+native   ▉▎ 2.5kb
+</pre>
+    <ul>
+        <li class="fragment">Native is 23 times smaller than Angular</li>
+        <li class="fragment">Stencil is 5 times smaller than Angular</li>
+    </ul>
+    <aside class="notes">
+        <p><b>Pour finir de vous convaincre</b></p>
+        <p>apres l'aspect plus philosophique penchant nous sur l'aspect benchmark, l'aspect</p>
+    </aside>
+</section>
+
+<section>
+<h2>Time matters (FMP 3G 📱 in ms)</h2>
+<pre style="font-size: 21px; color: white;">
+Angular              ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 3000
+Stencil              ▉▉▉▉▉▉▉▉▉▉▊ 1070
+Native               ▉▉▉▉▉▉▉▉▉▉▎ 1030
+Stencil Pre Rendered ▉▉▉▉▉▉▉▉▉▊ 980
+</pre>
+    <ul>
+        <li class="fragment">Native & Stencil 3 times faster than Angular</li>
+    </ul>
+    <aside class="notes">
+        <p>FMP: First meaningful paint</p>
+        <p>Maintenant que vous etes bien chaud, que vous comprenez l'interet des web components sur le papier, voyons voir les details.</p>
+    </aside>
+</section>
+
+
